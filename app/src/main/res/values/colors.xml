@@ -3,4 +3,25 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- MainPage !-->
+    <color name="mainpage_navigation_background">#FFFFFF</color>
+    <color name="mainpage_navigation_selectoritem_primary_color_selected">#842D29</color>
+    <color name="mainpage_navigation_selectoritem_primary_color_unselected">#000000</color>
+
+    <!-- Navigation !-->
+
+    <!-- Goods !-->
+
+    <!-- Friend !-->
+
+    <!-- Exhibition !-->
+
+    <!-- RouteCommend !-->
+
+    <!-- MyInfo !-->
+
+    <!-- Login/Register !-->
+
+
 </resources>

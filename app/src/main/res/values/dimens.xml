@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!-- MainPage !-->
+    <dimen name="mainpage_activity_marginTop">50dp</dimen>
+    <!-- Navigation !-->
+
+    <!-- Goods !-->
+
+    <!-- Friend !-->
+
+    <!-- Exhibition !-->
+
+    <!-- RouteCommend !-->
+
+    <!-- MyInfo !-->
+
+    <!-- Login/Register !-->
+
+</resources>

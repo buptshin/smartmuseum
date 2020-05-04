@@ -1,18 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/mainpage_activity_marginTop">
+
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/mainpage_bottomnavigationview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mainpage_navigation_background"
+                android:layout_alignParentBottom="true"
+                app:itemIconTint="@drawable/mainpage_navigation_selector_item_color"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/mainpage_navigation"/>
+
+            <com.example.smartmuseum.view.otherview.NoScrollViewPager
+                android:id="@+id/mainpage_noscrollviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/mainpage_bottomnavigationview"
+                />
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>
