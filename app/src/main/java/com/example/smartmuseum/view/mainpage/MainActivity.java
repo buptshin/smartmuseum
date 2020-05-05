@@ -13,6 +13,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.ActivityMainBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.util.ScreenUtil;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -27,20 +28,19 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.bindData().bindView().bindEvent();
-
     }
 
     @Override
     public MainActivity bindData() {
-
-
-
         return this;
     }
 
     @Override
     public MainActivity bindView() {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+
+        //状态栏字体设为黑色
+        ScreenUtil.setAndroidNativeLightStatusBar(MainActivity.this, true);
 
         //设置fragments
         Fragment mainPageExploreFragment = MainPageExploreFragment.getInstance();
