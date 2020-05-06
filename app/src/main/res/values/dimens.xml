@@ -17,6 +17,16 @@
     <dimen name="friend_my_firends_main_stroke_width">1dp</dimen>
     <dimen name="friend_my_firends_join_radius">4dp</dimen>
     <dimen name="friend_my_firends_start_radius">20dp</dimen>
+    <dimen name="friend_choose_friends">24sp</dimen>
+    <dimen name="friend_choose_friends_my_accompany">14sp</dimen>
+    <dimen name="friend_choose_friends_search">18sp</dimen>
+    <dimen name="friend_choose_friends_item_name">18sp</dimen>
+    <dimen name="friend_choose_friends_item_in_museum">14sp</dimen>
+    <dimen name="friend_choose_friends_item_accompany_count">14sp</dimen>
+    <dimen name="friend_choose_friends_button_text">18sp</dimen>
+    <dimen name="friend_choose_friends_button_radius">1.33dp</dimen>
+    <dimen name="friend_choose_friends_item_img_width">101dp</dimen>
+    <dimen name="friend_choose_friends_item_height">91dp</dimen>
     <!-- Exhibition !-->
 
     <!-- RouteCommend !-->

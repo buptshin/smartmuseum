@@ -13,4 +13,12 @@
     <string name="friend_my_firends_personal_join">灵活参与</string>
     <string name="friend_my_firends_personal">个人伙伴</string>
     <string name="friend_my_firends_personal_hint">自定义团体成员，不用担心失散迷路等问题</string>
+    <string name="friend_choose_friend">添加个人伙伴</string>
+    <string name="friend_choose_friend_search">搜索</string>
+    <string name="friend_choose_friend_my_accompany">已添加%d位同行伙伴</string>
+    <string name="firend_choose_friend_item_accompany_count">曾同行过%d次</string>
+    <string name="friend_choose_friend_item_inMuseum">国家博物馆参观中</string>
+    <string name="friend_choose_friend_item_not_inMuseum">离线</string>
+    <string name="friend_choose_friend_item_button">添加</string>
+    <string name="friend_choose_friend_item_button_already">已添加</string>
 </resources>

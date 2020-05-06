@@ -111,24 +111,17 @@
             app:layout_constraintWidth_percent="0.381" />
 
         <TextView
-            android:id="@+id/friend_my_firends_team_join_tv"
+            android:id="@+id/friend_my_firends_personal_tv"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/friend_view_border_join"
-            android:text="@string/friend_my_friends_team_join"
-            android:textAlignment="center"
-            android:textColor="@color/friend_my_firends_join_text"
-            android:textSize="@dimen/friend_my_firends_join"
-            app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_team_view"
-            app:layout_constraintEnd_toEndOf="@+id/friend_my_firends_team_view"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.03"
-            app:layout_constraintHorizontal_bias="0.065"
-            app:layout_constraintStart_toEndOf="@+id/friend_my_firends_team_iv"
-            app:layout_constraintTop_toTopOf="@+id/friend_my_firends_team_view"
-            app:layout_constraintVertical_bias="0.092"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.165" />
+            android:layout_height="41dp"
+            android:text="@string/friend_my_firends_personal"
+            android:textAlignment="textStart"
+            android:textColor="@color/friend_my_firends_team_and_personal_text"
+            android:textSize="@dimen/friend_my_firends_team_and_personal"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="@+id/friend_my_firends_personal_start_tv"
+            app:layout_constraintTop_toBottomOf="@+id/friend_my_firends_personal_join_tv"
+            app:layout_constraintWidth_percent="0.363" />
 
         <TextView
             android:id="@+id/friend_my_firends_personal_join_tv"
@@ -139,73 +132,17 @@
             android:textAlignment="center"
             android:textColor="@color/friend_my_firends_join_text"
             android:textSize="@dimen/friend_my_firends_join"
-            app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_personal_view"
             app:layout_constraintHeight_percent="0.03"
             app:layout_constraintStart_toEndOf="@+id/friend_my_firends_personal_iv"
             app:layout_constraintStart_toStartOf="@+id/friend_my_firends_personal_tv"
-            app:layout_constraintTop_toTopOf="@+id/friend_my_firends_personal_view"
-            app:layout_constraintVertical_bias="0.092"
+            app:layout_constraintTop_toTopOf="@+id/friend_my_firends_personal_iv"
             app:layout_constraintWidth_percent="0.165" />
 
         <TextView
-            android:id="@+id/friend_my_firends_team_tv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="63dp"
-            android:layout_marginBottom="163dp"
-            android:text="@string/friend_my_firends_team"
-            android:textAlignment="textStart"
-            android:textColor="@color/friend_my_firends_team_and_personal_text"
-            android:textSize="@dimen/friend_my_firends_team_and_personal"
-            app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_team_view"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.05"
-            app:layout_constraintStart_toEndOf="@+id/friend_my_firends_team_iv"
-            app:layout_constraintStart_toStartOf="@+id/friend_my_firends_team_join_tv"
-            app:layout_constraintTop_toTopOf="@+id/friend_my_firends_team_view"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.363" />
-
-        <TextView
-            android:id="@+id/friend_my_firends_personal_tv"
-            android:layout_width="0dp"
-            android:layout_height="41dp"
-            android:layout_marginTop="63dp"
-            android:text="@string/friend_my_firends_personal"
-            android:textAlignment="textStart"
-            android:textColor="@color/friend_my_firends_team_and_personal_text"
-            android:textSize="@dimen/friend_my_firends_team_and_personal"
-            app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_personal_view"
-            app:layout_constraintHeight_percent="0.05"
-            app:layout_constraintStart_toStartOf="@+id/friend_my_firends_personal_start_tv"
-            app:layout_constraintTop_toTopOf="@+id/friend_my_firends_personal_view"
-            app:layout_constraintVertical_bias="0.0"
-            app:layout_constraintWidth_percent="0.363" />
-
-        <TextView
-            android:id="@+id/friend_my_firends_team_start_tv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="@drawable/friend_view_border_start"
-            android:text="@string/friend_my_firends_start"
-            android:textAlignment="center"
-            android:textColor="@color/friend_my_firends_start_text"
-            android:textSize="@dimen/friend_my_firends_start"
-            app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_team_iv"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.049"
-            app:layout_constraintStart_toEndOf="@+id/friend_my_firends_team_iv"
-            app:layout_constraintStart_toStartOf="@+id/friend_my_firends_team_tv"
-            app:layout_constraintTop_toBottomOf="@+id/friend_my_firends_team_tv"
-            app:layout_constraintVertical_bias="1.0"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.32" />
-
-        <TextView
             android:id="@+id/friend_my_firends_personal_start_tv"
-            android:layout_width="0dp"
+            android:layout_width="132dp"
             android:layout_height="41dp"
+            android:layout_marginEnd="60dp"
             android:background="@drawable/friend_view_border_start"
             android:text="@string/friend_my_firends_start"
             android:textAlignment="center"
@@ -214,10 +151,49 @@
             app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_personal_iv"
             app:layout_constraintEnd_toEndOf="@+id/friend_my_firends_personal_view"
             app:layout_constraintHeight_percent="0.049"
-            app:layout_constraintHorizontal_bias="0.121"
-            app:layout_constraintStart_toEndOf="@+id/friend_my_firends_personal_iv"
-            app:layout_constraintTop_toBottomOf="@+id/friend_my_firends_personal_tv"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintWidth_percent="0.32" />
+
+        <TextView
+            android:id="@+id/friend_my_firends_team_tv"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:text="@string/friend_my_firends_team"
+            android:textAlignment="textStart"
+            android:textColor="@color/friend_my_firends_team_and_personal_text"
+            android:textSize="@dimen/friend_my_firends_team_and_personal"
+            app:layout_constraintHeight_percent="0.05"
+            app:layout_constraintStart_toStartOf="@+id/friend_my_firends_team_start_tv"
+            app:layout_constraintTop_toBottomOf="@+id/friend_my_firends_team_join_tv"
+            app:layout_constraintWidth_percent="0.363" />
+
+        <TextView
+            android:id="@+id/friend_my_firends_team_join_tv"
+            android:layout_width="81dp"
+            android:layout_height="25dp"
+            android:background="@drawable/friend_view_border_join"
+            android:text="@string/friend_my_friends_team_join"
+            android:textAlignment="center"
+            android:textColor="@color/friend_my_firends_join_text"
+            android:textSize="@dimen/friend_my_firends_join"
+            app:layout_constraintHeight_percent="0.03"
+            app:layout_constraintStart_toEndOf="@+id/friend_my_firends_team_iv"
+            app:layout_constraintStart_toStartOf="@+id/friend_my_firends_team_tv"
+            app:layout_constraintTop_toTopOf="@+id/friend_my_firends_team_iv"
+            app:layout_constraintWidth_percent="0.165" />
+
+        <TextView
+            android:id="@+id/friend_my_firends_team_start_tv"
+            android:layout_width="0dp"
+            android:layout_height="41dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/friend_view_border_start"
+            android:text="@string/friend_my_firends_start"
+            android:textAlignment="center"
+            android:textColor="@color/friend_my_firends_start_text"
+            android:textSize="@dimen/friend_my_firends_start"
+            app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_team_iv"
+            app:layout_constraintEnd_toEndOf="@+id/friend_my_firends_team_view"
+            app:layout_constraintHeight_percent="0.049"
             app:layout_constraintWidth_percent="0.32" />
 
         <TextView
@@ -239,12 +215,12 @@
 
         <TextView
             android:id="@+id/friend_my_firends_personal_hint_tv"
-            android:layout_width="387dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:singleLine="false"
             android:text="@string/friend_my_firends_personal_hint"
             android:textColor="@color/friend_my_firends_hint_text"
-            android:textSize="18sp"
+            android:textSize="@dimen/friend_my_firends_hint"
             app:layout_constraintBottom_toBottomOf="@+id/friend_my_firends_personal_view"
             app:layout_constraintEnd_toEndOf="@+id/friend_my_firends_personal_view"
             app:layout_constraintHorizontal_bias="0.492"
