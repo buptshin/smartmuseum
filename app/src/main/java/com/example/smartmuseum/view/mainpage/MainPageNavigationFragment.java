@@ -15,6 +15,7 @@ import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
 import com.example.smartmuseum.databinding.FragmentMainpageNavigationBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 
+/*导览fragment*/
 public class MainPageNavigationFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentMainpageNavigationBinding mBinding;

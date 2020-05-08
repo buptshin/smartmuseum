@@ -10,6 +10,7 @@
     <color name="mainpage_navigation_selectoritem_primary_color_unselected">#000000</color>
 
     <!-- Navigation !-->
+    <color name="mainpage_navigation_selectoritem_wordcolor_black">#FF000521</color>
 
     <!-- Goods !-->
 
