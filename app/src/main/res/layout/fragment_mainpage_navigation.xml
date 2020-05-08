@@ -6,16 +6,24 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/mainpage_navigation_background">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toRightOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="parent"
-            app:layout_constraintBottom_toTopOf="parent"
-            android:text="navigation"/>
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="导览"
+            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:textSize="9.5sp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="12.5dp"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src=""/>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
