@@ -25,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@mipmap/friend_choose_friends_icon1" />
+            tools:srcCompat="@drawable/friend_choose_friends_icon1" />
 
         <TextView
             android:id="@+id/friend_choose_friends_item_name_tv"
