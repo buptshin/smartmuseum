@@ -4,8 +4,10 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.smartmuseum.model.Accompany;
+import com.example.smartmuseum.util.http.HttpRequest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -14,15 +16,19 @@ import java.util.List;
 public class AccompanyViewModel extends ViewModel {
     private MutableLiveData<List<Accompany>> accompanyList;
 
-    public MutableLiveData<List<Accompany>> getAccompanyList() {
+    public MutableLiveData<List<Accompany>> getAccompanyList(HashMap map) {
         if(accompanyList == null){
             accompanyList = new MutableLiveData<>();
-            /*
-            在这里进行列表的初始化工作（从数据库得到同行伙伴的信息）
-             */
-            List<Accompany> tempAccompany = new ArrayList<>();
-            accompanyList.setValue(tempAccompany);
+            loadAccompanyList(map);
         }
         return accompanyList;
+    }
+
+    /**
+     * 进行网络请求
+     * @param map
+     */
+    public void loadAccompanyList(HashMap map) {
+        //HttpRequest.Get.
     }
 }
