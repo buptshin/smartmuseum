@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/mainpage_goods_recommend_layout_margin_top"
+        android:background="@color/mainpage_goods_sell_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainpage_goods_sell_commend_location_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mainpage_goods_recommend_layout_margin"
+            android:layout_margin="@dimen/mainpage_goods_recommend_layout_margin"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <ImageView
+                android:id="@+id/mainpage_goods_sell_commend_loacation_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mainpage_goods_sell_location"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+            <TextView
+                android:id="@+id/mainpage_goods_sell_commend_nowloacation_show_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mainpage_goods_recommend_newlocation_show_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/mainpage_goods_sell_commend_loacation_img"
+                android:textColor="@color/mainpage_goods_sell_commend_black"
+                android:text="@string/mainpage_goods_commend_now_location_show"
+                android:textSize="@dimen/mainpage_goods_recommend_newlocation_show_text"/>
+            <TextView
+                android:id="@+id/mainpage_goods_sell_commend_nowloacation_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/mainpage_goods_recommend_newlocation_margin"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/mainpage_goods_sell_commend_nowloacation_show_text"
+                android:textColor="@color/mainpage_goods_sell_commend_brown"
+                android:text="@string/mainpage_goods_commend_now_location"
+                android:textStyle="bold"
+                android:textSize="@dimen/mainpage_goods_recommend_newlocation_text"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mainpage_goods_sell_shop"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainpage_goods_sell_commend_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/mainpage_goods_recommend_recyclerview_margin_top"
+            android:layout_marginBottom="@dimen/mainpage_goods_recommend_recyclerview_margin_bottom"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_goods_sell_commend_location_constraintlayout"
+            app:layout_constraintBottom_toTopOf="@+id/mainpage_goods_sell_commend_select_constraintlayout"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainpage_goods_sell_commend_select_constraintlayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mainpage_goods_recommend_select_height"
+            android:layout_marginBottom="@dimen/mainpage_goods_recommend_select_margin_bottom"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:id="@+id/mainpage_goods_sell_commend_select_dislike_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mainpage_goods_sell_dislike"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/mainpage_goods_sell_commend_select_like_img" />
+
+            <ImageView
+                android:id="@+id/mainpage_goods_sell_commend_select_like_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/mainpage_goods_sell_like"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/mainpage_goods_sell_commend_select_dislike_img" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -6,6 +6,27 @@
     <!-- Navigation !-->
 
     <!-- Goods !-->
+    <dimen name="mainpage_goods_recommend_layout_margin_top">30dp</dimen>
+    <dimen name="mainpage_goods_recommend_layout_margin">20dp</dimen>
+    <dimen name="mainpage_goods_recommend_newlocation_show_margin">10dp</dimen>
+    <dimen name="mainpage_goods_recommend_newlocation_margin">5dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_margin_top">30dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_margin_bottom">50dp</dimen>
+    <dimen name="mainpage_goods_recommend_select_height">80dp</dimen>
+    <dimen name="mainpage_goods_recommend_select_margin_bottom">30dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_margin_top">10dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_margin_bottom">80dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_image_height">350dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_text_margin_top">20dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_text_margin">40dp</dimen>
+    <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_text_margin_top2">50dp</dimen>
+
+
+    <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
+    <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
+    <dimen name="mainpage_goods_recommend_layout_introduction_text">14sp</dimen>
+    <dimen name="mainpage_goods_recommend_newlocation_show_text">16sp</dimen>
+    <dimen name="mainpage_goods_recommend_newlocation_text">18sp</dimen>
 
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>

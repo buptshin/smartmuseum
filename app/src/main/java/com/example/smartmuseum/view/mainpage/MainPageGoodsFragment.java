@@ -54,15 +54,6 @@ public class MainPageGoodsFragment extends Fragment implements ViewChainedBindin
 
     @Override
     public MainPageGoodsFragment bindData() {
-        goodsViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
-        HashMap<String, String> map = new HashMap<>();
-        goodsViewModel.getCommendGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
-            goodsList = models;
-            LinearLayoutManager ms = new LinearLayoutManager(getContext());
-            ms.setOrientation(LinearLayoutManager.HORIZONTAL);
-            mBinding.mainpageGoodsSellCommendRecyclerview.setLayoutManager(ms);
-            mBinding.mainpageGoodsSellCommendRecyclerview.setAdapter(new MainPageGoodsCommendAdapter(goodsList));
-        });
 
         return this;
     }

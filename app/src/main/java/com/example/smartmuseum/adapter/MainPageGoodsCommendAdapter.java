@@ -36,6 +36,7 @@ public class MainPageGoodsCommendAdapter extends RecyclerView.Adapter<MainPageGo
     public void onBindViewHolder(@NonNull GoodsViewHolder holder, int position) {
         Goods goods = mList.get(position);
         holder.getBinding().setGoods(goods);
+        //为文本设置中划线
         holder.getBinding().mainpageGoodsSellCommendGoodsOldpriceText.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
     }
 
