@@ -21,4 +21,9 @@
     <string name="friend_choose_friend_item_not_inMuseum">离线</string>
     <string name="friend_choose_friend_item_button">添加</string>
     <string name="friend_choose_friend_item_button_already">已添加</string>
+
+    <!-- Goods !-->
+    <string name="mainpage_goods_price_sign">¥</string>
+    <string name="mainpage_goods_commend_buypeople_num">%d人曾购买</string>
+    <string name="mainpage_goods_commend_distribution">定位配送</string>
 </resources>

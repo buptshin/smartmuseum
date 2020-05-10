@@ -13,6 +13,11 @@
     <color name="mainpage_navigation_selectoritem_wordcolor_black">#FF000521</color>
 
     <!-- Goods !-->
+    <color name="mainpage_goods_sell_background">#FFFFFF</color>
+    <color name="mainpage_goods_sell_commend_black">#000521</color>
+    <color name="mainpage_goods_sell_commend_brown">#842D29</color>
+    <color name="mainpage_goods_sell_commend_gray">#8D92A3</color>
+
 
     <!-- Friend !-->
     <color name="friend_my_firends_main_box">#FFFFFF</color>

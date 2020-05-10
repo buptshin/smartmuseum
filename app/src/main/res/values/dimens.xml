@@ -2,7 +2,7 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <!-- MainPage !-->
-    <dimen name="mainpage_activity_marginTop">50dp</dimen>
+    <dimen name="mainpage_activity_marginTop">40dp</dimen>
     <!-- Navigation !-->
 
     <!-- Goods !-->

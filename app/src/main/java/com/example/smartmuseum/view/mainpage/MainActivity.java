@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -14,6 +14,7 @@ import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.ActivityMainBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.goods.GoodsCommendActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -81,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
                         position = 1;
                         break;
                     case R.id.mainpage_navigation_goods_item:
+                        Intent intent = new Intent(MainActivity.this, GoodsCommendActivity.class);
+                        startActivity(intent);
                         position = 2;
                         break;
                     case R.id.mainpage_navigation_myinfo_item:

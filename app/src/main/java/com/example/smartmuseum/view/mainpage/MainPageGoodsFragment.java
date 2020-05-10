@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -13,8 +14,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.adapter.MainPageGoodsCommendAdapter;
 import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
 import com.example.smartmuseum.databinding.FragmentMainpageGoodsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
@@ -53,11 +56,13 @@ public class MainPageGoodsFragment extends Fragment implements ViewChainedBindin
     public MainPageGoodsFragment bindData() {
         goodsViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
         HashMap<String, String> map = new HashMap<>();
-        goodsViewModel.getGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
+        goodsViewModel.getCommendGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
             goodsList = models;
-            mBinding.mainpageGoodsName.setText(goodsList.get(0).getName());
+            LinearLayoutManager ms = new LinearLayoutManager(getContext());
+            ms.setOrientation(LinearLayoutManager.HORIZONTAL);
+            mBinding.mainpageGoodsSellCommendRecyclerview.setLayoutManager(ms);
+            mBinding.mainpageGoodsSellCommendRecyclerview.setAdapter(new MainPageGoodsCommendAdapter(goodsList));
         });
-
 
         return this;
     }
