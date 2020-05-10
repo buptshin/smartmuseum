@@ -2,6 +2,7 @@ package com.example.smartmuseum.view.mainpage;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.MainPageGoodsCommendAdapter;
+import com.example.smartmuseum.adapter.MainPageGoodsPagerAdapter;
 import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
 import com.example.smartmuseum.databinding.FragmentMainpageGoodsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
@@ -30,9 +32,7 @@ import java.util.List;
 public class MainPageGoodsFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentMainpageGoodsBinding mBinding;
-    private GoodsViewModel goodsViewModel;
-    private List<Goods> goodsList;
-
+    private MainPageGoodsPagerAdapter mainPageGoodsPagerAdapter;
 
     public static MainPageGoodsFragment getInstance() {
         MainPageGoodsFragment fragment = new MainPageGoodsFragment();
@@ -54,17 +54,26 @@ public class MainPageGoodsFragment extends Fragment implements ViewChainedBindin
 
     @Override
     public MainPageGoodsFragment bindData() {
-
         return this;
     }
 
     @Override
     public MainPageGoodsFragment bindView() {
+
+        mainPageGoodsPagerAdapter = new MainPageGoodsPagerAdapter(getChildFragmentManager(), mBinding.getRoot().getContext());
+        mBinding.mainpageGoodsViewpager.setAdapter(mainPageGoodsPagerAdapter);
+        mBinding.mainpageGoodsTablayout.setupWithViewPager(mBinding.mainpageGoodsViewpager);
         return this;
     }
 
     @Override
     public MainPageGoodsFragment bindEvent() {
+        mBinding.mainpageGoodsTablayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return false;
+            }
+        });
         return null;
     }
 }
