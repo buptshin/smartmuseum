@@ -68,12 +68,6 @@ public class MainPageGoodsFragment extends Fragment implements ViewChainedBindin
 
     @Override
     public MainPageGoodsFragment bindEvent() {
-        mBinding.mainpageGoodsTablayout.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                return false;
-            }
-        });
         return null;
     }
 }

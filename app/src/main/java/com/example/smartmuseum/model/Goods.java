@@ -21,6 +21,12 @@ public class Goods {
     //旧价格
     private int oldPrice;
 
+    //购买状态
+    private String purchasedStatus;
+
+    //购买数量
+    private int purchasedNum;
+
     public String getName() {
         return name;
     }
@@ -67,5 +73,21 @@ public class Goods {
 
     public void setOldPrice(int oldPrice) {
         this.oldPrice = oldPrice;
+    }
+
+    public String getPurchasedStatus() {
+        return purchasedStatus;
+    }
+
+    public void setPurchasedStatus(String purchasedStatus) {
+        this.purchasedStatus = purchasedStatus;
+    }
+
+    public int getPurchasedNum() {
+        return purchasedNum;
+    }
+
+    public void setPurchasedNum(int purchasedNum) {
+        this.purchasedNum = purchasedNum;
     }
 }

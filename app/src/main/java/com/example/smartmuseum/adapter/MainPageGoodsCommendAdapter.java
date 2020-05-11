@@ -1,5 +1,8 @@
 package com.example.smartmuseum.adapter;
 
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -10,6 +13,7 @@ import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.bumptech.glide.Glide;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.GoodsRecommendItemBinding;
 import com.example.smartmuseum.model.Accompany;
@@ -38,6 +42,17 @@ public class MainPageGoodsCommendAdapter extends RecyclerView.Adapter<MainPageGo
         holder.getBinding().setGoods(goods);
         //为文本设置中划线
         holder.getBinding().mainpageGoodsSellCommendGoodsOldpriceText.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
+
+        Resources res = holder.getBinding().getRoot().getResources();
+        Bitmap bmp;
+        int resourceFlag = position % 2;
+        if (resourceFlag == 0) {
+            bmp = BitmapFactory.decodeResource(res, R.drawable.mainpage_goods_sell_goods_1);
+        } else {
+            bmp = BitmapFactory.decodeResource(res, R.drawable.mainpage_goods_sell_goods_2);
+        }
+
+        holder.getBinding().mainpageGoodsSellCommendGoodsImage.setImageBitmap(bmp);
     }
 
     @Override
