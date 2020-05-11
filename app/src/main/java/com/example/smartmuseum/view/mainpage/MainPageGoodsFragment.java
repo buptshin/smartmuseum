@@ -55,7 +55,7 @@ public class MainPageGoodsFragment extends Fragment implements ViewChainedBindin
         HashMap<String, String> map = new HashMap<>();
         goodsViewModel.getGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
             goodsList = models;
-            mBinding.mainpageGoodsName.setText(goodsList.get(0).getName());
+//            mBinding.mainpageGoodsName.setText(goodsList.get(0).getName());
         });
 
 
