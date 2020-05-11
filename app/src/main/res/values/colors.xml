@@ -11,6 +11,8 @@
 
     <!-- Navigation !-->
     <color name="mainpage_navigation_selectoritem_wordcolor_black">#FF000521</color>
+    <color name="mainpage_navigation_red">#842D29</color>
+    <color name="mainpage_navigation_white">#FFFFFF</color>
 
     <!-- Goods !-->
 

@@ -4,27 +4,150 @@
     <data>
 
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/mainpage_navigation_background">
 
         <TextView
+            android:id="@+id/mainpage_navigation_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="导览"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="16dp"
+            android:text="探索"
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
-            android:textSize="9.5sp"
-            android:layout_marginLeft="6dp"
-            android:layout_marginTop="12.5dp"/>
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:typeface="sans"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageView
+            android:id="@+id/mainpage_navigation_search_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/mainpage_navigation_search"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="15dp"/>
+
+        <TextView
+            android:id="@+id/mainpage_navigation_floor_b1_tv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/mainpage_navigation_circle_gray_tv_bg"
+            android:gravity="center"
+            android:text="B1"
+            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/mainpage_navigation_floor_1_tv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/mainpage_navigation_circle_gray_tv_bg"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_b1_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/mainpage_navigation_floor_2_tv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/mainpage_navigation_circle_gray_tv_bg"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_1_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/mainpage_navigation_floor_3_tv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/mainpage_navigation_circle_red_tv_bg"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/mainpage_navigation_white"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_2_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            android:layout_marginTop="15dp"/>
+
+        <TextView
+            android:id="@+id/mainpage_navigation_floor_4_tv"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/mainpage_navigation_circle_gray_tv_bg"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_3_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/mainpage_navigation_location_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
-            android:src="@mipmap/ic_launcher_round"/>
+            android:text="您现在的位置是"
+            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_floor_b1_tv"/>
+        <TextView
+            android:id="@+id/mainpage_navigation_location_value_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北1展厅"
+            android:textColor="#FF842D29"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_location_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_floor_b1_tv" />
+        <ImageView
+            android:id="@+id/mainpage_navigation_all_location_iv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:src="@drawable/mainpage_navigation_map_all"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_location_tv"
+            android:layout_marginTop="15dp"/>
+        <ImageView
+            android:id="@+id/mainpage_navigation_escape_routes_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/mainpage_navigation_escape_routes"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_all_location_iv"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="15dp"/>
+        <ImageView
+            android:id="@+id/mainpage_navigation_now_location_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/mainpage_navigation_now_location"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_escape_routes_iv"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="15dp"/>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
