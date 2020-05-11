@@ -6,18 +6,26 @@ public class Goods {
     //名称
     private String name;
 
-    //相关展厅名称
-    @SerializedName("placeNamessssss")
-    private String placeName;
+    //相关文物名称
+    private String collectName;
 
     //介绍
-    private String introduce;
+    private String introduction;
 
     //购买人数
     private int buyPeopleNum;
 
     //价格
     private int price;
+
+    //旧价格
+    private int oldPrice;
+
+    //购买状态
+    private String purchasedStatus;
+
+    //购买数量
+    private int purchasedNum;
 
     public String getName() {
         return name;
@@ -27,20 +35,20 @@ public class Goods {
         this.name = name;
     }
 
-    public String getPlaceName() {
-        return placeName;
+    public String getCollectName() {
+        return collectName;
     }
 
-    public void setPlaceName(String placeName) {
-        this.placeName = placeName;
+    public void setCollectName(String collectName) {
+        this.collectName = collectName;
     }
 
-    public String getIntroduce() {
-        return introduce;
+    public String getIntroduction() {
+        return introduction;
     }
 
-    public void setIntroduce(String introduce) {
-        this.introduce = introduce;
+    public void setIntroduction(String introduction) {
+        this.introduction = introduction;
     }
 
     public int getBuyPeopleNum() {
@@ -57,5 +65,29 @@ public class Goods {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public int getOldPrice() {
+        return oldPrice;
+    }
+
+    public void setOldPrice(int oldPrice) {
+        this.oldPrice = oldPrice;
+    }
+
+    public String getPurchasedStatus() {
+        return purchasedStatus;
+    }
+
+    public void setPurchasedStatus(String purchasedStatus) {
+        this.purchasedStatus = purchasedStatus;
+    }
+
+    public int getPurchasedNum() {
+        return purchasedNum;
+    }
+
+    public void setPurchasedNum(int purchasedNum) {
+        this.purchasedNum = purchasedNum;
     }
 }
