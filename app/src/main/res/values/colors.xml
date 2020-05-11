@@ -21,6 +21,10 @@
     <color name="mainpage_goods_purchased_gray">#6D7278</color>
     <color name="mainpage_goods_purchased_card_background_border">#E1E5F1</color>
 
+    <color name="goods_market_search_background_gray">#F5F6F9</color>
+    <color name="goods_market_text_black">#000000</color>
+
+
 
 
     <!-- Friend !-->

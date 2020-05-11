@@ -6,7 +6,8 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/mainpage_goods_sell_background">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/goods_purchased_recyclerview"
