@@ -1,0 +1,81 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="goodsCollectionModel"
+            type="com.example.smartmuseum.model.GoodsCollectionModel"/>
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="230dp"
+        android:layout_height="240dp"
+        android:background="@drawable/goods_market_signin_card_background"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/goods_market_signin_goods_img"
+            android:layout_width="225dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/goods_market_signin_goods_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="30dp"
+            android:text="@{goodsCollectionModel.goods.name}"
+            android:textSize="16sp"
+            android:textColor="@color/goods_market_text_black"
+            tools:text="月光宝盒茶具"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="40dp"
+            android:text="@{@string/mainpage_goods_price_sign + Integer.toString(goodsCollectionModel.goods.price)}"
+            android:textSize="16sp"
+            android:textColor="@color/goods_market_text_brown"
+            tools:text="¥820"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_goods_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:text="@{goodsCollectionModel.goods.introduction}"
+            android:textSize="12sp"
+            android:textColor="@color/goods_market_text_gray"
+            tools:text="匽侯盂同款花纹"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_signin_goods_name"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_goods_advantage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:text="@{goodsCollectionModel.goods.advantage}"
+            android:textSize="12sp"
+            android:textColor="@color/goods_market_text_gray"
+            tools:text="手工高白泥"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_signin_goods_introduction"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

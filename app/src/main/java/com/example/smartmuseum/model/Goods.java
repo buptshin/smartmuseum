@@ -38,6 +38,9 @@ public class Goods {
     //促销力度(0-100)
     private int discount;
 
+    //优点
+    private String advantage;
+
     public String getName() {
         return name;
     }
@@ -124,5 +127,13 @@ public class Goods {
 
     public void setDiscount(int discount) {
         this.discount = discount;
+    }
+
+    public String getAdvantage() {
+        return advantage;
+    }
+
+    public void setAdvantage(String advantage) {
+        this.advantage = advantage;
     }
 }

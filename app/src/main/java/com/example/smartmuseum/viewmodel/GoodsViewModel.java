@@ -46,6 +46,7 @@ public class GoodsViewModel extends ViewModel {
         return discountGoodsModelList;
     }
 
+
     public void loadCommendGoodsModelList(HashMap map){
         Goods test1 = new Goods();
         test1.setCollectName("青铜匽侯盂");
@@ -142,5 +143,6 @@ public class GoodsViewModel extends ViewModel {
 
         discountGoodsModelList.setValue(list);
     }
+
 
 }

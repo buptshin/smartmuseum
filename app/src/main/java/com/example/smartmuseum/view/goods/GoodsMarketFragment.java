@@ -15,9 +15,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.GoodsMarketDiscountAdapter;
+import com.example.smartmuseum.adapter.GoodsMarketSigninAdapter;
 import com.example.smartmuseum.databinding.FragmentGoodsMarketBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Goods;
+import com.example.smartmuseum.model.GoodsCollectionModel;
+import com.example.smartmuseum.viewmodel.GoodsCollectionModelViewModel;
 import com.example.smartmuseum.viewmodel.GoodsViewModel;
 
 import java.util.HashMap;
@@ -26,8 +29,10 @@ import java.util.List;
 public class GoodsMarketFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentGoodsMarketBinding mBinding;
-    private List<Goods> goodsList;
+    private List<Goods> goodsDiscountList;
+    private List<GoodsCollectionModel> goodsCollectionModelList;
     private GoodsViewModel goodsDiscountViewModel;
+    private GoodsCollectionModelViewModel goodsCollectionModelViewModel;
 
     public static GoodsMarketFragment getInstance() {
         GoodsMarketFragment fragment = new GoodsMarketFragment();
@@ -49,18 +54,8 @@ public class GoodsMarketFragment extends Fragment implements ViewChainedBinding 
 
     @Override
     public GoodsMarketFragment bindData() {
-
-
-        goodsDiscountViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
-        HashMap<String, String> map = new HashMap<>();
-        //Activity调用this, fragment调用getViewLifecycleOwner()
-        goodsDiscountViewModel.getDiscountGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
-            goodsList = models;
-            LinearLayoutManager ms = new LinearLayoutManager(mBinding.getRoot().getContext());
-            ms.setOrientation(LinearLayoutManager.HORIZONTAL);
-            mBinding.goodsMarketDiscountRecyclerview.setLayoutManager(ms);
-            mBinding.goodsMarketDiscountRecyclerview.setAdapter(new GoodsMarketDiscountAdapter(goodsList));
-        });
+        getDiscount();
+        getSignIn();
         return this;
     }
 
@@ -72,5 +67,29 @@ public class GoodsMarketFragment extends Fragment implements ViewChainedBinding 
     @Override
     public GoodsMarketFragment bindEvent() {
         return null;
+    }
+
+    private void getDiscount() {
+        goodsDiscountViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
+        HashMap<String, String> map = new HashMap<>();
+        //Activity调用this, fragment调用getViewLifecycleOwner()
+        goodsDiscountViewModel.getDiscountGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
+            goodsDiscountList = models;
+            LinearLayoutManager ms = new LinearLayoutManager(mBinding.getRoot().getContext());
+            ms.setOrientation(LinearLayoutManager.HORIZONTAL);
+            mBinding.goodsMarketDiscountRecyclerview.setLayoutManager(ms);
+            mBinding.goodsMarketDiscountRecyclerview.setAdapter(new GoodsMarketDiscountAdapter(goodsDiscountList));
+        });
+    }
+
+    private void getSignIn() {
+        goodsCollectionModelViewModel = new ViewModelProvider(this).get(GoodsCollectionModelViewModel.class);
+        HashMap<String, String> map = new HashMap<>();
+        //Activity调用this, fragment调用getViewLifecycleOwner()
+        goodsCollectionModelViewModel.getSignInGoodsCollectionModelList(map).observe(getViewLifecycleOwner(), models -> {
+            goodsCollectionModelList = models;
+            mBinding.goodsMarketSigninRecyclerview.setLayoutManager(new LinearLayoutManager(mBinding.getRoot().getContext()));
+            mBinding.goodsMarketSigninRecyclerview.setAdapter(new GoodsMarketSigninAdapter(goodsCollectionModelList));
+        });
     }
 }
