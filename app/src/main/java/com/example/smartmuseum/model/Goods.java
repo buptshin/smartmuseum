@@ -2,6 +2,8 @@ package com.example.smartmuseum.model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Date;
+
 public class Goods {
     //名称
     private String name;
@@ -26,6 +28,15 @@ public class Goods {
 
     //购买数量
     private int purchasedNum;
+
+    //促销剩余时间
+    private String discountRemainderTime;
+
+    //库存数量
+    private int remainderNum;
+
+    //促销力度(0-100)
+    private int discount;
 
     public String getName() {
         return name;
@@ -89,5 +100,29 @@ public class Goods {
 
     public void setPurchasedNum(int purchasedNum) {
         this.purchasedNum = purchasedNum;
+    }
+
+    public String getDiscountRemainderTime() {
+        return discountRemainderTime;
+    }
+
+    public void setDiscountRemainderTime(String discountRemainderTime) {
+        this.discountRemainderTime = discountRemainderTime;
+    }
+
+    public int getRemainderNum() {
+        return remainderNum;
+    }
+
+    public void setRemainderNum(int remainderNum) {
+        this.remainderNum = remainderNum;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(int discount) {
+        this.discount = discount;
     }
 }

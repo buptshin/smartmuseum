@@ -29,4 +29,16 @@
     <string name="mainpage_goods_commend_buypeople_num">%d人曾购买</string>
     <string name="mainpage_goods_commend_distribution">定位配送</string>
     <string name="mainpage_goods_purchased_num_sign">x</string>
+
+    <string name="mainpage_goods_dicount_num_sign">-</string>
+    <string name="mainpage_goods_dicount_num_sign_2">%</string>
+    <string name="mainpage_goods_dicount_champion">本周销量最佳</string>
+    <string name="mainpage_goods_dicount_remainder_num">库存%d件</string>
+
+    <string name="mainpage_goods_market_loacation">复兴之路参观中</string>
+    <string name="mainpage_goods_market_classical">经典展览文创产品</string>
+    <string name="mainpage_goods_market_discount">限量热销</string>
+    <string name="mainpage_goods_market_signin">你的打卡</string>
+
+
 </resources>

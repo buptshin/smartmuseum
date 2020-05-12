@@ -23,7 +23,8 @@
 
     <color name="goods_market_search_background_gray">#F5F6F9</color>
     <color name="goods_market_text_black">#000000</color>
-
+    <color name="goods_market_text_gray">#9C9EAF</color>
+    <color name="goods_market_text_brown">#842D29</color>
 
 
 

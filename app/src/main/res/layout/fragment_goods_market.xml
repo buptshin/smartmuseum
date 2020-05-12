@@ -30,6 +30,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/mainpage_goods_market_loacation"
                 android:layout_gravity="center_vertical"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/mainpage_goods_sell_commend_gray"
@@ -53,6 +54,7 @@
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:textColor="@color/mainpage_goods_text_white"
+                    android:text="6"
                     android:textSize="8sp"
                     android:background="@drawable/goods_market_notification_num_background"
                     android:gravity="center"
@@ -66,7 +68,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/goods_market_search_layout"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="60dp"
             android:layout_marginTop="20dp"
@@ -89,19 +91,11 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
-
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
-                android:src="@mipmap/goods_market_search"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/goods_market_search_text"/>
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ImageView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
@@ -110,15 +104,64 @@
             app:layout_constraintTop_toBottomOf="@+id/goods_market_location_layout" />
 
         <TextView
+            android:id="@+id/goods_market_classical_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"
-            android:text="经典展览文创产品"
+            android:text="@string/mainpage_goods_market_classical"
             android:textColor="@color/goods_market_text_black"
             android:textSize="23sp"
             app:layout_constraintTop_toBottomOf="@+id/goods_market_search_layout"
             app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/goods_market_classical_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_classical_text" />
+
+        <TextView
+            android:id="@+id/goods_market_discount_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/mainpage_goods_market_discount"
+            android:textColor="@color/goods_market_text_black"
+            android:textSize="23sp"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_classical_recyclerview"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/goods_market_discount_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_discount_text" />
+
+        <TextView
+            android:id="@+id/goods_market_signin_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/mainpage_goods_market_signin"
+            android:textColor="@color/goods_market_text_black"
+            android:textSize="23sp"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_discount_recyclerview"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/goods_market_signin_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintRight_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_discount_text" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
