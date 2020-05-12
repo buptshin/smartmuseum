@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.adapter.GoodsMarketClassicalAdapter;
 import com.example.smartmuseum.adapter.GoodsMarketDiscountAdapter;
 import com.example.smartmuseum.adapter.GoodsMarketSigninAdapter;
 import com.example.smartmuseum.databinding.FragmentGoodsMarketBinding;
@@ -29,8 +30,11 @@ import java.util.List;
 public class GoodsMarketFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentGoodsMarketBinding mBinding;
+    private List<Goods> goodsClassicalList;
     private List<Goods> goodsDiscountList;
     private List<GoodsCollectionModel> goodsCollectionModelList;
+
+    private GoodsViewModel goodsClassicalViewModel;
     private GoodsViewModel goodsDiscountViewModel;
     private GoodsCollectionModelViewModel goodsCollectionModelViewModel;
 
@@ -54,6 +58,7 @@ public class GoodsMarketFragment extends Fragment implements ViewChainedBinding 
 
     @Override
     public GoodsMarketFragment bindData() {
+        getClassical();
         getDiscount();
         getSignIn();
         return this;
@@ -67,6 +72,19 @@ public class GoodsMarketFragment extends Fragment implements ViewChainedBinding 
     @Override
     public GoodsMarketFragment bindEvent() {
         return null;
+    }
+
+    private void getClassical() {
+        goodsClassicalViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
+        HashMap<String, String> map = new HashMap<>();
+        //Activity调用this, fragment调用getViewLifecycleOwner()
+        goodsClassicalViewModel.getClassicalGoodsModelList(map).observe(getViewLifecycleOwner(), models -> {
+            goodsClassicalList = models;
+            LinearLayoutManager ms = new LinearLayoutManager(mBinding.getRoot().getContext());
+            ms.setOrientation(LinearLayoutManager.HORIZONTAL);
+            mBinding.goodsMarketClassicalRecyclerview.setLayoutManager(ms);
+            mBinding.goodsMarketClassicalRecyclerview.setAdapter(new GoodsMarketClassicalAdapter(goodsClassicalList));
+        });
     }
 
     private void getDiscount() {

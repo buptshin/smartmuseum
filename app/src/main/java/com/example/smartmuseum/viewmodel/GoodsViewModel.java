@@ -20,6 +20,8 @@ public class GoodsViewModel extends ViewModel {
 
     private MutableLiveData<List<Goods>> purchasedGoodsModelList;
 
+    private MutableLiveData<List<Goods>> classicaldGoodsModelList;
+
     private MutableLiveData<List<Goods>> discountGoodsModelList;
 
     public MutableLiveData<List<Goods>> getCommendGoodsModelList(HashMap map) {
@@ -38,6 +40,14 @@ public class GoodsViewModel extends ViewModel {
         return purchasedGoodsModelList;
     }
 
+    public MutableLiveData<List<Goods>> getClassicalGoodsModelList(HashMap map) {
+        if (classicaldGoodsModelList == null) {
+            classicaldGoodsModelList = new MutableLiveData<>();
+            loadClassicalGoodsModelList(map);
+        }
+        return classicaldGoodsModelList;
+    }
+
     public MutableLiveData<List<Goods>> getDiscountGoodsModelList(HashMap map) {
         if (discountGoodsModelList == null) {
             discountGoodsModelList = new MutableLiveData<>();
@@ -46,6 +56,26 @@ public class GoodsViewModel extends ViewModel {
         return discountGoodsModelList;
     }
 
+    public void loadClassicalGoodsModelList(HashMap map) {
+        Goods test1 = new Goods();
+        test1.setName("和田玉首饰");
+        test1.setIntroduction("龙凤呈祥项链");
+
+        Goods test2 = new Goods();
+        test2.setName("帝都创意");
+        test2.setIntroduction("鱼骨扇");
+
+        Goods test3 = new Goods();
+        test3.setName("创意陶瓷茶具");
+
+        List<Goods> list = new ArrayList<>();
+        list.add(test1);
+        list.add(test2);
+        list.add(test3);
+
+        classicaldGoodsModelList.setValue(list);
+
+    }
 
     public void loadCommendGoodsModelList(HashMap map){
         Goods test1 = new Goods();

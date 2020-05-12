@@ -138,7 +138,8 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/goods_market_classical_recyclerview"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="140dp"
                     android:background="@color/mainpage_goods_sell_background"
                     app:layout_constraintLeft_toRightOf="parent"
                     app:layout_constraintRight_toLeftOf="parent"
