@@ -39,6 +39,7 @@
     <string name="mainpage_goods_market_classical">经典展览文创产品</string>
     <string name="mainpage_goods_market_discount">限量热销</string>
     <string name="mainpage_goods_market_signin">你的打卡</string>
+    <string name="mainpage_goods_market_notification">6</string>
 
 
 </resources>

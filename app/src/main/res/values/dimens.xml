@@ -39,6 +39,17 @@
     <dimen name="goods_purchased_item_name_text">20sp</dimen>
     <dimen name="goods_purchased_item_status_text">13sp</dimen>
     <dimen name="goods_purchased_item_oldprice_text">18sp</dimen>
+    <dimen name="goods_market_location_text">15sp</dimen>
+    <dimen name="goods_market_notification_text">8sp</dimen>
+    <dimen name="goods_market_title_text">23sp</dimen>
+
+    <dimen name="goods_market_signin_name_text">16sp</dimen>
+    <dimen name="goods_market_signin_introduction_text">12sp</dimen>
+    <dimen name="goods_market_dicount_dicount_text">14sp</dimen>
+    <dimen name="goods_market_dicount_name_text">18sp</dimen>
+    <dimen name="goods_market_dicount_introduction_text">16sp</dimen>
+    <dimen name="goods_market_dicount_remainder_text">12sp</dimen>
+    <dimen name="goods_market_classical_name_text">18sp</dimen>
 
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>
