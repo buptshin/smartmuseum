@@ -4,6 +4,55 @@
     <color name="colorPrimaryDark">#FFFFFF</color>
     <color name="colorAccent">#FFFFFF</color>
 
+    <!--StartPage-->
+    <color name="startpage_one_order_tv">#FFFFFF</color>
+    <color name="startpage_one_recommend_tv">#FFFFFF</color>
+    <color name="startpage_one_details_tv">#FFFFFF</color>
+    <color name="startpage_one_index_tv">#2A2A2A</color>
+    <color name="startpage_two_order_tv">#FFFFFF</color>
+    <color name="startpage_two_recommend_tv">#FFFFFF</color>
+    <color name="startpage_two_details_tv">#FFFFFF</color>
+    <color name="startpage_two_index_tv">#2A2A2A</color>
+    <color name="startpage_three_order_tv">#210000</color>
+    <color name="startpage_three_recommend_tv">#210000</color>
+    <color name="startpage_three_details_tv">#000521</color>
+    <color name="startpage_three_index_tv">#FFFFFF</color>
+
+    <!--Login-->
+    <color name="login_to_register_tv">#FFFFFF</color>
+    <color name="login_welcome_tv">#FFFFFF</color>
+    <color name="login_lable_tv">#000000</color>
+    <color name="login_account_telephone_et">#8D92A3</color>
+    <color name="login_password_et">#8D92A3</color>
+    <color name="login_to_forgetpwd_tv">#8D92A3</color>
+    <color name="login_btn">#FFFFFF</color>
+
+    <!--Register-->
+    <color name="register_to_login_tv">#FFFFFF</color>
+    <color name="register_welcome_tv">#FFFFFF</color>
+    <color name="register_lable_tv">#000000</color>
+    <color name="register_account_telephone_et">#8D92A3</color>
+    <color name="register_password_et">#8D92A3</color>
+    <color name="register_btn">#FFFFFF</color>
+    <color name="register_next_step_tv">#842D29</color>
+    <color name="register_hint_tv">#000000</color>
+    <color name="register_step_count_tv">#8D92A3</color>
+    <color name="register_personal_info_tv">#000000</color>
+    <color name="register_nickname_with_name_with_gender_tv">#8D92A3</color>
+    <color name="register_nickname_with_name_et">#000521</color>
+    <color name="register_position_permissions_tv">#000000</color>
+    <color name="register_choose_permissions_tv">#8D92A3</color>
+    <color name="register_permission_checkbox">#210000</color>
+    <color name="register_input_telephone_tv">#97999F</color>
+    <color name="register_telephone_tv">#8D92A3</color>
+    <color name="register_area_code_tv">#000521</color>
+    <color name="register_telephone_et">#000521</color>
+    <color name="register_assure_telephone_hint_tv">#8D92A3 </color>
+    <color name="register_verify_code_et">#000000 </color>
+    <color name="reigster_assure_telephone_chronometer_tv">#FA7268</color>
+    <color name="register_assure_telephone_time_hint_tv">#8D92A3</color>
+    <color name="register_assure_telephone_resend_tv">#842D29</color>
+
     <!-- MainPage !-->
     <color name="mainpage_navigation_background">#FFFFFF</color>
     <color name="mainpage_navigation_selectoritem_primary_color_selected">#842D29</color>

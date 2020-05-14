@@ -1,6 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--StartPage-->
+    <dimen name="startpage_order_tv">20sp</dimen>
+    <dimen name="startpage_recommend_tv">36sp</dimen>
+    <dimen name="startpage_details_tv">24sp</dimen>
+    <dimen name="startpage_index_tv">14sp</dimen>
+
+    <!--Login-->
+    <dimen name="login_to_register_tv">20sp</dimen>
+    <dimen name="login_welcome_tv">40sp</dimen>
+    <dimen name="login_lable_tv">30sp</dimen>
+    <dimen name="login_account_telephone_et">20sp</dimen>
+    <dimen name="login_password_et">20sp</dimen>
+    <dimen name="login_to_forgetpwd_tv">18sp</dimen>
+    <dimen name="login_btn">18sp</dimen>
+
+    <!--Register-->
+    <dimen name="register_to_login_tv">20sp</dimen>
+    <dimen name="register_welcome_tv">40sp</dimen>
+    <dimen name="register_lable_tv">30sp</dimen>
+    <dimen name="register_account_telephone_et">20sp</dimen>
+    <dimen name="register_password_et">20sp</dimen>
+    <dimen name="register_btn">18sp</dimen>
+    <dimen name="register_next_step_tv">18sp</dimen>
+    <dimen name="register_hint_tv">36sp</dimen>
+    <dimen name="register_step_count_tv">16sp</dimen>
+    <dimen name="register_personal_info_tv">18sp</dimen>
+    <dimen name="register_nickname_with_name_with_gender_tv">16sp</dimen>
+    <dimen name="register_nickname_with_name_et">20sp</dimen>
+    <dimen name="register_position_permissions_tv">18sp</dimen>
+    <dimen name="register_choose_permissions_tv">16sp</dimen>
+    <dimen name="register_permission_checkbox">18sp</dimen>
+    <dimen name="register_input_telephone_tv">16sp</dimen>
+    <dimen name="register_telephone_tv">16sp</dimen>
+    <dimen name="register_area_code_tv">18sp</dimen>
+    <dimen name="register_telephone_et">18sp</dimen>
+    <dimen name="register_assure_telephone_hint_tv">16sp</dimen>
+    <dimen name="register_verify_code_et">30sp</dimen>
+    <dimen name="reigster_assure_telephone_chronometer_tv">16sp</dimen>
+    <dimen name="register_assure_telephone_time_hint_tv">16sp</dimen>
+    <dimen name="register_assure_telephone_resend_tv">16sp</dimen>
+
     <!-- MainPage !-->
     <dimen name="mainpage_activity_marginTop">50dp</dimen>
     <!-- Navigation !-->
