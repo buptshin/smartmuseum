@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -12,6 +13,7 @@ import com.example.smartmuseum.databinding.ActivityGoodsInfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Goods;
 import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.mainpage.MainActivity;
 import com.example.smartmuseum.viewmodel.GoodsViewModel;
 
 import java.util.HashMap;
@@ -25,7 +27,6 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_goods_info);
         this.bindData().bindView().bindEvent();
     }
 
@@ -54,6 +55,13 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        mBinding.goodsInfoAddCartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(GoodsInfoActivity.this, GoodsInfoDetailActivity.class);
+                startActivity(intent);
             }
         });
         return this;

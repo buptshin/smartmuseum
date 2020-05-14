@@ -32,6 +32,14 @@
 
     <color name="goods_info_card_background">#FFFFFF</color>
 
+    <color name="goods_info_detail_text_background">#F4F4F6</color>
+    <color name="goods_info_detail_name_text_color">#210000</color>
+    <color name="goods_info_detail_introduction_color">#A38D8D</color>
+
+    <color name="goods_info_detail_button_clickable">#842D29</color>
+    <color name="goods_info_detail_button_unclickable">#FFFFFF</color>
+    <color name="goods_info_detail_button_unclickable_text">#000521</color>
+
 
 
     <!-- Friend !-->

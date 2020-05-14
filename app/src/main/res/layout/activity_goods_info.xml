@@ -106,6 +106,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"/>
 
             <Button
+                android:id="@+id/goods_info_add_cart_button"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/goods_info_button_height"
                 android:layout_marginTop="@dimen/goods_info_select_type_margin_top"
