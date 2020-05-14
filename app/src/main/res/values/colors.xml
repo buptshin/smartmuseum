@@ -91,21 +91,6 @@
     <color name="goods_info_detail_button_unclickable">#FFFFFF</color>
     <color name="goods_info_detail_button_unclickable_text">#000521</color>
 
-
-    <color name="mainpage_goods_sell_background">#FFFFFF</color>
-    <color name="mainpage_goods_sell_commend_black">#000521</color>
-    <color name="mainpage_goods_sell_commend_brown">#842D29</color>
-    <color name="mainpage_goods_sell_commend_gray">#8D92A3</color>
-    <color name="mainpage_goods_text_white">#FFFFFF</color>
-    <color name="mainpage_goods_purchased_gray">#6D7278</color>
-    <color name="mainpage_goods_purchased_card_background_border">#E1E5F1</color>
-
-    <color name="goods_market_search_background_gray">#F5F6F9</color>
-    <color name="goods_market_text_black">#000000</color>
-
-
-
-
     <!-- Friend !-->
     <color name="friend_my_firends_main_box">#FFFFFF</color>
     <color name="friend_my_firends_main_box_stroke">#ECEBED</color>
