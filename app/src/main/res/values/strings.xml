@@ -74,4 +74,12 @@
     <string name="friend_choose_friends_item_button">添加</string>
     <string name="friend_choose_friends_item_button_already">已添加</string>
     <string name="friend_choose_friends_start_button">立即开始</string>
+
+    <!-- Goods !-->
+    <string name="mainpage_goods_price_sign">¥</string>
+    <string name="mainpage_goods_commend_now_location_show">您现在的位置是</string>
+    <string name="mainpage_goods_commend_now_location">北1展厅</string>
+    <string name="mainpage_goods_commend_buypeople_num">%d人曾购买</string>
+    <string name="mainpage_goods_commend_distribution">定位配送</string>
+    <string name="mainpage_goods_purchased_num_sign">x</string>
 </resources>
