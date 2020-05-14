@@ -1,0 +1,81 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="goodsCollectionModel"
+            type="com.example.smartmuseum.model.GoodsCollectionModel"/>
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="230dp"
+        android:layout_height="240dp"
+        android:background="@drawable/goods_market_signin_card_background"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/goods_market_signin_collcetion_img"
+            android:layout_width="225dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="25dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/goods_market_signin_collection_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_collcetion_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginStart="30dp"
+            android:text="@{goodsCollectionModel.collection.name}"
+            android:textSize="@dimen/goods_market_signin_name_text"
+            android:textColor="@color/goods_market_text_black"
+            tools:text="匽侯盂"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_collcetion_dynasty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="40dp"
+            android:text="@{goodsCollectionModel.collection.dynasty}"
+            android:textSize="16sp"
+            android:textColor="@color/goods_market_text_brown"
+            tools:text="@dimen/goods_market_signin_name_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_collcetion_exhibiton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:text="@{goodsCollectionModel.collection.exhibition}"
+            android:textSize="@dimen/goods_market_signin_introduction_text"
+            android:textColor="@color/goods_market_text_black"
+            tools:text="国家博物馆精品文物展"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_signin_collcetion_name"/>
+
+        <TextView
+            android:id="@+id/goods_market_signin_collcetion_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:text="@{goodsCollectionModel.collection.introduction}"
+            android:textSize="@dimen/goods_market_signin_introduction_text"
+            android:textColor="@color/goods_market_text_gray"
+            tools:text="推定燕国始封之地重要依据"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_signin_collcetion_exhibiton"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

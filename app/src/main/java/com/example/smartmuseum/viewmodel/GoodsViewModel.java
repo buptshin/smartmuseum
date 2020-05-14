@@ -20,6 +20,13 @@ public class GoodsViewModel extends ViewModel {
 
     private MutableLiveData<List<Goods>> purchasedGoodsModelList;
 
+    private MutableLiveData<List<Goods>> classicaldGoodsModelList;
+
+    private MutableLiveData<List<Goods>> discountGoodsModelList;
+
+    private MutableLiveData<Goods> goodsModelInfo;
+
+    //获取推荐商品
     public MutableLiveData<List<Goods>> getCommendGoodsModelList(HashMap map) {
         if (commendGoodsModelList == null) {
             commendGoodsModelList = new MutableLiveData<>();
@@ -28,12 +35,61 @@ public class GoodsViewModel extends ViewModel {
         return commendGoodsModelList;
     }
 
+    //获取已购买商品
     public MutableLiveData<List<Goods>> getPurchasedGoodsModelList(HashMap map) {
         if (purchasedGoodsModelList == null) {
             purchasedGoodsModelList = new MutableLiveData<>();
             loadPurchasedGoodsModelList(map);
         }
         return purchasedGoodsModelList;
+    }
+
+    //获取经典商品
+    public MutableLiveData<List<Goods>> getClassicalGoodsModelList(HashMap map) {
+        if (classicaldGoodsModelList == null) {
+            classicaldGoodsModelList = new MutableLiveData<>();
+            loadClassicalGoodsModelList(map);
+        }
+        return classicaldGoodsModelList;
+    }
+
+    //获取折扣商品
+    public MutableLiveData<List<Goods>> getDiscountGoodsModelList(HashMap map) {
+        if (discountGoodsModelList == null) {
+            discountGoodsModelList = new MutableLiveData<>();
+            loadDiscountGoodsModelList(map);
+        }
+        return discountGoodsModelList;
+    }
+
+    //获取商品信息
+    public MutableLiveData<Goods> getGoodsModelInfo(HashMap map) {
+        if (goodsModelInfo == null) {
+            goodsModelInfo = new MutableLiveData<>();
+            loadGoodsModelInfo(map);
+        }
+        return goodsModelInfo;
+    }
+
+    public void loadClassicalGoodsModelList(HashMap map) {
+        Goods test1 = new Goods();
+        test1.setName("和田玉首饰");
+        test1.setIntroduction("龙凤呈祥项链");
+
+        Goods test2 = new Goods();
+        test2.setName("帝都创意");
+        test2.setIntroduction("鱼骨扇");
+
+        Goods test3 = new Goods();
+        test3.setName("创意陶瓷茶具");
+
+        List<Goods> list = new ArrayList<>();
+        list.add(test1);
+        list.add(test2);
+        list.add(test3);
+
+        classicaldGoodsModelList.setValue(list);
+
     }
 
     public void loadCommendGoodsModelList(HashMap map){
@@ -109,4 +165,39 @@ public class GoodsViewModel extends ViewModel {
 
         purchasedGoodsModelList.setValue(list);
     }
+
+    public void loadDiscountGoodsModelList(HashMap map){
+        Goods test1 = new Goods();
+        test1.setName("杏林春燕创意首饰");
+        test1.setIntroduction("粉彩吉林春燕纹瓶");
+        test1.setPrice(261);
+        test1.setDiscount(50);
+        test1.setRemainderNum(10);
+
+
+        Goods test2 = new Goods();
+        test2.setName("大盂鼎马克杯");
+        test2.setIntroduction("大盂鼎");
+        test2.setPrice(109);
+        test2.setDiscount(40);
+        test2.setRemainderNum(42);
+
+        List<Goods> list = new ArrayList<>();
+        list.add(test1);
+        list.add(test2);
+
+        discountGoodsModelList.setValue(list);
+    }
+
+    public void loadGoodsModelInfo(HashMap map){
+        Goods test1 = new Goods();
+        test1.setName("大观园纸雕灯");
+        test1.setPrice(598);
+        test1.setWeight("625g");
+        test1.setSpecifications("36cm*26cm*6cm");
+
+        goodsModelInfo.setValue(test1);
+    }
+
+
 }

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="goods"
+            type="com.example.smartmuseum.model.Goods" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/goods_info_goods_background">
+
+        <ImageView
+            android:id="@+id/goods_info_return_img"
+            android:layout_width="@dimen/goods_info_return_size"
+            android:layout_height="@dimen/goods_info_return_size"
+            android:src="@mipmap/goods_info_return_button_white"
+            android:layout_marginTop="@dimen/goods_info_margin_top"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_info_name"
+            android:layout_width="@dimen/goods_info_name_width"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/goods_info_margin_top"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            android:text="@{goods.name}"
+            android:textSize="@dimen/goods_info_goods_name_text"
+            android:textColor="@color/goods_info_card_background"
+            app:layout_constraintTop_toBottomOf="@+id/goods_info_return_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="大观园纸雕灯"/>
+
+        <TextView
+            android:id="@+id/goods_info_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/goods_info_margin_top"
+            android:layout_marginEnd="@dimen/goods_info_margin_start"
+            android:text="@{@string/mainpage_goods_price_sign + Integer.toString(goods.price)}"
+            android:textSize="@dimen/goods_info_goods_price_text"
+            android:textColor="@color/goods_info_card_background"
+            app:layout_constraintTop_toBottomOf="@+id/goods_info_return_img"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="¥598"/>
+
+
+        <TextView
+            android:id="@+id/goods_info_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/goods_info_margin_start"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            android:text="@{goods.weight}"
+            android:textSize="@dimen/goods_info_goods_weight_text"
+            android:textColor="@color/goods_info_card_background"
+            app:layout_constraintTop_toBottomOf="@+id/goods_info_name"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="625g"/>
+
+        <TextView
+            android:id="@+id/goods_info_specifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/goods_info_specifications_margin_top"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            android:text="@{goods.specifications}"
+            android:textSize="@dimen/goods_info_goods_weight_text"
+            android:textColor="@color/goods_info_card_background"
+            app:layout_constraintTop_toBottomOf="@+id/goods_info_weight"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="36cm*26cm*6cm"/>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/goods_info_popupwindow_height"
+            android:background="@drawable/goods_info_card_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+            <TextView
+                android:id="@+id/goods_info_select_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/goods_info_margin_start"
+                android:layout_marginStart="@dimen/goods_info_margin_start"
+                android:text="@string/goods_info_select_type"
+                android:textSize="@dimen/goods_info_select_type_text"
+                android:textStyle="bold"
+                android:textColor="@color/goods_market_text_brown"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:id="@+id/goods_info_select_type_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/goods_info_select_type_margin_top"
+                android:layout_marginStart="@dimen/goods_info_margin_start"
+                android:src="@drawable/goods_info_goods_type"
+                app:layout_constraintTop_toBottomOf="@+id/goods_info_select_type_text"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <Button
+                android:id="@+id/goods_info_add_cart_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/goods_info_button_height"
+                android:layout_marginTop="@dimen/goods_info_select_type_margin_top"
+                android:layout_marginStart="@dimen/goods_info_button_margin_start"
+                android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+                android:text="@string/goods_info_add_cart"
+                android:textSize="@dimen/goods_info_button_text"
+                android:textColor="@color/goods_info_card_background"
+                android:background="@drawable/goods_purchased_status_button"
+                app:layout_constraintTop_toBottomOf="@+id/goods_info_select_type_img"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
