@@ -45,4 +45,19 @@
     <string name="goods_info_add_cart">加入购物车</string>
 
 
+    <string name="explore_text">探索</string>
+    <string name="exhibition_text">展览</string>
+    <string name="activity_text">活动</string>
+    <string name="recomendedroute_text">推荐路线</string>
+    <string name="bookvisit_text">预约参观</string>
+
+    <string name="family_activity_text">家庭活动</string>
+    <string name="family_activity">公益活动</string>
+    <string name="charitiable_number">5项相关计划</string>
+    <string name="family_activity_number">22项相关计划</string>
+    <string name="text_you_current_location">你现在的位置是</string>
+    <string name="beiyizhanting">北一展厅</string>
+    <string name="nearby_text">附近</string>
+    <string name="return_road_detail_rolling">回归之路-详细-滚动</string>
+    <string name="background1">white1</string>
 </resources>
