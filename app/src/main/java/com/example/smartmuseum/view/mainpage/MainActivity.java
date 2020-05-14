@@ -18,6 +18,7 @@ import com.example.smartmuseum.view.explore.ExploreActivityFragment;
 import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
 import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
+import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;

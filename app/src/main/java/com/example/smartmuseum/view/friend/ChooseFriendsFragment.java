@@ -20,6 +20,8 @@ import com.example.smartmuseum.databinding.FragmentChooseFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.viewmodel.AccompanyViewModel;
 
+import java.util.HashMap;
+
 public class ChooseFriendsFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentChooseFriendsBinding fragmentChooseFriendBinding;
@@ -47,7 +49,8 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
     @Override
     public ChooseFriendsFragment bindView() {
         fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setAdapter(new FriendFragmentAccompanyAdapter(accompanyViewModel.getAccompanyList().getValue()));
+        HashMap hashMap=new HashMap();
+        fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setAdapter(new FriendFragmentAccompanyAdapter(accompanyViewModel.getAccompanyList(hashMap).getValue()));
         return this;
     }
 

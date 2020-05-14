@@ -25,7 +25,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
-            tools:srcCompat="@mipmap/friend_choose_friends_icon1" />
+            tools:srcCompat="@drawable/friend_choose_friends_icon1" />
 
         <TextView
             android:id="@+id/friend_choose_friends_item_name_tv"
@@ -44,7 +44,7 @@
             android:id="@+id/friend_choose_friends_item_accompany_count_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{@string/firend_choose_friend_item_accompany_count(accompany.accompanyCount)}"
+            android:text="@{@string/firend_choose_friends_item_accompany_count(accompany.accompanyCount)}"
             android:textColor="@color/friend_choose_friends_item_accompany_count_text"
             android:textSize="@dimen/friend_choose_friends_item_accompany_count"
             app:layout_constraintBottom_toBottomOf="@+id/friend_choose_friends_item_img"
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:text="@{accompany.inMuseum?@string/friend_choose_friend_item_inMuseum:@string/friend_choose_friend_item_not_inMuseum}"
+            android:text="@{accompany.inMuseum?@string/friend_choose_friends_item_inMuseum:@string/friend_choose_friends_item_not_inMuseum}"
             android:textColor="@color/friend_choose_friends_item_in_museum_text"
             android:textSize="@dimen/friend_choose_friends_item_in_museum"
             app:layout_constraintStart_toStartOf="@+id/friend_choose_friends_item_name_tv"
@@ -68,7 +68,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:background="@{accompany.inMuseum?(accompany.added?@drawable/friend_item_button_already:@drawable/friend_item_button_normal):@drawable/friend_item_button_offline}"
-            android:text="@{accompany.added?@string/friend_choose_friend_item_button_already:@string/friend_choose_friend_item_button}"
+            android:text="@{accompany.added?@string/friend_choose_friends_item_button_already:@string/friend_choose_friends_item_button}"
             android:textColor="@{accompany.added?@color/friend_choose_friends_item_button_added_text:@color/friend_choose_friends_item_button_unadd_text}"
             android:textSize="@dimen/friend_choose_friends_button_text"
             android:textStyle="bold"

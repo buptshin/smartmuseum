@@ -51,7 +51,7 @@
             android:id="@+id/friend_my_firends_close_button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@mipmap/firend_myfriend_close_black"
+            android:src="@mipmap/friend_myfriend_close_black"
             app:layout_constraintBottom_toBottomOf="@id/friend_my_firends_main_view"
             app:layout_constraintEnd_toEndOf="@id/friend_my_firends_main_view"
             app:layout_constraintHeight_default="percent"

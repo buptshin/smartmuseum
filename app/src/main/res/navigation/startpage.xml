@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/startpage"
+    app:startDestination="@id/startPageOneFragment">
+
+    <fragment
+        android:id="@+id/startPageOneFragment"
+        android:name="com.example.smartmuseum.view.startpage.StartPageOneFragment"
+        android:label="fragment_start_page_one"
+        tools:layout="@layout/fragment_start_page_one" />
+    <fragment
+        android:id="@+id/startPageTwoFragment"
+        android:name="com.example.smartmuseum.view.startpage.StartPageTwoFragment"
+        android:label="fragment_start_page_two"
+        tools:layout="@layout/fragment_start_page_two" />
+    <fragment
+        android:id="@+id/startPageThreeFragment"
+        android:name="com.example.smartmuseum.view.startpage.StartPageThreeFragment"
+        android:label="fragment_start_page_three"
+        tools:layout="@layout/fragment_start_page_three" />
+</navigation>

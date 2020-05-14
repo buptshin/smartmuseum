@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".view.register.RegisterStepFourFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.94" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <ImageView
+        android:id="@+id/register_back_img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@mipmap/register_back"
+        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintEnd_toStartOf="@+id/guideline27"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.02"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toTopOf="@+id/guideline30"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.025" />
+
+    <TextView
+        android:id="@+id/register_next_step_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_next_step_tv"
+        android:textColor="@color/register_next_step_tv"
+        android:textSize="@dimen/register_next_step_tv"
+        app:layout_constraintBottom_toTopOf="@+id/guideline29"
+        app:layout_constraintEnd_toStartOf="@+id/guideline27"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toTopOf="@+id/guideline30"
+        tools:text="下一步" />
+
+    <TextView
+        android:id="@+id/register_hint_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_hint_three_tv"
+        android:textColor="@color/register_hint_tv"
+        android:textSize="@dimen/register_hint_tv"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline31"
+        app:layout_constraintEnd_toStartOf="@+id/guideline27"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toTopOf="@+id/guideline29"
+        tools:text="确认手机号" />
+
+    <TextView
+        android:id="@+id/register_step_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_step_three_count_tv"
+        android:textColor="@color/register_step_count_tv"
+        android:textSize="@dimen/register_step_count_tv"
+        app:layout_constraintBottom_toTopOf="@+id/guideline31"
+        app:layout_constraintEnd_toStartOf="@+id/guideline27"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toTopOf="@+id/guideline29"
+        tools:text="第3/3步" />
+
+    <TextView
+        android:id="@+id/register_input_telephone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_input_telephone_tv"
+        android:textColor="@color/register_input_telephone_tv"
+        android:textSize="@dimen/register_input_telephone_tv"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toTopOf="@+id/guideline31"
+        tools:text="输入您的手机号以确认" />
+
+    <TextView
+        android:id="@+id/register_telephone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_telephone_tv"
+        android:textColor="@color/register_telephone_tv"
+        android:textSize="@dimen/register_telephone_tv"
+        app:layout_constraintBottom_toTopOf="@+id/register_area_code_tv"
+        app:layout_constraintStart_toStartOf="@+id/register_area_code_tv"
+        app:layout_constraintTop_toTopOf="@+id/guideline38"
+        tools:text="电话号码" />
+
+    <EditText
+        android:id="@+id/register_telephone_et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:background="@null"
+        android:ems="10"
+        android:inputType="phone"
+        android:textColor="@color/register_telephone_et"
+        android:textSize="@dimen/register_telephone_et"
+        app:layout_constraintBottom_toBottomOf="@+id/register_area_code_tv"
+        app:layout_constraintStart_toEndOf="@+id/register_area_code_tv"
+        app:layout_constraintTop_toTopOf="@+id/register_area_code_tv"
+        tools:text="13125139796" />
+
+    <TextView
+        android:id="@+id/register_area_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_area_code_tv"
+        android:textColor="@color/register_area_code_tv"
+        android:textSize="@dimen/register_area_code_tv"
+        app:layout_constraintBottom_toTopOf="@+id/view18"
+        app:layout_constraintStart_toStartOf="@+id/view18"
+        app:layout_constraintTop_toBottomOf="@+id/register_telephone_tv"
+        tools:text="+86" />
+
+    <View
+        android:id="@+id/view18"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#F1F3F8"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline27"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toBottomOf="@+id/register_area_code_tv" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
