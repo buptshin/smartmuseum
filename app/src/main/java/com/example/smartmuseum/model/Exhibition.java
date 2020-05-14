@@ -25,31 +25,63 @@ public class Exhibition {
         return exhibition_name;
     }
 
+    public void setExhibition_name(String name) {
+        exhibition_name = name;
+    }
+
     public int getExhibition_id() {
         return exhibition_id;
+    }
+
+    public void setExhibition_id(int id) {
+        exhibition_id = id;
     }
 
     public String getExhibition_state() {
         return exhibition_state;
     }
 
+    public void setExhibition_state(String state) {
+        exhibition_state = state;
+    }
+
     public int getExhibition_passenger_flow() {
         return exhibition_passenger_flow;
+    }
+
+    public void setExhibition_passenger_flow(int flow) {
+        exhibition_passenger_flow = flow;
     }
 
     public int getExhibition_like() {
         return exhibition_like;
     }
 
+    public void setExhibition_like(int like) {
+        exhibition_like = like;
+    }
+
     public String getExhibition_hall() {
         return exhibition_hall;
+    }
+
+    public void setExhibition_hall(String hall) {
+        exhibition_hall = hall;
     }
 
     public double getExhibition_time() {
         return exhibition_time;
     }
 
+    public void setExhibition_time(double time) {
+        exhibition_time = time;
+    }
+
     public int getExhibition_distance() {
         return exhibition_distance;
+    }
+
+    public void setExhibition_distance(int distance) {
+        exhibition_distance = distance;
     }
 }

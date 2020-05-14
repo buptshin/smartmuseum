@@ -1,8 +1,11 @@
 package com.example.smartmuseum.adapter;
 
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,12 +16,17 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ExhibitionItemBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
+import com.example.smartmuseum.view.explore.ExhibitionContentActivity;
+import com.example.smartmuseum.view.mainpage.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 /*
-展览模块RecyclerView Adapter
+ *lzg
+ *展览模块RecyclerView Adapter
  */
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
@@ -87,11 +95,9 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                 .inflate(R.layout.exhibition_item, parent, false);
         final ViewHolder holder = new ViewHolder(view);
         // 设置点击事件
-        holder.exhibition_item_view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //TO DO：recyclerview点击事件
-            }
+        holder.exhibition_item_view.setOnClickListener(view1 -> {
+            Intent intent = new Intent(parent.getContext(), ExhibitionContentActivity.class);
+            
         });
         return holder;
     }
@@ -112,7 +118,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         holder.rvBinding.exhibitionHall.setText(exhibition.getExhibition_hall());
         holder.rvBinding.exhibitionTime.setText("平均停留时间为：" + exhibition.getExhibition_time() + "小时");
         holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() + " 米");
-
 
 //        holder.exhibition_imageView.setImageResource(exhibition.getExhibition_id());
 //        holder.exhibition_textView.setText(exhibition.getExhibition_name());

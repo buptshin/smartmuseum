@@ -10,7 +10,7 @@ public class Goods {
     @SerializedName("placeNamessssss")
     private String placeName;
 
-    //介绍
+    //介jie绍
     private String introduce;
 
     //购买人数

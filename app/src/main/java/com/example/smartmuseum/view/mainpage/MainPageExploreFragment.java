@@ -1,6 +1,8 @@
 package com.example.smartmuseum.view.mainpage;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.smartmuseum.R;
@@ -16,6 +20,8 @@ import com.example.smartmuseum.adapter.MyRecyclerViewAdapter;
 import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
+import com.example.smartmuseum.view.explore.ExhibitionContentActivity;
+import com.example.smartmuseum.view.explore.ExploreActivityFragment;
 
 import java.util.ArrayList;
 
@@ -24,6 +30,10 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
     private FragmentMainpageExploreBinding mBinding;
 
     private ArrayList<Exhibition> exhibition_list = new ArrayList<>();  // 展览对象类
+
+    // 创建fragment管理器用于跳转探索页面内的fragments
+    private FragmentManager manager;
+    private FragmentTransaction fragmentTransaction;
 
 
 
@@ -41,17 +51,9 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
                 false);
         View v = mBinding.getRoot();
 
-        initItemList(exhibition_list);
-        //创建布局管理器，垂直设置LinearLayoutManager.VERTICAL，水平设置LinearLayoutManager.HORIZONTAL
-        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        //创建适配器，将数据传递给适配器
-        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(exhibition_list);
-        //设置布局管理器
-        mBinding.exhibitionRvList.setLayoutManager(mLinearLayoutManager);
-//        //设置适配器adapter
-//        mRecycleView.setAdapter(mAdapter);
-        mBinding.exhibitionRvList.setAdapter(adapter);
 
+        // 切换探索页面内四个功能Fragment相互切换
+//        mBinding.activity.setOnClickListener(view -> );
         this.bindData().bindView().bindEvent();
         return v;
     }
@@ -72,11 +74,22 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
 
     @Override
     public MainPageExploreFragment bindView() {
+        // recyclerView创建
+        initItemList(exhibition_list);
+        //创建布局管理器，垂直设置LinearLayoutManager.VERTICAL，水平设置LinearLayoutManager.HORIZONTAL
+        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false);
+        //创建适配器，将数据传递给适配器
+        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(exhibition_list);
+        //设置布局管理器
+        mBinding.exhibitionRvList.setLayoutManager(mLinearLayoutManager);
+//        //设置适配器adapter
+//        mRecycleView.setAdapter(mAdapter);
+        mBinding.exhibitionRvList.setAdapter(adapter);
         return this;
     }
 
     @Override
     public MainPageExploreFragment bindEvent() {
-        return null;
+        return this;
     }
 }

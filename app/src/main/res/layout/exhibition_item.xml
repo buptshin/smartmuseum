@@ -19,21 +19,23 @@
 
         <ImageView
             android:id="@+id/exhibition_image"
-            android:layout_width="396dp"
-            android:layout_height="429dp"
+            android:layout_width="368dp"
+            android:layout_height="439dp"
+            android:background="#F9F9F9"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.466"
+            app:layout_constraintHorizontal_bias="0.627"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.636"
             app:srcCompat="?android:attr/textCursorDrawable" />
 
         <TextView
             android:id="@+id/exhibition_name"
             android:layout_width="189dp"
             android:layout_height="43dp"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
             android:textColor="#FFFFFF"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_image"
@@ -42,20 +44,20 @@
         <TextView
             android:id="@+id/exhibition_state"
             android:layout_width="189dp"
-            android:layout_height="34dp"
-            android:text="TextView"
+            android:layout_height="30dp"
+            android:layout_marginTop="80dp"
+            android:gravity="center_vertical"
             android:textColor="#FFFFFF"
             android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_name"
-            app:layout_constraintTop_toBottomOf="@+id/exhibition_name" />
+            app:layout_constraintTop_toTopOf="@+id/exhibition_image" />
 
         <TextView
             android:id="@+id/exhibition_passenger_flow"
             android:layout_width="189dp"
-            android:layout_height="37dp"
-            android:text="TextView"
+            android:layout_height="30dp"
             android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/exhibition_state"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/exhibition_image"
@@ -63,58 +65,62 @@
 
         <ImageView
             android:id="@+id/exhibition_like"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_marginTop="28dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="40dp"
             android:layout_marginEnd="36dp"
             android:background="#00000000"
             app:layout_constraintEnd_toEndOf="@+id/exhibition_image"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.716"
             app:layout_constraintStart_toEndOf="@+id/exhibition_name"
             app:layout_constraintTop_toTopOf="@+id/exhibition_image"
             app:srcCompat="@mipmap/mainpage_exhibition_like_not_selected" />
 
         <ImageView
             android:id="@+id/backgroundpicture"
-            android:layout_width="281dp"
-            android:layout_height="99dp"
-            android:layout_marginBottom="16dp"
+            android:layout_width="213dp"
+            android:layout_height="81dp"
+            android:layout_marginBottom="20dp"
+            android:background="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/exhibition_image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="?attr/actionModeBackground" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/exhibition_hall"
-            android:layout_width="188dp"
-            android:layout_height="36dp"
+            android:layout_width="108dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
             android:text="TextView"
             android:textColor="#111111"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/backgroundpicture"
             app:layout_constraintTop_toTopOf="@+id/backgroundpicture" />
 
         <TextView
             android:id="@+id/exhibition_time"
-            android:layout_width="188dp"
-            android:layout_height="36dp"
+            android:layout_width="151dp"
+            android:layout_height="22dp"
             android:text="TextView"
             android:textColor="#111111"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backgroundpicture"
             app:layout_constraintStart_toStartOf="@+id/backgroundpicture"
-            app:layout_constraintTop_toBottomOf="@+id/exhibition_hall" />
+            app:layout_constraintTop_toBottomOf="@+id/exhibition_hall"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/exhibition_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
             android:text="TextView"
             android:textColor="#842d29"
-            android:textSize="24sp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/backgroundpicture"
             app:layout_constraintEnd_toEndOf="@+id/backgroundpicture"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/exhibition_time"
-            app:layout_constraintTop_toTopOf="@+id/backgroundpicture" />
+            app:layout_constraintTop_toTopOf="@+id/backgroundpicture"
+            app:layout_constraintVertical_bias="0.444" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

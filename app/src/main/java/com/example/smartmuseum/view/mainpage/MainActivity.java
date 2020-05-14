@@ -14,6 +14,9 @@ import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.ActivityMainBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.explore.ExploreActivityFragment;
+import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
+import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
