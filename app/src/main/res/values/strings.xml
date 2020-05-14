@@ -41,5 +41,8 @@
     <string name="mainpage_goods_market_signin">你的打卡</string>
     <string name="mainpage_goods_market_notification">6</string>
 
+    <string name="goods_info_select_type">选择型号</string>
+    <string name="goods_info_add_cart">加入购物车</string>
+
 
 </resources>

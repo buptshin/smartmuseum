@@ -1,9 +1,11 @@
 package com.example.smartmuseum.adapter;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.GoodsMarketClassicalItemBinding;
 import com.example.smartmuseum.model.Goods;
+import com.example.smartmuseum.view.goods.GoodsInfoActivity;
+import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
+import com.example.smartmuseum.view.mainpage.MainActivity;
 
 import java.util.List;
 
@@ -38,7 +43,7 @@ public class GoodsMarketClassicalAdapter extends RecyclerView.Adapter<GoodsMarke
         holder.getBinding().setGoods(goods);
         Resources res = holder.getBinding().getRoot().getResources();
         int resourceFlag = position % 3;
-        Bitmap backgroundBmp, goodsImgBmp;
+        Bitmap goodsImgBmp;
         if (resourceFlag == 0) {
             goodsImgBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_classical_goods_1);
             holder.getBinding().goodsMarketClassicalGoodsImage.setImageBitmap(goodsImgBmp);
@@ -52,7 +57,17 @@ public class GoodsMarketClassicalAdapter extends RecyclerView.Adapter<GoodsMarke
             holder.getBinding().goodsMarketClassicalGoodsImage.setImageBitmap(goodsImgBmp);
             holder.getBinding().goodsMarketClassicalBackgroundImg.setImageResource(R.drawable.goods_market_classical_card_background_3);
         }
+
+
+        holder.getBinding().goodsMarketClassicalBackgroundImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.getBinding().getRoot().getContext(), GoodsInfoActivity.class);
+                holder.getBinding().getRoot().getContext().startActivity(intent);
+            }
+        });
     }
+
 
     @Override
     public int getItemCount() {

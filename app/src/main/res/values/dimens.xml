@@ -29,6 +29,16 @@
     <dimen name="goods_purchased_item_button_height">30dp</dimen>
     <dimen name="goods_purchased_item_margin_2">30dp</dimen>
     <dimen name="goods_purchased_item_name_text_width">130dp</dimen>
+    
+    <dimen name="goods_info_return_size">20dp</dimen>
+    <dimen name="goods_info_margin_start">20dp</dimen>
+    <dimen name="goods_info_margin_top">45dp</dimen>
+    <dimen name="goods_info_name_width">150dp</dimen>
+    <dimen name="goods_info_specifications_margin_top">5dp</dimen>
+    <dimen name="goods_info_popupwindow_height">290dp</dimen>
+    <dimen name="goods_info_select_type_margin_top">40dp</dimen>
+    <dimen name="goods_info_button_margin_start">30dp</dimen>
+    <dimen name="goods_info_button_height">55dp</dimen>
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
@@ -50,6 +60,12 @@
     <dimen name="goods_market_dicount_introduction_text">16sp</dimen>
     <dimen name="goods_market_dicount_remainder_text">12sp</dimen>
     <dimen name="goods_market_classical_name_text">18sp</dimen>
+
+    <dimen name="goods_info_goods_name_text">50sp</dimen>
+    <dimen name="goods_info_goods_price_text">40sp</dimen>
+    <dimen name="goods_info_goods_weight_text">20sp</dimen>
+    <dimen name="goods_info_select_type_text">18sp</dimen>
+    <dimen name="goods_info_button_text">20sp</dimen>
 
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>

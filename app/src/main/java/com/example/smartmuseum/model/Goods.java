@@ -41,6 +41,12 @@ public class Goods {
     //优点
     private String advantage;
 
+    //重量
+    private String weight;
+
+    //产品规格
+    private String specifications;
+
     public String getName() {
         return name;
     }
@@ -135,5 +141,21 @@ public class Goods {
 
     public void setAdvantage(String advantage) {
         this.advantage = advantage;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
+    }
+
+    public String getSpecifications() {
+        return specifications;
+    }
+
+    public void setSpecifications(String specifications) {
+        this.specifications = specifications;
     }
 }
