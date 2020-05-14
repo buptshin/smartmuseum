@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register"
+    app:startDestination="@id/registerStepOneFragment">
+
+    <fragment
+        android:id="@+id/registerStepOneFragment"
+        android:name="com.example.smartmuseum.view.register.RegisterStepOneFragment"
+        android:label="fragment_register_step_one"
+        tools:layout="@layout/fragment_register_step_one" >
+        <action
+            android:id="@+id/action_registerStepOneFragment_to_registerStepTwoFragment"
+            app:destination="@id/registerStepTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerStepTwoFragment"
+        android:name="com.example.smartmuseum.view.register.RegisterStepTwoFragment"
+        android:label="fragment_register_step_two"
+        tools:layout="@layout/fragment_register_step_two" >
+        <action
+            android:id="@+id/action_registerStepTwoFragment_to_registerStepThreeFragment"
+            app:destination="@id/registerStepThreeFragment" />
+        <action
+            android:id="@+id/action_registerStepTwoFragment_to_registerStepOneFragment"
+            app:destination="@id/registerStepOneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerStepThreeFragment"
+        android:name="com.example.smartmuseum.view.register.RegisterStepThreeFragment"
+        android:label="fragment_register_step_three"
+        tools:layout="@layout/fragment_register_step_three" >
+        <action
+            android:id="@+id/action_registerStepThreeFragment_to_registerStepFourFragment"
+            app:destination="@id/registerStepFourFragment" />
+        <action
+            android:id="@+id/action_registerStepThreeFragment_to_registerStepTwoFragment"
+            app:destination="@id/registerStepTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerStepFourFragment"
+        android:name="com.example.smartmuseum.view.register.RegisterStepFourFragment"
+        android:label="fragment_register_step_four"
+        tools:layout="@layout/fragment_register_step_four" >
+        <action
+            android:id="@+id/action_registerStepFourFragment_to_registerStepFiveFragment"
+            app:destination="@id/registerStepFiveFragment" />
+        <action
+            android:id="@+id/action_registerStepFourFragment_to_registerStepThreeFragment"
+            app:destination="@id/registerStepThreeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerStepFiveFragment"
+        android:name="com.example.smartmuseum.view.register.RegisterStepFiveFragment"
+        android:label="fragment_register_step_five"
+        tools:layout="@layout/fragment_register_step_five" >
+        <action
+            android:id="@+id/action_registerStepFiveFragment_to_registerStepFourFragment"
+            app:destination="@id/registerStepFourFragment" />
+    </fragment>
+</navigation>
