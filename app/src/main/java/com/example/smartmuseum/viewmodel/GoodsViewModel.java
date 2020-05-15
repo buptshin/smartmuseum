@@ -29,6 +29,8 @@ public class GoodsViewModel extends ViewModel {
 
     private MutableLiveData<Goods> goodsModelInfoDetail;
 
+    private MutableLiveData<List<Goods>> buyGoodsModelList;
+
     //获取推荐商品
     public MutableLiveData<List<Goods>> getCommendGoodsModelList(HashMap map) {
         if (commendGoodsModelList == null) {
@@ -81,6 +83,15 @@ public class GoodsViewModel extends ViewModel {
             loadGoodsInfoDetailInfo(map);
         }
         return goodsModelInfoDetail;
+    }
+
+    //获取已购买商品信息(付款页面)
+    public MutableLiveData<List<Goods>> getbuyGoodsModelList(HashMap map) {
+        if (buyGoodsModelList == null) {
+            buyGoodsModelList = new MutableLiveData<>();
+            loadbuyGoodsModelList(map);
+        }
+        return buyGoodsModelList;
     }
 
     public void loadClassicalGoodsModelList(HashMap map) {
@@ -241,6 +252,33 @@ public class GoodsViewModel extends ViewModel {
         test1.setFeature(goodsFeatureList);
 
         goodsModelInfoDetail.setValue(test1);
+    }
+
+    public void loadbuyGoodsModelList(HashMap map){
+        Goods test1 = new Goods();
+        test1.setName("月光宝盒陶瓷茶具");
+        test1.setPrice(820);
+        test1.setType("有礼盒");
+        test1.setPurchasedNum(1);
+
+        Goods test2 = new Goods();
+        test2.setName("大观园纸雕灯");
+        test2.setPrice(598);
+        test2.setType("无礼盒");
+        test2.setPurchasedNum(2);
+
+        Goods test3 = new Goods();
+        test3.setName("年年有鱼手镯 ");
+        test3.setPrice(599);
+        test3.setType("无礼盒");
+        test3.setPurchasedNum(1);
+
+        List<Goods> list = new ArrayList<>();
+        list.add(test1);
+        list.add(test2);
+        list.add(test3);
+
+        buyGoodsModelList.setValue(list);
     }
 
 

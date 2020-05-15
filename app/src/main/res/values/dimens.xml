@@ -94,6 +94,15 @@
     <dimen name="goods_info_detail_goods_box_height">35dp</dimen>
     <dimen name="goods_info_detail_goods_box_width">100dp</dimen>
 
+    <dimen name="goods_order_check_margin">20dp</dimen>
+    <dimen name="goods_order_check_card_background">300dp</dimen>
+    <dimen name="goods_order_check_margin_start">30dp</dimen>
+    <dimen name="goods_order_check_margin_bottom">10dp</dimen>
+    <dimen name="goods_order_check_item_height">130dp</dimen>
+    <dimen name="goods_order_check_item_margin_start">15dp</dimen>
+
+
+
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_introduction_text">14sp</dimen>
@@ -126,6 +135,11 @@
     <dimen name="goods_info_detail_detail_goods_production_text">16sp</dimen>
     <dimen name="goods_info_detail_detail_goods_selcet_type_text">18sp</dimen>
     <dimen name="goods_info_detail_detail_goods_box_text">16sp</dimen>
+
+    <dimen name="goods_order_check_title_text">35sp</dimen>
+    <dimen name="goods_order_check_price_text">18sp</dimen>
+    <dimen name="goods_order_check_item_price_text">16sp</dimen>
+    <dimen name="goods_order_check_item_num_text">14sp</dimen>
 
 
 

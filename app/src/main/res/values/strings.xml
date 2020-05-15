@@ -104,6 +104,22 @@
     <string name="goods_info_detail_nobox">无礼盒</string>
     <string name="goods_info_detail_box">有礼盒</string>
 
+    <string name="goods_order_check_change_order">变更订单</string>
+    <string name="goods_order_check_order_sum">订单结算</string>
+
+    <string name="goods_order_check_goods_price">商品费</string>
+    <string name="goods_order_check_pack_price">包装费</string>
+    <string name="goods_order_check_deliver_price">配送费</string>
+    <string name="goods_order_check_sum_price">总计</string>
+    <string name="goods_order_check_pay">立即付款</string>
+
+
+
+
+
+
+
+
     <string name="explore_text">探索</string>
     <string name="exhibition_text">展览</string>
     <string name="activity_text">活动</string>
