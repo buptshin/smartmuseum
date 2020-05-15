@@ -88,8 +88,11 @@
     <color name="goods_info_detail_introduction_color">#A38D8D</color>
 
     <color name="goods_info_detail_button_clickable">#842D29</color>
+    <color name="goods_info_detail_button_clickable_text">#FFFFFF</color>
     <color name="goods_info_detail_button_unclickable">#FFFFFF</color>
     <color name="goods_info_detail_button_unclickable_text">#000521</color>
+    <color name="goods_info_detail_item_title_text">#842D29</color>
+    <color name="goods_info_detail_item_introduction_text">#000000</color>
 
     <!-- Friend !-->
     <color name="friend_my_firends_main_box">#FFFFFF</color>

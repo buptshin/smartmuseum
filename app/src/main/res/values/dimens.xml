@@ -81,6 +81,19 @@
     <dimen name="goods_info_button_margin_start">30dp</dimen>
     <dimen name="goods_info_button_height">55dp</dimen>
 
+    <dimen name="goods_info_detail_detail_item_margin_start">30dp</dimen>
+    <dimen name="goods_info_detail_detail_item_margin_bottom">32dp</dimen>
+    <dimen name="goods_info_detail_detail_item_introduction_margin_top">5dp</dimen>
+    <dimen name="goods_info_detail_detail_item_image_height">200dp</dimen>
+    <dimen name="goods_info_detail_detail_item_image_margin_top">10dp</dimen>
+    <dimen name="goods_info_detail_detail_goods_top_img_height">350dp</dimen>
+    <dimen name="goods_info_detail_detail_card_margin_top">330dp</dimen>
+    <dimen name="goods_info_detail_detail_goods_name_margin_top">20dp</dimen>
+    <dimen name="goods_info_detail_goods_selcet_type_height">50dp</dimen>
+    <dimen name="goods_info_detail_goods_box_select_margin_top">25dp</dimen>
+    <dimen name="goods_info_detail_goods_box_height">35dp</dimen>
+    <dimen name="goods_info_detail_goods_box_width">100dp</dimen>
+
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_introduction_text">14sp</dimen>
@@ -107,6 +120,14 @@
     <dimen name="goods_info_goods_weight_text">20sp</dimen>
     <dimen name="goods_info_select_type_text">18sp</dimen>
     <dimen name="goods_info_button_text">20sp</dimen>
+
+    <dimen name="goods_info_detail_detail_item_title">16sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_name_text">20sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_production_text">16sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_selcet_type_text">18sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_box_text">16sp</dimen>
+
+
 
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>
