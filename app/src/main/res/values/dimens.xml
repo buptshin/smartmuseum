@@ -115,6 +115,8 @@
     <dimen name="goods_pay_type_card_next_margin_top">20dp</dimen>
     <dimen name="goods_pay_type_card_text_margin_top">25dp</dimen>
 
+    <dimen name="goods_credit_card_pay_card_margin_bottom">100dp</dimen>
+
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>

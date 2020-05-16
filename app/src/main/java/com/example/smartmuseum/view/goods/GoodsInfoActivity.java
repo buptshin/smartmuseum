@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ActivityGoodsInfoBinding;
@@ -28,6 +29,12 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.bindData().bindView().bindEvent();
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Toast.makeText(getApplicationContext(), "测试", Toast.LENGTH_LONG).show();
     }
 
     @Override

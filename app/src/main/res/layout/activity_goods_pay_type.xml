@@ -103,7 +103,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/goodd_pay_type_moneypay_layout"
+            android:id="@+id/goodd_pay_type_creditcardpay_layout"
             android:layout_width="@dimen/goods_pay_type_card_width"
             android:layout_height="@dimen/goods_pay_type_card_height"
             android:layout_marginTop="@dimen/goods_pay_type_card_next_margin_top"
@@ -113,7 +113,7 @@
             app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_alipay_layout">
 
             <ImageView
-                android:id="@+id/goodd_pay_type_moneypay_img"
+                android:id="@+id/goodd_pay_type_creditcardpay_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/goods_pay_type_card_margin_top"
@@ -132,12 +132,12 @@
                 android:textColor="@color/goods_pay_type_card_text_color"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_moneypay_img"/>
+                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_creditcardpay_img"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/goodd_pay_type_creditcardpay_layout"
+            android:id="@+id/goodd_pay_type_moneypay_layout"
             android:layout_width="@dimen/goods_pay_type_card_width"
             android:layout_height="@dimen/goods_pay_type_card_height"
             android:layout_marginTop="@dimen/goods_pay_type_card_next_margin_top"
@@ -147,7 +147,7 @@
             app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_alipay_layout">
 
             <ImageView
-                android:id="@+id/goodd_pay_type_creditcardpay_img"
+                android:id="@+id/goodd_pay_type_moneypay_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/goods_pay_type_card_margin_top"
@@ -166,7 +166,7 @@
                 android:textColor="@color/goods_pay_type_card_text_color"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_creditcardpay_img"/>
+                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_moneypay_img"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
