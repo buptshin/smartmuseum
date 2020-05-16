@@ -109,6 +109,12 @@
     <dimen name="goods_choose_address_item_card_localaddress_margin_top">25dp</dimen>
     <dimen name="goods_choose_address_item_card_address_detail_margin_top">5dp</dimen>
 
+    <dimen name="goods_pay_type_card_height">230dp</dimen>
+    <dimen name="goods_pay_type_card_width">160dp</dimen>
+    <dimen name="goods_pay_type_card_margin_top">30dp</dimen>
+    <dimen name="goods_pay_type_card_next_margin_top">20dp</dimen>
+    <dimen name="goods_pay_type_card_text_margin_top">25dp</dimen>
+
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
@@ -150,6 +156,8 @@
 
     <dimen name="goods_choose_address_item_locationaddress_text">18sp</dimen>
     <dimen name="goods_choose_address_item_detail_text">16sp</dimen>
+
+    <dimen name="goods_pay_type_card_pay_text">18sp</dimen>
 
 
     <!-- Friend !-->

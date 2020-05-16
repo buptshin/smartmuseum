@@ -118,6 +118,12 @@
     <string name="goods_choose_address_choose_next">下一步</string>
     <string name="goods_choose_address_card_default_address">默认地址</string>
 
+    <string name="goods_pay_type_text">付款方式</string>
+    <string name="goods_pay_type_alipay_text">支付宝</string>
+    <string name="goods_pay_type_wechatpay_text">微信支付</string>
+    <string name="goods_pay_type_creditcardpay_text">信用卡</string>
+    <string name="goods_pay_type_moneypay_text">现金</string>
+
 
     <string name="explore_text">探索</string>
     <string name="exhibition_text">展览</string>
