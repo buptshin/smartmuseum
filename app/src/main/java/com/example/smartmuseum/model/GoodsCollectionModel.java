@@ -1,5 +1,6 @@
 package com.example.smartmuseum.model;
 
+//文创和藏品绑定
 public class GoodsCollectionModel {
     private Goods goods;
     private Collection collection;

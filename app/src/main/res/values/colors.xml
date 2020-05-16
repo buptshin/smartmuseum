@@ -99,6 +99,9 @@
     <color name="goods_order_check_card_background">#842D29</color>
     <color name="goods_order_check_price_text">#FFFFFF</color>
 
+    <color name="goods_choose_address_item_localaddress_color">#210000</color>
+    <color name="goods_choose_address_item_default_color">#842D29</color>
+
     <!-- Friend !-->
     <color name="friend_my_firends_main_box">#FFFFFF</color>
     <color name="friend_my_firends_main_box_stroke">#ECEBED</color>

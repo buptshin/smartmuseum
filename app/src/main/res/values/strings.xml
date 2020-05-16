@@ -113,11 +113,10 @@
     <string name="goods_order_check_sum_price">总计</string>
     <string name="goods_order_check_pay">立即付款</string>
 
-
-
-
-
-
+    <string name="goods_choose_address_add_newaddress">添加新地址</string>
+    <string name="goods_choose_address_choose_address">选择地址</string>
+    <string name="goods_choose_address_choose_next">下一步</string>
+    <string name="goods_choose_address_card_default_address">默认地址</string>
 
 
     <string name="explore_text">探索</string>

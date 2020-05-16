@@ -101,6 +101,13 @@
     <dimen name="goods_order_check_item_height">130dp</dimen>
     <dimen name="goods_order_check_item_margin_start">15dp</dimen>
 
+    <dimen name="goods_choose_address_item_card_margin_end">30dp</dimen>
+    <dimen name="goods_choose_address_item_card_margin_bottom">10dp</dimen>
+    <dimen name="goods_choose_address_item_card_height">100dp</dimen>
+    <dimen name="goods_choose_address_item_card_margin_start">20dp</dimen>
+    <dimen name="goods_choose_address_item_card_img_width">20dp</dimen>
+    <dimen name="goods_choose_address_item_card_localaddress_margin_top">25dp</dimen>
+    <dimen name="goods_choose_address_item_card_address_detail_margin_top">5dp</dimen>
 
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
@@ -141,6 +148,8 @@
     <dimen name="goods_order_check_item_price_text">16sp</dimen>
     <dimen name="goods_order_check_item_num_text">14sp</dimen>
 
+    <dimen name="goods_choose_address_item_locationaddress_text">18sp</dimen>
+    <dimen name="goods_choose_address_item_detail_text">16sp</dimen>
 
 
     <!-- Friend !-->

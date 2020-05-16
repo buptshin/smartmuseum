@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -73,6 +74,13 @@ public class GoodsOrderCheckActivity extends AppCompatActivity implements ViewCh
             @Override
             public void onClick(View view) {
                 finish();
+            }
+        });
+        mBinding.goodsOrderCheckPayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(GoodsOrderCheckActivity.this, GoodsChooseAddressActivity.class);
+                startActivity(intent);
             }
         });
         return this;
