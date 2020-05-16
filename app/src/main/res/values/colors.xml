@@ -107,6 +107,12 @@
     <color name="goods_pay_type_moneypay_card_background_color">#FEF3D8</color>
     <color name="goods_pay_type_creditcardpay_card_background_color">#FEEAE8</color>
     <color name="goods_pay_type_card_text_color">#000521</color>
+    
+    <color name="dialog_goods_info_pay_success_card_background_1">#842D29</color>
+    <color name="dialog_goods_info_pay_success_card_background_2">#C29795</color>
+    <color name="dialog_goods_info_pay_success_card_background_3">#FFFFFF</color>
+    <color name="dialog_goods_info_pay_success_success_text">#210000</color>
+    <color name="dialog_goods_info_pay_success_tips_text">#8D92A3</color>
 
 
     <!-- Friend !-->

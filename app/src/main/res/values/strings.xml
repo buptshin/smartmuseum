@@ -124,6 +124,10 @@
     <string name="goods_pay_type_creditcardpay_text">信用卡</string>
     <string name="goods_pay_type_moneypay_text">现金</string>
 
+    <string name="dialog_goods_info_pay_success_success_text">购买成功！</string>
+    <string name="dialog_goods_info_pay_success_tips_text">凭此二维码自助取货或\n查收配送文创商品！</string>
+    <string name="dialog_goods_info_pay_success_buy_text">继续购买</string>
+
 
     <string name="explore_text">探索</string>
     <string name="exhibition_text">展览</string>

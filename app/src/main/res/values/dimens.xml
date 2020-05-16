@@ -117,6 +117,12 @@
 
     <dimen name="goods_credit_card_pay_card_margin_bottom">100dp</dimen>
 
+    <dimen name="dialog_goods_infp_pay_success_dialog_height">450dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_close_img_height">15dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_margin_top">20dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_img_margin_top">30dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_text_margin_top">10dp</dimen>
+
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
@@ -160,6 +166,9 @@
     <dimen name="goods_choose_address_item_detail_text">16sp</dimen>
 
     <dimen name="goods_pay_type_card_pay_text">18sp</dimen>
+
+    <dimen name="dialog_goods_info_pay_success_success_text">20sp</dimen>
+    <dimen name="dialog_goods_info_pay_success_tips_text">18sp</dimen>
 
 
     <!-- Friend !-->

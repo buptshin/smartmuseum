@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_goods_info_pay_success_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_goods_infp_pay_success_dialog_height"
+        android:layout_marginStart="@dimen/dialog_goods_infp_pay_success_img_margin_top"
+        android:layout_marginEnd="@dimen/dialog_goods_infp_pay_success_img_margin_top"
+        android:background="@drawable/dialog_goods_info_pay_success_card_background">
+
+        <ImageView
+            android:id="@+id/dialog_goods_info_pay_success_close_img"
+            android:layout_width="@dimen/dialog_goods_infp_pay_success_close_img_height"
+            android:layout_height="@dimen/dialog_goods_infp_pay_success_close_img_height"
+            android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_margin_top"
+            android:layout_marginEnd="@dimen/dialog_goods_infp_pay_success_margin_top"
+            android:src="@mipmap/goods_info_close_button_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/dialog_goods_info_pay_success_qrcode_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_img_margin_top"
+            android:src="@drawable/goods_info_qrcode_img"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/dialog_goods_info_pay_success_small_people_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/goods_info_small_people_img"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_goods_info_pay_success_qrcode_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+        
+        <TextView
+            android:id="@+id/dialog_goods_info_pay_success_success_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_text_margin_top"
+            android:text="@string/dialog_goods_info_pay_success_success_text"
+            android:textSize="@dimen/dialog_goods_info_pay_success_success_text"
+            android:textStyle="bold"
+            android:textColor="@color/dialog_goods_info_pay_success_success_text"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_goods_info_pay_success_small_people_img"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <TextView
+            android:id="@+id/dialog_goods_info_pay_success_tips_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dialog_goods_info_pay_success_tips_text"
+            android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_text_margin_top"
+            android:gravity="center"
+            android:textSize="@dimen/dialog_goods_info_pay_success_tips_text"
+            android:textColor="@color/dialog_goods_info_pay_success_tips_text"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_goods_info_pay_success_success_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/goods_info_add_cart_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/goods_info_button_height"
+            android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_margin_top"
+            android:layout_marginStart="@dimen/goods_info_button_margin_start"
+            android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+            android:text="@string/dialog_goods_info_pay_success_buy_text"
+            android:textSize="@dimen/goods_info_button_text"
+            android:textColor="@color/goods_info_card_background"
+            android:background="@drawable/goods_purchased_status_button"
+            app:layout_constraintTop_toBottomOf="@+id/dialog_goods_info_pay_success_tips_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
