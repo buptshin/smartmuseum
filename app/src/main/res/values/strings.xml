@@ -128,6 +128,11 @@
     <string name="dialog_goods_info_pay_success_tips_text">凭此二维码自助取货或\n查收配送文创商品！</string>
     <string name="dialog_goods_info_pay_success_buy_text">继续购买</string>
 
+    <string name="goods_order_delivery_edit_order">变更订单</string>
+    <string name="goods_order_delivery_myself_order">自取订单</string>
+
+
+    <!-- RouteCommend !-->
     <string name="route_commend_info_start_location_text">初始位置</string>
     <string name="route_commend_info_end_location_text">出口</string>
 

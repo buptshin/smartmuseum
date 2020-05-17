@@ -123,6 +123,20 @@
     <dimen name="dialog_goods_infp_pay_success_img_margin_top">30dp</dimen>
     <dimen name="dialog_goods_infp_pay_success_text_margin_top">10dp</dimen>
 
+    <dimen name="goods_order_delivery_layout_margin_top">30dp</dimen>
+    <dimen name="goods_order_delivery_layout_margin_start">40dp</dimen>
+    <dimen name="goods_order_delivery_name_margin_start">10dp</dimen>
+    <dimen name="goods_order_delivery_phone_margin_start">5dp</dimen>
+    <dimen name="goods_order_delivery_map_height">400dp</dimen>
+    <dimen name="goods_order_delivery_time_layout_margin_top">20dp</dimen>
+    <dimen name="goods_order_delivery_time_layout_margin_start">40dp</dimen>
+
+
+    <dimen name="goods_order_delivery_card_margin_top">20dp</dimen>
+    <dimen name="goods_order_delivery_card_margin_start">40dp</dimen>
+    <dimen name="goods_order_delivery_card_background_height">80dp</dimen>
+    <dimen name="goods_order_delivery_card_background_margin_top">30dp</dimen>
+
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
@@ -169,6 +183,10 @@
 
     <dimen name="dialog_goods_info_pay_success_success_text">20sp</dimen>
     <dimen name="dialog_goods_info_pay_success_tips_text">18sp</dimen>
+
+    <dimen name="goods_order_delivery_people_name_text">20sp</dimen>
+    <dimen name="goods_order_delivery_order_edit_text">18sp</dimen>
+    <dimen name="goods_order_delivery_card_background_time_text">20sp</dimen>
 
 
     <!-- Friend !-->

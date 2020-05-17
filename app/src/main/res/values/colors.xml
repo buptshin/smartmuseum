@@ -114,6 +114,11 @@
     <color name="dialog_goods_info_pay_success_success_text">#210000</color>
     <color name="dialog_goods_info_pay_success_tips_text">#8D92A3</color>
 
+    <color name="goods_order_delivery_name_text">#000521</color>
+    <color name="goods_order_delivery_edit_order_text">#8D92A3</color>
+    <color name="goods_order_delivery_time_text">#FFFFFF</color>
+
+
 
     <!-- Friend !-->
     <color name="friend_my_firends_main_box">#FFFFFF</color>
