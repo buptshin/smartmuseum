@@ -213,8 +213,8 @@
 
         <ImageView
             android:id="@+id/forgetpwd_assure_pwd_preview_img"
-            android:layout_width="23dp"
-            android:layout_height="18dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:src="@mipmap/login_password_preview"
             app:layout_constraintBottom_toBottomOf="@+id/forgetpwd_assure_pwd_et"
             app:layout_constraintEnd_toStartOf="@+id/guideline51"
