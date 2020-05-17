@@ -10,6 +10,9 @@ public class Exhibition {
     private double exhibition_time;  // 展厅的停留时间
     private int exhibition_distance;  // 展厅距离你的位置
 
+    public Exhibition() {
+
+    }
     public Exhibition(String name, int id, String state, int passenger_flow, int like, String hall, double time, int distance) {
         this.exhibition_name = name;
         this.exhibition_id = id;

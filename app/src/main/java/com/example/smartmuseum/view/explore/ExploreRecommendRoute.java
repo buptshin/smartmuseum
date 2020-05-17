@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
@@ -13,7 +14,8 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentExploreRecommendedrouteBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 
-public class ExploreRecommendRoute extends Fragment implements ViewChainedBinding<ExploreRecommendRoute> {
+public class ExploreRecommendRoute extends Fragment implements ViewChainedBinding {
+    private View view;
     private FragmentExploreRecommendedrouteBinding fragmentExploreRecommendedrouteBinding;
 
     public static ExploreRecommendRoute getInstance() {
@@ -21,32 +23,31 @@ public class ExploreRecommendRoute extends Fragment implements ViewChainedBindin
         return fragment;
     }
 
-    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container
-            , Bundle savedInstanceState) {
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         fragmentExploreRecommendedrouteBinding = DataBindingUtil.inflate(inflater,
                 R.layout.fragment_explore_recommendedroute,
                 container,
                 false);
         View v = fragmentExploreRecommendedrouteBinding.getRoot();
-        this.bindData().bindView().bindEvent();
 
+        this.bindData().bindView().bindEvent();
         return v;
     }
 
     @Override
     public ExploreRecommendRoute bindView() {
-        return null;
+        return this;
     }
 
     @Override
     public ExploreRecommendRoute bindData() {
-        return null;
+        return this;
     }
 
     @Override
     public ExploreRecommendRoute bindEvent() {
-        return null;
+        return this;
     }
-
-
 }

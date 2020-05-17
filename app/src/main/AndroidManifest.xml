@@ -18,7 +18,10 @@
         <activity android:name=".view.startpage.StartActivity" />
         <activity android:name=".view.register.RegisterActivity" />
         <activity android:name=".view.login.LoginActivity" />
-        <activity android:name=".view.goods.GoodsRecommendActivity"></activity>
+        <activity android:name=".view.explore.ExhibitionContentActivity"></activity>
+        <activity android:name=".view.me.FieldGuideActivity" />
+        <activity android:name=".view.me.MuseumInfoActivity" />
+        <!--        <activity android:name=".view.goods.GoodsRecommendActivity"></activity>-->
         <activity android:name=".view.mainpage.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

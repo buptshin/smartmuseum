@@ -3,143 +3,41 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/SearchButton"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            android:layout_marginTop="25dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@mipmap/mainpage_search" />
-
-        <TextView
-            android:id="@+id/ExplorerTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp"
-            android:text="@string/explore_text"
-            android:textColor="#111111"
-            android:textSize="45sp"
-            android:textStyle="bold"
-            android:typeface="sans"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
-            android:id="@+id/recommendedroute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="32dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toEndOf="@+id/activity"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
-            app:srcCompat="@mipmap/mainpage_recommendedroute_not_selected" />
-
-        <ImageButton
-            android:id="@+id/exhibition"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="32dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
-            app:srcCompat="@mipmap/exhibition_not_selected" />
-
-        <TextView
-            android:id="@+id/exhibition_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/exhibition_text"
-            app:layout_constraintEnd_toEndOf="@+id/exhibition"
-            app:layout_constraintStart_toStartOf="@+id/exhibition"
-            app:layout_constraintTop_toBottomOf="@+id/exhibition" />
-
-        <TextView
-            android:id="@+id/activity_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/activity_text"
-            app:layout_constraintEnd_toEndOf="@+id/activity"
-            app:layout_constraintHorizontal_bias="0.55"
-            app:layout_constraintStart_toStartOf="@+id/activity"
-            app:layout_constraintTop_toBottomOf="@+id/activity" />
-
-        <TextView
-            android:id="@+id/recomendedroute_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:text="@string/recomendedroute_text"
-            app:layout_constraintEnd_toEndOf="@+id/recommendedroute"
-            app:layout_constraintStart_toStartOf="@+id/recommendedroute"
-            app:layout_constraintTop_toBottomOf="@+id/recommendedroute" />
-
-        <ImageButton
-            android:id="@+id/bookvisit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="32dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toEndOf="@+id/recommendedroute"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
-            app:srcCompat="@mipmap/bookvisit_selected" />
-
-        <TextView
-            android:id="@+id/bookvisit_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="80dp"
-            android:gravity="center"
-            android:text="@string/bookvisit_text"
-            android:textColor="@color/mainpage_navigation_selectoritem_primary_color_selected"
-            app:layout_constraintEnd_toEndOf="@+id/bookvisit"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/bookvisit"
-            app:layout_constraintTop_toBottomOf="@+id/bookvisit" />
-
-        <ImageButton
-            android:id="@+id/activity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="44dp"
-            android:layout_marginTop="32dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toEndOf="@+id/exhibition"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
-            app:srcCompat="@mipmap/mainpage_activity_not_selected" />
-
         <ScrollView
-            android:layout_width="409dp"
-            android:layout_height="545dp"
-            android:layout_marginTop="196dp"
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/national_museum_line_picture" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#09080040"
+                    android:gravity="center"
+                    android:text="选择日期"
+                    android:textColor="#111111"
+                    android:textSize="14sp" />
+            </LinearLayout>
         </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

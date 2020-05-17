@@ -122,5 +122,6 @@
     <string name="friend_choose_friends_item_button">添加</string>
     <string name="friend_choose_friends_item_button_already">已添加</string>
     <string name="friend_choose_friends_start_button">立即开始</string>
+    <string name="backButton">goback</string>
 
 </resources>
