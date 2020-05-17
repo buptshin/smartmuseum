@@ -12,31 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".view.goods.GoodsOrderStatusActivity"></activity>
-        <activity android:name=".view.goods.GoodsOrderDeliveryActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-        <activity android:name=".view.routecommend.RouteCommendInfoActivity">
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
+        <activity android:name=".view.goods.GoodsOrderDeliveryActivity"/>
+        <activity android:name=".view.routecommend.RouteCommendInfoActivity"/>
         <activity android:name=".view.goods.GoodsCreditCardPayActivity" />
         <activity android:name=".view.goods.GoodsPayTypeActivity" />
-        <activity android:name=".view.goods.GoodsChooseAddressActivity">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+        <activity android:name=".view.goods.GoodsChooseAddressActivity" />
         <activity android:name=".view.goods.GoodsInfoDetailActivity" />
         <activity
             android:name=".view.goods.GoodsInfoActivity"
