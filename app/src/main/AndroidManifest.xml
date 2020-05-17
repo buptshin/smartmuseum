@@ -11,10 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.goods.GoodsInfoDetailActivity"></activity>
+        <activity android:name=".view.navigation.NavigationSearchActivity"></activity>
+        <activity android:name=".view.goods.GoodsInfoDetailActivity" />
         <activity android:name=".view.goods.GoodsInfoActivity" />
         <activity android:name=".view.goods.GoodsRecommendActivity" />
-        <activity android:name=".view.forgetpwd.ForgetPwdActivity"></activity>
+        <activity android:name=".view.forgetpwd.ForgetPwdActivity" />
         <activity android:name=".view.startpage.StartActivity" />
         <activity android:name=".view.register.RegisterActivity" />
         <activity android:name=".view.login.LoginActivity" />
