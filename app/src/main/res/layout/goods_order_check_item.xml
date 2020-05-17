@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="goods"
+            type="com.example.smartmuseum.model.Goods" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/goods_order_check_margin"
+        android:layout_marginEnd="@dimen/goods_order_check_margin"
+        android:layout_marginBottom="@dimen/goods_order_check_margin_bottom"
+        android:layout_height="@dimen/goods_order_check_item_height"
+        android:background="@drawable/goods_purchased_card_background">
+
+        <ImageView
+            android:id="@+id/goods_order_check_item_goods_img"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/goods_order_check_goods_1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_order_check_item_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goods.name}"
+            android:textSize="@dimen/goods_order_check_item_price_text"
+            android:textColor="@color/goods_order_check_order_color"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_order_check_item_margin_start"
+            app:layout_constraintLeft_toRightOf="@+id/goods_order_check_item_goods_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="月光宝盒茶具"/>
+
+        <TextView
+            android:id="@+id/goods_order_check_item_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/mainpage_goods_price_sign + Integer.toString(goods.price)}"
+            android:textSize="@dimen/goods_order_check_item_price_text"
+            android:textColor="@color/goods_order_check_order_color"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginEnd="@dimen/goods_order_check_margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="¥820"/>
+
+        <TextView
+            android:id="@+id/goods_order_check_item_goods_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goods.type}"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_order_check_item_margin_start"
+            android:textSize="@dimen/goods_order_check_item_num_text"
+            android:textColor="@color/mainpage_goods_sell_commend_gray"
+            app:layout_constraintTop_toBottomOf="@+id/goods_order_check_item_goods_name"
+            app:layout_constraintLeft_toRightOf="@+id/goods_order_check_item_goods_img"
+            tools:text="有礼盒"/>
+
+        <TextView
+            android:id="@+id/goods_order_check_item_goods_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{@string/mainpage_goods_purchased_num_sign + Integer.toString(goods.purchasedNum)}"
+            android:layout_marginTop="@dimen/goods_order_check_margin_bottom"
+            android:layout_marginStart="@dimen/goods_order_check_item_margin_start"
+            android:textSize="@dimen/goods_order_check_item_num_text"
+            android:textColor="@color/mainpage_goods_sell_commend_gray"
+            app:layout_constraintTop_toBottomOf="@+id/goods_order_check_item_goods_type"
+            app:layout_constraintLeft_toRightOf="@+id/goods_order_check_item_goods_img"
+            tools:text="x1"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

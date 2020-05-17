@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/goods_info_button_margin_start"
+        android:background="@color/mainpage_goods_sell_background">
+        <ImageView
+            android:id="@+id/goods_credit_card_pay_return_img"
+            android:layout_width="@dimen/goods_info_return_size"
+            android:layout_height="@dimen/goods_info_return_size"
+            android:src="@mipmap/goods_order_check_return_button_gray"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_credit_card_pay_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_pay_type_text"
+            android:textColor="@color/goods_order_check_order_color"
+            android:textSize="@dimen/goods_order_check_title_text"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/goods_credit_card_pay_return_img"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/goods_credit_card_pay_card_margin_bottom"
+            android:src="@drawable/goods_credit_card_pay_card_img"
+            app:layout_constraintTop_toBottomOf="@+id/goods_credit_card_pay_title_text"
+            app:layout_constraintBottom_toTopOf="@+id/goods_credit_card_pay_next_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <Button
+            android:id="@+id/goods_credit_card_pay_next_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/goods_info_button_height"
+            android:layout_marginBottom="@dimen/goods_info_detail_detail_goods_name_margin_top"
+            android:layout_marginStart="@dimen/goods_info_button_margin_start"
+            android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+            android:text="@string/goods_choose_address_choose_next"
+            android:textSize="@dimen/goods_info_button_text"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/goods_info_detail_clickable_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

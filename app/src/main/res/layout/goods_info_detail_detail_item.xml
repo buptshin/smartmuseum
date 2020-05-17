@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="goodsfeature"
+            type="com.example.smartmuseum.model.GoodsFeature" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/goods_info_detail_detail_item_margin_start"
+        android:layout_marginEnd="@dimen/goods_info_detail_detail_item_margin_start"
+        android:layout_marginBottom="@dimen/goods_info_detail_detail_item_margin_bottom">
+
+        <TextView
+            android:id="@+id/goods_info_detail_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goodsfeature.title}"
+            android:textStyle="bold"
+            android:textSize="@dimen/goods_info_detail_detail_item_title"
+            android:textColor="@color/goods_info_detail_item_title_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="[光影交错 浪漫缠绵]"/>
+
+        <TextView
+            android:id="@+id/goods_info_detail_item_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{goodsfeature.introduction}"
+            android:textSize="@dimen/goods_info_detail_detail_item_title"
+            android:layout_marginTop="@dimen/goods_info_detail_detail_item_introduction_margin_top"
+            android:textColor="@color/goods_info_detail_item_introduction_text"
+            app:layout_constraintTop_toBottomOf="@+id/goods_info_detail_item_title"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="    将7层高透光纸片精巧叠加，尽显层叠交错之美。柔和灯光邂逅高透光雕刻纸片，组成一幅朦胧、温馨、浪漫的画面。"/>
+
+        <ImageView
+            android:id="@+id/goods_info_detail_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/goods_info_detail_detail_item_image_height"
+            android:src="@drawable/goods_info_detail_goods_1"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/goods_info_detail_detail_item_image_margin_top"
+            app:layout_constraintTop_toBottomOf="@+id/goods_info_detail_item_introduction"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.smartmuseum.model.Goods;
+import com.example.smartmuseum.model.GoodsFeature;
 import com.example.smartmuseum.util.http.HttpRequest;
 import com.example.smartmuseum.util.http.HttpResult;
 
@@ -25,6 +26,10 @@ public class GoodsViewModel extends ViewModel {
     private MutableLiveData<List<Goods>> discountGoodsModelList;
 
     private MutableLiveData<Goods> goodsModelInfo;
+
+    private MutableLiveData<Goods> goodsModelInfoDetail;
+
+    private MutableLiveData<List<Goods>> buyGoodsModelList;
 
     //获取推荐商品
     public MutableLiveData<List<Goods>> getCommendGoodsModelList(HashMap map) {
@@ -69,6 +74,24 @@ public class GoodsViewModel extends ViewModel {
             loadGoodsModelInfo(map);
         }
         return goodsModelInfo;
+    }
+
+    //获取商品详细信息
+    public MutableLiveData<Goods> goodsInfoDetailInfo(HashMap map) {
+        if (goodsModelInfoDetail == null) {
+            goodsModelInfoDetail = new MutableLiveData<>();
+            loadGoodsInfoDetailInfo(map);
+        }
+        return goodsModelInfoDetail;
+    }
+
+    //获取已购买商品信息(付款页面)
+    public MutableLiveData<List<Goods>> getbuyGoodsModelList(HashMap map) {
+        if (buyGoodsModelList == null) {
+            buyGoodsModelList = new MutableLiveData<>();
+            loadbuyGoodsModelList(map);
+        }
+        return buyGoodsModelList;
     }
 
     public void loadClassicalGoodsModelList(HashMap map) {
@@ -197,6 +220,65 @@ public class GoodsViewModel extends ViewModel {
         test1.setSpecifications("36cm*26cm*6cm");
 
         goodsModelInfo.setValue(test1);
+    }
+
+    public void loadGoodsInfoDetailInfo(HashMap map){
+        Goods test1 = new Goods();
+        test1.setName("大观园纸雕灯");
+        test1.setIntroduction("现代剪纸艺术结合光影效果重现红楼梦经典场景");
+        test1.setPurchasedNum(2);
+
+        GoodsFeature goodsFeature1 = new GoodsFeature();
+        goodsFeature1.setImageId("1");
+        goodsFeature1.setTitle("[光影交错 浪漫缠绵]");
+        goodsFeature1.setIntroduction("    将7层高透光纸片精巧叠加，尽显层叠交错之美。柔和灯光邂逅高透光雕刻纸片，组成一幅朦胧、温馨、浪漫的画面。");
+
+        GoodsFeature goodsFeature2 = new GoodsFeature();
+        goodsFeature2.setImageId("2");
+        goodsFeature2.setTitle("[激光雕刻 精美细腻]");
+        goodsFeature2.setIntroduction("    采用全新激光雕刻工艺，智障雕刻细致入微，光洁无瑕疵。");
+
+        GoodsFeature goodsFeature3 = new GoodsFeature();
+        goodsFeature3.setImageId("2");
+        goodsFeature3.setTitle("[文物元素 还原场景]");
+        goodsFeature3.setIntroduction("    细致还原文物故事场景，画面形象呼之欲出。透过画面，大观园的富丽堂皇和精致精巧扑面而来。细细观看仿佛可以听见流水潺潺、微风绵绵、宝玉和黛玉细雨轻快、娴静自得。");
+
+
+        List<GoodsFeature> goodsFeatureList = new ArrayList<>();
+        goodsFeatureList.add(goodsFeature1);
+        goodsFeatureList.add(goodsFeature2);
+        goodsFeatureList.add(goodsFeature3);
+
+        test1.setFeature(goodsFeatureList);
+
+        goodsModelInfoDetail.setValue(test1);
+    }
+
+    public void loadbuyGoodsModelList(HashMap map){
+        Goods test1 = new Goods();
+        test1.setName("月光宝盒陶瓷茶具");
+        test1.setPrice(820);
+        test1.setType("有礼盒");
+        test1.setPurchasedNum(1);
+
+        Goods test2 = new Goods();
+        test2.setName("大观园纸雕灯");
+        test2.setPrice(598);
+        test2.setType("无礼盒");
+        test2.setPurchasedNum(2);
+
+        Goods test3 = new Goods();
+        test3.setName("年年有鱼手镯 ");
+        test3.setPrice(599);
+        test3.setType("无礼盒");
+        test3.setPurchasedNum(1);
+
+        List<Goods> list = new ArrayList<>();
+        list.add(test1);
+        list.add(test2);
+        list.add(test3);
+
+        buyGoodsModelList.setValue(list);
     }
 
 

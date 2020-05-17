@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/goods_info_button_margin_start"
+        android:background="@color/mainpage_goods_sell_background">
+        <ImageView
+            android:id="@+id/goods_pay_type_return_img"
+            android:layout_width="@dimen/goods_info_return_size"
+            android:layout_height="@dimen/goods_info_return_size"
+            android:src="@mipmap/goods_order_check_return_button_gray"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_pay_type_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_pay_type_text"
+            android:textColor="@color/goods_order_check_order_color"
+            android:textSize="@dimen/goods_order_check_title_text"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintTop_toBottomOf="@+id/goods_pay_type_return_img"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/goodd_pay_type_alipay_layout"
+            android:layout_width="@dimen/goods_pay_type_card_width"
+            android:layout_height="@dimen/goods_pay_type_card_height"
+            android:layout_marginTop="@dimen/goods_pay_type_card_margin_top"
+            android:layout_marginStart="@dimen/goods_pay_type_card_margin_top"
+            android:background="@drawable/goods_pay_type_alipay_card_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_pay_type_title_text">
+
+            <ImageView
+                android:id="@+id/goodd_pay_type_alipay_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/goods_pay_type_card_margin_top"
+                android:src="@mipmap/goos_pay_type_alipay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/goods_pay_type_card_text_margin_top"
+                android:text="@string/goods_pay_type_alipay_text"
+                android:textSize="@dimen/goods_pay_type_card_pay_text"
+                android:textColor="@color/goods_pay_type_card_text_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_alipay_img"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/goodd_pay_type_wechatpay_layout"
+            android:layout_width="@dimen/goods_pay_type_card_width"
+            android:layout_height="@dimen/goods_pay_type_card_height"
+            android:layout_marginTop="@dimen/goods_pay_type_card_margin_top"
+            android:layout_marginEnd="@dimen/goods_pay_type_card_margin_top"
+            android:background="@drawable/goods_pay_type_wechatpay_card_background"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_pay_type_title_text">
+
+            <ImageView
+                android:id="@+id/goodd_pay_type_wechatpay_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/goods_pay_type_card_margin_top"
+                android:src="@mipmap/goos_pay_type_wechatpay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/goods_pay_type_card_text_margin_top"
+                android:text="@string/goods_pay_type_wechatpay_text"
+                android:textSize="@dimen/goods_pay_type_card_pay_text"
+                android:textColor="@color/goods_pay_type_card_text_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_wechatpay_img"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/goodd_pay_type_creditcardpay_layout"
+            android:layout_width="@dimen/goods_pay_type_card_width"
+            android:layout_height="@dimen/goods_pay_type_card_height"
+            android:layout_marginTop="@dimen/goods_pay_type_card_next_margin_top"
+            android:layout_marginStart="@dimen/goods_pay_type_card_margin_top"
+            android:background="@drawable/goods_pay_type_moneypay_card_background"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_alipay_layout">
+
+            <ImageView
+                android:id="@+id/goodd_pay_type_creditcardpay_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/goods_pay_type_card_margin_top"
+                android:src="@mipmap/goos_pay_type_creditcardpay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/goods_pay_type_card_text_margin_top"
+                android:text="@string/goods_pay_type_creditcardpay_text"
+                android:textSize="@dimen/goods_pay_type_card_pay_text"
+                android:textColor="@color/goods_pay_type_card_text_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_creditcardpay_img"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/goodd_pay_type_moneypay_layout"
+            android:layout_width="@dimen/goods_pay_type_card_width"
+            android:layout_height="@dimen/goods_pay_type_card_height"
+            android:layout_marginTop="@dimen/goods_pay_type_card_next_margin_top"
+            android:layout_marginEnd="@dimen/goods_pay_type_card_margin_top"
+            android:background="@drawable/goods_pay_type_creditcardpay_card_background"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_alipay_layout">
+
+            <ImageView
+                android:id="@+id/goodd_pay_type_moneypay_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/goods_pay_type_card_margin_top"
+                android:src="@mipmap/goos_pay_type_moneypay"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/goods_pay_type_card_text_margin_top"
+                android:text="@string/goods_pay_type_moneypay_text"
+                android:textSize="@dimen/goods_pay_type_card_pay_text"
+                android:textColor="@color/goods_pay_type_card_text_color"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/goodd_pay_type_moneypay_img"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="address"
+            type="com.example.smartmuseum.model.Address" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/goods_choose_address_item_card_margin_end"
+        android:layout_marginEnd="@dimen/goods_choose_address_item_card_margin_end"
+        android:layout_marginBottom="@dimen/goods_choose_address_item_card_margin_bottom"
+        android:layout_height="@dimen/goods_choose_address_item_card_height"
+        android:background="@drawable/goods_purchased_card_background">
+
+        <ImageView
+            android:id="@+id/goods_choose_address_item_choose_img"
+            android:layout_width="@dimen/goods_choose_address_item_card_img_width"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/goods_choose_address_item_card_margin_start"
+            android:src="@mipmap/goods_choose_address_circle_clickable"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/goods_choose_address_item_localaddress_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{address.locationAddress}"
+            android:textColor="@color/goods_choose_address_item_localaddress_color"
+            android:textSize="@dimen/goods_choose_address_item_locationaddress_text"
+            android:textStyle="bold"
+            android:layout_marginStart="@dimen/goods_choose_address_item_card_margin_start"
+            android:layout_marginTop="@dimen/goods_choose_address_item_card_localaddress_margin_top"
+            app:layout_constraintLeft_toRightOf="@+id/goods_choose_address_item_choose_img"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="东1门-安检处"/>
+
+        <TextView
+            android:id="@+id/goods_choose_address_item_detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{address.detailAddress}"
+            android:textColor="@color/goods_choose_address_item_localaddress_color"
+            android:textSize="@dimen/goods_choose_address_item_detail_text"
+            android:layout_marginStart="@dimen/goods_choose_address_item_card_margin_start"
+            android:layout_marginTop="@dimen/goods_choose_address_item_card_address_detail_margin_top"
+            app:layout_constraintLeft_toRightOf="@+id/goods_choose_address_item_choose_img"
+            app:layout_constraintTop_toBottomOf="@+id/goods_choose_address_item_localaddress_text"
+            tools:text="中国国家博物馆东1门西侧"/>
+
+        <TextView
+            android:id="@+id/goods_choose_address_item_default_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{address.defaultFlag ? View.VISIBLE : View.GONE}"
+            android:text="@string/goods_choose_address_card_default_address"
+            android:textColor="@color/goods_choose_address_item_default_color"
+            android:textSize="@dimen/goods_choose_address_item_detail_text"
+            android:textStyle="bold"
+            android:layout_marginEnd="@dimen/goods_choose_address_item_card_margin_start"
+            android:layout_marginTop="@dimen/goods_choose_address_item_card_localaddress_margin_top"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="默认地址"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

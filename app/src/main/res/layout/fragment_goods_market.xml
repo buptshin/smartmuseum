@@ -20,16 +20,6 @@
                 android:layout_height="wrap_content"
                 android:background="@color/mainpage_goods_sell_background">
 
-                <ScrollView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:fillViewport="true"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="parent">
-                </ScrollView>
-
                 <LinearLayout
                     android:id="@+id/goods_market_location_layout"
                     android:layout_width="match_parent"
