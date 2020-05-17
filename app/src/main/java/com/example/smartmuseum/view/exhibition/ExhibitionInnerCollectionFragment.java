@@ -37,6 +37,7 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
     private Matrix normalMatrix;
     private float imgX,imgY;
     private PopupWindow popupWindow;
+    private int seekBarProgress;
 
     public ExhibitionInnerCollectionFragment() {
         // Required empty public constructor
@@ -106,6 +107,9 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
     public ExhibitionInnerCollectionFragment bindData() {
         // 保存一份地图矩阵的原始矩阵
         normalMatrix = mBinding.exhibitionInnerCollectionMap.getImageMatrix();
+
+        // 设定seekBar的初始值
+        seekBarProgress = 3;
         return this;
     }
 
@@ -117,7 +121,10 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
         mBinding.exhibitionInnerCollectionExpandBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mBinding.exhibitionInnerCollectionSeekbar.setProgress(6);
+                seekBarProgress += 3;
+                if(seekBarProgress > 6)
+                    return;
+                mBinding.exhibitionInnerCollectionSeekbar.setProgress(seekBarProgress);
                 // 将地图放大
                 Matrix matrix = normalMatrix;
                 matrix.postScale((float)1.6,(float)1.6);   // 默认扩大1.6倍（主要是方便还原的倍数设定）
@@ -196,41 +203,46 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
         mBinding.exhibitionInnerCollectionSmallImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mBinding.exhibitionInnerCollectionSeekbar.setProgress(3);
-                // 缩小地图
-                Matrix matrix = normalMatrix;
-                Matrix changeMatrix = new Matrix();
-                changeMatrix.postScale((float)0.625,(float)0.625); // 用于变换坐标点的矩阵
-                matrix.postScale((float)0.625,(float)0.625);  // 用于地图缩放的矩阵
-                mBinding.exhibitionInnerCollectionMap.setImageMatrix(matrix);
+                seekBarProgress -= 3;
+                if(seekBarProgress == 0){
+                    // 回到上一个界面
+                }else {
+                    mBinding.exhibitionInnerCollectionSeekbar.setProgress(seekBarProgress);
+                    // 缩小地图
+                    Matrix matrix = normalMatrix;
+                    Matrix changeMatrix = new Matrix();
+                    changeMatrix.postScale((float)0.625,(float)0.625); // 用于变换坐标点的矩阵
+                    matrix.postScale((float)0.625,(float)0.625);  // 用于地图缩放的矩阵
+                    mBinding.exhibitionInnerCollectionMap.setImageMatrix(matrix);
 
-                // 缩小定位点
-                ObjectAnimator objectAnimatorX1 = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"scaleX",1f);
-                ObjectAnimator objectAnimatorY1 = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"scaleY",1f);
-                AnimatorSet locSmaller = new AnimatorSet();
-                locSmaller.setDuration(500);
-                locSmaller.play(objectAnimatorX1).with(objectAnimatorY1);
-                locSmaller.addListener(new AnimatorListenerAdapter() {
-                    // 改变定位点和周围渲染的位置（在缩小后的地图上的位置）
-                    @Override
-                    public void onAnimationEnd(Animator animation) {
-                        super.onAnimationEnd(animation);
-                        float[] dstCoords = new float[2];
-                        // 这里从逻辑上是有问题的，应该在地图缩放前，就计算出缩放后应有的坐标，但是这里因为地图的坐标其实是不会变的，并且以后也不是这样来计算坐标
-                        float tx = (float)mBinding.exhibitionInnerCollectionLocpoint.getX()-mBinding.exhibitionInnerCollectionMap.getX();
-                        float ty = (float)mBinding.exhibitionInnerCollectionLocpoint.getY()-mBinding.exhibitionInnerCollectionMap.getY();
-                        changeMatrix.mapPoints(dstCoords,new float[]{tx,ty});
-                        ObjectAnimator obLocY = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationY",dstCoords[1]-imgY);
-                        ObjectAnimator obLocX = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationX",dstCoords[0]-imgX);
-                        ObjectAnimator obLocY1 = ObjectAnimator.ofFloat(iv,"translationY",iv.getY()+dstCoords[1]-ty);
-                        ObjectAnimator obLocX1 = ObjectAnimator.ofFloat(iv,"translationX",iv.getX()+dstCoords[0]-tx);
-                        AnimatorSet newLocPoint = new AnimatorSet();
-                        newLocPoint.play(obLocX).with(obLocY).with(obLocX1).with(obLocY1);
-                        newLocPoint.setDuration(2000);
-                        newLocPoint.start();
-                    }
-                });
-                locSmaller.start();
+                    // 缩小定位点
+                    ObjectAnimator objectAnimatorX1 = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"scaleX",1f);
+                    ObjectAnimator objectAnimatorY1 = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"scaleY",1f);
+                    AnimatorSet locSmaller = new AnimatorSet();
+                    locSmaller.setDuration(500);
+                    locSmaller.play(objectAnimatorX1).with(objectAnimatorY1);
+                    locSmaller.addListener(new AnimatorListenerAdapter() {
+                        // 改变定位点和周围渲染的位置（在缩小后的地图上的位置）
+                        @Override
+                        public void onAnimationEnd(Animator animation) {
+                            super.onAnimationEnd(animation);
+                            float[] dstCoords = new float[2];
+                            // 这里从逻辑上是有问题的，应该在地图缩放前，就计算出缩放后应有的坐标，但是这里因为地图的坐标其实是不会变的，并且以后也不是这样来计算坐标
+                            float tx = (float)mBinding.exhibitionInnerCollectionLocpoint.getX()-mBinding.exhibitionInnerCollectionMap.getX();
+                            float ty = (float)mBinding.exhibitionInnerCollectionLocpoint.getY()-mBinding.exhibitionInnerCollectionMap.getY();
+                            changeMatrix.mapPoints(dstCoords,new float[]{tx,ty});
+                            ObjectAnimator obLocY = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationY",dstCoords[1]-imgY);
+                            ObjectAnimator obLocX = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationX",dstCoords[0]-imgX);
+                            ObjectAnimator obLocY1 = ObjectAnimator.ofFloat(iv,"translationY",iv.getY()+dstCoords[1]-ty);
+                            ObjectAnimator obLocX1 = ObjectAnimator.ofFloat(iv,"translationX",iv.getX()+dstCoords[0]-tx);
+                            AnimatorSet newLocPoint = new AnimatorSet();
+                            newLocPoint.play(obLocX).with(obLocY).with(obLocX1).with(obLocY1);
+                            newLocPoint.setDuration(2000);
+                            newLocPoint.start();
+                        }
+                    });
+                    locSmaller.start();
+                }
             }
         });
         return this;
