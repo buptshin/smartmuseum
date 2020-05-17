@@ -104,7 +104,7 @@
             app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
         <ImageView
-            android:id="@+id/imageView15"
+            android:id="@+id/exhibition_inner_collection_search_img"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView14"
@@ -124,7 +124,7 @@
             app:srcCompat="@mipmap/exhibition_book" />
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/exhibition_inner_collection_heatmap_img"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView13"
@@ -134,7 +134,7 @@
             app:srcCompat="@mipmap/exhibition_goods" />
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/exhibition_inner_collection_small_img"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView9"
@@ -144,7 +144,7 @@
             app:srcCompat="@mipmap/exhibition_introduction" />
 
         <ImageView
-            android:id="@+id/imageView19"
+            android:id="@+id/exhibition_inner_collection_expand_btn"
             android:layout_width="50dp"
             android:layout_height="50dp"
             app:layout_constraintBottom_toBottomOf="@+id/imageView12"
@@ -154,7 +154,7 @@
             app:srcCompat="@mipmap/exhibition_route" />
 
         <ImageView
-            android:id="@+id/imageView20"
+            android:id="@+id/exhibition_inner_collection_escape_img"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="19dp"
