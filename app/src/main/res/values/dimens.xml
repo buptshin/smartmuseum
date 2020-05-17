@@ -194,7 +194,8 @@
     <!-- Exhibition !-->
 
     <!-- RouteCommend !-->
-
+    <dimen name="route_commend_info_exhibition_location_name_text">20sp</dimen>
+    <dimen name="route_commend_info_exhibition_exhibition_name_text">18sp</dimen>
     <!-- MyInfo !-->
 
     <!-- Login/Register !-->

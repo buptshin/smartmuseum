@@ -139,7 +139,10 @@
     <!-- Exhibition !-->
 
     <!-- RouteCommend !-->
+    <color name="route_commend_info_exhibition_location_name_color">#000521</color>
+    <color name="route_commend_info_exhibition_exhibition_name_color">#8D92A3</color>
 
+    v
     <!-- MyInfo !-->
 
     <!-- Login/Register !-->
