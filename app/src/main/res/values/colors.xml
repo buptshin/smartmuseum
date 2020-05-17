@@ -159,8 +159,11 @@
     <color name="route_commend_info_exhibition_location_name_color">#000521</color>
     <color name="route_commend_info_exhibition_exhibition_name_color">#8D92A3</color>
 
-    v
     <!-- MyInfo !-->
+
+    <!--Settings-->
+    <color name="settings_switch_track_checked">#842D29</color>
+    <color name="settings_switch_track_unchecked">#08080040</color>
 
 
 </resources>
