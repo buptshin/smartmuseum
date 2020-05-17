@@ -131,6 +131,14 @@
     <string name="goods_order_delivery_edit_order">变更订单</string>
     <string name="goods_order_delivery_myself_order">自取订单</string>
 
+    <string name="goods_order_status_text">订单状态</string>
+
+    <string name="goods_order_status_pay">下单</string>
+    <string name="goods_order_status_confirm">确认</string>
+    <string name="goods_order_status_pack">包裹打包</string>
+    <string name="goods_order_status_delivery">包裹配送</string>
+    <string name="goods_order_status_getpack">收到包裹</string>
+
 
     <!-- RouteCommend !-->
     <string name="route_commend_info_start_location_text">初始位置</string>

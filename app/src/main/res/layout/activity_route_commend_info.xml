@@ -38,7 +38,7 @@
             android:id="@+id/route_commend_info_map_img"
             android:layout_width="25dp"
             android:layout_height="25dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="@dimen/goods_info_margin_start"
             android:src="@mipmap/route_commend_info_map"
             app:layout_constraintTop_toTopOf="parent"

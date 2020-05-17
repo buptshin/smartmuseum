@@ -1,10 +1,12 @@
 package com.example.smartmuseum.adapter;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -19,6 +21,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.GoodsPurchasedItemBinding;
 import com.example.smartmuseum.model.Goods;
 import com.example.smartmuseum.util.GlideRoundTransform;
+import com.example.smartmuseum.view.goods.GoodsOrderStatusActivity;
 
 import java.util.List;
 
@@ -70,6 +73,14 @@ public class MainPageGoodsPurchasedAdapter extends RecyclerView.Adapter<MainPage
                     .apply(myOptions)
                     .into(holder.getBinding().goodsPurchasedGoodsImage);
         }
+
+        holder.getBinding().goodsPurchasedGoodsLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(holder.getBinding().getRoot().getContext(), GoodsOrderStatusActivity.class);
+                holder.getBinding().getRoot().getContext().startActivity(intent);
+            }
+        });
 
     }
 

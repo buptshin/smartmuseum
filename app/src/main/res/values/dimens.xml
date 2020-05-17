@@ -188,6 +188,9 @@
     <dimen name="goods_order_delivery_order_edit_text">18sp</dimen>
     <dimen name="goods_order_delivery_card_background_time_text">20sp</dimen>
 
+    <dimen name="goods_order_status_pay_text">20sp</dimen>
+    <dimen name="goods_order_status_pay_time_text">18sp</dimen>
+
 
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>

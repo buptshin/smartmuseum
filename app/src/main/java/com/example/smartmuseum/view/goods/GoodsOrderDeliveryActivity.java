@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ActivityGoodsOrderDeliveryBinding;
@@ -36,6 +37,12 @@ public class GoodsOrderDeliveryActivity extends AppCompatActivity implements Vie
 
     @Override
     public GoodsOrderDeliveryActivity bindEvent() {
+        mBinding.goodsOrderDeliveryReturnImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         return this;
     }
 }

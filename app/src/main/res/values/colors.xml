@@ -118,6 +118,9 @@
     <color name="goods_order_delivery_edit_order_text">#8D92A3</color>
     <color name="goods_order_delivery_time_text">#FFFFFF</color>
 
+    <color name="goods_order_status_name_text">#000521</color>
+    <color name="goods_order_status_time_text">#8D92A3</color>
+
 
 
     <!-- Friend !-->
