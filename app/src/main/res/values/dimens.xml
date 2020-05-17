@@ -128,7 +128,13 @@
     <dimen name="friend_choose_friends_button_radius">4dp</dimen>
     <dimen name="friend_choose_friends_item_img_width">101dp</dimen>
     <dimen name="friend_choose_friends_item_height">91dp</dimen>
+
+
     <!-- Exhibition !-->
+    <dimen name="exhibition_inner_collection_lable_tv">45sp</dimen>
+    <dimen name="exhibition_inner_collection_position_hint_tv">14sp</dimen>
+    <dimen name="exhibition_inner_collection_concrete_position_tv">18sp</dimen>
+    <dimen name="exhibition_inner_collection_change_hint_tv">14sp</dimen>
 
     <!-- RouteCommend !-->
 

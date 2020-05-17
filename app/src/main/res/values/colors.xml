@@ -113,13 +113,19 @@
     <color name="friend_choose_friends_item_normal_button">#842D29</color>
     <color name="friend_choose_friends_item_already_button">#FFFFFF</color>
     <color name="friend_choose_friends_item_offline_button">#CDCDD7</color>
+
     <!-- Exhibition !-->
+    <color name="exhibition_inner_collection_lable_tv">#000521</color>
+    <color name="exhibition_inner_collection_position_hint_tv">#000521</color>
+    <color name="exhibition_inner_collection_concrete_position_tv">#842D29</color>
+    <color name="exhibition_inner_collection_change_hint_tv">#8D92A3</color>
+    <color name="exhibition_inner_collector_seekbar_thumb">#55842D29</color>
+    <color name="exhibition_inner_collector_seekbar_style_bg">#F1F3F8</color>
+    <color name="exhibition_inner_collector_seekbar_style_progress">#842D29</color>
 
     <!-- RouteCommend !-->
 
     <!-- MyInfo !-->
-
-    <!-- Login/Register !-->
 
 
 </resources>

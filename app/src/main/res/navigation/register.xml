@@ -24,7 +24,9 @@
             app:destination="@id/registerStepThreeFragment" />
         <action
             android:id="@+id/action_registerStepTwoFragment_to_registerStepOneFragment"
-            app:destination="@id/registerStepOneFragment" />
+            app:destination="@id/registerStepOneFragment"
+            app:popUpTo="@+id/registerStepOneFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerStepThreeFragment"
@@ -36,7 +38,8 @@
             app:destination="@id/registerStepFourFragment" />
         <action
             android:id="@+id/action_registerStepThreeFragment_to_registerStepTwoFragment"
-            app:destination="@id/registerStepTwoFragment" />
+            app:destination="@id/registerStepTwoFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerStepFourFragment"
@@ -48,7 +51,8 @@
             app:destination="@id/registerStepFiveFragment" />
         <action
             android:id="@+id/action_registerStepFourFragment_to_registerStepThreeFragment"
-            app:destination="@id/registerStepThreeFragment" />
+            app:destination="@id/registerStepThreeFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/registerStepFiveFragment"
@@ -57,6 +61,7 @@
         tools:layout="@layout/fragment_register_step_five" >
         <action
             android:id="@+id/action_registerStepFiveFragment_to_registerStepFourFragment"
-            app:destination="@id/registerStepFourFragment" />
+            app:destination="@id/registerStepFourFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 </navigation>

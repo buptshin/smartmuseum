@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forget_pwd"
+    app:startDestination="@id/forgetPwdResetFragment">
+
+    <fragment
+        android:id="@+id/forgetPwdResetFragment"
+        android:name="com.example.smartmuseum.view.forgetpwd.ForgetPwdResetFragment"
+        android:label="fragment_forget_pwd_reset"
+        tools:layout="@layout/fragment_forget_pwd_reset" />
+</navigation>
