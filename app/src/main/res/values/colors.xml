@@ -164,6 +164,11 @@
     <!--Settings-->
     <color name="settings_switch_track_checked">#842D29</color>
     <color name="settings_switch_track_unchecked">#08080040</color>
+    <color name="settings_lable_tv">#1A1A1A</color>
+    <color name="settings_item_title_tv">#000521</color>
+    <color name="settings_item_tv">#000521</color>
+    <color name="settings_setted_language_tv">#B8BBC6</color>
+    <color name="settings_logout_btn">#FFFFFF </color>
 
 
 </resources>
