@@ -16,6 +16,7 @@ import com.example.smartmuseum.databinding.FragmentMainpageMyinfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.me.FieldGuideActivity;
 import com.example.smartmuseum.view.me.MuseumInfoActivity;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 public class MainPageMyInfoFragment extends Fragment implements ViewChainedBinding {
 
@@ -59,6 +60,14 @@ public class MainPageMyInfoFragment extends Fragment implements ViewChainedBindi
         mBinding.fgbutton.setOnClickListener(view -> {
             Intent intent = new Intent(mBinding.getRoot().getContext(), FieldGuideActivity.class);
             startActivity(intent);
+        });
+        mBinding.mainpageMyinfoFriendsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               View parent = mBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(4,false);
+            }
         });
 
         return this;

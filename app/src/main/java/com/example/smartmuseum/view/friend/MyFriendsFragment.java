@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentMyFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 public class MyFriendsFragment extends Fragment implements ViewChainedBinding<MyFriendsFragment> {
 
@@ -48,6 +49,14 @@ public class MyFriendsFragment extends Fragment implements ViewChainedBinding<My
 
     @Override
     public MyFriendsFragment bindEvent() {
-        return null;
+        fragmentMyFriendsBinding.friendMyFirendsPersonalStartTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View parent = fragmentMyFriendsBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(5,false);
+            }
+        });
+        return this;
     }
 }

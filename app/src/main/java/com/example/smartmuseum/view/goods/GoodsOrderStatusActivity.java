@@ -50,6 +50,13 @@ public class GoodsOrderStatusActivity extends AppCompatActivity implements ViewC
                 finish();
             }
         });
+        mBinding.goodsOrderStatusDeliveryImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(GoodsOrderStatusActivity.this,GoodsOrderDeliveryActivity.class);
+                startActivity(intent);
+            }
+        });
         return this;
     }
 }

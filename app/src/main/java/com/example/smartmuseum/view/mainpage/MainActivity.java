@@ -2,6 +2,7 @@ package com.example.smartmuseum.view.mainpage;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
@@ -12,11 +13,15 @@ import android.view.MenuItem;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.ActivityMainBinding;
+import com.example.smartmuseum.databinding.FragmentForgetPwdResetBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.explore.ExploreActivityFragment;
 import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
 import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
+import com.example.smartmuseum.view.friend.ChooseFriendsFragment;
+import com.example.smartmuseum.view.friend.MyFriendsFragment;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -47,11 +52,19 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         //状态栏字体设为黑色
         ScreenUtil.setAndroidNativeLightStatusBar(MainActivity.this, true);
 
+        // 看是否打开侧滑栏
+        if(GlobalVariables.hasAcompany)
+            mBinding.mainpageDrawer.openDrawer(GravityCompat.START);
+
         //设置fragments
+        //主页的四个fragment
         Fragment mainPageExploreFragment = MainPageExploreFragment.getInstance();
         Fragment mainPageNavigationFragment = MainPageNavigationFragment.getInstance();
         Fragment mainPageGoodsFragment = MainPageGoodsFragment.getInstance();
         Fragment mainPageMyInfoFragment = MainPageMyInfoFragment.getInstance();
+        //个人界面的两个fragment
+        Fragment myFriendsFragment = MyFriendsFragment.getInstance();
+        Fragment chooseFriendsFragment = ChooseFriendsFragment.getInstance();
 
         //添加fragments到adapter
         fragments = new ArrayList<>();
@@ -59,6 +72,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         fragments.add(mainPageNavigationFragment);
         fragments.add(mainPageGoodsFragment);
         fragments.add(mainPageMyInfoFragment);
+        fragments.add(myFriendsFragment);
+        fragments.add(chooseFriendsFragment);
 
 
         //设置adapter
