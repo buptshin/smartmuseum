@@ -119,7 +119,7 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guideline69"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="0.2"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.058"
             app:srcCompat="@mipmap/settings_close_black" />
@@ -162,13 +162,11 @@
         <ImageView
             android:id="@+id/settings_personal_account_enter_img"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="11dp"
             app:layout_constraintBottom_toBottomOf="@+id/settings_personal_account_tv"
             app:layout_constraintEnd_toStartOf="@+id/guideline74"
-            app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent="0.015"
             app:layout_constraintTop_toTopOf="@+id/settings_personal_account_tv"
-            app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.05"
             app:srcCompat="@mipmap/settings_enter" />
 

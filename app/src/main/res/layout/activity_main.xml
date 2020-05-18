@@ -8,34 +8,371 @@
 
     </data>
 
-    <FrameLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/mainpage_drawer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/mainpage_activity_marginTop">
+            android:background="#FFFFFF">
 
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/mainpage_bottomnavigationview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/mainpage_navigation_background"
-                android:layout_alignParentBottom="true"
-                app:itemIconTint="@drawable/mainpage_navigation_selector_item_color"
-                app:labelVisibilityMode="unlabeled"
-                app:menu="@menu/mainpage_navigation"/>
-
-            <com.example.smartmuseum.view.otherview.NoScrollViewPager
-                android:id="@+id/mainpage_noscrollviewpager"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@+id/mainpage_bottomnavigationview"
-                />
+                android:layout_marginTop="@dimen/mainpage_activity_marginTop">
 
-        </RelativeLayout>
-    </FrameLayout>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/mainpage_bottomnavigationview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/mainpage_navigation_background"
+                    android:layout_alignParentBottom="true"
+                    app:itemIconTint="@drawable/mainpage_navigation_selector_item_color"
+                    app:labelVisibilityMode="unlabeled"
+                    app:menu="@menu/mainpage_navigation"/>
+
+                <com.example.smartmuseum.view.otherview.NoScrollViewPager
+                    android:id="@+id/mainpage_noscrollviewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/mainpage_bottomnavigationview"
+                    />
+
+            </RelativeLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_gravity="start"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#EEEEEE">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.574"
+                    app:layout_constraintHorizontal_bias="0.065"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.716"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.262"
+                    app:srcCompat="@drawable/drawer_friends_position_img" />
+
+                <TextView
+                    android:id="@+id/mainpage_drawer_username_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="@string/mainpage_drawer_username_tv"
+                    android:textColor="@color/mainpage_drawer_username_tv"
+                    android:textSize="@dimen/mainpage_drawer_username_tv"
+                    app:layout_constraintBottom_toTopOf="@+id/mainpage_drawer_user_status_tv"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_img"
+                    app:layout_constraintTop_toTopOf="@+id/mainpage_drawer_img"
+                    tools:text="葫芦" />
+
+                <TextView
+                    android:id="@+id/mainpage_drawer_user_status_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainpage_drawer_user_status_tv"
+                    android:textColor="@color/mainpage_drawer_user_status_tv"
+                    android:textSize="@dimen/mainpage_drawer_user_status_tv"
+                    app:layout_constraintBottom_toBottomOf="@+id/mainpage_drawer_img"
+                    app:layout_constraintStart_toStartOf="@+id/mainpage_drawer_username_tv"
+                    app:layout_constraintTop_toBottomOf="@+id/mainpage_drawer_username_tv"
+                    tools:text="和伙伴参观中" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_user_gender_img"
+                    android:layout_width="20dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/mainpage_drawer_username_tv"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_username_tv"
+                    app:layout_constraintTop_toTopOf="@+id/mainpage_drawer_username_tv"
+                    app:srcCompat="@mipmap/drawer_friends_position_gender" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline63"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline65"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline66"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.03" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline67"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.09" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.15" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.21" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.85" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_my_position_img"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline67"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline69"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline63"
+                    app:layout_constraintTop_toTopOf="@+id/guideline66"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.08"
+                    app:srcCompat="@mipmap/drawer_friends_position_icon_0" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_friends_position_img_2"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline68"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline69"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline63"
+                    app:layout_constraintTop_toTopOf="@+id/guideline67"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.08"
+                    app:srcCompat="@mipmap/drawer_friends_position_icon_2" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_friends_position_img_3"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline68"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline69"
+                    app:layout_constraintTop_toTopOf="@+id/guideline67"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.08"
+                    app:srcCompat="@mipmap/drawer_friends_position_icon_3" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_friends_position_img_1"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline67"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.045"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline69"
+                    app:layout_constraintTop_toTopOf="@+id/guideline66"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.08"
+                    app:srcCompat="@mipmap/drawer_friends_position_icon_1" />
+
+                <TextView
+                    android:id="@+id/mainpage_drawer_my_position_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainpage_drawer_my_position_tv"
+                    android:textColor="@color/mainpage_drawer_position_tv"
+                    android:textSize="@dimen/mainpage_drawer_position_tv"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline67"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline69"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_my_position_img"
+                    app:layout_constraintTop_toTopOf="@+id/guideline66"
+                    tools:text="我的位置" />
+
+                <TextView
+                    android:id="@+id/mainpage_drawer_friends_position_tv_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainpage_drawer_friends_position_tv_2"
+                    android:textColor="@color/mainpage_drawer_position_tv"
+                    android:textSize="@dimen/mainpage_drawer_position_tv"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline68"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline69"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_friends_position_img_2"
+                    app:layout_constraintTop_toTopOf="@+id/guideline67"
+                    tools:text="伙伴位置2" />
+
+                <TextView
+                    android:id="@+id/mainpage_drawer_friends_position_tv_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainpage_drawer_friends_position_tv_3"
+                    android:textColor="@color/mainpage_drawer_position_tv"
+                    android:textSize="@dimen/mainpage_drawer_position_tv"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline68"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_friends_position_img_3"
+                    app:layout_constraintTop_toTopOf="@+id/guideline67"
+                    tools:text="伙伴位置3" />
+
+                <TextView
+                    android:id="@+id/mainpage_drawer_friends_position_tv_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mainpage_drawer_friends_position_tv_1"
+                    android:textColor="@color/mainpage_drawer_position_tv"
+                    android:textSize="@dimen/mainpage_drawer_position_tv"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline67"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintHorizontal_bias="0.05"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_friends_position_img_1"
+                    app:layout_constraintTop_toTopOf="@+id/guideline66"
+                    tools:text="伙伴位置1" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_smaller_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline70"
+                    app:layout_constraintHeight_default="percent"
+                    app:layout_constraintHeight_percent="0.042"
+                    app:layout_constraintStart_toStartOf="@+id/guideline63"
+                    app:layout_constraintTop_toTopOf="@+id/guideline68"
+                    app:layout_constraintWidth_default="percent"
+                    app:layout_constraintWidth_percent="0.068"
+                    app:srcCompat="@mipmap/exhibition_inner_collection_smaller_btn" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_expand_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline70"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintHeight_percent="0.042"
+                    app:layout_constraintTop_toTopOf="@+id/guideline68"
+                    app:layout_constraintWidth_percent="0.068"
+                    app:srcCompat="@mipmap/exhibition_inner_collection_expand_btn" />
+
+                <SeekBar
+                    android:id="@+id/mainpage_drawer_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:max="9"
+                    android:maxHeight="3dp"
+                    android:minHeight="3dp"
+                    android:progress="3"
+                    android:progressDrawable="@drawable/exhibition_inner_collector_seekbar_style"
+                    android:thumb="@drawable/exhibition_inner_collector_seekbar_thumb"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline70"
+                    app:layout_constraintEnd_toStartOf="@+id/mainpage_drawer_expand_btn"
+                    app:layout_constraintStart_toEndOf="@+id/mainpage_drawer_smaller_btn"
+                    app:layout_constraintTop_toTopOf="@+id/guideline68" />
+
+                <ImageView
+                    android:id="@+id/mainpage_drawer_position_map"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toTopOf="@+id/guideline71"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintStart_toStartOf="@+id/guideline63"
+                    app:layout_constraintTop_toTopOf="@+id/guideline70"
+                    app:srcCompat="@drawable/drawer_friends_position_map" />
+
+                <Button
+                    android:id="@+id/mainpage_drawer_send_message_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/drawer_friends_position_send_msg_btn_border"
+                    android:text="@string/mainpage_drawer_send_message_btn"
+                    android:textColor="@color/mainpage_drawer_btn"
+                    android:textSize="@dimen/mainpage_drawer_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline69"
+                    app:layout_constraintStart_toStartOf="@+id/guideline63"
+                    app:layout_constraintTop_toTopOf="@+id/guideline71"
+                    tools:text="发送消息" />
+
+                <Button
+                    android:id="@+id/mainpage_drawer_exit_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/drawer_friends_position_exit_btn_border"
+                    android:text="@string/mainpage_drawer_exit_btn"
+                    android:textColor="@color/mainpage_drawer_btn"
+                    android:textSize="@dimen/mainpage_drawer_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline65"
+                    app:layout_constraintStart_toStartOf="@+id/guideline69"
+                    app:layout_constraintTop_toTopOf="@+id/guideline71"
+                    tools:text="退出" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
 </layout>

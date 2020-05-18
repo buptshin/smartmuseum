@@ -18,6 +18,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.FriendFragmentAccompanyAdapter;
 import com.example.smartmuseum.databinding.FragmentChooseFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 import com.example.smartmuseum.viewmodel.AccompanyViewModel;
 
 import java.util.HashMap;
@@ -62,6 +63,14 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
 
     @Override
     public ChooseFriendsFragment bindEvent() {
-        return null;
+        fragmentChooseFriendBinding.friendChooseFriendsBackImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View parent = fragmentChooseFriendBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(4,false);
+            }
+        });
+        return this;
     }
 }

@@ -24,6 +24,7 @@ import android.widget.PopupWindow;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentExhibitionInnerCollectionBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.GlobalVariables;
 
 import javax.xml.transform.sax.TemplatesHandler;
 
@@ -179,6 +180,7 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                                     @Override
                                     public void onAnimationEnd(Animator animation) {
                                         super.onAnimationEnd(animation);
+                                        GlobalVariables.location_change = 1;  // 全局变量，标识用户的位置已经改变
                                         View view = getActivity().getLayoutInflater().inflate(R.layout.exhibition_inner_collector_popwindow_view,null);
                                         view.measure(View.MeasureSpec.UNSPECIFIED,View.MeasureSpec.UNSPECIFIED);
                                         // 第四个参数是弹窗能否获得焦点
