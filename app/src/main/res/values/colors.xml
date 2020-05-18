@@ -122,6 +122,11 @@
     <color name="goods_order_status_name_text">#000521</color>
     <color name="goods_order_status_time_text">#8D92A3</color>
 
+    <color name="route_commend_popupwindow_title_text">#000000</color>
+    <color name="route_commend_popupwindow_content_text">#8D92A3</color>
+    <color name="route_commend_popupwindow_people_text">#210000</color>
+    <color name="route_commend_popupwindow_time_text">#842D29</color>
+
 
 
     <!-- Friend !-->

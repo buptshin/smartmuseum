@@ -43,6 +43,8 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     @Override
     public RouteCommendInfoActivity bindData() {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_route_commend_info);
+        //设置配送进度
+        mBinding.routeCommendPopupwindowSomethingDeliveryTimeView.setScales(new double[]{0.8, 0.2});
         return this;
     }
 
@@ -57,6 +59,7 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     @Override
     public RouteCommendInfoActivity bindEvent() {
 
+        //打开浮窗
         mBinding.routeCommendInfoFirstLocationImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,6 +67,32 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
                 getCommendGoods();
             }
         });
+
+        //关闭浮窗
+        mBinding.routeCommendPopupwindowNothingCloseImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBinding.routeCommendPopupwindowNothingLayout.setVisibility(View.GONE);
+            }
+        });
+
+        //打开浮窗
+        mBinding.routeCommendInfoSecondLocationImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.VISIBLE);
+            }
+        });
+
+        //关闭浮窗
+        mBinding.routeCommendPopupwindowSomethingCloseImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.GONE);
+            }
+        });
+
+
         return this;
     }
 

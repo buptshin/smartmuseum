@@ -157,6 +157,12 @@
     <string name="dialog_route_commend_goods_commend_detail_text1">根据您参观过的</string>
     <string name="dialog_route_commend_goods_commend_detail_text2">推荐</string>
 
+    <string name="route_commend_popupwindow_goods_pack_title">文创包裹</string>
+    <string name="route_commend_popupwindow_goods_pack_nothing">暂无内容</string>
+    <string name="route_commend_popupwindow_goods_commend_title">推荐加入</string>
+    <string name="route_commend_popupwindow_goods_add_goods_title">添加到包裹</string>
+    <string name="route_commend_popupwindow_goods_detail_title">查看包裹详情</string>
+
 
     <string name="explore_text">探索</string>
     <string name="exhibition_text">展览</string>
