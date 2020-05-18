@@ -6,10 +6,20 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/route_commend_info_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/goods_info_button_margin_start"
-        android:background="@color/route_commend_info_popupwindow_parent_background">
+        android:background="@color/mainpage_goods_sell_background">
+
+        <com.example.smartmuseum.view.otherview.DragFloatActionButton
+            android:id="@+id/route_commend_drag_float_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@mipmap/route_commend_info_pack_nothing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ImageView
             android:id="@+id/route_commend_info_return_img"
@@ -460,7 +470,7 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <Button
-                android:id="@+id/route_commend_popupwindow_something_add_goods_pack_button"
+                android:id="@+id/route_commend_popupwindow_something_goods_detail_button"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/goods_info_button_height"
                 android:layout_marginTop="30dp"

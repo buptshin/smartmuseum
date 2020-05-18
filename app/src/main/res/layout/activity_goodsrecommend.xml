@@ -53,6 +53,7 @@
                 android:textSize="@dimen/mainpage_goods_recommend_newlocation_text"/>
 
             <ImageView
+                android:id="@+id/mainpage_goods_sell_commend_shop_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/mainpage_goods_sell_shop"

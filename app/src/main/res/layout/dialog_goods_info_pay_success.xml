@@ -71,7 +71,7 @@
             app:layout_constraintRight_toRightOf="parent"/>
 
         <Button
-            android:id="@+id/goods_info_add_cart_button"
+            android:id="@+id/goods_info_contiue_add_cart_button"
             android:layout_width="match_parent"
             android:layout_height="@dimen/goods_info_button_height"
             android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_margin_top"
