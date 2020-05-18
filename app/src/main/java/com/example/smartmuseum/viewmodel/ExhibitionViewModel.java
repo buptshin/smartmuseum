@@ -18,20 +18,36 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.internal.operators.observable.ObservableCache;
 
 public class ExhibitionViewModel extends ViewModel {
+    // 展厅列表（展厅详细页展示）
     private MutableLiveData<List<Exhibition>> exhibition_list;
 
+    // 获取展览信息
     public MutableLiveData<List<Exhibition>> getExhibition_list(HashMap map) {
         if (exhibition_list == null) {
             exhibition_list = new MutableLiveData<>();
             loadExhibitionModelList(map);
-            // 获取展览的数据
-            List<Exhibition> exhibitions = new ArrayList<>();
-            exhibition_list.setValue(exhibitions);
+//            // 获取展览的数据
+//            List<Exhibition> exhibitions = new ArrayList<>();
+//            exhibition_list.setValue(exhibitions);
         }
         return exhibition_list;
     }
 
+    // 展厅详细页展示
     private void loadExhibitionModelList(HashMap map) {
+        Exhibition exhibition1 = new Exhibition();
+        exhibition1.setExhibition_name("回归之路");
+        exhibition1.setExhibition_hall("北一、北三展厅");
+
+        Exhibition exhibition2 = new Exhibition();
+        exhibition2.setExhibition_name("古代中国");
+        exhibition2.setExhibition_hall("地下一层展厅");
+
+        List<Exhibition> exhibitionList = new ArrayList<>();
+        exhibitionList.add(exhibition1);
+        exhibitionList.add(exhibition2);
+        // 传入
+        exhibition_list.setValue(exhibitionList);
         // 发送网络请求获取
 //        HttpRequest.Get.testGet(new Observer<HttpResult<List<Exhibtion>>>() {
 //            @Override

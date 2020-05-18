@@ -1,6 +1,7 @@
 package com.example.smartmuseum.view.mainpage;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,28 +13,37 @@ import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.viewpager.widget.ViewPager;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.adapter.ExploreFragmentAdapter;
 import com.example.smartmuseum.adapter.MyRecyclerViewAdapter;
 import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
+import com.example.smartmuseum.databinding.FragmentMainpageExploreNewBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
 import com.example.smartmuseum.view.explore.ExhibitionContentActivity;
 import com.example.smartmuseum.view.explore.ExploreActivityFragment;
+import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
+import com.example.smartmuseum.view.explore.ExploreExhibitionFragment;
+import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
-public class MainPageExploreFragment extends Fragment implements ViewChainedBinding {
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
-    private FragmentMainpageExploreBinding mBinding;
+public class MainPageExploreFragment extends Fragment implements ViewChainedBinding, View.OnClickListener {
 
-    private ArrayList<Exhibition> exhibition_list = new ArrayList<>();  // 展览对象类
+    private FragmentMainpageExploreNewBinding mainpageExploreNewBinding;
 
-    // 创建fragment管理器用于跳转探索页面内的fragments
-    private FragmentManager manager;
-    private FragmentTransaction fragmentTransaction;
+    private List<Fragment> fragment_list;
 
 
 
@@ -45,51 +55,107 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mBinding = DataBindingUtil.inflate(inflater,
-                R.layout.fragment_mainpage_explore,
+        mainpageExploreNewBinding = DataBindingUtil.inflate(inflater,
+                R.layout.fragment_mainpage_explore_new,
                 container,
                 false);
-        View v = mBinding.getRoot();
-
-
-        // 切换探索页面内四个功能Fragment相互切换
-//        mBinding.activity.setOnClickListener(view -> );
+        View v = mainpageExploreNewBinding.getRoot();
+        fragment_list = new ArrayList<>();
         this.bindData().bindView().bindEvent();
         return v;
     }
 
-    public void initItemList(ArrayList<Exhibition> list) {
-        Exhibition exhibition1 = new Exhibition("古代中国", R.drawable.mainpage_ancient_china, "基本陈列（常设）", 293993924,
-                R.mipmap.mainpage_exhibition_like_not_selected, "地下一层展厅", 3.5, 240);
-        list.add(exhibition1);
-        Exhibition exhibition2 = new Exhibition("回归之路", R.drawable.mainpage_return_road, "2019.9.17-11.27", 223904,
-                R.mipmap.mainpage_exhibition_like_selected, "北二，北三展厅", 1.5, 130);
-        list.add(exhibition2);
-    }
-
     @Override
     public MainPageExploreFragment bindData() {
+
         return this;
     }
 
     @Override
     public MainPageExploreFragment bindView() {
-        // recyclerView创建
-        initItemList(exhibition_list);
-        //创建布局管理器，垂直设置LinearLayoutManager.VERTICAL，水平设置LinearLayoutManager.HORIZONTAL
-        LinearLayoutManager mLinearLayoutManager = new LinearLayoutManager(this.getContext(), LinearLayoutManager.HORIZONTAL, false);
-        //创建适配器，将数据传递给适配器
-        MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter(exhibition_list);
-        //设置布局管理器
-        mBinding.exhibitionRvList.setLayoutManager(mLinearLayoutManager);
-//        //设置适配器adapter
-//        mRecycleView.setAdapter(mAdapter);
-        mBinding.exhibitionRvList.setAdapter(adapter);
+
+        // 设置点击监听
+        mainpageExploreNewBinding.activity.setOnClickListener(this);
+        mainpageExploreNewBinding.exhibition.setOnClickListener(this);
+        mainpageExploreNewBinding.recommendedroute.setOnClickListener(this);
+        mainpageExploreNewBinding.bookvisit.setOnClickListener(this);
+
+        // 将子fragment添加至fragment列表
+        fragment_list.add(ExploreExhibitionFragment.getInstance());
+        fragment_list.add(ExploreActivityFragment.getInstance());
+        fragment_list.add(ExploreRecommendRoute.getInstance());
+        fragment_list.add(ExploreBookVisitFragment.getInstance());
+
+        // 设置viewpager相关
+        mainpageExploreNewBinding.prohibitescrollviewpager.setAdapter(new ExploreFragmentAdapter(getChildFragmentManager(), fragment_list));
+        mainpageExploreNewBinding.prohibitescrollviewpager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
+            }
+        });
+        mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(0);
         return this;
     }
 
     @Override
     public MainPageExploreFragment bindEvent() {
         return this;
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        initImageButton();
+        switch (view.getId()) {
+            case R.id.exhibition:
+                mainpageExploreNewBinding.exhibition.setImageResource(R.mipmap.mainpage_exhibition_selected);
+                mainpageExploreNewBinding.exhibitionText.setTextColor(Color.parseColor("#842d29"));
+                Log.d(TAG, "onClick: button1");
+                mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(0);
+                break;
+            case R.id.activity:
+                mainpageExploreNewBinding.activity.setImageResource(R.mipmap.activity_selected);
+                mainpageExploreNewBinding.activityText.setTextColor(Color.parseColor("#842d29"));
+                Log.d(TAG, "onClick: button2");
+                mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(1);
+                break;
+            case R.id.recommendedroute:
+                mainpageExploreNewBinding.recommendedroute.setImageResource(R.mipmap.recommendedroute_selected);
+                mainpageExploreNewBinding.recomendedrouteText.setTextColor(Color.parseColor("#842d29"));
+                Log.d(TAG, "onClick: button3");
+                mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(2);
+                break;
+            case R.id.bookvisit:
+                mainpageExploreNewBinding.bookvisit.setImageResource(R.mipmap.bookvisit_selected);
+                mainpageExploreNewBinding.bookvisitText.setTextColor(Color.parseColor("#842d29"));
+                Log.d(TAG, "onClick: button4");
+                mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(3);
+                break;
+        }
+    }
+
+    // 每次点击后还原Button样式
+    public void initImageButton() {
+        mainpageExploreNewBinding.exhibitionText.setTextColor(Color.parseColor("#222222"));
+        mainpageExploreNewBinding.activityText.setTextColor(Color.parseColor("#222222"));
+        mainpageExploreNewBinding.recomendedrouteText.setTextColor(Color.parseColor("#222222"));
+        mainpageExploreNewBinding.bookvisitText.setTextColor(Color.parseColor("#222222"));
+
+        mainpageExploreNewBinding.exhibition.setImageResource(R.mipmap.exhibition_not_selected);
+        mainpageExploreNewBinding.activity.setImageResource(R.mipmap.mainpage_activity_not_selected);
+        mainpageExploreNewBinding.recommendedroute.setImageResource(R.mipmap.mainpage_recommendedroute_not_selected);
+        mainpageExploreNewBinding.bookvisit.setImageResource(R.mipmap.mainpage_bookvisit_not_selected);
+
     }
 }

@@ -21,7 +21,7 @@
             app:srcCompat="@mipmap/mainpage_search" />
 
         <TextView
-            android:id="@+id/ExplorerTextView"
+            android:id="@+id/mainpage_explore_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -42,7 +42,7 @@
             android:layout_marginTop="32dp"
             android:background="#00000000"
             app:layout_constraintStart_toEndOf="@+id/activity"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_explore_text"
             app:srcCompat="@mipmap/mainpage_recommendedroute_not_selected" />
 
         <ImageButton
@@ -53,7 +53,7 @@
             android:layout_marginTop="32dp"
             android:background="#00000000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_explore_text"
             app:srcCompat="@mipmap/mainpage_exhibition_selected" />
 
         <TextView
@@ -99,7 +99,7 @@
             android:layout_marginTop="32dp"
             android:background="#00000000"
             app:layout_constraintStart_toEndOf="@+id/recommendedroute"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_explore_text"
             app:srcCompat="@mipmap/mainpage_bookvisit_not_selected" />
 
         <TextView
@@ -123,7 +123,7 @@
             android:layout_marginTop="32dp"
             android:background="#00000000"
             app:layout_constraintStart_toEndOf="@+id/exhibition"
-            app:layout_constraintTop_toBottomOf="@+id/ExplorerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_explore_text"
             app:srcCompat="@mipmap/mainpage_activity_not_selected" />
 
         <ImageView

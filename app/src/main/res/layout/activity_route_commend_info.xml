@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/goods_info_button_margin_start"
+        android:background="@color/mainpage_goods_sell_background">
+
+        <ImageView
+            android:id="@+id/route_commend_info_return_img"
+            android:layout_width="@dimen/goods_info_return_size"
+            android:layout_height="@dimen/goods_info_return_size"
+            android:src="@mipmap/goods_order_check_return_button_gray"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="文物特展"
+            android:textColor="@color/goods_order_check_order_color"
+            android:textSize="@dimen/goods_order_check_title_text"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginStart="@dimen/goods_info_margin_start"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_return_img"/>
+
+        <ImageView
+            android:id="@+id/route_commend_info_map_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="@dimen/goods_info_margin_start"
+            android:src="@mipmap/route_commend_info_map"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <ImageView
+            android:id="@+id/route_commend_info_timeline_img"
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="50dp"
+            android:src="@drawable/route_commend_info_timeline"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_title_text"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_start_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/route_commend_info_start_location_text"
+            android:textSize="@dimen/route_commend_info_exhibition_location_name_text"
+            android:textColor="@color/route_commend_info_exhibition_location_name_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_title_text"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_start_location_exhibition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北1展厅"
+            android:textSize="@dimen/route_commend_info_exhibition_exhibition_name_text"
+            android:textColor="@color/route_commend_info_exhibition_exhibition_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_start_location_text"
+            app:layout_constraintTop_toTopOf="@+id/route_commend_info_start_location_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_start_location_text"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_first_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="古蜀华章"
+            android:textSize="@dimen/route_commend_info_exhibition_location_name_text"
+            android:textColor="@color/route_commend_info_exhibition_location_name_color"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="35dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_start_location_text"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_first_location_exhibition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北9展厅"
+            android:textSize="@dimen/route_commend_info_exhibition_exhibition_name_text"
+            android:textColor="@color/route_commend_info_exhibition_exhibition_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_first_location_text"
+            app:layout_constraintTop_toTopOf="@+id/route_commend_info_first_location_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_first_location_text"/>
+
+        <ImageView
+            android:id="@+id/route_commend_info_first_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/route_commend_info_exhibition_background_1"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_first_location_text"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_second_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大唐风华"
+            android:textSize="@dimen/route_commend_info_exhibition_location_name_text"
+            android:textColor="@color/route_commend_info_exhibition_location_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_first_location_img"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_second_location_exhibition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北10展厅"
+            android:textSize="@dimen/route_commend_info_exhibition_exhibition_name_text"
+            android:textColor="@color/route_commend_info_exhibition_exhibition_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_second_location_text"
+            app:layout_constraintTop_toTopOf="@+id/route_commend_info_second_location_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_second_location_text"/>
+
+        <ImageView
+            android:id="@+id/route_commend_info_second_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/route_commend_info_exhibition_background_2"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_second_location_text"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_third_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中国古代瓷器艺术展"
+            android:textSize="@dimen/route_commend_info_exhibition_location_name_text"
+            android:textColor="@color/route_commend_info_exhibition_location_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_second_location_img"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_third_location_exhibition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="北17展厅"
+            android:textSize="@dimen/route_commend_info_exhibition_exhibition_name_text"
+            android:textColor="@color/route_commend_info_exhibition_exhibition_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_third_location_text"
+            app:layout_constraintTop_toTopOf="@+id/route_commend_info_third_location_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_third_location_text"/>
+
+
+        <ImageView
+            android:id="@+id/route_commend_info_third_location_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/route_commend_info_exhibition_background_3"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_third_location_text"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_end_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/route_commend_info_end_location_text"
+            android:textSize="@dimen/route_commend_info_exhibition_location_name_text"
+            android:textColor="@color/route_commend_info_exhibition_location_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_timeline_img"
+            app:layout_constraintTop_toBottomOf="@+id/route_commend_info_third_location_img"/>
+
+        <TextView
+            android:id="@+id/route_commend_info_end_location_exhibition_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="国家博物馆-西门"
+            android:textSize="@dimen/route_commend_info_exhibition_exhibition_name_text"
+            android:textColor="@color/route_commend_info_exhibition_exhibition_name_color"
+            android:layout_marginStart="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/route_commend_info_end_location_text"
+            app:layout_constraintTop_toTopOf="@+id/route_commend_info_end_location_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_end_location_text"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

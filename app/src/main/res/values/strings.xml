@@ -3,14 +3,17 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <!--StartPage-->
     <string name="startpage_order_tv">立即预约</string>
     <string name="startpage_one_recommend_tv">个性展览推荐</string>
     <string name="startpage_one_details_tv">“回归之路”特展</string>
     <string name="startpage_one_index_tv">展览推荐</string>
+
     <string name="startpage_two_recommend_tv">今日文创推荐</string>
     <string name="startpage_two_details_tv">海晏河清加湿器</string>
     <string name="startpage_two_index_tv">文创推荐</string>
+
     <string name="startpage_three_recommend_tv">展品推荐</string>
     <string name="startpage_three_details_tv">清康熙豇豆红太白尊</string>
     <string name="startpage_three_index_tv">展品推荐</string>
@@ -32,6 +35,7 @@
     <string name="register_password_et_hint">密码</string>
     <string name="register_assure_pwd_et_hint">确认密码</string>
     <string name="register_btn">注册</string>
+
     <string name="register_next_step_tv">下一步</string>
     <string name="register_hint_one_tv">注册</string>
     <string name="register_step_one_count_tv">第1/3步</string>
@@ -39,6 +43,7 @@
     <string name="register_nickname_tv">用户名</string>
     <string name="register_name_tv">姓名</string>
     <string name="register_gender_tv">性别</string>
+
     <string name="register_hint_two_tv">注册</string>
     <string name="register_step_two_count_tv">第2/3步</string>
     <string name="register_position_permissions_tv">位置信息权限</string>
@@ -46,11 +51,13 @@
     <string name="register_permission_navigation_checkbox">    导览</string>
     <string name="register_permission_goods_delivery_checkbox">    文创配送</string>
     <string name="register_permission_safe_run_checkbox">    急救逃生</string>
+
     <string name="register_hint_three_tv">注册</string>
     <string name="register_step_three_count_tv">第3/3步</string>
     <string name="register_input_telephone_tv">输入您的手机号以确认</string>
     <string name="register_telephone_tv">电话号码</string>
     <string name="register_area_code_tv">+86</string>
+
     <string name="register_assure_telephone_hint_tv">我们已经向您的手机号 +86 18378212121 发送了验证码。请您在下方填写验证码以确认手机号。</string>
     <string name="reigster_assure_telephone_chronometer_tv">33秒</string>
     <string name="register_assure_telephone_time_hint_tv">后可重新发送验证码</string>
@@ -97,6 +104,53 @@
     <string name="goods_info_select_type">选择型号</string>
     <string name="goods_info_add_cart">加入购物车</string>
 
+    <string name="goods_info_detail_goods_selcet_type">选择型号</string>
+    <string name="goods_info_detail_goods_selcet_number">选择数量</string>
+    <string name="goods_info_detail_goods_watch_detail">查看详情</string>
+    <string name="goods_info_detail_goods_buy">立即购买</string>
+    <string name="goods_info_detail_nobox">无礼盒</string>
+    <string name="goods_info_detail_box">有礼盒</string>
+
+    <string name="goods_order_check_change_order">变更订单</string>
+    <string name="goods_order_check_order_sum">订单结算</string>
+
+    <string name="goods_order_check_goods_price">商品费</string>
+    <string name="goods_order_check_pack_price">包装费</string>
+    <string name="goods_order_check_deliver_price">配送费</string>
+    <string name="goods_order_check_sum_price">总计</string>
+    <string name="goods_order_check_pay">立即付款</string>
+
+    <string name="goods_choose_address_add_newaddress">添加新地址</string>
+    <string name="goods_choose_address_choose_address">选择地址</string>
+    <string name="goods_choose_address_choose_next">下一步</string>
+    <string name="goods_choose_address_card_default_address">默认地址</string>
+
+    <string name="goods_pay_type_text">付款方式</string>
+    <string name="goods_pay_type_alipay_text">支付宝</string>
+    <string name="goods_pay_type_wechatpay_text">微信支付</string>
+    <string name="goods_pay_type_creditcardpay_text">信用卡</string>
+    <string name="goods_pay_type_moneypay_text">现金</string>
+
+    <string name="dialog_goods_info_pay_success_success_text">购买成功！</string>
+    <string name="dialog_goods_info_pay_success_tips_text">凭此二维码自助取货或\n查收配送文创商品！</string>
+    <string name="dialog_goods_info_pay_success_buy_text">继续购买</string>
+
+    <string name="goods_order_delivery_edit_order">变更订单</string>
+    <string name="goods_order_delivery_myself_order">自取订单</string>
+
+    <string name="goods_order_status_text">订单状态</string>
+
+    <string name="goods_order_status_pay">下单</string>
+    <string name="goods_order_status_confirm">确认</string>
+    <string name="goods_order_status_pack">包裹打包</string>
+    <string name="goods_order_status_delivery">包裹配送</string>
+    <string name="goods_order_status_getpack">收到包裹</string>
+
+
+    <!-- RouteCommend !-->
+    <string name="route_commend_info_start_location_text">初始位置</string>
+    <string name="route_commend_info_end_location_text">出口</string>
+
 
     <string name="explore_text">探索</string>
     <string name="exhibition_text">展览</string>
@@ -122,5 +176,12 @@
     <string name="friend_choose_friends_item_button">添加</string>
     <string name="friend_choose_friends_item_button_already">已添加</string>
     <string name="friend_choose_friends_start_button">立即开始</string>
+    <string name="backButton">goback</string>
+
+    <!--Exhibition-->
+    <string name="exhibition_inner_collection_lable_tv">导览</string>
+    <string name="exhibition_inner_collection_position_hint_tv">您现在的位置是</string>
+    <string name="exhibition_inner_collection_concrete_position_tv">北一展厅-复兴之路</string>
+    <string name="exhibition_inner_collection_change_hint_tv">缩放</string>
 
 </resources>

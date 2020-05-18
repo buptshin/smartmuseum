@@ -89,8 +89,40 @@
     <color name="goods_info_detail_introduction_color">#A38D8D</color>
 
     <color name="goods_info_detail_button_clickable">#842D29</color>
+    <color name="goods_info_detail_button_clickable_text">#FFFFFF</color>
     <color name="goods_info_detail_button_unclickable">#FFFFFF</color>
     <color name="goods_info_detail_button_unclickable_text">#000521</color>
+    <color name="goods_info_detail_item_title_text">#842D29</color>
+    <color name="goods_info_detail_item_introduction_text">#000000</color>
+
+    <color name="goods_order_check_change_order_color">#8D92A3</color>
+    <color name="goods_order_check_order_color">#000000</color>
+    <color name="goods_order_check_card_background">#842D29</color>
+    <color name="goods_order_check_price_text">#FFFFFF</color>
+
+    <color name="goods_choose_address_item_localaddress_color">#210000</color>
+    <color name="goods_choose_address_item_default_color">#842D29</color>
+
+    <color name="goods_pay_type_alipay_card_background_color">#E2E5FD</color>
+    <color name="goods_pay_type_wechatpay_card_background_color">#DAF6E4</color>
+    <color name="goods_pay_type_moneypay_card_background_color">#FEF3D8</color>
+    <color name="goods_pay_type_creditcardpay_card_background_color">#FEEAE8</color>
+    <color name="goods_pay_type_card_text_color">#000521</color>
+    
+    <color name="dialog_goods_info_pay_success_card_background_1">#842D29</color>
+    <color name="dialog_goods_info_pay_success_card_background_2">#C29795</color>
+    <color name="dialog_goods_info_pay_success_card_background_3">#FFFFFF</color>
+    <color name="dialog_goods_info_pay_success_success_text">#210000</color>
+    <color name="dialog_goods_info_pay_success_tips_text">#8D92A3</color>
+
+    <color name="goods_order_delivery_name_text">#000521</color>
+    <color name="goods_order_delivery_edit_order_text">#8D92A3</color>
+    <color name="goods_order_delivery_time_text">#FFFFFF</color>
+
+    <color name="goods_order_status_name_text">#000521</color>
+    <color name="goods_order_status_time_text">#8D92A3</color>
+
+
 
     <!-- Friend !-->
     <color name="friend_my_firends_main_box">#FFFFFF</color>
@@ -113,13 +145,22 @@
     <color name="friend_choose_friends_item_normal_button">#842D29</color>
     <color name="friend_choose_friends_item_already_button">#FFFFFF</color>
     <color name="friend_choose_friends_item_offline_button">#CDCDD7</color>
+
     <!-- Exhibition !-->
+    <color name="exhibition_inner_collection_lable_tv">#000521</color>
+    <color name="exhibition_inner_collection_position_hint_tv">#000521</color>
+    <color name="exhibition_inner_collection_concrete_position_tv">#842D29</color>
+    <color name="exhibition_inner_collection_change_hint_tv">#8D92A3</color>
+    <color name="exhibition_inner_collector_seekbar_thumb">#55842D29</color>
+    <color name="exhibition_inner_collector_seekbar_style_bg">#F1F3F8</color>
+    <color name="exhibition_inner_collector_seekbar_style_progress">#842D29</color>
 
     <!-- RouteCommend !-->
+    <color name="route_commend_info_exhibition_location_name_color">#000521</color>
+    <color name="route_commend_info_exhibition_exhibition_name_color">#8D92A3</color>
 
+    v
     <!-- MyInfo !-->
-
-    <!-- Login/Register !-->
 
 
 </resources>

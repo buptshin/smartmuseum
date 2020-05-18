@@ -1,12 +1,18 @@
 package com.example.smartmuseum.view.goods;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ActivityGoodsInfoBinding;
@@ -28,6 +34,14 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.bindData().bindView().bindEvent();
+    }
+
+    //singtask模式，购买成功时，清空该Activity任务栈并调用
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+//        Toast.makeText(getApplicationContext(), "测试", Toast.LENGTH_LONG).show();
+        setDialog();
     }
 
     @Override
@@ -65,5 +79,24 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
             }
         });
         return this;
+    }
+
+    public void setDialog() {
+        //创建View对象与XML关联
+        LayoutInflater insertLayoutInflater = LayoutInflater.from(mBinding.getRoot().getContext());
+        View successView = insertLayoutInflater.inflate(R.layout.dialog_goods_info_pay_success, null);
+        //将View设置到Dialog中
+        AlertDialog.Builder builder = new AlertDialog.Builder(mBinding.getRoot().getContext());
+        Dialog dialog = builder.create();
+        dialog.show();
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.getWindow().setContentView(successView);
+        ImageView closeImg = dialog.findViewById(R.id.dialog_goods_info_pay_success_close_img);
+        closeImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
     }
 }

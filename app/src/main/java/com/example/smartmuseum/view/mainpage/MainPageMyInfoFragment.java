@@ -1,5 +1,6 @@
 package com.example.smartmuseum.view.mainpage;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentMainpageMyinfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.me.FieldGuideActivity;
+import com.example.smartmuseum.view.me.MuseumInfoActivity;
 
 public class MainPageMyInfoFragment extends Fragment implements ViewChainedBinding {
 
@@ -49,6 +52,15 @@ public class MainPageMyInfoFragment extends Fragment implements ViewChainedBindi
 
     @Override
     public MainPageMyInfoFragment bindEvent() {
-        return null;
+        mBinding.infobutton.setOnClickListener(view -> {
+            Intent intent = new Intent(mBinding.getRoot().getContext(), MuseumInfoActivity.class);
+            startActivity(intent);
+        });
+        mBinding.fgbutton.setOnClickListener(view -> {
+            Intent intent = new Intent(mBinding.getRoot().getContext(), FieldGuideActivity.class);
+            startActivity(intent);
+        });
+
+        return this;
     }
 }

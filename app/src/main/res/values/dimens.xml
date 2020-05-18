@@ -81,6 +81,63 @@
     <dimen name="goods_info_button_margin_start">30dp</dimen>
     <dimen name="goods_info_button_height">55dp</dimen>
 
+    <dimen name="goods_info_detail_detail_item_margin_start">30dp</dimen>
+    <dimen name="goods_info_detail_detail_item_margin_bottom">32dp</dimen>
+    <dimen name="goods_info_detail_detail_item_introduction_margin_top">5dp</dimen>
+    <dimen name="goods_info_detail_detail_item_image_height">200dp</dimen>
+    <dimen name="goods_info_detail_detail_item_image_margin_top">10dp</dimen>
+    <dimen name="goods_info_detail_detail_goods_top_img_height">350dp</dimen>
+    <dimen name="goods_info_detail_detail_card_margin_top">330dp</dimen>
+    <dimen name="goods_info_detail_detail_goods_name_margin_top">20dp</dimen>
+    <dimen name="goods_info_detail_goods_selcet_type_height">50dp</dimen>
+    <dimen name="goods_info_detail_goods_box_select_margin_top">25dp</dimen>
+    <dimen name="goods_info_detail_goods_box_height">35dp</dimen>
+    <dimen name="goods_info_detail_goods_box_width">100dp</dimen>
+
+    <dimen name="goods_order_check_margin">20dp</dimen>
+    <dimen name="goods_order_check_card_background">300dp</dimen>
+    <dimen name="goods_order_check_margin_start">30dp</dimen>
+    <dimen name="goods_order_check_margin_bottom">10dp</dimen>
+    <dimen name="goods_order_check_item_height">130dp</dimen>
+    <dimen name="goods_order_check_item_margin_start">15dp</dimen>
+
+    <dimen name="goods_choose_address_item_card_margin_end">30dp</dimen>
+    <dimen name="goods_choose_address_item_card_margin_bottom">10dp</dimen>
+    <dimen name="goods_choose_address_item_card_height">100dp</dimen>
+    <dimen name="goods_choose_address_item_card_margin_start">20dp</dimen>
+    <dimen name="goods_choose_address_item_card_img_width">20dp</dimen>
+    <dimen name="goods_choose_address_item_card_localaddress_margin_top">25dp</dimen>
+    <dimen name="goods_choose_address_item_card_address_detail_margin_top">5dp</dimen>
+
+    <dimen name="goods_pay_type_card_height">230dp</dimen>
+    <dimen name="goods_pay_type_card_width">160dp</dimen>
+    <dimen name="goods_pay_type_card_margin_top">30dp</dimen>
+    <dimen name="goods_pay_type_card_next_margin_top">20dp</dimen>
+    <dimen name="goods_pay_type_card_text_margin_top">25dp</dimen>
+
+    <dimen name="goods_credit_card_pay_card_margin_bottom">100dp</dimen>
+
+    <dimen name="dialog_goods_infp_pay_success_dialog_height">450dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_close_img_height">15dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_margin_top">20dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_img_margin_top">30dp</dimen>
+    <dimen name="dialog_goods_infp_pay_success_text_margin_top">10dp</dimen>
+
+    <dimen name="goods_order_delivery_layout_margin_top">30dp</dimen>
+    <dimen name="goods_order_delivery_layout_margin_start">40dp</dimen>
+    <dimen name="goods_order_delivery_name_margin_start">10dp</dimen>
+    <dimen name="goods_order_delivery_phone_margin_start">5dp</dimen>
+    <dimen name="goods_order_delivery_map_height">400dp</dimen>
+    <dimen name="goods_order_delivery_time_layout_margin_top">20dp</dimen>
+    <dimen name="goods_order_delivery_time_layout_margin_start">40dp</dimen>
+
+
+    <dimen name="goods_order_delivery_card_margin_top">20dp</dimen>
+    <dimen name="goods_order_delivery_card_margin_start">40dp</dimen>
+    <dimen name="goods_order_delivery_card_background_height">80dp</dimen>
+    <dimen name="goods_order_delivery_card_background_margin_top">30dp</dimen>
+
+
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_introduction_text">14sp</dimen>
@@ -108,6 +165,33 @@
     <dimen name="goods_info_select_type_text">18sp</dimen>
     <dimen name="goods_info_button_text">20sp</dimen>
 
+    <dimen name="goods_info_detail_detail_item_title">16sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_name_text">20sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_production_text">16sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_selcet_type_text">18sp</dimen>
+    <dimen name="goods_info_detail_detail_goods_box_text">16sp</dimen>
+
+    <dimen name="goods_order_check_title_text">35sp</dimen>
+    <dimen name="goods_order_check_price_text">18sp</dimen>
+    <dimen name="goods_order_check_item_price_text">16sp</dimen>
+    <dimen name="goods_order_check_item_num_text">14sp</dimen>
+
+    <dimen name="goods_choose_address_item_locationaddress_text">18sp</dimen>
+    <dimen name="goods_choose_address_item_detail_text">16sp</dimen>
+
+    <dimen name="goods_pay_type_card_pay_text">18sp</dimen>
+
+    <dimen name="dialog_goods_info_pay_success_success_text">20sp</dimen>
+    <dimen name="dialog_goods_info_pay_success_tips_text">18sp</dimen>
+
+    <dimen name="goods_order_delivery_people_name_text">20sp</dimen>
+    <dimen name="goods_order_delivery_order_edit_text">18sp</dimen>
+    <dimen name="goods_order_delivery_card_background_time_text">20sp</dimen>
+
+    <dimen name="goods_order_status_pay_text">20sp</dimen>
+    <dimen name="goods_order_status_pay_time_text">18sp</dimen>
+
+
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>
     <dimen name="friend_my_firends_join">18sp</dimen>
@@ -128,10 +212,17 @@
     <dimen name="friend_choose_friends_button_radius">4dp</dimen>
     <dimen name="friend_choose_friends_item_img_width">101dp</dimen>
     <dimen name="friend_choose_friends_item_height">91dp</dimen>
+
+
     <!-- Exhibition !-->
+    <dimen name="exhibition_inner_collection_lable_tv">45sp</dimen>
+    <dimen name="exhibition_inner_collection_position_hint_tv">14sp</dimen>
+    <dimen name="exhibition_inner_collection_concrete_position_tv">18sp</dimen>
+    <dimen name="exhibition_inner_collection_change_hint_tv">14sp</dimen>
 
     <!-- RouteCommend !-->
-
+    <dimen name="route_commend_info_exhibition_location_name_text">20sp</dimen>
+    <dimen name="route_commend_info_exhibition_exhibition_name_text">18sp</dimen>
     <!-- MyInfo !-->
 
     <!-- Login/Register !-->

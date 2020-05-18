@@ -3,6 +3,7 @@ package com.example.smartmuseum.model;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
+import java.util.List;
 
 public class Goods {
     //名称
@@ -46,6 +47,12 @@ public class Goods {
 
     //产品规格
     private String specifications;
+
+    //特点
+    private List<GoodsFeature> feature;
+
+    //型号
+    private String type;
 
     public String getName() {
         return name;
@@ -157,5 +164,21 @@ public class Goods {
 
     public void setSpecifications(String specifications) {
         this.specifications = specifications;
+    }
+
+    public List<GoodsFeature> getFeature() {
+        return feature;
+    }
+
+    public void setFeature(List<GoodsFeature> feature) {
+        this.feature = feature;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
