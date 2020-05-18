@@ -164,6 +164,9 @@
     <color name="dialog_route_commend_goods_name_text_color">#842D29</color>
     <color name="dialog_route_commend_goods_recommend_text_color">#8D92A3</color>
     <color name="dialog_route_commend_goods_recommend_goods_text_color">#000000</color>
+
+
+    <color name="route_commend_info_popupwindow_parent_background">#EFEFEF</color>
     <!-- MyInfo !-->
 
 

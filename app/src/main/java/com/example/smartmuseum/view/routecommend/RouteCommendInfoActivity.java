@@ -3,6 +3,8 @@ package com.example.smartmuseum.view.routecommend;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -13,15 +15,24 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.adapter.GoodsCommendAdapter;
 import com.example.smartmuseum.databinding.ActivityRouteCommendInfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.model.Goods;
 import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.goods.GoodsInfoActivity;
 import com.example.smartmuseum.view.goods.GoodsOrderCheckActivity;
+import com.example.smartmuseum.viewmodel.GoodsViewModel;
+
+import java.util.HashMap;
+import java.util.List;
 
 public class RouteCommendInfoActivity extends AppCompatActivity implements ViewChainedBinding {
 
     private ActivityRouteCommendInfoBinding mBinding;
+    private List<Goods> goodsCommendList;
+
+    private GoodsViewModel goodsCommendViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +56,14 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
 
     @Override
     public RouteCommendInfoActivity bindEvent() {
+
+        mBinding.routeCommendInfoFirstLocationImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBinding.routeCommendPopupwindowNothingLayout.setVisibility(View.VISIBLE);
+                getCommendGoods();
+            }
+        });
         return this;
     }
 
@@ -77,5 +96,18 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             }
         });
 
+    }
+
+    private void getCommendGoods() {
+        goodsCommendViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
+        HashMap<String, String> map = new HashMap<>();
+        //Activity调用this, fragment调用getViewLifecycleOwner()
+        goodsCommendViewModel.getRouteCommendGoodsModelList(map).observe(this, models -> {
+            goodsCommendList = models;
+            LinearLayoutManager ms = new LinearLayoutManager(mBinding.getRoot().getContext());
+            ms.setOrientation(LinearLayoutManager.HORIZONTAL);
+            mBinding.routeCommendPopupwindowCommendGoodsRecyclerview.setLayoutManager(ms);
+            mBinding.routeCommendPopupwindowCommendGoodsRecyclerview.setAdapter(new GoodsCommendAdapter(goodsCommendList));
+        });
     }
 }

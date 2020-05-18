@@ -21,15 +21,21 @@
         <activity android:name=".view.me.MuseumInfoActivity" />
         <activity android:name=".view.explore.ExhibitionContentActivity"></activity>
         <activity android:name=".view.mainpage.MainActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".view.goods.GoodsOrderStatusActivity"></activity>
+        <activity android:name=".view.goods.GoodsOrderDeliveryActivity"/>
+        <activity android:name=".view.routecommend.RouteCommendInfoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.goods.GoodsOrderStatusActivity"></activity>
-        <activity android:name=".view.goods.GoodsOrderDeliveryActivity"/>
-        <activity android:name=".view.routecommend.RouteCommendInfoActivity"/>
         <activity android:name=".view.goods.GoodsCreditCardPayActivity" />
         <activity android:name=".view.goods.GoodsPayTypeActivity" />
         <activity android:name=".view.goods.GoodsChooseAddressActivity" />

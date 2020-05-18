@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/goods_info_button_margin_start"
-        android:background="@color/mainpage_goods_sell_background">
+        android:background="@color/route_commend_info_popupwindow_parent_background">
 
         <ImageView
             android:id="@+id/route_commend_info_return_img"
@@ -198,6 +198,79 @@
             app:layout_constraintLeft_toRightOf="@+id/route_commend_info_end_location_text"
             app:layout_constraintTop_toTopOf="@+id/route_commend_info_end_location_text"
             app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_end_location_text"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/route_commend_popupwindow_nothing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:background="@drawable/goods_info_card_background"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_nothing_pack_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="文创包裹"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_nothing_pack_nothing_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无内容"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#8D92A3"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="40dp"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_nothing_pack_text"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_commend_goods_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:text="推荐加入"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_nothing_pack_nothing_text"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/route_commend_popupwindow_commend_goods_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_commend_goods_text"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <Button
+                android:id="@+id/route_commend_popupwindow_add_goods_pack_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/goods_info_button_height"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="@dimen/goods_info_button_margin_start"
+                android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+                android:text="添加到包裹"
+                android:textSize="@dimen/goods_info_button_text"
+                android:textColor="@color/goods_info_card_background"
+                android:background="@drawable/goods_purchased_status_button"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_commend_goods_recyclerview"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
