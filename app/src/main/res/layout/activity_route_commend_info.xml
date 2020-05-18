@@ -25,7 +25,7 @@
             android:id="@+id/route_commend_info_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="文物特展"
+            android:text="@string/route_commend_info_title"
             android:textColor="@color/goods_order_check_order_color"
             android:textSize="@dimen/goods_order_check_title_text"
             android:textStyle="bold"

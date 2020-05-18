@@ -159,7 +159,11 @@
     <color name="route_commend_info_exhibition_location_name_color">#000521</color>
     <color name="route_commend_info_exhibition_exhibition_name_color">#8D92A3</color>
 
-    v
+    <color name="dialog_route_commend_goods_card_background_color">#FFFFFF</color>
+    <color name="dialog_route_commend_goods_other_text_color">#BDBDBD</color>
+    <color name="dialog_route_commend_goods_name_text_color">#842D29</color>
+    <color name="dialog_route_commend_goods_recommend_text_color">#8D92A3</color>
+    <color name="dialog_route_commend_goods_recommend_goods_text_color">#000000</color>
     <!-- MyInfo !-->
 
 

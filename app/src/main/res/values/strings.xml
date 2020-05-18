@@ -148,8 +148,14 @@
 
 
     <!-- RouteCommend !-->
+    <string name="route_commend_info_title">文物特展</string>
     <string name="route_commend_info_start_location_text">初始位置</string>
     <string name="route_commend_info_end_location_text">出口</string>
+
+    <string name="dialog_route_commend_goods_other_text">查看其他推荐文创商品</string>
+    <string name="dialog_route_commend_goods_detail_text">查看详情</string>
+    <string name="dialog_route_commend_goods_commend_detail_text1">根据您参观过的</string>
+    <string name="dialog_route_commend_goods_commend_detail_text2">推荐</string>
 
 
     <string name="explore_text">探索</string>
