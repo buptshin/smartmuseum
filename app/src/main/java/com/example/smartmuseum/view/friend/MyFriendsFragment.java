@@ -4,6 +4,7 @@ package com.example.smartmuseum.view.friend;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
@@ -19,6 +20,7 @@ import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 public class MyFriendsFragment extends Fragment implements ViewChainedBinding<MyFriendsFragment> {
 
     private FragmentMyFriendsBinding fragmentMyFriendsBinding;
+    private NoScrollViewPager noScrollViewPager;
 
     public static MyFriendsFragment getInstance(){
         MyFriendsFragment fragment = new MyFriendsFragment();
@@ -38,6 +40,13 @@ public class MyFriendsFragment extends Fragment implements ViewChainedBinding<My
     }
 
     @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        View parent = fragmentMyFriendsBinding.getRoot().getRootView();
+        noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+    }
+
+    @Override
     public MyFriendsFragment bindView() {
         return this;
     }
@@ -52,9 +61,13 @@ public class MyFriendsFragment extends Fragment implements ViewChainedBinding<My
         fragmentMyFriendsBinding.friendMyFirendsPersonalStartTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                View parent = fragmentMyFriendsBinding.getRoot().getRootView();
-                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
                 noScrollViewPager.setCurrentItem(5,false);
+            }
+        });
+        fragmentMyFriendsBinding.friendMyFirendsCloseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                noScrollViewPager.setCurrentItem(3);
             }
         });
         return this;

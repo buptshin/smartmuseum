@@ -184,4 +184,25 @@
     <string name="exhibition_inner_collection_concrete_position_tv">北一展厅-复兴之路</string>
     <string name="exhibition_inner_collection_change_hint_tv">缩放</string>
 
+    <!--Settings-->
+    <string name="settings_lable_tv">设置</string>
+    <string name="settings_user_info_tv">用户信息</string>
+    <string name="settings_personal_account_tv">个人账户</string>
+    <string name="settings_notify_tv">通知</string>
+    <string name="settings_recommend_tv">个性推荐</string>
+    <string name="settings_application_setting_tv">软件设置</string>
+    <string name="settings_language_tv">语言</string>
+    <string name="settings_setted_language_tv">简体中文</string>
+    <string name="settings_contact_us_tv">联系我们</string>
+    <string name="settings_logout_btn">退出登录</string>
+
+    <!--MainPage-Drawer-->
+    <string name="mainpage_drawer_username_tv">葫芦</string>
+    <string name="mainpage_drawer_user_status_tv">和伙伴参观中</string>
+    <string name="mainpage_drawer_my_position_tv">我的位置</string>
+    <string name="mainpage_drawer_friends_position_tv_1">伙伴位置1</string>
+    <string name="mainpage_drawer_friends_position_tv_2">伙伴位置2</string>
+    <string name="mainpage_drawer_friends_position_tv_3">伙伴位置3</string>
+    <string name="mainpage_drawer_send_message_btn">发送消息</string>
+    <string name="mainpage_drawer_exit_btn">退出</string>
 </resources>

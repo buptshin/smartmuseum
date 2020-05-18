@@ -194,9 +194,9 @@
 
     <!-- Friend !-->
     <dimen name="friend_my_firends">30sp</dimen>
-    <dimen name="friend_my_firends_join">18sp</dimen>
+    <dimen name="friend_my_firends_join">14sp</dimen>
     <dimen name="friend_my_firends_team_and_personal">30sp</dimen>
-    <dimen name="friend_my_firends_start">30sp</dimen>
+    <dimen name="friend_my_firends_start">18sp</dimen>
     <dimen name="friend_my_firends_hint">18sp</dimen>
     <dimen name="friend_my_firends_main_radius">8dp</dimen>
     <dimen name="friend_my_firends_main_stroke_width">1dp</dimen>
@@ -208,8 +208,8 @@
     <dimen name="friend_choose_friends_item_name">18sp</dimen>
     <dimen name="friend_choose_friends_item_in_museum">14sp</dimen>
     <dimen name="friend_choose_friends_item_accompany_count">14sp</dimen>
-    <dimen name="friend_choose_friends_button_text">18sp</dimen>
-    <dimen name="friend_choose_friends_button_radius">4dp</dimen>
+    <dimen name="friend_choose_friends_button_text">14sp</dimen>
+    <dimen name="friend_choose_friends_button_radius">8dp</dimen>
     <dimen name="friend_choose_friends_item_img_width">91dp</dimen>
     <dimen name="friend_choose_friends_item_height">81dp</dimen>
 
@@ -225,6 +225,18 @@
     <dimen name="route_commend_info_exhibition_exhibition_name_text">18sp</dimen>
     <!-- MyInfo !-->
 
-    <!-- Login/Register !-->
+
+    <!--Settings-->
+    <dimen name="settings_lable_tv">45sp</dimen>
+    <dimen name="settings_item_title_tv">16sp</dimen>
+    <dimen name="settings_item_tv">20sp</dimen>
+    <dimen name="settings_setted_language_tv">16sp</dimen>
+    <dimen name="settings_logout_btn">20sp</dimen>
+    
+    <!--MainPage-Drawer-->
+    <dimen name="mainpage_drawer_username_tv">24sp</dimen>
+    <dimen name="mainpage_drawer_user_status_tv">14sp</dimen>
+    <dimen name="mainpage_drawer_position_tv">14sp</dimen>
+    <dimen name="mainpage_drawer_btn">14sp</dimen>
 
 </resources>

@@ -14,6 +14,7 @@ import com.example.smartmuseum.databinding.FriendItemAccompanyBinding;
 import com.example.smartmuseum.model.Accompany;
 import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
 
@@ -36,6 +37,24 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
     public void onBindViewHolder(@NonNull AccompanyViewHolder holder, int position) {
         Accompany accompany = mList.get(position);
         holder.getBinding().setAccompany(accompany);
+        switch (position){
+            case 0:
+                holder.getBinding().friendChooseFriendsItemImg.setImageResource(R.drawable.friend_choose_friends_icon1);
+                break;
+            case 1:
+                holder.getBinding().friendChooseFriendsItemImg.setImageResource(R.drawable.friend_choose_friends_icon2);
+                break;
+            case 2:
+                holder.getBinding().friendChooseFriendsItemImg.setImageResource(R.drawable.friend_choose_friends_icon3);
+                break;
+            case 3:
+                holder.getBinding().friendChooseFriendsItemImg.setImageResource(R.drawable.friend_choose_friends_icon4);
+                break;
+            case 4:
+                holder.getBinding().friendChooseFriendsItemImg.setImageResource(R.drawable.friend_choose_friends_icon5);
+                break;
+
+        }
         holder.getBinding().friendChooseFriendsItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,6 +65,8 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
                     GlobalVariables.hasAcompany = true;
                     View parent = holder.getBinding().getRoot().getRootView();
                     NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                    BottomNavigationView navigationView = (BottomNavigationView)parent.findViewById(R.id.mainpage_bottomnavigationview);
+                    navigationView.setSelectedItemId(navigationView.getMenu().getItem(0).getItemId());
                     noScrollViewPager.setCurrentItem(0,false);
                 }
             }

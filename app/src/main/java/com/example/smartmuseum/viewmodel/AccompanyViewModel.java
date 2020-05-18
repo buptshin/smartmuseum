@@ -29,6 +29,12 @@ public class AccompanyViewModel extends ViewModel {
      * @param map
      */
     public void loadAccompanyList(HashMap map) {
-        //HttpRequest.Get.
+        List<Accompany> list = new ArrayList<>();
+        list.add(new Accompany("路小璐",-700170,true,false,1));
+        list.add(new Accompany("柳菲菲",-700168,true,false,0));
+        list.add(new Accompany("韩馨月",-700167,true,true,0));
+        list.add(new Accompany("马尚莱",-700165,false,false,0));
+        list.add(new Accompany("周文韬",-700164,false,false,0));
+        accompanyList.setValue(list);
     }
 }

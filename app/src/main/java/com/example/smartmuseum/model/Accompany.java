@@ -10,10 +10,18 @@ import com.example.smartmuseum.BR;
 public class Accompany extends BaseObservable {
 
     private String name;   // 同行者的姓名
-    private String img;    // 同行者的头像
+    private int img;    // 同行者的头像
     private Boolean isInMuseum;  //同行者是否正在博物馆参观
     private Boolean isAdded;     //是否已添加为“个人伙伴”
     private int accompanyCount;  //同行的次数
+
+    public Accompany(String name, int img, Boolean isInMuseum, Boolean isAdded, int accompanyCount) {
+        this.name = name;
+        this.img = img;
+        this.isInMuseum = isInMuseum;
+        this.isAdded = isAdded;
+        this.accompanyCount = accompanyCount;
+    }
 
     @Bindable
     public String getName() {
@@ -21,7 +29,7 @@ public class Accompany extends BaseObservable {
     }
 
     @Bindable
-    public String getImg() {
+    public int getImg() {
         return img;
     }
 
@@ -45,7 +53,7 @@ public class Accompany extends BaseObservable {
         notifyPropertyChanged(BR.name);
     }
 
-    public void setImg(String img) {
+    public void setImg(int img) {
         this.img = img;
         notifyPropertyChanged(BR.img);
     }

@@ -84,8 +84,10 @@ public class StartActivity extends AppCompatActivity implements ViewChainedBindi
                     switch (event.getAction()){
                         case MotionEvent.ACTION_DOWN:
                             downX = event.getX();
+                            break;
                         case MotionEvent.ACTION_MOVE:
                             doIntent = event.getX()-downX < 0;
+                            break;
                         case MotionEvent.ACTION_UP:
                             if(doIntent){
                                 Intent intent = new Intent(StartActivity.this, LoginActivity.class);
@@ -94,6 +96,7 @@ public class StartActivity extends AppCompatActivity implements ViewChainedBindi
                                 finish();
                             }
                             doIntent = false;
+                            break;
                     }
                 }
                 return false;

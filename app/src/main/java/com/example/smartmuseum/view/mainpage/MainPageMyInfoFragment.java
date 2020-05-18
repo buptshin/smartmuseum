@@ -17,6 +17,7 @@ import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.me.FieldGuideActivity;
 import com.example.smartmuseum.view.me.MuseumInfoActivity;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
+import com.example.smartmuseum.view.settings.SettingsActivity;
 
 public class MainPageMyInfoFragment extends Fragment implements ViewChainedBinding {
 
@@ -69,7 +70,13 @@ public class MainPageMyInfoFragment extends Fragment implements ViewChainedBindi
                 noScrollViewPager.setCurrentItem(4,false);
             }
         });
-
+        mBinding.mainpageMyinfoSettingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mBinding.getRoot().getContext(), SettingsActivity.class);
+                startActivity(intent);
+            }
+        });
         return this;
     }
 }

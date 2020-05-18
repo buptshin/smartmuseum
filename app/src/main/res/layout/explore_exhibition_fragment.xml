@@ -46,6 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:text="推荐展览"
+            android:checked="true"
+            android:thumb="@drawable/mainpage_explore_exhibition_switch_thumb"
+            android:track="@drawable/mainpage_explore_exhibition_switch_track"
             app:layout_constraintBottom_toBottomOf="@+id/current_location_text"
             app:layout_constraintStart_toEndOf="@+id/current_location_text" />
 

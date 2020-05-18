@@ -58,6 +58,10 @@
     <color name="mainpage_navigation_selectoritem_primary_color_selected">#842D29</color>
     <color name="mainpage_navigation_selectoritem_primary_color_unselected">#000000</color>
 
+    <!--Exhibition-->
+    <color name="mainpage_explore_exhibition_switch_checked">#842D29</color>
+    <color name="mainpage_explore_exhibition_switch_unchecked">#08080040</color>
+
     <!-- Navigation !-->
     <color name="mainpage_navigation_selectoritem_wordcolor_black">#FF000521</color>
     <color name="mainpage_navigation_red">#701F1F</color>
@@ -162,8 +166,21 @@
     <!-- MyInfo !-->
 
     <!--Settings-->
+    <color name="settings_colorPrimary">#F7F8FA</color>
+    <color name="settings_colorPrimaryDark">#F7F8FA</color>
     <color name="settings_switch_track_checked">#842D29</color>
     <color name="settings_switch_track_unchecked">#08080040</color>
+    <color name="settings_lable_tv">#1A1A1A</color>
+    <color name="settings_item_title_tv">#000521</color>
+    <color name="settings_item_tv">#000521</color>
+    <color name="settings_setted_language_tv">#B8BBC6</color>
+    <color name="settings_logout_btn">#FFFFFF </color>
+
+    <!--MainPage-Drawer-->
+    <color name="mainpage_drawer_username_tv">#000000</color>
+    <color name="mainpage_drawer_user_status_tv">#000000</color>
+    <color name="mainpage_drawer_position_tv">#000000</color>
+    <color name="mainpage_drawer_btn">#FFFFFF</color>
 
 
 </resources>

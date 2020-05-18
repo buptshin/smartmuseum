@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         // 看是否打开侧滑栏
         if(GlobalVariables.hasAcompany)
             mBinding.mainpageDrawer.openDrawer(GravityCompat.START);
+        mBinding.mainpageDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
 
         //设置fragments
         //主页的四个fragment
