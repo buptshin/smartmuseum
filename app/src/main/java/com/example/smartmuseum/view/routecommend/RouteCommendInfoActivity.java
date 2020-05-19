@@ -45,7 +45,7 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     @Override
     protected void onResume() {
         super.onResume();
-        setFloatButtonResource();
+        setPopupWindow();
     }
 
     @Override
@@ -72,8 +72,16 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             @Override
             public void onClick(View view) {
                 mBinding.routeCommendPopupwindowNothingLayout.setVisibility(View.GONE);
-                mBinding.routeCommendDragFloatButton.setVisibility(View.VISIBLE);
                 mBinding.routeCommendInfoLayout.setBackgroundResource(R.color.mainpage_goods_sell_background);
+
+//                mBinding.routeCommendDragFloatButton.setVisibility(View.VISIBLE);
+
+                //还原悬浮按钮显示的图片
+                if (Parameters.purchasedGoodsNum <= 0) {
+                    mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+                } else {
+                    mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+                }
             }
         });
 
@@ -82,7 +90,15 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             @Override
             public void onClick(View view) {
                 mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.GONE);
-                mBinding.routeCommendDragFloatButton.setVisibility(View.VISIBLE);
+                mBinding.routeCommendInfoLayout.setBackgroundResource(R.color.mainpage_goods_sell_background);
+//                mBinding.routeCommendDragFloatButton.setVisibility(View.VISIBLE);
+
+                //还原悬浮按钮显示的图片
+                if (Parameters.purchasedGoodsNum <= 0) {
+                    mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+                } else {
+                    mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+                }
             }
         });
 
@@ -91,7 +107,9 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             @Override
             public void onClick(View view) {
 
-                mBinding.routeCommendDragFloatButton.setVisibility(View.GONE);
+//                mBinding.routeCommendDragFloatButton.setVisibility(View.GONE);
+                //悬浮按钮设置成悬浮图片
+                mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_suspension);
                 mBinding.routeCommendInfoLayout.setBackgroundResource(R.color.route_commend_info_popupwindow_parent_background);
 
                 //购买数大于0，启动已购买浮窗。否则，启动推荐浮窗
@@ -182,12 +200,12 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     }
 
     //设置悬浮按钮颜色
-    private void setFloatButtonResource() {
-        //购买数大于0，显示已购买图标。否则，启动未购买图标
+    private void setPopupWindow() {
+        //购买数大于0，显示已购买界面
         if (Parameters.purchasedGoodsNum <= 0) {
-            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+//            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
         } else {
-            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+//            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
             mBinding.routeCommendPopupwindowNothingLayout.setVisibility(View.GONE);
             mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.VISIBLE);
         }
