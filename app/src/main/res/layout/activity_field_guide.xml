@@ -30,14 +30,21 @@
                     android:id="@+id/imageView45"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginStart="16dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginBottom="4dp"
+                    android:contentDescription="@string/backButton"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline135"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@mipmap/friend_choose_friends_grey_back"
-                    android:contentDescription="@string/backButton" />
+                    app:srcCompat="@mipmap/friend_choose_friends_grey_back" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline135"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -48,52 +55,73 @@
                     android:id="@+id/field_guide_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="16dp"
                     android:text="图鉴"
                     android:textColor="#111111"
                     android:textSize="40sp"
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintStart_toStartOf="@+id/guideline128"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
 
                 <ImageView
                     android:id="@+id/imageView23"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="16dp"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline129"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@mipmap/fieldguide_screen" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline128"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline129"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline126"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline127"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94" />
+
                 <ImageView
                     android:id="@+id/fg3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.492"
-                    app:layout_constraintStart_toEndOf="@+id/fg_returnroad"
-                    app:layout_constraintTop_toBottomOf="@+id/fg2"
+                    app:layout_constraintBottom_toBottomOf="@+id/fg_returnroad"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline127"
                     app:srcCompat="@drawable/field_guide3" />
 
                 <ImageView
                     android:id="@+id/fg2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toTopOf="@+id/fg3"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.492"
-                    app:layout_constraintStart_toEndOf="@+id/fg_returnroad"
-                    app:layout_constraintTop_toBottomOf="@+id/fg1"
+                    app:layout_constraintBottom_toBottomOf="@+id/fg_returnroad"
+                    app:layout_constraintEnd_toEndOf="@+id/fg3"
+                    app:layout_constraintTop_toTopOf="@+id/fg_returnroad"
                     app:srcCompat="@drawable/field_guide2" />
 
                 <ImageView
@@ -101,10 +129,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintBottom_toTopOf="@+id/fg2"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.492"
-                    app:layout_constraintStart_toEndOf="@+id/fg_returnroad"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/fg2"
+                    app:layout_constraintTop_toTopOf="@+id/fg_returnroad"
                     app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/field_guide1" />
 
@@ -112,11 +138,10 @@
                     android:id="@+id/fg_returnroad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline126"
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintVertical_bias="1.0"
                     app:srcCompat="@drawable/field_guide_return_road" />
@@ -132,6 +157,20 @@
                     app:layout_constraintEnd_toEndOf="@+id/fg_returnroad"
                     app:layout_constraintStart_toStartOf="@+id/fg_returnroad"
                     app:layout_constraintTop_toTopOf="@+id/fg_returnroad" />
+
+                <TextView
+                    android:id="@+id/not_signed_text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="未签到"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fg2"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline127"
+                    app:layout_constraintStart_toStartOf="@+id/fg2"
+                    app:layout_constraintTop_toTopOf="@+id/fg2" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -142,32 +181,62 @@
                     android:id="@+id/fg5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline131"
+                    app:layout_constraintTop_toTopOf="@+id/fg4"
                     app:srcCompat="@drawable/field_guide5" />
 
                 <ImageView
                     android:id="@+id/fg6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="32dp"
                     app:layout_constraintBottom_toBottomOf="@+id/fg4"
-                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline131"
                     app:srcCompat="@drawable/field_guide6" />
 
                 <ImageView
                     android:id="@+id/fg4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="28dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline132"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@drawable/field_guide4" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline131"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline132"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline133"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_begin="20dp" />
+
+                <TextView
+                    android:id="@+id/not_signed_text5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="未签到"
+                    android:textColor="@color/exhibition_inner_collection_change_hint_tv"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fg6"
+                    app:layout_constraintEnd_toEndOf="@+id/fg6"
+                    app:layout_constraintStart_toStartOf="@+id/fg5"
+                    app:layout_constraintTop_toTopOf="@+id/fg6" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -178,37 +247,41 @@
                     android:id="@+id/imageView44"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginEnd="28dp"
-                    android:layout_marginBottom="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline134"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
                     app:srcCompat="@drawable/field_guide9" />
 
                 <ImageView
                     android:id="@+id/fg8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/fg7"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView44"
+                    app:layout_constraintStart_toStartOf="@+id/fg7"
                     app:srcCompat="@drawable/field_guide8" />
+
+                <TextView
+                    android:id="@+id/not_signed_text6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="未签到"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/fg7"
+                    app:layout_constraintEnd_toEndOf="@+id/fg7"
+                    app:layout_constraintStart_toStartOf="@+id/fg7"
+                    app:layout_constraintTop_toTopOf="@+id/fg7" />
 
                 <ImageView
                     android:id="@+id/fg7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginBottom="12dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.116"
+                    app:layout_constraintStart_toStartOf="@+id/guideline130"
+                    app:layout_constraintTop_toTopOf="@+id/imageView44"
                     app:srcCompat="@drawable/field_guide7" />
 
                 <TextView
@@ -224,7 +297,23 @@
                     app:layout_constraintStart_toStartOf="@+id/imageView44"
                     app:layout_constraintTop_toTopOf="@+id/imageView44"
                     app:layout_constraintVertical_bias="0.465" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline130"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline134"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
+
         </LinearLayout>
     </ScrollView>
 

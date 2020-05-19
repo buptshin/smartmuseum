@@ -11,50 +11,77 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
         <TextView
             android:id="@+id/mainpage_navigation_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp"
             android:text="探索"
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="25sp"
             android:textStyle="bold"
             android:typeface="sans"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/guideline79"
+            app:layout_constraintTop_toTopOf="@+id/guideline107" />
+
 
         <ImageView
             android:id="@+id/mainpage_navigation_search_iv"
-            android:layout_width="20dp"
+            android:layout_width="0dp"
             android:layout_height="20dp"
             android:src="@mipmap/mainpage_navigation_search"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp" />
-
-        <ImageButton
-            android:id="@+id/recommendedroute"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toEndOf="@+id/activity"
-            app:layout_constraintTop_toTopOf="@+id/activity"
-            app:srcCompat="@mipmap/mainpage_recommendedroute_not_selected" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline80"
+            app:layout_constraintTop_toTopOf="@+id/guideline107" />
 
         <ImageButton
             android:id="@+id/exhibition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="60dp"
             android:background="#00000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline81"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="@+id/guideline79"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
             app:srcCompat="@mipmap/mainpage_exhibition_selected" />
+
+        <ImageButton
+            android:id="@+id/activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="@+id/exhibition"
+            app:layout_constraintEnd_toStartOf="@+id/guideline81"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="@+id/guideline79"
+            app:layout_constraintTop_toTopOf="@+id/exhibition"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/mainpage_activity_not_selected" />
+
+        <ImageButton
+            android:id="@+id/recommendedroute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="@+id/activity"
+            app:layout_constraintEnd_toStartOf="@+id/guideline80"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toStartOf="@+id/guideline81"
+            app:layout_constraintTop_toTopOf="@+id/activity"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/mainpage_recommendedroute_not_selected" />
+
+        <ImageButton
+            android:id="@+id/bookvisit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            app:layout_constraintBottom_toBottomOf="@+id/recommendedroute"
+            app:layout_constraintEnd_toStartOf="@+id/guideline80"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="@+id/guideline81"
+            app:layout_constraintTop_toTopOf="@+id/recommendedroute"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/mainpage_bookvisit_not_selected" />
 
         <TextView
             android:id="@+id/exhibition_text"
@@ -72,78 +99,81 @@
             android:id="@+id/activity_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="活动"
+            app:layout_constraintBaseline_toBaselineOf="@+id/exhibition_text"
             app:layout_constraintEnd_toEndOf="@+id/activity"
-            app:layout_constraintHorizontal_bias="0.55"
-            app:layout_constraintStart_toStartOf="@+id/activity"
-            app:layout_constraintTop_toBottomOf="@+id/activity" />
+            app:layout_constraintStart_toStartOf="@+id/activity" />
 
         <TextView
             android:id="@+id/recomendedroute_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="推荐路线"
+            app:layout_constraintBaseline_toBaselineOf="@+id/activity_text"
             app:layout_constraintEnd_toEndOf="@+id/recommendedroute"
-            app:layout_constraintStart_toStartOf="@+id/recommendedroute"
-            app:layout_constraintTop_toBottomOf="@+id/recommendedroute" />
-
-        <ImageButton
-            android:id="@+id/bookvisit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toEndOf="@+id/recommendedroute"
-            app:layout_constraintTop_toTopOf="@+id/recommendedroute"
-            app:srcCompat="@mipmap/mainpage_bookvisit_not_selected" />
+            app:layout_constraintStart_toStartOf="@+id/recommendedroute" />
 
         <TextView
             android:id="@+id/bookvisit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="80dp"
             android:gravity="center"
             android:text="预约参观"
+            app:layout_constraintBaseline_toBaselineOf="@+id/recomendedroute_text"
             app:layout_constraintEnd_toEndOf="@+id/bookvisit"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/bookvisit"
-            app:layout_constraintTop_toBottomOf="@+id/bookvisit" />
-
-        <ImageButton
-            android:id="@+id/activity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:background="#00000000"
-            app:layout_constraintStart_toEndOf="@+id/exhibition"
-            app:layout_constraintTop_toTopOf="@+id/exhibition"
-            app:srcCompat="@mipmap/mainpage_activity_not_selected" />
+            app:layout_constraintStart_toStartOf="@+id/bookvisit" />
 
         <com.example.smartmuseum.view.otherview.NoScrollViewPager
             android:id="@+id/prohibitescrollviewpager"
-            android:layout_width="408dp"
-            android:layout_height="453dp"
-            android:layout_marginTop="144dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/activity_text" />
 
         <ImageView
             android:id="@+id/mainpage_explore_friends_status_img"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginEnd="15dp"
-            android:visibility="gone"
             android:clickable="true"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/mainpage_navigation_search_iv"
             app:layout_constraintEnd_toStartOf="@+id/mainpage_navigation_search_iv"
             app:layout_constraintTop_toTopOf="@+id/mainpage_navigation_search_iv"
             app:srcCompat="@mipmap/mainpage_explore_friends_together" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline79"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline80"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline81"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline107"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
