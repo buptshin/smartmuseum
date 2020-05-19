@@ -11,6 +11,7 @@ import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,6 +26,8 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentExhibitionInnerCollectionBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.GlobalVariables;
+import com.example.smartmuseum.view.mainpage.MainPageNavigationFragment;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 import javax.xml.transform.sax.TemplatesHandler;
 
@@ -42,6 +45,10 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
 
     public ExhibitionInnerCollectionFragment() {
         // Required empty public constructor
+    }
+
+    public static ExhibitionInnerCollectionFragment getInstance(){
+        return new ExhibitionInnerCollectionFragment();
     }
 
     @Override
@@ -207,7 +214,9 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
             public void onClick(View v) {
                 seekBarProgress -= 3;
                 if(seekBarProgress == 0){
-                    // 回到上一个界面
+                    View parent = mBinding.getRoot().getRootView();
+                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                    noScrollViewPager.setCurrentItem(1,false);
                 }else {
                     mBinding.exhibitionInnerCollectionSeekbar.setProgress(seekBarProgress);
                     // 缩小地图

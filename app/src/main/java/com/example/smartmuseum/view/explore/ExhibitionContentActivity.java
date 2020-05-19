@@ -3,6 +3,8 @@ package com.example.smartmuseum.view.explore;
 import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -18,8 +20,10 @@ import com.example.smartmuseum.databinding.ActivityExhibitionContentBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
 import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.login.LoginActivity;
 import com.example.smartmuseum.view.mainpage.MainActivity;
 import com.example.smartmuseum.view.me.FieldGuideActivity;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 import com.example.smartmuseum.viewmodel.ExhibitionViewModel;
 
 import java.util.HashMap;
@@ -91,6 +95,16 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
             public void onClick(View view) {
                 initDialog();
                 dialog.show();
+            }
+        });
+
+        // 到展厅的界面
+        activityExhibitionContentBinding.navigation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ExhibitionContentActivity.this,MainActivity.class);
+                intent.putExtra("exhibition",1);
+                startActivity(intent);
             }
         });
         return this;

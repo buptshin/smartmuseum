@@ -18,6 +18,7 @@ import com.example.smartmuseum.databinding.FragmentForgetPwdResetBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.GlobalVariables;
+import com.example.smartmuseum.view.exhibition.ExhibitionInnerCollectionFragment;
 import com.example.smartmuseum.view.explore.ExploreActivityFragment;
 import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
 import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
@@ -53,11 +54,6 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         //状态栏字体设为黑色
         ScreenUtil.setAndroidNativeLightStatusBar(MainActivity.this, true);
 
-        // 看是否打开侧滑栏
-        if(GlobalVariables.hasAcompany)
-            mBinding.mainpageDrawer.openDrawer(GravityCompat.START);
-        mBinding.mainpageDrawer.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
-
         //设置fragments
         //主页的四个fragment
         Fragment mainPageExploreFragment = MainPageExploreFragment.getInstance();
@@ -67,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         //个人界面的两个fragment
         Fragment myFriendsFragment = MyFriendsFragment.getInstance();
         Fragment chooseFriendsFragment = ChooseFriendsFragment.getInstance();
+        //展厅地图的fragment
+        Fragment exhibitionInnerCollectionFragment = ExhibitionInnerCollectionFragment.getInstance();
 
         //添加fragments到adapter
         fragments = new ArrayList<>();
@@ -76,6 +74,7 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         fragments.add(mainPageMyInfoFragment);
         fragments.add(myFriendsFragment);
         fragments.add(chooseFriendsFragment);
+        fragments.add(exhibitionInnerCollectionFragment);
 
 
         //设置adapter
@@ -88,6 +87,12 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
 
     @Override
     public MainActivity bindEvent() {
+        // activity的跳转事件
+        int tag = getIntent().getIntExtra("exhibition",0);
+        if(tag == 1){
+            mBinding.mainpageNoscrollviewpager.setCurrentItem(6,false);
+            mBinding.mainpageBottomnavigationview.setSelectedItemId(R.id.mainpage_navigation_navigation_item);
+        }
         //设置底部导航栏点击事件
         mBinding.mainpageBottomnavigationview.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             private int previousPosition = -1;
