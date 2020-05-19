@@ -58,7 +58,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@mipmap/exhibition_inner_collection_search"
-            app:layout_constraintBottom_toTopOf="@+id/guideline55"
+            app:layout_constraintBottom_toBottomOf="@id/exhibition_inner_collection_lable_tv"
             app:layout_constraintEnd_toStartOf="@+id/guideline93"
             app:layout_constraintTop_toTopOf="@+id/exhibition_inner_collection_lable_tv" />
 
