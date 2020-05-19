@@ -35,18 +35,14 @@
 
         <ImageView
             android:id="@+id/forgetpwd_back_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:src="@mipmap/register_back"
             app:layout_constraintBottom_toTopOf="@+id/guideline43"
             app:layout_constraintEnd_toStartOf="@+id/guideline46"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.02"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline45"
-            app:layout_constraintTop_toTopOf="@+id/guideline47"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.025" />
+            app:layout_constraintTop_toTopOf="@+id/guideline47" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline45"

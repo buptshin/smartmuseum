@@ -99,17 +99,15 @@
 
         <ImageView
             android:id="@+id/register_back_img"
-            android:layout_width="10dp"
-            android:layout_height="15dp"
-            android:src="@mipmap/register_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:clickable="true"
+            android:src="@mipmap/register_back"
             app:layout_constraintBottom_toTopOf="@+id/guideline29"
             app:layout_constraintEnd_toStartOf="@+id/guideline27"
-            app:layout_constraintHeight_percent="0.02"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toTopOf="@+id/guideline30"
-            app:layout_constraintWidth_percent="0.025" />
+            app:layout_constraintTop_toTopOf="@+id/guideline30" />
 
         <TextView
             android:id="@+id/register_next_step_tv"

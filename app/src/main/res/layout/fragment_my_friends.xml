@@ -29,23 +29,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/friend_my_firends"
-            android:textAlignment="center"
             android:textColor="@color/friend_my_firends_text"
             android:textSize="@dimen/friend_my_firends"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline77"
-            app:layout_constraintStart_toStartOf="@+id/guideline75" />
+            app:layout_constraintStart_toStartOf="@+id/guideline83" />
 
         <ImageView
             android:id="@+id/friend_my_firends_close_button"
-            android:layout_width="20dp"
-            android:layout_height="16dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@mipmap/friend_myfriend_close_black"
-            app:layout_constraintBottom_toTopOf="@+id/guideline77"
+            app:layout_constraintBottom_toTopOf="@+id/guideline75"
             app:layout_constraintEnd_toStartOf="@+id/guideline76"
-            app:layout_constraintHeight_percent="0.022"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.048" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <View
             android:id="@+id/friend_my_firends_team_view"
@@ -207,13 +204,6 @@
             app:layout_constraintTop_toTopOf="@+id/guideline89" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline75"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.1" />
-
-        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline85"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -246,7 +236,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12" />
+            app:layout_constraintGuide_percent="0.15" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline78"
@@ -254,6 +244,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.17" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline75"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline88"

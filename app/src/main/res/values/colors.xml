@@ -133,7 +133,7 @@
     <color name="friend_my_firends_main_box_stroke">#ECEBED</color>
     <color name="friend_my_firends_other_boxes">#842D29</color>
     <color name="friend_my_firends">#ECEBED</color>
-    <color name="friend_my_firends_text">#000000</color>
+    <color name="friend_my_firends_text">#1A1A1A</color>
     <color name="friend_my_firends_join_text">#FBFBFB</color>
     <color name="friend_my_firends_team_and_personal_text">#1A051D</color>
     <color name="friend_my_firends_start_text">#FFFFFF</color>
