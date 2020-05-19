@@ -39,6 +39,7 @@ public class RegisterStepFiveFragment extends Fragment implements ViewChainedBin
                 R.layout.fragment_register_step_five,
                 container,
                 false);
+        this.bindData().bindView().bindEvent();
         return mBinding.getRoot();
     }
 

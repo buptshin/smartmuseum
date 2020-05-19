@@ -53,6 +53,12 @@
     <color name="register_assure_telephone_time_hint_tv">#8D92A3</color>
     <color name="register_assure_telephone_resend_tv">#842D29</color>
 
+    <!--ForgetPwd-->
+    <color name="forgetpwd_lable_tv">#000000</color>
+    <color name="forgetpwd_password_tv">#8D92A3</color>
+    <color name="forgetpwd_password_et">#320000</color>
+    <color name="forgetpwd_change_pwd_btn">#FFFFFF</color>
+
     <!-- MainPage !-->
     <color name="mainpage_navigation_background">#FFFFFF</color>
     <color name="mainpage_navigation_selectoritem_primary_color_selected">#842D29</color>

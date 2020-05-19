@@ -64,8 +64,8 @@
 
         <ImageView
             android:id="@+id/register_back_img"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:clickable="true"
             android:src="@mipmap/register_back"
             app:layout_constraintBottom_toTopOf="@+id/guideline29"
@@ -125,7 +125,7 @@
             android:id="@+id/register_assure_telephone_hint_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/register_assure_telephone_time_hint_tv"
+            android:text="@string/register_assure_telephone_hint_tv"
             android:textColor="@color/register_assure_telephone_hint_tv"
             android:textSize="@dimen/register_assure_telephone_hint_tv"
             app:layout_constraintBottom_toTopOf="@+id/guideline42"

@@ -48,9 +48,9 @@
     <string name="register_step_two_count_tv">第2/3步</string>
     <string name="register_position_permissions_tv">位置信息权限</string>
     <string name="register_choose_permissions_tv">请选择允许开通的位置权限</string>
-    <string name="register_permission_navigation_checkbox">    导览</string>
-    <string name="register_permission_goods_delivery_checkbox">    文创配送</string>
-    <string name="register_permission_safe_run_checkbox">    急救逃生</string>
+    <string name="register_permission_navigation_checkbox">&#160;&#160;&#160;导览</string>
+    <string name="register_permission_goods_delivery_checkbox">&#160;&#160;&#160;文创配送</string>
+    <string name="register_permission_safe_run_checkbox">&#160;&#160;&#160;急救逃生</string>
 
     <string name="register_hint_three_tv">注册</string>
     <string name="register_step_three_count_tv">第3/3步</string>
@@ -62,6 +62,12 @@
     <string name="reigster_assure_telephone_chronometer_tv">33秒</string>
     <string name="register_assure_telephone_time_hint_tv">后可重新发送验证码</string>
     <string name="register_assure_telephone_resend_tv">重新发送</string>
+
+    <!--ForgetPwd-->
+    <string name="forgetpwd_lable_tv">忘记密码</string>
+    <string name="forgetpwd_new_password_tv">新密码</string>
+    <string name="forgetpwd_assure_pwd_tv">确认密码</string>
+    <string name="forgetpwd_change_pwd_btn">更改密码</string>
 
     <!-- Friend !-->
     <string name="friend_my_firends">我的伙伴</string>
