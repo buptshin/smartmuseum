@@ -13,4 +13,17 @@
         <item name="android:colorControlNormal">@color/mainpage_goods_sell_commend_brown</item>
     </style>
 
+    <!-- 展览介绍弹窗 -->
+    <style name="edit_AlertDialog_style" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <!-- 是否启用标题栏 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 是否使用背景半透明 -->
+    </style>
+
+
 </resources>

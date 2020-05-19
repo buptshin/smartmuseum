@@ -121,25 +121,25 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
             case R.id.exhibition:
                 mainpageExploreNewBinding.exhibition.setImageResource(R.mipmap.mainpage_exhibition_selected);
                 mainpageExploreNewBinding.exhibitionText.setTextColor(Color.parseColor("#842d29"));
-                Log.d(TAG, "onClick: button1");
+//                Log.d(TAG, "onClick: button1");
                 mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(0);
                 break;
             case R.id.activity:
                 mainpageExploreNewBinding.activity.setImageResource(R.mipmap.activity_selected);
                 mainpageExploreNewBinding.activityText.setTextColor(Color.parseColor("#842d29"));
-                Log.d(TAG, "onClick: button2");
+//                Log.d(TAG, "onClick: button2");
                 mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(1);
                 break;
             case R.id.recommendedroute:
                 mainpageExploreNewBinding.recommendedroute.setImageResource(R.mipmap.recommendedroute_selected);
                 mainpageExploreNewBinding.recomendedrouteText.setTextColor(Color.parseColor("#842d29"));
-                Log.d(TAG, "onClick: button3");
+//                Log.d(TAG, "onClick: button3");
                 mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(2);
                 break;
             case R.id.bookvisit:
                 mainpageExploreNewBinding.bookvisit.setImageResource(R.mipmap.bookvisit_selected);
                 mainpageExploreNewBinding.bookvisitText.setTextColor(Color.parseColor("#842d29"));
-                Log.d(TAG, "onClick: button4");
+//                Log.d(TAG, "onClick: button4");
                 mainpageExploreNewBinding.prohibitescrollviewpager.setCurrentItem(3);
                 break;
         }

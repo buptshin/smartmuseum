@@ -1,8 +1,12 @@
 package com.example.smartmuseum.view.explore;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -28,6 +32,7 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
 
     private ActivityExhibitionContentBinding activityExhibitionContentBinding;
     private List<Exhibition> exhibitions;
+    private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +64,7 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
 
     @Override
     public ExhibitionContentActivity bindEvent() {
+        // 返回键
         activityExhibitionContentBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,7 +73,8 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
             }
         });
 
-        activityExhibitionContentBinding.fgbutton.setOnClickListener(new View.OnClickListener() {
+        // 图鉴
+        activityExhibitionContentBinding.fgButton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ExhibitionContentActivity.this, FieldGuideActivity.class);
@@ -75,7 +82,32 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
             }
         });
 
+        // 展览详细
+        activityExhibitionContentBinding.infomationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initDialog();
+                dialog.show();
+            }
+        });
         return this;
+    }
+
+    private void initDialog() {
+        dialog = new Dialog(ExhibitionContentActivity.this, R.style.edit_AlertDialog_style);
+        dialog.setContentView(R.layout.exhibition_content_dialog);
+        ImageView imageView = dialog.findViewById(R.id.exhibition_dialog_image);
+        imageView.setImageResource(R.drawable.returnroad_dialog);
+        // true：点击其他地方也可以使dialog消失，false不会
+        dialog.setCanceledOnTouchOutside(false);
+        Window w = dialog.getWindow();
+        WindowManager.LayoutParams layoutParams = w.getAttributes();
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
     }
 
 

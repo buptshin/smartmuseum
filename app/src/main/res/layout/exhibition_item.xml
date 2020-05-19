@@ -34,10 +34,10 @@
             android:id="@+id/exhibition_name"
             android:layout_width="189dp"
             android:layout_height="43dp"
-            android:layout_marginStart="52dp"
+            android:layout_marginStart="64dp"
             android:layout_marginTop="48dp"
             android:textColor="#FFFFFF"
-            android:textSize="40sp"
+            android:textSize="35sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_image"
             app:layout_constraintTop_toTopOf="@+id/exhibition_image" />
 
@@ -47,8 +47,8 @@
             android:layout_height="30dp"
             android:layout_marginTop="2dp"
             android:gravity="center_vertical"
-            android:textColor="#FFFFFF"
-            android:textSize="14sp"
+            android:textColor="#FFD8DDEE"
+            android:textSize="12sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_name"
             app:layout_constraintTop_toBottomOf="@+id/exhibition_name" />
 
@@ -56,7 +56,7 @@
             android:id="@+id/exhibition_passenger_flow"
             android:layout_width="189dp"
             android:layout_height="30dp"
-            android:textColor="#FFFFFF"
+            android:textColor="#FFD8DDEE"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="@+id/exhibition_state"
             app:layout_constraintHorizontal_bias="1.0"
@@ -65,8 +65,8 @@
 
         <ImageView
             android:id="@+id/exhibition_like"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="44dp"
             android:background="#00000000"
@@ -74,24 +74,25 @@
             app:layout_constraintHorizontal_bias="0.716"
             app:layout_constraintStart_toEndOf="@+id/exhibition_name"
             app:layout_constraintTop_toTopOf="@+id/exhibition_image"
-            app:srcCompat="@mipmap/mainpage_exhibition_like_not_selected" />
+            app:srcCompat="@mipmap/mainpage_exhibition_like_not_selected"
+            tools:background="#FFFFFF" />
 
         <ImageView
             android:id="@+id/backgroundpicture"
             android:layout_width="232dp"
             android:layout_height="50dp"
             android:layout_marginBottom="70dp"
-            android:background="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/exhibition_image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/friend_item_button_already" />
 
         <TextView
             android:id="@+id/exhibition_hall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:text="TextView"
             android:textColor="#111111"
             android:textSize="18sp"
@@ -102,10 +103,10 @@
             android:id="@+id/exhibition_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="8dp"
             android:text="TextView"
-            android:textColor="#111111"
-            android:textSize="12sp"
+            android:textColor="#FF8D92A3"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/backgroundpicture"
             app:layout_constraintStart_toStartOf="@+id/backgroundpicture"
             app:layout_constraintTop_toBottomOf="@+id/exhibition_hall"
@@ -118,7 +119,7 @@
             android:layout_marginEnd="8dp"
             android:text="TextView"
             android:textColor="#842d29"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/backgroundpicture"
             app:layout_constraintEnd_toEndOf="@+id/backgroundpicture"
             app:layout_constraintTop_toTopOf="@+id/backgroundpicture"

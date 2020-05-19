@@ -56,7 +56,7 @@ public class MainPageMyInfoFragment extends Fragment implements ViewChainedBindi
             Intent intent = new Intent(mBinding.getRoot().getContext(), MuseumInfoActivity.class);
             startActivity(intent);
         });
-        mBinding.fgbutton.setOnClickListener(view -> {
+        mBinding.fgButton.setOnClickListener(view -> {
             Intent intent = new Intent(mBinding.getRoot().getContext(), FieldGuideActivity.class);
             startActivity(intent);
         });

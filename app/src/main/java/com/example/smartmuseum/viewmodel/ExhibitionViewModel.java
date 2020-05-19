@@ -3,6 +3,7 @@ package com.example.smartmuseum.viewmodel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.smartmuseum.R;
 import com.example.smartmuseum.model.Exhibition;
 import com.example.smartmuseum.model.Goods;
 import com.example.smartmuseum.util.http.HttpRequest;
@@ -35,17 +36,16 @@ public class ExhibitionViewModel extends ViewModel {
 
     // 展厅详细页展示
     private void loadExhibitionModelList(HashMap map) {
-        Exhibition exhibition1 = new Exhibition();
-        exhibition1.setExhibition_name("回归之路");
-        exhibition1.setExhibition_hall("北一、北三展厅");
-
-        Exhibition exhibition2 = new Exhibition();
-        exhibition2.setExhibition_name("古代中国");
-        exhibition2.setExhibition_hall("地下一层展厅");
 
         List<Exhibition> exhibitionList = new ArrayList<>();
+        Exhibition exhibition1 = new Exhibition("古代中国", R.drawable.mainpage_ancient_china, "基本陈列（常设）", 293993924,
+                R.mipmap.mainpage_exhibition_like_not_selected, "地下一层展厅", 3.5, 240);
         exhibitionList.add(exhibition1);
+        Exhibition exhibition2 = new Exhibition("回归之路", R.drawable.mainpage_return_road, "2019.9.17-11.27", 223904,
+                R.mipmap.mainpage_exhibition_like_selected, "北二，北三展厅", 1.5, 130);
         exhibitionList.add(exhibition2);
+
+
         // 传入
         exhibition_list.setValue(exhibitionList);
         // 发送网络请求获取
