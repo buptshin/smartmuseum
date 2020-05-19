@@ -9,6 +9,8 @@ import androidx.databinding.DataBindingUtil;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ActivityMuseumInfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.explore.ExhibitionContentActivity;
 
 public class MuseumInfoActivity extends AppCompatActivity implements ViewChainedBinding {
 
@@ -22,6 +24,8 @@ public class MuseumInfoActivity extends AppCompatActivity implements ViewChained
 
     @Override
     public MuseumInfoActivity bindView() {
+        //状态栏字体设为黑色
+        ScreenUtil.setAndroidNativeLightStatusBar(MuseumInfoActivity.this, true);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_museum_info);
         return this;
     }

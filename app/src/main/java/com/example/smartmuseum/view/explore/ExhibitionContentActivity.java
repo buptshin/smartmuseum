@@ -17,6 +17,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ActivityExhibitionContentBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
+import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.mainpage.MainActivity;
 import com.example.smartmuseum.view.me.FieldGuideActivity;
 import com.example.smartmuseum.viewmodel.ExhibitionViewModel;
@@ -42,6 +43,8 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
 
     @Override
     public ExhibitionContentActivity bindView() {
+        //状态栏字体设为黑色
+        ScreenUtil.setAndroidNativeLightStatusBar(ExhibitionContentActivity.this, true);
         activityExhibitionContentBinding = DataBindingUtil.setContentView(this, R.layout.activity_exhibition_content);
         return this;
     }

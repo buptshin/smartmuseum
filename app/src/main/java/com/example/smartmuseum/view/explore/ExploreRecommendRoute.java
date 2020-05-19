@@ -1,5 +1,6 @@
 package com.example.smartmuseum.view.explore;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,8 @@ import androidx.fragment.app.Fragment;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentExploreRecommendedrouteBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.goods.GoodsInfoActivity;
+import com.example.smartmuseum.view.routecommend.RouteCommendInfoActivity;
 
 public class ExploreRecommendRoute extends Fragment implements ViewChainedBinding {
     private View view;
@@ -48,6 +51,13 @@ public class ExploreRecommendRoute extends Fragment implements ViewChainedBindin
 
     @Override
     public ExploreRecommendRoute bindEvent() {
+        fragmentExploreRecommendedrouteBinding.imageView2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(fragmentExploreRecommendedrouteBinding.getRoot().getContext(), RouteCommendInfoActivity.class);
+                startActivity(intent);
+            }
+        });
         return this;
     }
 }
