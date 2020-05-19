@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/exhibition_dialog_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.525"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/returnroad_dialog" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:fontFamily="sans-serif-light"
+            android:text="\n这是一条回归之路。\n这也是一条中华民族梦圆之路。\n中华民族延绵五千年所孕育创造的\n璀璨文化，是中华民族根混所寄、\n中华儿女精神所系。"
+            android:textColor="#111111"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="@+id/exhibition_dialog_image"
+            app:layout_constraintStart_toStartOf="@+id/exhibition_dialog_image"
+            app:layout_constraintTop_toBottomOf="@+id/exhibition_dialog_image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

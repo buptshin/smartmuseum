@@ -17,6 +17,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ExhibitionItemBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
+import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.explore.ExhibitionContentActivity;
 import com.example.smartmuseum.view.mainpage.MainActivity;
 
@@ -32,6 +33,8 @@ import static androidx.core.content.ContextCompat.startActivity;
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
     private List<Exhibition> exhibition_list;
+
+    GlobalVariables globalVariables = new GlobalVariables();
 
     // 监听器
     private OnItemClickListener onItemClickListener;
@@ -107,7 +110,12 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         holder.rvBinding.exhibitionLike.setImageResource(exhibition.getExhibition_like());
         holder.rvBinding.exhibitionHall.setText(exhibition.getExhibition_hall());
         holder.rvBinding.exhibitionTime.setText("平均停留时间为：" + exhibition.getExhibition_time() + "小时");
-        holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() + " 米");
+        if (globalVariables.getLocation_change() == 0) {
+            holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() + " 米");
+        } else {
+            holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() - 150 + " 米");
+        }
+
 
         holder.getBinding().exhibitionImage.setOnClickListener(new View.OnClickListener() {
             @Override
