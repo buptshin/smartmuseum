@@ -1,10 +1,13 @@
 package com.example.smartmuseum.view.mainpage;
 
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,6 +23,8 @@ import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
 import com.example.smartmuseum.databinding.FragmentMainpageNavigationBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.NavigationFlagModel;
+import com.example.smartmuseum.view.exhibition.ExhibitionInnerCollectionFragment;
+import com.example.smartmuseum.view.navigation.NavigationSearchActivity;
 
 import java.util.ArrayList;
 
@@ -27,23 +32,15 @@ import java.util.ArrayList;
 public class MainPageNavigationFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentMainpageNavigationBinding mBinding;
+
     private ArrayList<View> viewList;
+
     private MainPageNavigationPagerAdapter mAdapter;
+
     //标记当前fragment是否已绑定xml文件
     protected boolean isCreated = false;
+
     private NavigationFlagModel flagModel;
-
-    /** 标记筛选按钮是否打开*/
-    private boolean isScreen = false;
-
-    /*
-    * 标记当前地图放大倍数，默认0，最大3
-    * 0：楼层导览
-    * 1：当前楼层地图
-    * 2：当前楼层地图放大模式
-    * 3：文物导览模式
-    * */
-    private int zoomValue = 0;
 
     public MainPageNavigationFragment() {
     }
@@ -65,34 +62,50 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         flagModel = new NavigationFlagModel();
         mBinding.setData(flagModel);
         mBinding.setLifecycleOwner(this);
+
+        //监听是否打开筛选
         flagModel.getIsGreen().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
             public void onChanged(Boolean aBoolean) {
-                if (flagModel.getIsGreen().equals(false)){
+                if (flagModel.getIsGreen().getValue().equals(false)){
                     mBinding.mainpageNavigationScreenIv.setImageResource(R.mipmap.mainpage_navigation_screen_false);
                     mBinding.mainpageNavigationMapViewpager.setCurrentItem(0);
 
-                }else if (flagModel.getIsGreen().equals(true)){
+                }else if (flagModel.getIsGreen().getValue().equals(true)){
                     mBinding.mainpageNavigationScreenIv.setImageResource(R.mipmap.mainpage_navigation_screen_true);
                     mBinding.mainpageNavigationMapViewpager.setCurrentItem(1);
                 }
 
             }
         });
+
+        //监听缩放
         flagModel.getZoomValue().observe(getViewLifecycleOwner(), new Observer<Integer>() {
             @Override
             public void onChanged(Integer integer) {
-                if (flagModel.getZoomValue().equals(0)){
+
+                if (flagModel.getZoomValue().getValue().equals(-1)){
+                    //将导览viewpage恢复到楼层导览
+                    setNormalView();
+
+                }else if (flagModel.getZoomValue().getValue().equals(0)){
                     mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_middle);
-                    if (flagModel.getIsGreen().equals(true)){
-                        mBinding.mainpageNavigationMapViewpager.setCurrentItem(1);
-                    }else if (flagModel.getIsGreen().equals(false)){
-                        mBinding.mainpageNavigationMapViewpager.setCurrentItem(0);
+                    if (flagModel.getIsGreen().getValue().equals(true)){
+                        mBinding.mainpageNavigationMapViewpager.setCurrentItem(1,false);
+                    }else if (flagModel.getIsGreen().getValue().equals(false)){
+                        mBinding.mainpageNavigationMapViewpager.setCurrentItem(0,false);
                     }
 
-                }else if (flagModel.getZoomValue().equals(1)){
+                }else if (flagModel.getZoomValue().getValue().equals(1)){
                     mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_high);
-                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(2);
+                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(2,false);
+                }else if (flagModel.getZoomValue().getValue().equals(2)){
+                   /* //如果是用的v4的包，则用getActivity().getSuppoutFragmentManager();
+                    FragmentManager fm = getActivity().getFragmentManager();
+                    //注意v4包的配套使用
+                    Fragment fragment = new ExhibitionInnerCollectionFragment();
+                    fm.beginTransaction().replace(fragment).commit();
+*/
                 }
             }
         });
@@ -133,6 +146,8 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
                 mBinding.mainpageNavigationZoomCl.setVisibility(View.VISIBLE);
                 mBinding.mainpageNavigationLocationMapIv.setVisibility(View.GONE);
                 mBinding.mainpageNavigationMapViewpager.setVisibility(View.VISIBLE);
+                mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_middle);
+                //mBinding.mainpageNavigationEscapeRoutesIv.set
 
             }
         });
@@ -146,48 +161,12 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
             }
         });
 
-        /*//筛选开/关mainpage_navigation_screen_iv
-        mBinding.mainpageNavigationScreenIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (!isScreen){
-                    isScreen = true;
-                    mBinding.mainpageNavigationScreenIv.setImageResource(R.mipmap.mainpage_navigation_screen_true);
-                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(1);
-                }else{
-                    isScreen = false;
-                    mBinding.mainpageNavigationScreenIv.setImageResource(R.mipmap.mainpage_navigation_screen_false);
-                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(0);
-                }
-
-            }
-        });
-
-        //缩小按钮mainpage_navigation_narrow_iv
-        mBinding.mainpageNavigationNarrowIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
-
-        //放大按钮mainpage_navigation_process_iv
-        mBinding.mainpageNavigationEnlargeIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                zoomValue ++;
-                if (zoomValue == 1){
-
-                }
-
-            }
-        });
-
         //搜索按钮
         mBinding.mainpageNavigationSearchIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -195,11 +174,22 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         mBinding.mainpageNavigationFirstaidSearchIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-
+                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
+                startActivity(intent);
             }
-        });*/
-        return null;
+        });
+        return this;
+    }
+
+    //将导览viewpage恢复到楼层导览
+    public void setNormalView(){
+        mBinding.mainpageNavigationNormal.setVisibility(View.VISIBLE);
+        mBinding.mainpageNavigationFirstaid.setVisibility(View.GONE);
+        mBinding.mainpageNavigationNormalNowLocationCl.setVisibility(View.VISIBLE);
+        mBinding.mainpageNavigationZoomCl.setVisibility(View.GONE);
+        mBinding.mainpageNavigationLocationMapIv.setVisibility(View.VISIBLE);
+        mBinding.mainpageNavigationMapViewpager.setVisibility(View.GONE);
+        flagModel.setIsGreenToNormal();
     }
 
     /*
@@ -215,12 +205,7 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
 
         if (isVisibleToUser) {
             //将导览viewpage恢复到楼层导览
-            mBinding.mainpageNavigationNormal.setVisibility(View.VISIBLE);
-            mBinding.mainpageNavigationFirstaid.setVisibility(View.GONE);
-            mBinding.mainpageNavigationNormalNowLocationCl.setVisibility(View.VISIBLE);
-            mBinding.mainpageNavigationZoomCl.setVisibility(View.GONE);
-            mBinding.mainpageNavigationLocationMapIv.setVisibility(View.VISIBLE);
-            mBinding.mainpageNavigationMapViewpager.setVisibility(View.GONE);
+            setNormalView();
         }
     }
 

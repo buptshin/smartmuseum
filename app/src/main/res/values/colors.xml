@@ -64,6 +64,17 @@
     <color name="mainpage_navigation_white">#FFFFFF</color>
     <color name="mainpage_navigation_wordcolor_gray">#8D92A3</color>
 
+    <!--Navigation_search-->
+    <color name="navigation_search_background_gray">#F7F8FA</color>
+    <color name="navigation_search_red">#842D29</color>
+    <color name="navigation_search_white">#FFFFFF</color>
+    <color name="navigation_search_black">#000521</color>
+    <color name="navigation_search_item_gray">#8D92A3</color>
+
+    <!--Navigation_go_routes-->
+    <color name="navigation_routes_black">#000521</color>
+    <color name="navigation_routes_red">#842D29</color>
+
     <!-- Goods !-->
     <color name="mainpage_goods_sell_background">#FFFFFF</color>
     <color name="mainpage_goods_sell_commend_black">#000521</color>

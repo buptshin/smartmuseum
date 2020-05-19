@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="record"
+            type="com.example.smartmuseum.model.SearchRecord" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_marginEnd="30dp"
+        android:layout_height="70dp"
+        android:background="@color/navigation_search_white">
+
+        <TextView
+            android:id="@+id/search_record_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{record.recordName}"
+            android:textColor="@color/navigation_search_black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="东1门-安检处"/>
+
+        <TextView
+            android:id="@+id/goods_choose_address_item_detail_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{record.address}"
+            android:textColor="@color/navigation_search_item_gray"
+            android:textSize="15sp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_record_name_text"
+            tools:text="中国国家博物馆东1门西侧"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

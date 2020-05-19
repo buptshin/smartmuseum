@@ -45,21 +45,28 @@ public class NavigationFlagModel extends ViewModel {
     }
 
     public void changeIsGreen(){
-        if (isGreen.equals(true)){
+        if (isGreen.getValue() == true && zoomValue.getValue() != 1){
             isGreen.setValue(false);
-        }else if (isGreen.equals(false)){
+        }else if (isGreen.getValue() == false && zoomValue.getValue() != 1){
             isGreen.setValue(true);
         }
     }
 
+    //强制将筛选状态恢复到默认值false
+    public void setIsGreenToNormal(){
+        isGreen.setValue(false);
+    }
+
     public void addZoomValue(){
-        if (zoomValue.getValue() < 2) {
+        if (zoomValue.getValue() == 0 && isGreen.getValue() == true){
+            zoomValue.setValue(zoomValue.getValue() + 1);
+        }else if (zoomValue.getValue() < 2 && zoomValue.getValue() != 0){
             zoomValue.setValue(zoomValue.getValue() + 1);
         }
     }
 
     public void lessZoomValue(){
-        if (zoomValue.getValue() > 1) {
+        if (zoomValue.getValue() >= 0) {
             zoomValue.setValue(zoomValue.getValue() - 1);
         }
     }
