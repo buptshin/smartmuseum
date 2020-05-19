@@ -57,14 +57,11 @@ public class RegisterStepOneFragment extends Fragment implements ViewChainedBind
     public RegisterStepOneFragment bindEvent() {
 
         // 返回登录
-        mBinding.registerToLoginTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),LoginActivity.class);
-                getActivity().finish();
-                // 在回到登录界面的时候，应该清空所有的Activity,这里先不写
-                startActivity(intent);
-            }
+        mBinding.registerToLoginTv.setOnClickListener(v -> {
+            Intent intent = new Intent(mBinding.getRoot().getContext(),LoginActivity.class);
+            getActivity().finish();
+            // 在回到登录界面的时候，应该清空所有的Activity,这里先不写
+            startActivity(intent);
         });
 
         // 进行注册的下一步操作

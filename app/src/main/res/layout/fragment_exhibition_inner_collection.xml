@@ -14,18 +14,18 @@
         tools:context=".view.exhibition.ExhibitionInnerCollectionFragment">
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline55"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.062" />
-
-        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline56"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.14" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.12" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline57"
@@ -49,27 +49,18 @@
             android:textColor="#000521"
             android:textSize="@dimen/exhibition_inner_collection_lable_tv"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/guideline56"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.06"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline55"
+            app:layout_constraintBottom_toTopOf="@+id/guideline55"
+            app:layout_constraintStart_toStartOf="@+id/guideline92"
             tools:text="导览" />
 
         <ImageView
             android:id="@+id/exhibition_inner_collection_search_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@mipmap/exhibition_inner_collection_search"
-            app:layout_constraintBottom_toTopOf="@+id/guideline56"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.035"
-            app:layout_constraintHorizontal_bias="0.94"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline55"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.06" />
+            app:layout_constraintBottom_toBottomOf="@id/exhibition_inner_collection_lable_tv"
+            app:layout_constraintEnd_toStartOf="@+id/guideline93"
+            app:layout_constraintTop_toTopOf="@+id/exhibition_inner_collection_lable_tv" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline58"
@@ -79,11 +70,32 @@
             app:layout_constraintGuide_percent="0.08" />
 
         <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline91"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline92"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline59"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline93"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.94" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline61"

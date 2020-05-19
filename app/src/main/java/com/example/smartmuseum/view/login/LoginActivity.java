@@ -41,31 +41,22 @@ public class LoginActivity extends AppCompatActivity implements ViewChainedBindi
     public LoginActivity bindEvent() {
 
         //“注册”
-        mBinding.loginToRegisterTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
+        mBinding.loginToRegisterTv.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+            startActivity(intent);
         });
 
         // “登录”
-        mBinding.loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
+        mBinding.loginBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         });
 
         // “忘记密码”
-        mBinding.loginToForgetpwdTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, ForgetPwdActivity.class);
-                startActivity(intent);
-            }
+        mBinding.loginToForgetpwdTv.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, ForgetPwdActivity.class);
+            startActivity(intent);
         });
         return this;
     }

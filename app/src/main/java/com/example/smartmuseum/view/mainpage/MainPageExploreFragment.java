@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -25,6 +28,7 @@ import com.example.smartmuseum.databinding.FragmentMainpageExploreBinding;
 import com.example.smartmuseum.databinding.FragmentMainpageExploreNewBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
+import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.explore.ExhibitionContentActivity;
 import com.example.smartmuseum.view.explore.ExploreActivityFragment;
 import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
@@ -44,6 +48,7 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
     private FragmentMainpageExploreNewBinding mainpageExploreNewBinding;
 
     private List<Fragment> fragment_list;
+    private boolean isApart = false;   // 标识伙伴图标的切换状态
 
 
 
@@ -73,6 +78,10 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
 
     @Override
     public MainPageExploreFragment bindView() {
+
+        // 如果有同行伙伴的话，伙伴图标是可见的
+        if(GlobalVariables.hasAcompany)
+            mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setVisibility(View.VISIBLE);
 
         // 设置点击监听
         mainpageExploreNewBinding.activity.setOnClickListener(this);
@@ -110,6 +119,30 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
 
     @Override
     public MainPageExploreFragment bindEvent() {
+
+        // 单击伙伴图标
+        mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isApart = !isApart;
+                if(isApart)
+                    mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setImageResource(R.mipmap.mainpage_explore_friends_apart);
+                else mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setImageResource(R.mipmap.mainpage_explore_friends_together);
+            }
+        });
+
+        // 长按伙伴图标，出现侧滑栏
+        mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                // 如果当前是伙伴集中的状态，就打开侧滑栏
+                if(!isApart){
+                    DrawerLayout drawerLayout = (DrawerLayout)mainpageExploreNewBinding.getRoot().getRootView().findViewById(R.id.mainpage_drawer);
+                    drawerLayout.openDrawer(GravityCompat.START);
+                }
+                return false;
+            }
+        });
         return this;
     }
 

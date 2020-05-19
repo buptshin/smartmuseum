@@ -13,6 +13,11 @@
         <item name="android:colorControlNormal">@color/mainpage_goods_sell_commend_brown</item>
     </style>
 
+    <style name="SettingsTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/settings_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/settings_colorPrimaryDark</item>
+    </style>
+
     <!-- 展览介绍弹窗 -->
     <style name="edit_AlertDialog_style" parent="@android:style/Theme.Dialog">
         <item name="android:windowIsFloating">true</item>

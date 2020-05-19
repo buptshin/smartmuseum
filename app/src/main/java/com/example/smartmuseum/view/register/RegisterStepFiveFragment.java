@@ -39,6 +39,7 @@ public class RegisterStepFiveFragment extends Fragment implements ViewChainedBin
                 R.layout.fragment_register_step_five,
                 container,
                 false);
+        this.bindData().bindView().bindEvent();
         return mBinding.getRoot();
     }
 
@@ -54,22 +55,16 @@ public class RegisterStepFiveFragment extends Fragment implements ViewChainedBin
 
     @Override
     public RegisterStepFiveFragment bindEvent() {
-        mBinding.registerBackImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_registerStepFiveFragment_to_registerStepFourFragment);
-            }
+        mBinding.registerBackImg.setOnClickListener(v -> {
+            NavController controller = Navigation.findNavController(v);
+            controller.navigate(R.id.action_registerStepFiveFragment_to_registerStepFourFragment);
         });
 
-        mBinding.registerNextStepTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 再下一步就是回到登录界面了
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
-                getActivity().finish();
-                startActivity(intent);
-            }
+        mBinding.registerNextStepTv.setOnClickListener(v -> {
+            // 再下一步就是回到登录界面了
+            Intent intent = new Intent(mBinding.getRoot().getContext(), LoginActivity.class);
+            getActivity().finish();
+            startActivity(intent);
         });
         return this;
     }

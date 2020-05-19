@@ -1,6 +1,7 @@
 package com.example.smartmuseum.view.forgetpwd;
 
 
+import android.content.Intent;
 import android.media.audiofx.DynamicsProcessing;
 import android.os.Bundle;
 
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentForgetPwdResetBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.login.LoginActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -36,6 +38,7 @@ public class ForgetPwdResetFragment extends Fragment implements ViewChainedBindi
                 R.layout.fragment_forget_pwd_reset,
                 container,false
         );
+        this.bindData().bindView().bindEvent();
         return mBinding.getRoot();
     }
 
@@ -51,6 +54,20 @@ public class ForgetPwdResetFragment extends Fragment implements ViewChainedBindi
 
     @Override
     public ForgetPwdResetFragment bindEvent() {
+        mBinding.forgetpwdBackImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getActivity().finish();
+            }
+        });
+        mBinding.forgetpwdChangePwdBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mBinding.getRoot().getContext(), LoginActivity.class);
+                getActivity().finish();
+                startActivity(intent);
+            }
+        });
         return this;
     }
 }

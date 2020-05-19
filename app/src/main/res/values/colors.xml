@@ -53,10 +53,20 @@
     <color name="register_assure_telephone_time_hint_tv">#8D92A3</color>
     <color name="register_assure_telephone_resend_tv">#842D29</color>
 
+    <!--ForgetPwd-->
+    <color name="forgetpwd_lable_tv">#000000</color>
+    <color name="forgetpwd_password_tv">#8D92A3</color>
+    <color name="forgetpwd_password_et">#320000</color>
+    <color name="forgetpwd_change_pwd_btn">#FFFFFF</color>
+
     <!-- MainPage !-->
     <color name="mainpage_navigation_background">#FFFFFF</color>
     <color name="mainpage_navigation_selectoritem_primary_color_selected">#842D29</color>
     <color name="mainpage_navigation_selectoritem_primary_color_unselected">#000000</color>
+
+    <!--Exhibition-->
+    <color name="mainpage_explore_exhibition_switch_checked">#842D29</color>
+    <color name="mainpage_explore_exhibition_switch_unchecked">#08080040</color>
 
     <!-- Navigation !-->
     <color name="mainpage_navigation_selectoritem_wordcolor_black">#FF000521</color>
@@ -140,7 +150,7 @@
     <color name="friend_my_firends_main_box_stroke">#ECEBED</color>
     <color name="friend_my_firends_other_boxes">#842D29</color>
     <color name="friend_my_firends">#ECEBED</color>
-    <color name="friend_my_firends_text">#000000</color>
+    <color name="friend_my_firends_text">#1A1A1A</color>
     <color name="friend_my_firends_join_text">#FBFBFB</color>
     <color name="friend_my_firends_team_and_personal_text">#1A051D</color>
     <color name="friend_my_firends_start_text">#FFFFFF</color>
@@ -170,8 +180,24 @@
     <color name="route_commend_info_exhibition_location_name_color">#000521</color>
     <color name="route_commend_info_exhibition_exhibition_name_color">#8D92A3</color>
 
-    v
     <!-- MyInfo !-->
+
+    <!--Settings-->
+    <color name="settings_colorPrimary">#F7F8FA</color>
+    <color name="settings_colorPrimaryDark">#F7F8FA</color>
+    <color name="settings_switch_track_checked">#842D29</color>
+    <color name="settings_switch_track_unchecked">#08080040</color>
+    <color name="settings_lable_tv">#1A1A1A</color>
+    <color name="settings_item_title_tv">#000521</color>
+    <color name="settings_item_tv">#000521</color>
+    <color name="settings_setted_language_tv">#B8BBC6</color>
+    <color name="settings_logout_btn">#FFFFFF </color>
+
+    <!--MainPage-Drawer-->
+    <color name="mainpage_drawer_username_tv">#000000</color>
+    <color name="mainpage_drawer_user_status_tv">#000000</color>
+    <color name="mainpage_drawer_position_tv">#000000</color>
+    <color name="mainpage_drawer_btn">#FFFFFF</color>
 
 
 </resources>

@@ -133,5 +133,17 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/mainpage_explore_friends_status_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="15dp"
+            android:visibility="gone"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="@+id/mainpage_navigation_search_iv"
+            app:layout_constraintEnd_toStartOf="@+id/mainpage_navigation_search_iv"
+            app:layout_constraintTop_toTopOf="@+id/mainpage_navigation_search_iv"
+            app:srcCompat="@mipmap/mainpage_explore_friends_together" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

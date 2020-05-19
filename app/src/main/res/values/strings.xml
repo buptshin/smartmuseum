@@ -48,9 +48,9 @@
     <string name="register_step_two_count_tv">第2/3步</string>
     <string name="register_position_permissions_tv">位置信息权限</string>
     <string name="register_choose_permissions_tv">请选择允许开通的位置权限</string>
-    <string name="register_permission_navigation_checkbox">    导览</string>
-    <string name="register_permission_goods_delivery_checkbox">    文创配送</string>
-    <string name="register_permission_safe_run_checkbox">    急救逃生</string>
+    <string name="register_permission_navigation_checkbox">&#160;&#160;&#160;导览</string>
+    <string name="register_permission_goods_delivery_checkbox">&#160;&#160;&#160;文创配送</string>
+    <string name="register_permission_safe_run_checkbox">&#160;&#160;&#160;急救逃生</string>
 
     <string name="register_hint_three_tv">注册</string>
     <string name="register_step_three_count_tv">第3/3步</string>
@@ -62,6 +62,12 @@
     <string name="reigster_assure_telephone_chronometer_tv">33秒</string>
     <string name="register_assure_telephone_time_hint_tv">后可重新发送验证码</string>
     <string name="register_assure_telephone_resend_tv">重新发送</string>
+
+    <!--ForgetPwd-->
+    <string name="forgetpwd_lable_tv">忘记密码</string>
+    <string name="forgetpwd_new_password_tv">新密码</string>
+    <string name="forgetpwd_assure_pwd_tv">确认密码</string>
+    <string name="forgetpwd_change_pwd_btn">更改密码</string>
 
     <!-- Friend !-->
     <string name="friend_my_firends">我的伙伴</string>
@@ -169,7 +175,7 @@
     <string name="background1">white1</string>
     <string name="friend_choose_friends">添加个人伙伴</string>
     <string name="friend_choose_friends_search">搜索</string>
-    <string name="friend_choose_friends_my_accompany">已添加%d位同行伙伴</string>
+    <string name="friend_choose_friends_my_accompany">已添加1位同行伙伴</string>
     <string name="firend_choose_friends_item_accompany_count">曾同行过%d次</string>
     <string name="friend_choose_friends_item_inMuseum">国家博物馆参观中</string>
     <string name="friend_choose_friends_item_not_inMuseum">离线</string>
@@ -184,4 +190,25 @@
     <string name="exhibition_inner_collection_concrete_position_tv">北一展厅-复兴之路</string>
     <string name="exhibition_inner_collection_change_hint_tv">缩放</string>
 
+    <!--Settings-->
+    <string name="settings_lable_tv">设置</string>
+    <string name="settings_user_info_tv">用户信息</string>
+    <string name="settings_personal_account_tv">个人账户</string>
+    <string name="settings_notify_tv">通知</string>
+    <string name="settings_recommend_tv">个性推荐</string>
+    <string name="settings_application_setting_tv">软件设置</string>
+    <string name="settings_language_tv">语言</string>
+    <string name="settings_setted_language_tv">简体中文</string>
+    <string name="settings_contact_us_tv">联系我们</string>
+    <string name="settings_logout_btn">退出登录</string>
+
+    <!--MainPage-Drawer-->
+    <string name="mainpage_drawer_username_tv">葫芦</string>
+    <string name="mainpage_drawer_user_status_tv">和伙伴参观中</string>
+    <string name="mainpage_drawer_my_position_tv">我的位置</string>
+    <string name="mainpage_drawer_friends_position_tv_1">伙伴位置1</string>
+    <string name="mainpage_drawer_friends_position_tv_2">伙伴位置2</string>
+    <string name="mainpage_drawer_friends_position_tv_3">伙伴位置3</string>
+    <string name="mainpage_drawer_send_message_btn">发送消息</string>
+    <string name="mainpage_drawer_exit_btn">退出</string>
 </resources>
