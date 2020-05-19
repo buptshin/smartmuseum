@@ -31,6 +31,8 @@ public class GoodsViewModel extends ViewModel {
 
     private MutableLiveData<List<Goods>> buyGoodsModelList;
 
+    private MutableLiveData<List<Goods>> routeCommendGoodsModelList;
+
     //获取推荐商品
     public MutableLiveData<List<Goods>> getCommendGoodsModelList(HashMap map) {
         if (commendGoodsModelList == null) {
@@ -85,13 +87,23 @@ public class GoodsViewModel extends ViewModel {
         return goodsModelInfoDetail;
     }
 
-    //获取已购买商品信息(付款页面)
+
+    //获取文物特展推荐商品
     public MutableLiveData<List<Goods>> getbuyGoodsModelList(HashMap map) {
         if (buyGoodsModelList == null) {
             buyGoodsModelList = new MutableLiveData<>();
             loadbuyGoodsModelList(map);
         }
         return buyGoodsModelList;
+    }
+
+    //获取已购买商品信息(付款页面)
+    public MutableLiveData<List<Goods>> getRouteCommendGoodsModelList(HashMap map) {
+        if (routeCommendGoodsModelList == null) {
+            routeCommendGoodsModelList = new MutableLiveData<>();
+            loadRouteommendGoodsModelList(map);
+        }
+        return routeCommendGoodsModelList;
     }
 
     public void loadClassicalGoodsModelList(HashMap map) {
@@ -280,6 +292,27 @@ public class GoodsViewModel extends ViewModel {
 
         buyGoodsModelList.setValue(list);
     }
+
+
+    public void loadRouteommendGoodsModelList(HashMap map) {
+        Goods test1 = new Goods();
+        test1.setCollectName("青铜匽侯盂");
+        test1.setName("月光宝盒陶瓷茶具");
+
+        Goods test2 = new Goods();
+        test2.setCollectName("霁青金彩海晏河清尊");
+        test2.setName("年年有鱼纯银手镯");
+
+        List<Goods> list = new ArrayList<>();
+        list.add(test1);
+        list.add(test2);
+        list.add(test1);
+        list.add(test2);
+
+        routeCommendGoodsModelList.setValue(list);
+    }
+
+
 
 
 }

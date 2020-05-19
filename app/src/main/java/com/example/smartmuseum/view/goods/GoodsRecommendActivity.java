@@ -64,6 +64,13 @@ public class GoodsRecommendActivity extends AppCompatActivity implements ViewCha
             }
         });
 
+        mBinding.mainpageGoodsSellCommendShopImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
         return this;
     }
 }

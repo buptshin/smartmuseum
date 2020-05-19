@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_route_commend_goods_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_route_commend_goods_card_background"
+        android:layout_marginStart="@dimen/dialog_route_commend_goods_card_margin_start"
+        android:layout_marginEnd="@dimen/dialog_route_commend_goods_card_margin_start"
+        android:background="@drawable/dialog_route_commend_goods_img">
+
+        <ImageView
+            android:id="@+id/dialog_route_commend_goods_close_img"
+            android:layout_width="@dimen/dialog_goods_infp_pay_success_close_img_height"
+            android:layout_height="@dimen/dialog_goods_infp_pay_success_close_img_height"
+            android:layout_marginTop="@dimen/dialog_goods_infp_pay_success_margin_top"
+            android:layout_marginEnd="@dimen/dialog_goods_infp_pay_success_margin_top"
+            android:src="@mipmap/goods_info_close_button_white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+        <LinearLayout
+            android:id="@+id/dialog_route_commend_goods_other_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/dialog_route_commend_goods_other_text_margin_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/dialog_route_commend_goods_other_text"
+                android:textColor="@color/dialog_route_commend_goods_other_text_color"
+                android:textSize="@dimen/dialog_route_commend_goods_other_text"/>
+
+            <ImageView
+                android:id="@+id/dialog_route_commend_goods_other_img"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/dialog_route_commend_goods_img_margin_start"
+                android:src="@mipmap/dialog_route_commend_goods_next_img"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/dialog_route_commend_goods_detail_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/goods_info_button_height"
+            android:layout_marginBottom="@dimen/dialog_goods_infp_pay_success_margin_top"
+            android:layout_marginStart="@dimen/goods_info_button_margin_start"
+            android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+            android:gravity="center"
+            android:text="@string/dialog_route_commend_goods_detail_text"
+            android:textSize="@dimen/goods_info_button_text"
+            android:textColor="@color/goods_info_card_background"
+            android:background="@drawable/goods_purchased_status_button"
+            app:layout_constraintBottom_toTopOf="@+id/dialog_route_commend_goods_other_layout"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <TextView
+            android:id="@+id/dialog_route_commend_goods_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥598"
+            android:textSize="@dimen/dialog_route_commend_goods_price_text"
+            android:textStyle="bold"
+            android:textColor="@color/dialog_route_commend_goods_name_text_color"
+            android:layout_marginBottom="@dimen/dialog_route_commend_goods_price_margin_bottom"
+            android:layout_marginStart="@dimen/goods_info_button_margin_start"
+            app:layout_constraintBottom_toTopOf="@+id/dialog_route_commend_goods_detail_button"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="¥598"/>
+
+        <TextView
+            android:id="@+id/dialog_route_commend_goods_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="大观园纸雕灯"
+            android:textSize="@dimen/dialog_route_commend_goods_price_text"
+            android:textStyle="bold"
+            android:textColor="@color/dialog_route_commend_goods_name_text_color"
+            android:layout_marginBottom="@dimen/dialog_route_commend_goods_img_margin_start"
+            android:layout_marginStart="@dimen/goods_info_button_margin_start"
+            app:layout_constraintBottom_toTopOf="@+id/dialog_route_commend_goods_price_text"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="大观园纸雕灯"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/goods_info_button_margin_start"
+            android:layout_marginBottom="@dimen/dialog_route_commend_goods_price_margin_bottom"
+            app:layout_constraintBottom_toTopOf="@+id/dialog_route_commend_goods_name_text"
+            app:layout_constraintLeft_toLeftOf="parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_route_commend_goods_commend_detail_text1"
+                android:textSize="@dimen/dialog_route_commend_goods_other_text"
+                android:textColor="@color/dialog_route_commend_goods_recommend_text_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="[清]大观园图"
+                android:textSize="@dimen/dialog_route_commend_goods_other_text"
+                android:textColor="@color/dialog_route_commend_goods_recommend_goods_text_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_route_commend_goods_commend_detail_text2"
+                android:textSize="@dimen/dialog_route_commend_goods_other_text"
+                android:textColor="@color/dialog_route_commend_goods_recommend_text_color" />
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

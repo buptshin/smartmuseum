@@ -6,6 +6,7 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/route_commend_info_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/goods_info_button_margin_start"
@@ -25,7 +26,7 @@
             android:id="@+id/route_commend_info_title_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="文物特展"
+            android:text="@string/route_commend_info_title"
             android:textColor="@color/goods_order_check_order_color"
             android:textSize="@dimen/goods_order_check_title_text"
             android:textStyle="bold"
@@ -198,6 +199,291 @@
             app:layout_constraintLeft_toRightOf="@+id/route_commend_info_end_location_text"
             app:layout_constraintTop_toTopOf="@+id/route_commend_info_end_location_text"
             app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_end_location_text"/>
+
+        <com.example.smartmuseum.view.otherview.DragFloatActionButton
+            android:id="@+id/route_commend_drag_float_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:background="@mipmap/route_commend_info_pack_nothing"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/route_commend_popupwindow_nothing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/route_commend_popupwindow_card_background"
+            android:background="@drawable/goods_info_card_background"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_nothing_pack_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:layout_marginStart="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:text="@string/route_commend_popupwindow_goods_pack_title"
+                android:textSize="@dimen/route_commend_popupwindow_commend_nothing_text"
+                android:textStyle="bold"
+                android:textColor="@color/route_commend_popupwindow_title_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:id="@+id/route_commend_popupwindow_nothing_close_img"
+                android:layout_width="@dimen/route_commend_popupwindow_nothing_pack_margin"
+                android:layout_height="@dimen/route_commend_popupwindow_nothing_pack_margin"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:layout_marginEnd="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:src="@mipmap/route_commend_popupwindow_close_gray"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_nothing_pack_nothing_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/route_commend_popupwindow_goods_pack_nothing"
+                android:textSize="@dimen/route_commend_popupwindow_commend_nothing_content_text"
+                android:textColor="@color/route_commend_popupwindow_content_text"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_nothing_pack_margin"
+                android:layout_marginStart="@dimen/route_commend_popupwindow_nothing_pack_margin_start"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_nothing_pack_text"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_commend_goods_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:layout_marginStart="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:text="@string/route_commend_popupwindow_goods_commend_title"
+                android:textSize="@dimen/route_commend_popupwindow_commend_nothing_text"
+                android:textStyle="bold"
+                android:textColor="@color/route_commend_popupwindow_title_text"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_nothing_pack_nothing_text"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/route_commend_popupwindow_commend_goods_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin_top"
+                android:layout_marginStart="@dimen/route_commend_popupwindow_commend_goods_margin"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_commend_goods_text"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <Button
+                android:id="@+id/route_commend_popupwindow_add_goods_pack_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/goods_info_button_height"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin_top"
+                android:layout_marginStart="@dimen/goods_info_button_margin_start"
+                android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+                android:text="@string/route_commend_popupwindow_goods_add_goods_title"
+                android:textSize="@dimen/goods_info_button_text"
+                android:textColor="@color/goods_info_card_background"
+                android:background="@drawable/goods_purchased_status_button"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_commend_goods_recyclerview"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/route_commend_popupwindow_something_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/route_commend_popupwindow_card_background"
+            android:visibility="gone"
+            android:background="@drawable/goods_info_card_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent">
+
+            <TextView
+                android:id="@+id/route_commend_popupwindow_something_pack_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:layout_marginStart="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:text="@string/route_commend_popupwindow_goods_pack_title"
+                android:textSize="@dimen/route_commend_popupwindow_commend_nothing_text"
+                android:textStyle="bold"
+                android:textColor="@color/route_commend_popupwindow_title_text"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+            <ImageView
+                android:id="@+id/route_commend_popupwindow_something_close_img"
+                android:layout_width="@dimen/route_commend_popupwindow_nothing_pack_margin"
+                android:layout_height="@dimen/route_commend_popupwindow_nothing_pack_margin"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:layout_marginEnd="@dimen/route_commend_popupwindow_commend_goods_margin"
+                android:src="@mipmap/route_commend_popupwindow_close_gray"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/route_commend_popupwindow_something_goods_pack_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/route_commend_popupwindow_nothing_pack_margin"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_pack_text"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <ImageView
+                    android:id="@+id/route_commend_popupwindow_something_goods_pack_img"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/route_commend_popupwindow_purchased_goods"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_goods_pack_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="月光宝盒茶具"
+                    android:textSize="@dimen/route_commend_popupwindow_commend_nothing_content_text"
+                    android:textColor="@color/route_commend_popupwindow_title_text"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toRightOf="@+id/route_commend_popupwindow_something_goods_pack_img"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_goods_status_pack_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="配送中"
+                    android:textSize="@dimen/route_commend_popupwindow_commend_nothing_content_text"
+                    android:textColor="@color/route_commend_popupwindow_title_text"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="40dp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/route_commend_popupwindow_something_delivery_car_img"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@mipmap/goods_order_delivery_car"
+                    app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_pack_text"
+                    app:layout_constraintLeft_toRightOf="@+id/route_commend_popupwindow_something_goods_pack_img"/>
+
+                <com.example.smartmuseum.view.otherview.ScaleView
+                    android:id="@+id/route_commend_popupwindow_something_delivery_time_view"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_pack_text"
+                    app:layout_constraintLeft_toRightOf="@+id/route_commend_popupwindow_something_delivery_car_img"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/route_commend_popupwindow_something_goods_delivery_people_info_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="@dimen/goods_order_delivery_layout_margin_start"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_pack_layout"
+                app:layout_constraintLeft_toLeftOf="parent" >
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_goods_delivery_people_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="配送员小鲁"
+                    android:textSize="@dimen/route_commend_popupwindow_commend_nothing_text"
+                    android:textColor="@color/route_commend_popupwindow_people_text"
+                    android:textStyle="bold"
+                    tools:text="配送员小鲁"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_goods_delivery_people_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="130****2399"
+                    android:textSize="@dimen/route_commend_popupwindow_commend_nothing_text"
+                    android:textColor="@color/route_commend_popupwindow_people_text"
+                    android:textStyle="bold"
+                    tools:text="130****2399"
+                    app:layout_constraintLeft_toRightOf="@+id/route_commend_popupwindow_something_goods_delivery_people_name"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/goods_order_delivery_call"
+                    android:layout_marginStart="@dimen/goods_order_delivery_phone_margin_start"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_delivery_edit_order_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:text="@string/goods_order_delivery_edit_order"
+                    android:textSize="@dimen/goods_order_delivery_order_edit_text"
+                    android:textColor="@color/goods_order_delivery_edit_order_text"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_delivery_people_name"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_delivery_myself_order_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
+                    android:text="@string/goods_order_delivery_myself_order"
+                    android:textSize="@dimen/goods_order_delivery_order_edit_text"
+                    android:textColor="@color/goods_order_delivery_edit_order_text"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toRightOf="@+id/route_commend_popupwindow_something_delivery_edit_order_name"
+                    app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_delivery_people_name"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+                <TextView
+                    android:id="@+id/route_commend_popupwindow_something_delivery_last_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
+                    android:text="预计5分钟送达"
+                    android:textSize="@dimen/goods_order_delivery_order_edit_text"
+                    android:textColor="@color/route_commend_popupwindow_time_text"
+                    android:layout_marginTop="10dp"
+                    tools:text="预计5分钟送达"
+                    app:layout_constraintLeft_toRightOf="@+id/route_commend_popupwindow_something_delivery_myself_order_name"
+                    app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_delivery_people_name"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/route_commend_popupwindow_something_goods_detail_button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/goods_info_button_height"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="@dimen/goods_info_button_margin_start"
+                android:layout_marginEnd="@dimen/goods_info_button_margin_start"
+                android:text="@string/route_commend_popupwindow_goods_detail_title"
+                android:textSize="@dimen/goods_info_button_text"
+                android:textColor="@color/goods_info_card_background"
+                android:background="@drawable/goods_purchased_status_button"
+                app:layout_constraintTop_toBottomOf="@+id/route_commend_popupwindow_something_goods_delivery_people_info_layout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

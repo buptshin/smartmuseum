@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -18,6 +19,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.ActivityGoodsInfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Goods;
+import com.example.smartmuseum.model.Parameters;
 import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.mainpage.MainActivity;
 import com.example.smartmuseum.viewmodel.GoodsViewModel;
@@ -40,6 +42,9 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+
+        //购买数量加1
+        Parameters.purchasedGoodsNum++;
 //        Toast.makeText(getApplicationContext(), "测试", Toast.LENGTH_LONG).show();
         setDialog();
     }
@@ -92,7 +97,14 @@ public class GoodsInfoActivity extends AppCompatActivity implements ViewChainedB
         dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.getWindow().setContentView(successView);
         ImageView closeImg = dialog.findViewById(R.id.dialog_goods_info_pay_success_close_img);
+        Button contiueBuyButton = dialog.findViewById(R.id.goods_info_contiue_add_cart_button);
         closeImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+        contiueBuyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 dialog.dismiss();

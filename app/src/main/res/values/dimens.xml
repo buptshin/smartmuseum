@@ -143,6 +143,19 @@
     <dimen name="goods_order_delivery_card_background_height">80dp</dimen>
     <dimen name="goods_order_delivery_card_background_margin_top">30dp</dimen>
 
+    <dimen name="dialog_route_commend_goods_card_background">600dp</dimen>
+    <dimen name="dialog_route_commend_goods_card_margin_start">30dp</dimen>
+    <dimen name="dialog_route_commend_goods_other_text_margin_bottom">20dp</dimen>
+    <dimen name="dialog_route_commend_goods_img_margin_start">5dp</dimen>
+    <dimen name="dialog_route_commend_goods_price_margin_bottom">10dp</dimen>
+
+
+    <dimen name="route_commend_popupwindow_card_background">320dp</dimen>
+    <dimen name="route_commend_popupwindow_commend_goods_margin">20dp</dimen>
+    <dimen name="route_commend_popupwindow_nothing_pack_margin">15dp</dimen>
+    <dimen name="route_commend_popupwindow_commend_goods_margin_top">10dp</dimen>
+    <dimen name="route_commend_popupwindow_nothing_pack_margin_start">40dp</dimen>
+
 
     <dimen name="mainpage_goods_recommend_layout_collectname_text">40sp</dimen>
     <dimen name="mainpage_goods_recommend_layout_name_text">18sp</dimen>
@@ -196,6 +209,12 @@
 
     <dimen name="goods_order_status_pay_text">20sp</dimen>
     <dimen name="goods_order_status_pay_time_text">18sp</dimen>
+
+    <dimen name="dialog_route_commend_goods_other_text">16sp</dimen>
+    <dimen name="dialog_route_commend_goods_price_text">23sp</dimen>
+
+    <dimen name="route_commend_popupwindow_commend_nothing_text">18sp</dimen>
+    <dimen name="route_commend_popupwindow_commend_nothing_content_text">16sp</dimen>
 
 
     <!-- Friend !-->

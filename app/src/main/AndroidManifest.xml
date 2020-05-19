@@ -15,19 +15,12 @@
         <activity android:name=".view.goods.GoodsInfoDetailActivity" />
         <activity android:name=".view.goods.GoodsRecommendActivity" />
         <activity android:name=".view.forgetpwd.ForgetPwdActivity" />
-        <activity android:name=".view.startpage.StartActivity" />
         <activity android:name=".view.register.RegisterActivity" />
         <activity android:name=".view.login.LoginActivity" />
         <activity android:name=".view.me.FieldGuideActivity" />
         <activity android:name=".view.me.MuseumInfoActivity" />
         <activity android:name=".view.explore.ExhibitionContentActivity" />
-        <activity android:name=".view.mainpage.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".view.mainpage.MainActivity"/>
         <activity android:name=".view.goods.GoodsOrderStatusActivity" />
         <activity android:name=".view.goods.GoodsOrderDeliveryActivity" />
         <activity android:name=".view.routecommend.RouteCommendInfoActivity" />
@@ -37,7 +30,18 @@
         <activity android:name=".view.navigation.NavigationSearchActivity" />
         <activity
             android:name=".view.goods.GoodsInfoActivity"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name=".view.goods.GoodsOrderCheckActivity"/>
+        <activity android:name=".view.settings.SettingsActivity" android:theme="@style/SettingsTheme">
+        </activity>
+        <activity android:name=".view.startpage.StartActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

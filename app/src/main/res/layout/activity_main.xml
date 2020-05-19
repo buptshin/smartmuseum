@@ -24,15 +24,15 @@
                 android:layout_marginTop="@dimen/mainpage_activity_marginTop">
 
 
-                <com.google.android.material.bottomnavigation.BottomNavigationView
-                    android:id="@+id/mainpage_bottomnavigationview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/mainpage_navigation_background"
-                    android:layout_alignParentBottom="true"
-                    app:itemIconTint="@drawable/mainpage_navigation_selector_item_color"
-                    app:labelVisibilityMode="unlabeled"
-                    app:menu="@menu/mainpage_navigation"/>
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/mainpage_bottomnavigationview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mainpage_navigation_background"
+                android:layout_alignParentBottom="true"
+                app:itemIconTint="@drawable/mainpage_navigation_selector_item_color"
+                app:labelVisibilityMode="unlabeled"
+                app:menu="@menu/mainpage_navigation"/>
 
                 <com.example.smartmuseum.view.otherview.NoScrollViewPager
                     android:id="@+id/mainpage_noscrollviewpager"
@@ -42,6 +42,13 @@
                     />
 
             </RelativeLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:src="@mipmap/mainpage_ar"/>
         </FrameLayout>
 
         <LinearLayout
@@ -373,6 +380,4 @@
 
 
     </androidx.drawerlayout.widget.DrawerLayout>
-
-
 </layout>
