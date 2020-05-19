@@ -193,7 +193,7 @@
 
 
     <!-- Friend !-->
-    <dimen name="friend_my_firends">30sp</dimen>
+    <dimen name="friend_my_firends">35sp</dimen>
     <dimen name="friend_my_firends_join">14sp</dimen>
     <dimen name="friend_my_firends_team_and_personal">30sp</dimen>
     <dimen name="friend_my_firends_start">18sp</dimen>
@@ -215,7 +215,7 @@
 
 
     <!-- Exhibition !-->
-    <dimen name="exhibition_inner_collection_lable_tv">45sp</dimen>
+    <dimen name="exhibition_inner_collection_lable_tv">35sp</dimen>
     <dimen name="exhibition_inner_collection_position_hint_tv">14sp</dimen>
     <dimen name="exhibition_inner_collection_concrete_position_tv">18sp</dimen>
     <dimen name="exhibition_inner_collection_change_hint_tv">14sp</dimen>
@@ -227,7 +227,7 @@
 
 
     <!--Settings-->
-    <dimen name="settings_lable_tv">45sp</dimen>
+    <dimen name="settings_lable_tv">35sp</dimen>
     <dimen name="settings_item_title_tv">16sp</dimen>
     <dimen name="settings_item_tv">20sp</dimen>
     <dimen name="settings_setted_language_tv">16sp</dimen>

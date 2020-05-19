@@ -17,17 +17,14 @@
             android:id="@+id/settings_lable_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:text="@string/settings_lable_tv"
             android:textColor="@color/settings_lable_tv"
             android:textSize="@dimen/settings_lable_tv"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/guideline63"
+            app:layout_constraintBottom_toTopOf="@+id/guideline90"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline69"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
             tools:text="设置" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -36,6 +33,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.18194254" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline90"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.15" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline65"
@@ -109,19 +113,13 @@
 
         <ImageView
             android:id="@+id/settings_close_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline63"
             app:layout_constraintEnd_toStartOf="@+id/guideline70"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.032"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="@+id/guideline69"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.2"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.058"
             app:srcCompat="@mipmap/settings_close_black" />
 
         <View

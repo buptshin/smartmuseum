@@ -27,6 +27,13 @@
             app:layout_constraintGuide_percent="0.95" />
 
         <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline96"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -34,11 +41,25 @@
             app:layout_constraintGuide_percent="0.05" />
 
         <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline94"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.06" />
+
+        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.07" />
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline95"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.04" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"
@@ -56,17 +77,11 @@
 
         <ImageView
             android:id="@+id/friend_choose_friends_back_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.015"
-            app:layout_constraintHorizontal_bias="0.02"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.04"
+            app:layout_constraintStart_toStartOf="@+id/guideline94"
+            app:layout_constraintTop_toTopOf="@+id/guideline95"
             app:srcCompat="@mipmap/friend_choose_friends_grey_back" />
 
         <TextView
@@ -79,21 +94,17 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline95"
             tools:text="添加个人伙伴" />
 
         <ImageView
             android:id="@+id/friend_choose_friends_right_iv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="44dp"
+            android:layout_height="35dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHeight_default="percent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline96"
             app:layout_constraintHeight_percent="0.048"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_default="percent"
+            app:layout_constraintTop_toTopOf="@+id/guideline95"
             app:layout_constraintWidth_percent="0.106"
             app:srcCompat="@mipmap/friend_choose_friends_small_icon" />
 
@@ -184,8 +195,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:paddingVertical="18dp"
             android:background="@drawable/friend_choose_friends_start_btn_border"
+            android:paddingVertical="18dp"
             android:text="@string/friend_choose_friend_start_button"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
