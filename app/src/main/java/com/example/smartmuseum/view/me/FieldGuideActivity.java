@@ -29,6 +29,7 @@ public class FieldGuideActivity extends AppCompatActivity implements ViewChained
         //状态栏字体设为黑色
         ScreenUtil.setAndroidNativeLightStatusBar(FieldGuideActivity.this, true);
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_field_guide);
+        mBinding.scrollView3.setFadingEdgeLength(0);
         return this;
     }
 
