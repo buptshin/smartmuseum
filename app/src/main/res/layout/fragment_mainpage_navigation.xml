@@ -253,7 +253,8 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_zoom_cl"
-                app:layout_constraintRight_toRightOf="@+id/mainpage_navigation_escape_routes_iv">
+                app:layout_constraintRight_toRightOf="@+id/mainpage_navigation_escape_routes_iv"
+                android:visibility="gone">
             </com.example.smartmuseum.view.navigation.NavigationViewPager>
             <ImageView
                 android:id="@+id/mainpage_navigation_escape_routes_iv"
