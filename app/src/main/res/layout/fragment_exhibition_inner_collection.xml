@@ -11,8 +11,7 @@
         android:id="@+id/exhibition_inner_collection_cl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.exhibition.ExhibitionInnerCollectionFragment"
-        android:paddingTop="@dimen/mainpage_fragment_paddingTop">
+        tools:context=".view.exhibition.ExhibitionInnerCollectionFragment">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline56"
