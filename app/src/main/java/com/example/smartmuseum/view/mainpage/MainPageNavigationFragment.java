@@ -34,10 +34,6 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
 
     private FragmentMainpageNavigationBinding mBinding;
 
-    private ArrayList<View> viewList;
-
-    private MainPageNavigationPagerAdapter mAdapter;
-
     //标记当前fragment是否已绑定xml文件
     protected boolean isCreated = false;
 
@@ -63,52 +59,6 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         flagModel = new NavigationFlagModel();
         mBinding.setData(flagModel);
         mBinding.setLifecycleOwner(this);
-
-        //监听是否打开筛选
-        flagModel.getIsGreen().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
-            @Override
-            public void onChanged(Boolean aBoolean) {
-                if (flagModel.getIsGreen().getValue().equals(false)){
-                    mBinding.mainpageNavigationScreenIv.setImageResource(R.mipmap.mainpage_navigation_screen_false);
-                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(0);
-
-                }else if (flagModel.getIsGreen().getValue().equals(true)){
-                    mBinding.mainpageNavigationScreenIv.setImageResource(R.mipmap.mainpage_navigation_screen_true);
-                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(1);
-                }
-
-            }
-        });
-
-        //监听缩放
-        flagModel.getZoomValue().observe(getViewLifecycleOwner(), new Observer<Integer>() {
-            @Override
-            public void onChanged(Integer integer) {
-
-                if (flagModel.getZoomValue().getValue().equals(-1)){
-                    //将导览viewpage恢复到楼层导览
-                    setNormalView();
-
-                }else if (flagModel.getZoomValue().getValue().equals(0)){
-                    mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_middle);
-                    if (flagModel.getIsGreen().getValue().equals(true)){
-                        mBinding.mainpageNavigationMapViewpager.setCurrentItem(1,false);
-                    }else if (flagModel.getIsGreen().getValue().equals(false)){
-                        mBinding.mainpageNavigationMapViewpager.setCurrentItem(0,false);
-                    }
-
-                }else if (flagModel.getZoomValue().getValue().equals(1)){
-                    mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_high);
-                    mBinding.mainpageNavigationMapViewpager.setCurrentItem(2,false);
-                }else if (flagModel.getZoomValue().getValue().equals(2)){
-                    setNormalView();
-                    View parent = mBinding.getRoot().getRootView();
-                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                    noScrollViewPager.setCurrentItem(6,false);
-                    setNormalView();
-                }
-            }
-        });
         View v = mBinding.getRoot();
         // 标记当前fragment是否已绑定xml文件
         isCreated = true;
@@ -124,13 +74,7 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
 
     @Override
     public MainPageNavigationFragment bindView() {
-        viewList = new ArrayList<View>();
-        LayoutInflater li = getLayoutInflater();
-        viewList.add(li.inflate(R.layout.navigation_map_item1,null,false));
-        viewList.add(li.inflate(R.layout.navigation_map_item2,null,false));
-        viewList.add(li.inflate(R.layout.navigation_map_item3,null,false));
-        mAdapter = new MainPageNavigationPagerAdapter(viewList);
-        mBinding.mainpageNavigationMapViewpager.setAdapter(mAdapter);
+
         return this;
     }
 
@@ -140,13 +84,9 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         mBinding.mainpageNavigationLocationMapIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mBinding.mainpageNavigationNormalNowLocationCl.setVisibility(View.GONE);
-                mBinding.mainpageNavigationZoomCl.setVisibility(View.VISIBLE);
-                mBinding.mainpageNavigationLocationMapIv.setVisibility(View.GONE);
-                mBinding.mainpageNavigationMapViewpager.setVisibility(View.VISIBLE);
-                mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_middle);
-                //mBinding.mainpageNavigationEscapeRoutesIv.set
-
+                View parent = mBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(8,false);
             }
         });
 
@@ -173,15 +113,6 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         return this;
     }
 
-    //将导览viewpage恢复到楼层导览
-    public void setNormalView(){
-        mBinding.mainpageNavigationNormalNowLocationCl.setVisibility(View.VISIBLE);
-        mBinding.mainpageNavigationZoomCl.setVisibility(View.GONE);
-        mBinding.mainpageNavigationLocationMapIv.setVisibility(View.VISIBLE);
-        mBinding.mainpageNavigationMapViewpager.setVisibility(View.GONE);
-        flagModel.setIsGreenToNormal();
-    }
-
     /*
     * 此方法目前仅适用于标示ViewPager中的Fragment是否真实可见
     * */
@@ -195,7 +126,6 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
 
         if (isVisibleToUser) {
             //将导览viewpage恢复到楼层导览
-            setNormalView();
         }
     }
 

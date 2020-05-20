@@ -27,6 +27,7 @@ import com.example.smartmuseum.view.friend.MyFriendsFragment;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.navigation.NavigationFirstAidFragment;
+import com.example.smartmuseum.view.navigation.NavigationNowFloorFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -72,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         Fragment exhibitionInnerCollectionFragment = ExhibitionInnerCollectionFragment.getInstance();
         //急救路线fragment
         Fragment firstAidFragment = NavigationFirstAidFragment.getInstance();
+        //当前楼层导览fragment
+        Fragment nowFloorFragment = NavigationNowFloorFragment.getInstance();
 
         //添加fragments到adapter
         fragments = new ArrayList<>();
@@ -83,6 +86,7 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         fragments.add(chooseFriendsFragment);
         fragments.add(exhibitionInnerCollectionFragment);
         fragments.add(firstAidFragment);
+        fragments.add(nowFloorFragment);
 
 
         //设置adapter
