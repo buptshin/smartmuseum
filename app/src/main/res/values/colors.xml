@@ -84,6 +84,7 @@
     <!--Navigation_go_routes-->
     <color name="navigation_routes_black">#000521</color>
     <color name="navigation_routes_red">#842D29</color>
+    <color name="navigation_routes_white">#FFFFFF</color>
 
     <!-- Goods !-->
     <color name="mainpage_goods_sell_background">#FFFFFF</color>
