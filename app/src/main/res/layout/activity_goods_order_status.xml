@@ -8,262 +8,279 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/goods_info_button_margin_start"
+        android:fitsSystemWindows="true"
         android:background="@color/mainpage_goods_sell_background">
-        <ImageView
-            android:id="@+id/goods_order_status_return_img"
-            android:layout_width="@dimen/goods_info_return_size"
-            android:layout_height="@dimen/goods_info_return_size"
-            android:src="@mipmap/goods_order_check_return_button_gray"
-            android:layout_marginTop="@dimen/goods_order_check_margin"
-            android:layout_marginStart="@dimen/goods_info_margin_start"
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scrollbars="none"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"/>
-
-        <TextView
-            android:id="@+id/goods_order_status_title_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/goods_order_status_text"
-            android:textColor="@color/goods_order_check_order_color"
-            android:textSize="@dimen/goods_order_check_title_text"
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/goods_order_check_margin"
-            android:layout_marginStart="@dimen/goods_info_margin_start"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_status_return_img"
-            app:layout_constraintLeft_toLeftOf="parent" />
-
-
-        <ImageView
-            android:id="@+id/goods_order_status_info_map_img"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginEnd="@dimen/goods_info_margin_start"
-            android:src="@mipmap/route_commend_info_map"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"/>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/goods_order_status_timeline_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_status_title_text"
-            app:layout_constraintLeft_toLeftOf="parent">
-
-            <ImageView
-                android:id="@+id/goods_order_status_timeline_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:src="@drawable/goods_order_status_timeline"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_pay_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/goods_order_status_pay"
-                android:textSize="@dimen/goods_order_status_pay_text"
-                android:textColor="@color/goods_order_status_name_text"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_pay_time_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
-                android:text="10:24 am"
-                android:textSize="@dimen/goods_order_status_pay_time_text"
-                android:textColor="@color/goods_order_status_time_text"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pay_text"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:src="@mipmap/goods_order_status_pay"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_confirm_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
-                android:layout_marginStart="20dp"
-                android:text="@string/goods_order_status_confirm"
-                android:textSize="@dimen/goods_order_status_pay_text"
-                android:textColor="@color/goods_order_status_name_text"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pay_text"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_confirm_time_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="20dp"
-                android:text="10:24 am"
-                android:textSize="@dimen/goods_order_status_pay_time_text"
-                android:textColor="@color/goods_order_status_time_text"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_confirm_text"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
-                android:layout_marginTop="80dp"
-                android:src="@mipmap/goods_order_status_confirm"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pay_text"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_pack_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/goods_order_status_pack"
-                android:textSize="@dimen/goods_order_status_pay_text"
-                android:textColor="@color/goods_order_status_name_text"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_confirm_time_text"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_pack_time_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="20dp"
-                android:text="10:30 am"
-                android:textSize="@dimen/goods_order_status_pay_time_text"
-                android:textColor="@color/goods_order_status_time_text"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pack_text"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="70dp"
-                android:src="@mipmap/goods_order_status_pack"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_confirm_text"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_delivery_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="90dp"
-                android:layout_marginStart="20dp"
-                android:text="@string/goods_order_status_delivery"
-                android:textSize="@dimen/goods_order_status_pay_text"
-                android:textColor="@color/goods_order_status_name_text"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pack_text"/>
-
-            <TextView
-                android:id="@+id/goods_order_status_delivery_time_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginStart="20dp"
-                android:text="10:35 am"
-                android:textSize="@dimen/goods_order_status_pay_time_text"
-                android:textColor="@color/goods_order_status_time_text"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_delivery_text"/>
-
-            <ImageView
-                android:id="@+id/goods_order_status_delivery_img"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
-                android:layout_marginRight="20dp"
-                android:src="@mipmap/goods_order_status_delivery"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pack_text" />
-
-            <TextView
-                android:id="@+id/goods_order_status_getpack_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="95dp"
-                android:layout_marginEnd="20dp"
-                android:text="@string/goods_order_status_getpack"
-                android:textSize="@dimen/goods_order_status_pay_text"
-                android:textColor="@color/goods_order_status_name_text"
-                app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_delivery_text"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="70dp"
-                android:src="@mipmap/goods_order_status_getpack"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_status_delivery_text"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
-            android:layout_marginEnd="@dimen/goods_order_delivery_card_margin_top"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_status_timeline_layout"
-            app:layout_constraintLeft_toLeftOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/goods_order_delivery_card_background_height"
-                android:background="@drawable/goods_order_delivery_card_background"
-                android:layout_marginTop="@dimen/goods_order_delivery_card_background_margin_top"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent">
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:id="@+id/goods_order_status_delivery_white_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/goods_order_delivery_delivery_white"
-                    android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
-                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/goods_order_status_return_img"
+                    android:layout_width="@dimen/goods_info_return_size"
+                    android:layout_height="@dimen/goods_info_return_size"
+                    android:src="@mipmap/goods_order_check_return_button_gray"
+                    android:layout_marginTop="@dimen/goods_order_check_margin"
+                    android:layout_marginStart="@dimen/goods_info_margin_start"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"/>
+                    app:layout_constraintLeft_toLeftOf="parent"/>
 
                 <TextView
+                    android:id="@+id/goods_order_status_title_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
-                    android:text="预计5分钟内到达"
-                    android:textSize="@dimen/goods_order_delivery_card_background_time_text"
-                    android:textColor="@color/goods_order_delivery_time_text"
-                    app:layout_constraintLeft_toRightOf="@+id/goods_order_status_delivery_white_img"
+                    android:text="@string/goods_order_status_text"
+                    android:textColor="@color/goods_order_check_order_color"
+                    android:textSize="@dimen/goods_order_check_title_text"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/goods_order_check_margin"
+                    android:layout_marginStart="@dimen/goods_info_margin_start"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_status_return_img"
+                    app:layout_constraintLeft_toLeftOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/goods_order_status_info_map_img"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginEnd="@dimen/goods_info_margin_start"
+                    android:src="@mipmap/route_commend_info_map"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    tools:text="预计5分钟内到达"/>
+                    app:layout_constraintRight_toRightOf="parent"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/goods_order_status_timeline_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_status_title_text"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <ImageView
+                        android:id="@+id/goods_order_status_timeline_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/goods_order_status_timeline"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_pay_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/goods_order_status_pay"
+                        android:textSize="@dimen/goods_order_status_pay_text"
+                        android:textColor="@color/goods_order_status_name_text"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_pay_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="10:24 am"
+                        android:textSize="@dimen/goods_order_status_pay_time_text"
+                        android:textColor="@color/goods_order_status_time_text"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pay_text"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:src="@mipmap/goods_order_status_pay"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_confirm_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/goods_order_status_confirm"
+                        android:textSize="@dimen/goods_order_status_pay_text"
+                        android:textColor="@color/goods_order_status_name_text"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pay_text"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_confirm_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:text="10:24 am"
+                        android:textSize="@dimen/goods_order_status_pay_time_text"
+                        android:textColor="@color/goods_order_status_time_text"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_confirm_text"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="80dp"
+                        android:src="@mipmap/goods_order_status_confirm"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pay_text"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_pack_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/goods_order_status_pack"
+                        android:textSize="@dimen/goods_order_status_pay_text"
+                        android:textColor="@color/goods_order_status_name_text"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_confirm_time_text"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_pack_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="10:30 am"
+                        android:textSize="@dimen/goods_order_status_pay_time_text"
+                        android:textColor="@color/goods_order_status_time_text"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pack_text"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="70dp"
+                        android:src="@mipmap/goods_order_status_pack"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_confirm_text"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_delivery_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="90dp"
+                        android:layout_marginStart="20dp"
+                        android:text="@string/goods_order_status_delivery"
+                        android:textSize="@dimen/goods_order_status_pay_text"
+                        android:textColor="@color/goods_order_status_name_text"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pack_text"/>
+
+                    <TextView
+                        android:id="@+id/goods_order_status_delivery_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="20dp"
+                        android:text="10:35 am"
+                        android:textSize="@dimen/goods_order_status_pay_time_text"
+                        android:textColor="@color/goods_order_status_time_text"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_delivery_text"/>
+
+                    <ImageView
+                        android:id="@+id/goods_order_status_delivery_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="80dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@mipmap/goods_order_status_delivery"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_pack_text" />
+
+                    <TextView
+                        android:id="@+id/goods_order_status_getpack_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="95dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="@string/goods_order_status_getpack"
+                        android:textSize="@dimen/goods_order_status_pay_text"
+                        android:textColor="@color/goods_order_status_name_text"
+                        app:layout_constraintRight_toLeftOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_delivery_text"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="70dp"
+                        android:src="@mipmap/goods_order_status_getpack"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_status_timeline_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_status_delivery_text"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
+                    android:layout_marginEnd="@dimen/goods_order_delivery_card_margin_top"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_status_timeline_layout"
+                    app:layout_constraintLeft_toLeftOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/goods_order_delivery_card_background_height"
+                        android:background="@drawable/goods_order_delivery_card_background"
+                        android:layout_marginTop="@dimen/goods_order_delivery_card_background_margin_top"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent">
+
+                        <ImageView
+                            android:id="@+id/goods_order_status_delivery_white_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/goods_order_delivery_delivery_white"
+                            android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
+                            android:text="预计5分钟内到达"
+                            android:textSize="@dimen/goods_order_delivery_card_background_time_text"
+                            android:textColor="@color/goods_order_delivery_time_text"
+                            app:layout_constraintLeft_toRightOf="@+id/goods_order_status_delivery_white_img"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            tools:text="预计5分钟内到达"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/goods_order_delivery_comment"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/goods_order_delivery_comment"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintRight_toRightOf="parent"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

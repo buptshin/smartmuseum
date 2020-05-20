@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/goods_info_button_margin_start"
+        android:fitsSystemWindows="true"
         android:background="@color/mainpage_goods_sell_background">
         <ImageView
             android:id="@+id/goods_info_detail_return_img"

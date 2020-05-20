@@ -69,11 +69,11 @@
     <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_text_margin">40dp</dimen>
     <dimen name="mainpage_goods_recommend_recyclerview_constraintlayout_text_margin_top2">50dp</dimen>
 
-    <dimen name="goods_purchased_item_card_height">280dp</dimen>
+    <dimen name="goods_purchased_item_card_height">250dp</dimen>
     <dimen name="goods_purchased_item_margin">20dp</dimen>
     <dimen name="goods_purchased_item_margin_start">10dp</dimen>
-    <dimen name="goods_purchased_item_image_height">150dp</dimen>
-    <dimen name="goods_purchased_item_image_width">240dp</dimen>
+    <dimen name="goods_purchased_item_image_height">200dp</dimen>
+    <dimen name="goods_purchased_item_image_width">150dp</dimen>
     <dimen name="goods_purchased_item_button_height">30dp</dimen>
     <dimen name="goods_purchased_item_margin_2">30dp</dimen>
     <dimen name="goods_purchased_item_name_text_width">130dp</dimen>
@@ -117,7 +117,7 @@
     <dimen name="goods_choose_address_item_card_address_detail_margin_top">5dp</dimen>
 
     <dimen name="goods_pay_type_card_height">230dp</dimen>
-    <dimen name="goods_pay_type_card_width">160dp</dimen>
+    <dimen name="goods_pay_type_card_width">150dp</dimen>
     <dimen name="goods_pay_type_card_margin_top">30dp</dimen>
     <dimen name="goods_pay_type_card_next_margin_top">20dp</dimen>
     <dimen name="goods_pay_type_card_text_margin_top">25dp</dimen>
@@ -164,7 +164,7 @@
     <dimen name="mainpage_goods_recommend_newlocation_show_text">16sp</dimen>
     <dimen name="mainpage_goods_recommend_newlocation_text">18sp</dimen>
 
-    <dimen name="goods_purchased_item_name_text">20sp</dimen>
+    <dimen name="goods_purchased_item_name_text">18sp</dimen>
     <dimen name="goods_purchased_item_status_text">13sp</dimen>
     <dimen name="goods_purchased_item_oldprice_text">18sp</dimen>
     <dimen name="goods_market_location_text">15sp</dimen>
@@ -204,7 +204,7 @@
     <dimen name="dialog_goods_info_pay_success_success_text">20sp</dimen>
     <dimen name="dialog_goods_info_pay_success_tips_text">18sp</dimen>
 
-    <dimen name="goods_order_delivery_people_name_text">20sp</dimen>
+    <dimen name="goods_order_delivery_people_name_text">18sp</dimen>
     <dimen name="goods_order_delivery_order_edit_text">18sp</dimen>
     <dimen name="goods_order_delivery_card_background_time_text">20sp</dimen>
 

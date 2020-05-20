@@ -47,32 +47,32 @@ public class MainPageGoodsPurchasedAdapter extends RecyclerView.Adapter<MainPage
         //为文本设置中划线
         holder.getBinding().goodsPurchasedGoodsOldpriceText.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);
 
-//        Resources res = holder.getBinding().getRoot().getResources();
-//        Bitmap bmp;
-//        int resourceFlag = position % 2;
-//        if (resourceFlag == 0) {
-//            bmp = BitmapFactory.decodeResource(res, R.drawable.mainpage_goods_sell_goods_1);
-//        } else {
-//            bmp = BitmapFactory.decodeResource(res, R.drawable.mainpage_goods_sell_goods_2);
-//        }
-//
-//        holder.getBinding().goodsPurchasedGoodsImage.setImageBitmap(bmp);
-
-        //圆角和centerCrop冲突
+        Resources res = holder.getBinding().getRoot().getResources();
+        Bitmap bmp;
         int resourceFlag = position % 2;
-        RequestOptions myOptions = new RequestOptions()
-                .transform(new GlideRoundTransform(holder.getBinding().getRoot().getContext()));
         if (resourceFlag == 0) {
-            Glide.with(holder.getBinding().getRoot())
-                    .load(R.drawable.mainpage_goods_sell_goods_1)
-                    .apply(myOptions)
-                    .into(holder.getBinding().goodsPurchasedGoodsImage);
+            bmp = BitmapFactory.decodeResource(res, R.drawable.mainpage_goods_sell_goods_3_vertical);
         } else {
-            Glide.with(holder.getBinding().getRoot())
-                    .load(R.drawable.mainpage_goods_sell_goods_2)
-                    .apply(myOptions)
-                    .into(holder.getBinding().goodsPurchasedGoodsImage);
+            bmp = BitmapFactory.decodeResource(res, R.drawable.mainpage_goods_sell_goods_4_vertical);
         }
+
+        holder.getBinding().goodsPurchasedGoodsImage.setImageBitmap(bmp);
+
+        //圆角和centerCrop冲突（重新绘制了图片，已解决）
+//        int resourceFlag = position % 2;
+//        RequestOptions myOptions = new RequestOptions()
+//                .transform(new GlideRoundTransform(holder.getBinding().getRoot().getContext()));
+//        if (resourceFlag == 0) {
+//            Glide.with(holder.getBinding().getRoot())
+//                    .load(R.drawable.mainpage_goods_sell_goods_3_vertical)
+//                    .apply(myOptions)
+//                    .into(holder.getBinding().goodsPurchasedGoodsImage);
+//        } else {
+//            Glide.with(holder.getBinding().getRoot())
+//                    .load(R.drawable.mainpage_goods_sell_goods_4_vertical)
+//                    .apply(myOptions)
+//                    .into(holder.getBinding().goodsPurchasedGoodsImage);
+//        }
 
         holder.getBinding().goodsPurchasedGoodsLayout.setOnClickListener(new View.OnClickListener() {
             @Override

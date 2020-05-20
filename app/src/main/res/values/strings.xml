@@ -125,6 +125,7 @@
     <string name="goods_order_check_deliver_price">配送费</string>
     <string name="goods_order_check_sum_price">总计</string>
     <string name="goods_order_check_pay">立即付款</string>
+    <string name="goods_order_check_total_pay">统计价格</string>
 
     <string name="goods_choose_address_add_newaddress">添加新地址</string>
     <string name="goods_choose_address_choose_address">选择地址</string>

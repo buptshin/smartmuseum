@@ -24,6 +24,7 @@ import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.goods.GoodsInfoActivity;
 import com.example.smartmuseum.view.goods.GoodsOrderCheckActivity;
 import com.example.smartmuseum.view.goods.GoodsOrderStatusActivity;
+import com.example.smartmuseum.view.navigation.NavigationGoRoutesActivity;
 import com.example.smartmuseum.viewmodel.GoodsViewModel;
 
 import java.util.HashMap;
@@ -145,6 +146,23 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             @Override
             public void onClick(View view) {
                 //等待添加
+            }
+        });
+
+        //返回按钮
+        mBinding.routeCommendInfoReturnImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
+        mBinding.routeCommendInfoMapImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RouteCommendInfoActivity.this, NavigationGoRoutesActivity.class);
+                startActivity(intent);
             }
         });
 

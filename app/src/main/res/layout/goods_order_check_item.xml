@@ -31,7 +31,7 @@
             android:text="@{goods.name}"
             android:textSize="@dimen/goods_order_check_item_price_text"
             android:textColor="@color/goods_order_check_order_color"
-            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="@dimen/goods_order_check_item_margin_start"
             app:layout_constraintLeft_toRightOf="@+id/goods_order_check_item_goods_img"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,11 +43,11 @@
             android:layout_height="wrap_content"
             android:text="@{@string/mainpage_goods_price_sign + Integer.toString(goods.price)}"
             android:textSize="@dimen/goods_order_check_item_price_text"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="@dimen/goods_order_check_item_margin_start"
             android:textColor="@color/goods_order_check_order_color"
-            android:layout_marginTop="@dimen/goods_order_check_margin"
-            android:layout_marginEnd="@dimen/goods_order_check_margin_start"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goods_order_check_item_goods_name"
+            app:layout_constraintLeft_toRightOf="@+id/goods_order_check_item_goods_img"
             tools:text="¥820"/>
 
         <TextView
@@ -55,11 +55,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@{goods.type}"
-            android:layout_marginTop="@dimen/goods_order_check_margin"
+            android:layout_marginTop="10dp"
             android:layout_marginStart="@dimen/goods_order_check_item_margin_start"
             android:textSize="@dimen/goods_order_check_item_num_text"
             android:textColor="@color/mainpage_goods_sell_commend_gray"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_check_item_goods_name"
+            app:layout_constraintTop_toBottomOf="@+id/goods_order_check_item_goods_price"
             app:layout_constraintLeft_toRightOf="@+id/goods_order_check_item_goods_img"
             tools:text="有礼盒"/>
 

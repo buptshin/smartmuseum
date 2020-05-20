@@ -9,7 +9,7 @@
         android:id="@+id/goods_order_delivery_ct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/goods_info_button_margin_start"
+        android:fitsSystemWindows="true"
         android:background="@color/mainpage_goods_sell_background">
 
         <ImageView
@@ -26,15 +26,14 @@
             android:id="@+id/goods_order_delivery_people_info_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/goods_order_delivery_layout_margin_start"
             android:layout_marginTop="@dimen/goods_order_delivery_layout_margin_top"
-            android:layout_marginEnd="@dimen/goods_order_delivery_layout_margin_start"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_return_img">
 
             <ImageView
                 android:id="@+id/goods_order_delivery_delivery_img"
-                android:layout_width="wrap_content"
+                android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/goods_order_status_delivery"
                 app:layout_constraintLeft_toLeftOf="parent"

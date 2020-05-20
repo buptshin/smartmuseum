@@ -21,7 +21,7 @@ import java.util.List;
 
 public class GoodsChooseAddressAdapter extends RecyclerView.Adapter<GoodsChooseAddressAdapter.AddressViewHolder>{
     private List<Address> mList;
-    private int lastIndex = 0;
+    private int lastClickPosition = -1;
 
     public GoodsChooseAddressAdapter(List<Address> addressList) {
         this.mList = addressList;
@@ -39,39 +39,38 @@ public class GoodsChooseAddressAdapter extends RecyclerView.Adapter<GoodsChooseA
         Address address = mList.get(position);
         holder.getBinding().setAddress(address);
 
+        if (position == 0) {
+            holder.getBinding().goodsChooseAddressItemDefaultFlag.setVisibility(View.VISIBLE);
+        }
+
         Resources res = holder.getBinding().getRoot().getResources();
         Bitmap chooseImgBmp;
         if (address.isDefaultFlag()) {
             chooseImgBmp = BitmapFactory.decodeResource(res, R.mipmap.goods_choose_address_circle_clickable);
             holder.getBinding().goodsChooseAddressItemChooseImg.setImageBitmap(chooseImgBmp);
+            lastClickPosition = position;
         } else {
             chooseImgBmp = BitmapFactory.decodeResource(res, R.mipmap.goods_choose_address_circle_unclickable);
             holder.getBinding().goodsChooseAddressItemChooseImg.setImageBitmap(chooseImgBmp);
         }
 
+
+
         holder.getBinding().goodsChooseAddressItemChooseImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Bitmap chooseImgBmp;
-                if (address.isDefaultFlag()) {
-                    mList.get(position).setDefaultFlag(false);
-                    chooseImgBmp = BitmapFactory.decodeResource(res, R.mipmap.goods_choose_address_circle_unclickable);
-                    holder.getBinding().goodsChooseAddressItemChooseImg.setImageBitmap(chooseImgBmp);
-                } else {
-                    mList.get(position).setDefaultFlag(true);
-                    chooseImgBmp = BitmapFactory.decodeResource(res, R.mipmap.goods_choose_address_circle_clickable);
-                    holder.getBinding().goodsChooseAddressItemChooseImg.setImageBitmap(chooseImgBmp);
+
+                String newId = address.getLocationAddress();
+                for (Address address : mList) {
+                    String oldId = address.getLocationAddress();
+                    if (newId.equals(oldId)) {
+                        address.setDefaultFlag(true);
+                    }else{
+                        address.setDefaultFlag(false);
+                    }
                 }
 
-//                if (lastIndex != position) {
-//                    AddressViewHolder test = holder;
-//                    mList.get(lastIndex).setDefaultFlag(false);
-//                    Address address = mList.get(lastIndex);
-//                    test.getBinding().setAddress(address);
-//                    chooseImgBmp = BitmapFactory.decodeResource(res, R.mipmap.goods_choose_address_circle_unclickable);
-//                    test.getBinding().goodsChooseAddressItemChooseImg.setImageBitmap(chooseImgBmp);
-//                    lastIndex = position;
-//                }
+                notifyDataSetChanged();
             }
         });
     }
@@ -92,4 +91,5 @@ public class GoodsChooseAddressAdapter extends RecyclerView.Adapter<GoodsChooseA
             return goodsOrderCheckItemBinding;
         }
     }
+
 }
