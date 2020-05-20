@@ -77,8 +77,8 @@
 
         <ImageView
             android:id="@+id/friend_choose_friends_back_img"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintStart_toStartOf="@+id/guideline94"
             app:layout_constraintTop_toTopOf="@+id/guideline95"
@@ -99,13 +99,11 @@
 
         <ImageView
             android:id="@+id/friend_choose_friends_right_iv"
-            android:layout_width="44dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline6"
             app:layout_constraintEnd_toStartOf="@+id/guideline96"
-            app:layout_constraintHeight_percent="0.048"
             app:layout_constraintTop_toTopOf="@+id/guideline95"
-            app:layout_constraintWidth_percent="0.106"
             app:srcCompat="@mipmap/friend_choose_friends_small_icon" />
 
         <TextView

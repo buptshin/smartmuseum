@@ -55,8 +55,8 @@
 
         <ImageView
             android:id="@+id/exhibition_inner_collection_search_img"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@mipmap/exhibition_inner_collection_search"
             app:layout_constraintBottom_toBottomOf="@id/exhibition_inner_collection_lable_tv"
             app:layout_constraintEnd_toStartOf="@+id/guideline93"
