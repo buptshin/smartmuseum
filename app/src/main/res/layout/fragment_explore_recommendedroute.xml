@@ -11,49 +11,41 @@
             android:id="@+id/nearTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="48dp"
             android:text="@string/nearby_text"
             android:textColor="#111111"
             android:textSize="24sp"
             android:textStyle="bold"
             android:typeface="sans"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/guideline101"
+            app:layout_constraintTop_toBottomOf="@+id/current_location_text" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="32dp"
-            android:layout_height="37dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/guideline101"
+            app:layout_constraintTop_toTopOf="@+id/guideline102"
             app:srcCompat="@mipmap/mainpage_navigation_icon" />
 
         <TextView
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="8dp"
             android:text="@string/text_you_current_location"
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            app:layout_constraintStart_toEndOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView" />
+            app:layout_constraintStart_toEndOf="@+id/imageView" />
 
         <TextView
             android:id="@+id/current_location_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
             android:text="@string/beiyizhanting"
             android:textColor="#842d29"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView6"
-            app:layout_constraintStart_toEndOf="@+id/textView6"
-            app:layout_constraintTop_toTopOf="@+id/textView6"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
+            app:layout_constraintStart_toEndOf="@+id/textView6" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -69,10 +61,9 @@
             android:id="@+id/imageView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nearTextView"
             app:srcCompat="@drawable/classical_route_image" />
 
         <TextView
@@ -118,6 +109,28 @@
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/textView18"
             app:layout_constraintStart_toEndOf="@+id/textView18" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline101"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline102"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.02020202" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="current_location_text,textView6,imageView"
+            tools:layout_editor_absoluteY="594dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

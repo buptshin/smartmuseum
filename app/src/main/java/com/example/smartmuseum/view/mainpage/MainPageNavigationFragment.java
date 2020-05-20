@@ -25,6 +25,7 @@ import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.NavigationFlagModel;
 import com.example.smartmuseum.view.exhibition.ExhibitionInnerCollectionFragment;
 import com.example.smartmuseum.view.navigation.NavigationSearchActivity;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 import java.util.ArrayList;
 
@@ -100,12 +101,11 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
                     mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_high);
                     mBinding.mainpageNavigationMapViewpager.setCurrentItem(2,false);
                 }else if (flagModel.getZoomValue().getValue().equals(2)){
-                   /* //如果是用的v4的包，则用getActivity().getSuppoutFragmentManager();
-                    FragmentManager fm = getActivity().getFragmentManager();
-                    //注意v4包的配套使用
-                    Fragment fragment = new ExhibitionInnerCollectionFragment();
-                    fm.beginTransaction().replace(fragment).commit();
-*/
+                    setNormalView();
+                    View parent = mBinding.getRoot().getRootView();
+                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                    noScrollViewPager.setCurrentItem(6,false);
+                    setNormalView();
                 }
             }
         });

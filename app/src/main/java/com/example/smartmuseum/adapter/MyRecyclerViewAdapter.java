@@ -113,7 +113,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         if (globalVariables.getLocation_change() == 0) {
             holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() + " 米");
         } else {
-            holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() - 150 + " 米");
+            holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() - 100 + " 米");
         }
 
 

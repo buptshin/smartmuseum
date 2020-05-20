@@ -16,7 +16,7 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:contentDescription="@string/return_road_detail_rolling"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,47 +41,41 @@
             android:id="@+id/back"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline100"
+            app:layout_constraintStart_toStartOf="@+id/guideline122"
             app:srcCompat="@mipmap/back_white" />
 
         <ImageView
             android:id="@+id/navigation"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline100"
+            app:layout_constraintEnd_toStartOf="@+id/guideline108"
             app:srcCompat="@mipmap/navigation_white" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="36dp"
-            android:layout_marginStart="24dp"
             android:gravity="center"
             android:text="欢迎来到"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
             app:layout_constraintBottom_toTopOf="@+id/exhibition_name"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="@+id/exhibition_name" />
 
         <TextView
             android:id="@+id/exhibition_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="8dp"
             android:text="huiguizhilu"
             android:textColor="#FFFFFF"
             android:textSize="48sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/searchView"
-            app:layout_constraintStart_toStartOf="@+id/imageView4"
-            app:layout_constraintTop_toTopOf="@+id/imageView4"
-            app:layout_constraintVertical_bias="0.918" />
+            app:layout_constraintBottom_toTopOf="@+id/guideline120"
+            app:layout_constraintStart_toStartOf="@+id/guideline122"
+            app:layout_constraintTop_toTopOf="@+id/guideline120" />
 
         <TextView
             android:id="@+id/exhibition_hall"
@@ -90,78 +84,80 @@
             android:text="hall"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline108"
             app:layout_constraintStart_toEndOf="@+id/exhibition_name"
-            app:layout_constraintTop_toTopOf="@+id/exhibition_name" />
+            app:layout_constraintTop_toTopOf="@id/imageView8" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="20dp"
             android:layout_height="20dp"
             app:layout_constraintEnd_toStartOf="@+id/exhibition_hall"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/exhibition_name"
-            app:layout_constraintTop_toTopOf="@+id/exhibition_hall"
+            app:layout_constraintTop_toTopOf="@+id/exhibition_name"
             app:srcCompat="@mipmap/navigation_location_white" />
 
         <TextView
             android:id="@+id/arbutton"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@+id/searchView"
-            app:layout_constraintStart_toStartOf="@+id/searchView"
-            app:layout_constraintTop_toBottomOf="@+id/searchView" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_shadow"
+            app:layout_constraintBottom_toTopOf="@+id/guideline98"
+            app:layout_constraintEnd_toStartOf="@+id/guideline108"
+            app:layout_constraintStart_toStartOf="@+id/guideline122" />
 
         <TextView
             android:id="@+id/infomation_button"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintEnd_toStartOf="@+id/arbutton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_shadow"
+            app:layout_constraintStart_toStartOf="@+id/guideline122"
             app:layout_constraintTop_toTopOf="@+id/arbutton" />
 
         <TextView
             android:id="@+id/book_button"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/fg_button1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_shadow"
+            app:layout_constraintEnd_toStartOf="@+id/guideline108"
             app:layout_constraintTop_toTopOf="@+id/fg_button1" />
 
         <TextView
             android:id="@+id/fg_button1"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="24dp"
-            app:layout_constraintEnd_toEndOf="@+id/arbutton"
-            app:layout_constraintStart_toStartOf="@+id/arbutton"
-            app:layout_constraintTop_toBottomOf="@+id/arbutton" />
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_shadow"
+            app:layout_constraintBottom_toTopOf="@+id/guideline97"
+            app:layout_constraintEnd_toStartOf="@+id/guideline108"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/guideline122" />
 
         <TextView
             android:id="@+id/friends_button"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginStart="48dp"
-            app:layout_constraintStart_toEndOf="@+id/arbutton"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_shadow"
+            app:layout_constraintEnd_toStartOf="@+id/guideline108"
             app:layout_constraintTop_toTopOf="@+id/arbutton" />
 
         <TextView
             android:id="@+id/route_button"
-            android:layout_width="65dp"
-            android:layout_height="65dp"
-            android:layout_marginEnd="48dp"
-            app:layout_constraintEnd_toStartOf="@+id/arbutton"
-            app:layout_constraintStart_toStartOf="@+id/infomation_button"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/bg_shadow"
+            app:layout_constraintStart_toStartOf="@+id/guideline122"
             app:layout_constraintTop_toTopOf="@+id/fg_button1" />
 
         <ImageView
             android:id="@+id/imageView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/arbutton"
             app:layout_constraintEnd_toEndOf="@+id/arbutton"
             app:layout_constraintStart_toStartOf="@+id/arbutton"
             app:layout_constraintTop_toTopOf="@+id/arbutton"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@mipmap/ar" />
 
         <TextView
@@ -169,19 +165,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="AR"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView28"
             app:layout_constraintEnd_toEndOf="@+id/arbutton"
             app:layout_constraintHorizontal_bias="0.489"
-            app:layout_constraintStart_toStartOf="@+id/arbutton"
-            app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+            app:layout_constraintStart_toStartOf="@+id/arbutton" />
 
         <ImageView
             android:id="@+id/imageView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/infomation_button"
             app:layout_constraintEnd_toEndOf="@+id/infomation_button"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/infomation_button"
             app:layout_constraintTop_toTopOf="@+id/infomation_button"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@mipmap/exhibition_introduction" />
 
         <TextView
@@ -198,10 +196,11 @@
             android:id="@+id/imageView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/friends_button"
             app:layout_constraintEnd_toEndOf="@+id/friends_button"
             app:layout_constraintStart_toStartOf="@+id/friends_button"
             app:layout_constraintTop_toTopOf="@+id/friends_button"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@mipmap/exhibition_goods" />
 
         <TextView
@@ -209,18 +208,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="文创"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView26"
             app:layout_constraintEnd_toEndOf="@+id/friends_button"
-            app:layout_constraintStart_toStartOf="@+id/friends_button"
-            app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+            app:layout_constraintStart_toStartOf="@+id/friends_button" />
 
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/route_button"
             app:layout_constraintEnd_toEndOf="@+id/route_button"
             app:layout_constraintStart_toStartOf="@+id/route_button"
             app:layout_constraintTop_toTopOf="@+id/route_button"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@mipmap/exhibition_route" />
 
         <TextView
@@ -236,10 +236,11 @@
             android:id="@+id/imageView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/fg_button1"
             app:layout_constraintEnd_toEndOf="@+id/fg_button1"
             app:layout_constraintStart_toStartOf="@+id/fg_button1"
             app:layout_constraintTop_toTopOf="@+id/fg_button1"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@mipmap/exhibition_tujian" />
 
         <TextView
@@ -247,18 +248,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="图鉴"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textview_route"
             app:layout_constraintEnd_toEndOf="@+id/fg_button1"
-            app:layout_constraintStart_toStartOf="@+id/fg_button1"
-            app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+            app:layout_constraintStart_toStartOf="@+id/fg_button1" />
 
         <ImageView
             android:id="@+id/imageView26"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/book_button"
             app:layout_constraintEnd_toEndOf="@+id/book_button"
             app:layout_constraintStart_toStartOf="@+id/book_button"
             app:layout_constraintTop_toTopOf="@+id/book_button"
+            app:layout_constraintVertical_bias="0.4"
             app:srcCompat="@mipmap/book_icon" />
 
         <TextView
@@ -266,9 +268,58 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="预约"
+            app:layout_constraintBaseline_toBaselineOf="@+id/fg_button"
             app:layout_constraintEnd_toEndOf="@+id/book_button"
-            app:layout_constraintStart_toStartOf="@+id/book_button"
-            app:layout_constraintTop_toBottomOf="@+id/imageView26" />
+            app:layout_constraintStart_toStartOf="@+id/book_button" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline108"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.92" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline122"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.08" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline116"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline120"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline97"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.93" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline98"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.06" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

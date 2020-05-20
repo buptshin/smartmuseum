@@ -48,19 +48,7 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
                 container,
                 false);
         View v = exploreExhibitionFragmentBinding.getRoot();
-        initRecommendedRecyclerView();
-        exploreExhibitionFragmentBinding.recommendExhibitionOrNot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    exploreExhibitionFragmentBinding.recommendExhibitionOrNot.setText("最新展览");
-                    initLatestRecyclerView();
-                } else {
-                    exploreExhibitionFragmentBinding.recommendExhibitionOrNot.setText("最新展览");
-                    initRecommendedRecyclerView();
-                }
-            }
-        });
+        initLatestRecyclerView();
         this.bindData().bindView().bindEvent();
         return v;
     }
@@ -137,6 +125,19 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
 
     @Override
     public ExploreExhibitionFragment bindEvent() {
+
+        exploreExhibitionFragmentBinding.recommendExhibitionOrNot.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+                if (isChecked) {
+                    exploreExhibitionFragmentBinding.recommendExhibitionOrNot.setText("最新展览");
+                    initLatestRecyclerView();
+                } else {
+                    exploreExhibitionFragmentBinding.recommendExhibitionOrNot.setText("推荐展览");
+                    initRecommendedRecyclerView();
+                }
+            }
+        });
         return this;
     }
 }
