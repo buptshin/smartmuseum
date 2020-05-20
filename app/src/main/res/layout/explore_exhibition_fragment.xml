@@ -58,7 +58,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
-                    android:text="推荐展览"
+                    android:text="最新展览"
                     android:thumb="@drawable/mainpage_explore_exhibition_switch_thumb"
                     android:track="@drawable/mainpage_explore_exhibition_switch_track"
                     app:layout_constraintBaseline_toBaselineOf="@+id/current_location_text"

@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="35sp"
+            android:textSize="40sp"
             app:layout_constraintStart_toStartOf="@+id/guideline109"
             app:layout_constraintTop_toTopOf="@+id/guideline112" />
 
@@ -45,7 +45,7 @@
             android:layout_marginTop="2dp"
             android:gravity="center_vertical"
             android:textColor="#FFD8DDEE"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_name"
             app:layout_constraintTop_toBottomOf="@+id/exhibition_name" />
 
@@ -54,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FFD8DDEE"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_state"
             app:layout_constraintTop_toBottomOf="@+id/exhibition_state" />
 
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="#111111"
-            android:textSize="18sp"
+            android:textSize="24sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/exhibition_distance"
             app:layout_constraintEnd_toStartOf="@+id/guideline162"
             app:layout_constraintHorizontal_bias="0.38"
@@ -86,7 +86,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="#FF8D92A3"
-            android:textSize="10sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toStartOf="@+id/exhibition_hall"
             app:layout_constraintTop_toBottomOf="@+id/exhibition_hall" />
 
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textColor="#842d29"
-            android:textSize="14sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="@id/backgroundpicture"
             app:layout_constraintEnd_toStartOf="@+id/guideline118"
             app:layout_constraintStart_toStartOf="@+id/guideline162"
@@ -153,14 +153,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.82" />
+            app:layout_constraintGuide_percent="0.84" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline119"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.18" />
+            app:layout_constraintGuide_percent="0.16" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline123"
@@ -209,7 +209,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.74" />
+            app:layout_constraintGuide_percent="0.72" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
