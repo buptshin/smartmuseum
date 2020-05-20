@@ -38,8 +38,8 @@
 
             <ImageView
                 android:id="@+id/mainpage_navigation_search_iv"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@mipmap/mainpage_navigation_search"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -265,7 +265,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="15dp"
-                android:layout_marginBottom="100dp"/>
+                android:layout_marginBottom="80dp"/>
             <ImageView
                 android:id="@+id/mainpage_navigation_now_location_iv"
                 android:layout_width="40dp"

@@ -50,7 +50,7 @@
 
     <!-- MainPage !-->
     <dimen name="mainpage_activity_marginTop">0dp</dimen>
-    <dimen name="mainpage_fragment_paddingTop">25dp</dimen>
+    <dimen name="mainpage_fragment_paddingTop">35dp</dimen>
     <!-- Navigation !-->
 
     <!-- Goods !-->

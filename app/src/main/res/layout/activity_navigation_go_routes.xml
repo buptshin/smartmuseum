@@ -23,8 +23,8 @@
             app:layout_constraintTop_toTopOf="parent" />
         <ImageView
             android:id="@+id/navigation_location_iv"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@mipmap/location_red"
             android:layout_margin="25dp"
             app:layout_constraintRight_toRightOf="parent"
