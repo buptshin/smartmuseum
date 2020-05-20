@@ -124,8 +124,6 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
 
     @Override
     public MainPageNavigationFragment bindView() {
-        mBinding.mainpageNavigationNormal.setVisibility(View.VISIBLE);
-        mBinding.mainpageNavigationFirstaid.setVisibility(View.GONE);
         viewList = new ArrayList<View>();
         LayoutInflater li = getLayoutInflater();
         viewList.add(li.inflate(R.layout.navigation_map_item1,null,false));
@@ -156,8 +154,9 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         mBinding.mainpageNavigationEscapeRoutesIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mBinding.mainpageNavigationNormal.setVisibility(View.GONE);
-                mBinding.mainpageNavigationFirstaid.setVisibility(View.VISIBLE);
+                View parent = mBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(7,false);
             }
         });
 
@@ -170,21 +169,12 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
             }
         });
 
-        //急救地图-搜索按钮
-        mBinding.mainpageNavigationFirstaidSearchIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
-                startActivity(intent);
-            }
-        });
+
         return this;
     }
 
     //将导览viewpage恢复到楼层导览
     public void setNormalView(){
-        mBinding.mainpageNavigationNormal.setVisibility(View.VISIBLE);
-        mBinding.mainpageNavigationFirstaid.setVisibility(View.GONE);
         mBinding.mainpageNavigationNormalNowLocationCl.setVisibility(View.VISIBLE);
         mBinding.mainpageNavigationZoomCl.setVisibility(View.GONE);
         mBinding.mainpageNavigationLocationMapIv.setVisibility(View.VISIBLE);

@@ -26,6 +26,7 @@ import com.example.smartmuseum.view.friend.ChooseFriendsFragment;
 import com.example.smartmuseum.view.friend.MyFriendsFragment;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
+import com.example.smartmuseum.view.navigation.NavigationFirstAidFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -69,6 +70,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         Fragment chooseFriendsFragment = ChooseFriendsFragment.getInstance();
         //展厅地图的fragment
         Fragment exhibitionInnerCollectionFragment = ExhibitionInnerCollectionFragment.getInstance();
+        //急救路线fragment
+        Fragment firstAidFragment = NavigationFirstAidFragment.getInstance();
 
         //添加fragments到adapter
         fragments = new ArrayList<>();
@@ -79,6 +82,7 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         fragments.add(myFriendsFragment);
         fragments.add(chooseFriendsFragment);
         fragments.add(exhibitionInnerCollectionFragment);
+        fragments.add(firstAidFragment);
 
 
         //设置adapter
@@ -122,10 +126,13 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
                     default:
                         return false;
                 }
-                if (previousPosition != position) {
+                //因为存在一个底部导航里面有多个fragment切换的情况
+                mBinding.mainpageNoscrollviewpager.setCurrentItem(position, false);
+                /*previousPosition = position;*/
+                /*if (previousPosition != position) {
                     mBinding.mainpageNoscrollviewpager.setCurrentItem(position, false);
                     previousPosition = position;
-                }
+                }*/
                 return true;
             }
         });
