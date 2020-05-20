@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         mBinding = DataBindingUtil.setContentView(MainActivity.this, R.layout.activity_main);
 
         //状态栏字体设为黑色
+        ScreenUtil.fullScreen(MainActivity.this);
         ScreenUtil.setAndroidNativeLightStatusBar(MainActivity.this, true);
 
         //禁止侧滑栏的手动滑动
