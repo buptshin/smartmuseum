@@ -19,7 +19,8 @@
             android:background="@color/mainpage_navigation_background"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:visibility="visible">
+            android:visibility="visible"
+            android:paddingTop="@dimen/mainpage_fragment_paddingTop">
 
             <TextView
                 android:id="@+id/mainpage_navigation_tv"
@@ -274,8 +275,6 @@
                 app:layout_constraintRight_toRightOf="parent"
                 android:layout_marginRight="15dp"/>
 
-
-
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -287,7 +286,8 @@
             android:background="@color/mainpage_navigation_red"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone">
+            android:visibility="gone"
+            android:paddingTop="@dimen/mainpage_fragment_paddingTop">
 
             <TextView
                 android:id="@+id/mainpage_navigation_firstaid_tv"

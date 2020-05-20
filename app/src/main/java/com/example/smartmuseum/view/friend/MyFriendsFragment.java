@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentMyFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 public class MyFriendsFragment extends Fragment implements ViewChainedBinding<MyFriendsFragment> {

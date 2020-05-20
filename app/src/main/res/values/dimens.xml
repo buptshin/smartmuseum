@@ -49,7 +49,8 @@
     <dimen name="forgetpwd_change_pwd_btn">18sp</dimen>
 
     <!-- MainPage !-->
-    <dimen name="mainpage_activity_marginTop">40dp</dimen>
+    <dimen name="mainpage_activity_marginTop">0dp</dimen>
+    <dimen name="mainpage_fragment_paddingTop">25dp</dimen>
     <!-- Navigation !-->
 
     <!-- Goods !-->

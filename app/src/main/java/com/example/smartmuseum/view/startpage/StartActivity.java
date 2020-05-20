@@ -37,7 +37,8 @@ public class StartActivity extends AppCompatActivity implements ViewChainedBindi
     @Override
     public StartActivity bindView() {
         // 设置全屏
-        ScreenUtil.fullScreen(StartActivity.this);
+        // ScreenUtil.fullScreen(StartActivity.this);
+        ScreenUtil.hideStatusBar(StartActivity.this);
         mBinding.startpageViewpager.setAdapter(new StartPageAdapter(getSupportFragmentManager(),fragments));
         return this;
     }

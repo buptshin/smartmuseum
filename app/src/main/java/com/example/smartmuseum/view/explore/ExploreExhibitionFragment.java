@@ -49,7 +49,7 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
                 container,
                 false);
         View v = exploreExhibitionFragmentBinding.getRoot();
-        initRecommendedRecyclerView();
+        initLatestRecyclerView();
         this.bindData().bindView().bindEvent();
         return v;
     }

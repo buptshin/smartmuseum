@@ -162,7 +162,8 @@
     <color name="friend_my_firends_hint_text">#1A051D</color>
     <color name="friend_choose_friends_text">#000000</color>
     <color name="friend_choose_friends_my_accompany_text">#8D92A3</color>
-    <color name="friend_choose_friends_search_edit">#8D92A3</color>
+    <color name="friend_choose_friends_search_edit">#000000</color>
+    <color name="friend_choose_friends_search_edit_hint">#8D92A3</color>
     <color name="friend_choose_friends_item_name_text">#000000</color>
     <color name="friend_choose_friends_item_in_museum_text">#8D92A3</color>
     <color name="friend_choose_friends_item_accompany_count_text">#310707</color>
