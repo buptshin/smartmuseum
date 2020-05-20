@@ -126,13 +126,17 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
                     default:
                         return false;
                 }
-                //因为存在一个底部导航里面有多个fragment切换的情况
+
                 mBinding.mainpageNoscrollviewpager.setCurrentItem(position, false);
-                /*previousPosition = position;*/
-                /*if (previousPosition != position) {
+                previousPosition = position;
+                //因为导览里面有多个fragment切换的情况
+                if (position == 1){
                     mBinding.mainpageNoscrollviewpager.setCurrentItem(position, false);
                     previousPosition = position;
-                }*/
+                }else if (previousPosition != position) {
+                    mBinding.mainpageNoscrollviewpager.setCurrentItem(position, false);
+                    previousPosition = position;
+                }
                 return true;
             }
         });
