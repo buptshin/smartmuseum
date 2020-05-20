@@ -20,8 +20,9 @@
         <ImageView
             android:id="@+id/exhibition_image"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="wrap_content"
             android:background="#F9F9F9"
+            android:adjustViewBounds="true"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="parent"
             app:layout_constraintStart_toEndOf="parent"

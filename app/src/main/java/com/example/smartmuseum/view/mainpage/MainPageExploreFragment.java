@@ -34,6 +34,7 @@ import com.example.smartmuseum.view.explore.ExploreActivityFragment;
 import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
 import com.example.smartmuseum.view.explore.ExploreExhibitionFragment;
 import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
+import com.example.smartmuseum.view.navigation.NavigationSearchActivity;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -128,6 +129,15 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
                 if(isApart)
                     mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setImageResource(R.mipmap.mainpage_explore_friends_apart);
                 else mainpageExploreNewBinding.mainpageExploreFriendsStatusImg.setImageResource(R.mipmap.mainpage_explore_friends_together);
+            }
+        });
+
+        // 搜索按钮
+        mainpageExploreNewBinding.mainpageNavigationSearchIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
+                startActivity(intent);
             }
         });
 

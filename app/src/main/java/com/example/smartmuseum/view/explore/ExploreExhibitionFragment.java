@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.adapter.MyExhibitionItemDecoration;
 import com.example.smartmuseum.adapter.MyRecyclerViewAdapter;
 import com.example.smartmuseum.databinding.ExploreExhibitionFragmentBinding;
 import com.example.smartmuseum.databinding.FragmentExploreRecommendedrouteBinding;
@@ -67,6 +68,9 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
 //        //设置适配器adapter
 //        mRecycleView.setAdapter(mAdapter);
         exploreExhibitionFragmentBinding.exhibitionRvList.setAdapter(adapter);
+
+        // 添加item边距
+        exploreExhibitionFragmentBinding.exhibitionRvList.addItemDecoration(new MyExhibitionItemDecoration());
     }
 
     // 创建推荐展览RecyclerView
@@ -83,6 +87,9 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
 //        //设置适配器adapter
 //        mRecycleView.setAdapter(mAdapter);
         exploreExhibitionFragmentBinding.exhibitionRvList.setAdapter(adapter);
+
+        // 添加item边距
+        exploreExhibitionFragmentBinding.exhibitionRvList.addItemDecoration(new MyExhibitionItemDecoration());
     }
 
     // 展览对象创建
