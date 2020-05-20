@@ -53,8 +53,10 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
             case 4:
                 holder.getBinding().friendChooseFriendsItemImg.setImageResource(R.drawable.friend_choose_friends_icon5);
                 break;
-
         }
+        int referenceWidth = holder.getBinding().getRoot().getRootView().getWidth()/5;
+        holder.getBinding().friendChooseFriendsItemImg.setMaxWidth(referenceWidth);
+        holder.getBinding().friendChooseFriendsItemImg.setMaxHeight(referenceWidth);
         holder.getBinding().friendChooseFriendsItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
