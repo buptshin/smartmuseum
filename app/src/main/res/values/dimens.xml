@@ -253,7 +253,7 @@
 
 
     <!--Settings-->
-    <dimen name="settings_lable_tv">35sp</dimen>
+    <dimen name="settings_lable_tv">30sp</dimen>
     <dimen name="settings_item_title_tv">16sp</dimen>
     <dimen name="settings_item_tv">20sp</dimen>
     <dimen name="settings_setted_language_tv">16sp</dimen>
