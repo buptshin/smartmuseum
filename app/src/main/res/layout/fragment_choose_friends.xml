@@ -47,41 +47,13 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.06" />
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.1" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline95"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.04" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.22" />
-
         <ImageView
             android:id="@+id/friend_choose_friends_back_img"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            android:layout_marginTop="30dp"
             app:layout_constraintStart_toStartOf="@+id/guideline94"
-            app:layout_constraintTop_toTopOf="@+id/guideline95"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@mipmap/friend_choose_friends_grey_back" />
 
         <TextView
@@ -91,49 +63,42 @@
             android:text="@string/friend_choose_friends"
             android:textColor="@color/friend_choose_friends_text"
             android:textSize="@dimen/friend_choose_friends"
-            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintBottom_toBottomOf="@+id/friend_choose_friends_back_img"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/guideline95"
+            app:layout_constraintTop_toTopOf="@+id/friend_choose_friends_back_img"
             tools:text="添加个人伙伴" />
 
         <ImageView
             android:id="@+id/friend_choose_friends_right_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline6"
+            app:layout_constraintBottom_toBottomOf="@+id/friend_choose_friends_tv"
             app:layout_constraintEnd_toStartOf="@+id/guideline96"
-            app:layout_constraintTop_toTopOf="@+id/guideline95"
+            app:layout_constraintTop_toTopOf="@+id/friend_choose_friends_tv"
             app:srcCompat="@mipmap/friend_choose_friends_small_icon" />
 
         <TextView
             android:id="@+id/friend_choose_friends_my_accompany_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:text="@string/friend_choose_friends_my_accompany"
             android:textColor="#8D92A3"
             android:textSize="@dimen/friend_choose_friends_my_accompany"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/guideline6"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintTop_toBottomOf="@+id/friend_choose_friends_tv"
             tools:text="已添加1位同行伙伴" />
 
         <ImageView
             android:id="@+id/friend_choose_friends_search_iv"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.045"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/guideline7"
-            app:layout_constraintVertical_bias="0.19999999"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.06"
+            app:layout_constraintTop_toBottomOf="@+id/friend_choose_friends_my_accompany_tv"
             app:srcCompat="@mipmap/friend_choose_friends_search" />
 
         <EditText
@@ -148,12 +113,11 @@
             android:textColor="@color/friend_choose_friends_search_edit"
             android:textColorHint="@color/friend_choose_friends_search_edit_hint"
             android:textSize="@dimen/friend_choose_friends_search"
-            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintBottom_toBottomOf="@+id/friend_choose_friends_search_iv"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
             app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@+id/friend_choose_friends_search_iv"
-            app:layout_constraintTop_toTopOf="@+id/guideline7"
-            app:layout_constraintVertical_bias="0.26"
+            app:layout_constraintTop_toTopOf="@+id/friend_choose_friends_search_iv"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent="0.8" />
 
@@ -161,50 +125,66 @@
             android:id="@+id/view2"
             android:layout_width="0dp"
             android:layout_height="1dp"
+            android:layout_marginTop="8dp"
             android:background="#8D92A3"
-            app:layout_constraintBottom_toTopOf="@+id/guideline8"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toBottomOf="@+id/friend_choose_friends_search_iv"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline96"
+            app:layout_constraintStart_toStartOf="@+id/friend_choose_friends_search_iv"
+            app:layout_constraintTop_toBottomOf="@+id/friend_choose_friends_search_iv" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/friend_choose_friends_accompany_recycler_view"
+        <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/guideline82"
-            app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/guideline8"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline82"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.85" />
-
-        <Button
-            android:id="@+id/friend_choose_friends_start_btn"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@drawable/friend_choose_friends_start_btn_border"
-            android:paddingVertical="18dp"
-            android:text="@string/friend_choose_friend_start_button"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/guideline82"
-            tools:text="立即开始" />
+            app:layout_constraintStart_toEndOf="@id/guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/view2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/friend_choose_friends_accompany_recycler_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Button
+                    android:id="@+id/friend_choose_friends_start_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/friend_choose_friends_start_btn_border"
+                    android:paddingVertical="18dp"
+                    android:text="@string/friend_choose_friend_start_button"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/friend_choose_friends_accompany_recycler_view"
+                    tools:text="立即开始" />
+
+                <View
+                    android:id="@+id/view33"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:background="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/friend_choose_friends_start_btn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </ScrollView>
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
