@@ -19,7 +19,7 @@
             android:layout_height="@dimen/friend_choose_friends_item_height"
             android:layout_marginVertical="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline100"
+            app:layout_constraintEnd_toStartOf="@+id/guide_h_4"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -115,7 +115,7 @@
             app:layout_constraintGuide_percent="0.25" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline100"
+            android:id="@+id/guide_h_4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"

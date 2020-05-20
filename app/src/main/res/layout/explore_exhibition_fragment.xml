@@ -8,6 +8,7 @@
         android:id="@+id/scrollView5"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:scrollbars="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,15 +21,16 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="wrap_content">
 
 
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/guideline105"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:srcCompat="@mipmap/mainpage_navigation_icon" />
 
@@ -36,8 +38,8 @@
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:text="你现在的位置是"
+                    android:layout_marginStart="16dp"
+                    android:text="你现在的位置是 "
                     app:layout_constraintBottom_toBottomOf="@+id/imageView"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
                     app:layout_constraintTop_toTopOf="@+id/imageView" />
@@ -46,7 +48,7 @@
                     android:id="@+id/current_location_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="0dp"
                     android:text="北一展厅"
                     android:textColor="#842d29"
                     android:textSize="20sp"
@@ -57,32 +59,13 @@
                     android:id="@+id/recommend_exhibition_or_not"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="43dp"
                     android:checked="true"
                     android:text="最新展览"
                     android:thumb="@drawable/mainpage_explore_exhibition_switch_thumb"
                     android:track="@drawable/mainpage_explore_exhibition_switch_track"
                     app:layout_constraintBaseline_toBaselineOf="@+id/current_location_text"
-                    app:layout_constraintEnd_toStartOf="@+id/guideline111"
-                    app:layout_constraintStart_toEndOf="@+id/current_location_text" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline105"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="720dp"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintGuide_percent="0.05"
-                    app:layout_constraintTop_toBottomOf="@+id/guideline111" />
-
-                <androidx.constraintlayout.widget.Guideline
-                    android:id="@+id/guideline111"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    app:layout_constraintBottom_toTopOf="@+id/guideline105"
-                    app:layout_constraintGuide_percent="0.95"
-                    app:layout_constraintTop_toBottomOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -91,6 +74,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:scrollbars="none"
                 android:background="#F9F9F9" />
 
             <androidx.constraintlayout.widget.ConstraintLayout

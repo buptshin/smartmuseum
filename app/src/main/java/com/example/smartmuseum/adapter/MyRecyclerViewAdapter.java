@@ -14,6 +14,7 @@ import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.databinding.ExhibitionItem1Binding;
 import com.example.smartmuseum.databinding.ExhibitionItemBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
@@ -48,16 +49,16 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
      */
     static public class ViewHolder extends RecyclerView.ViewHolder implements ViewChainedBinding, OnItemClickListener {
 
-        ExhibitionItemBinding rvBinding;
+        ExhibitionItem1Binding rvBinding;
         // 创建item layout各个组件的view
         private View exhibition_item_view;
 
         public ViewHolder(ViewDataBinding binding) {
             super(binding.getRoot());
-            this.rvBinding = (ExhibitionItemBinding) binding;
+            this.rvBinding = (ExhibitionItem1Binding) binding;
         }
 
-        public ExhibitionItemBinding getBinding() {
+        public ExhibitionItem1Binding getBinding() {
             return rvBinding;
         }
 
@@ -88,8 +89,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         /**
          * 为每个item inflater出view，返回ViewHolder
          */
-        ExhibitionItemBinding binding = DataBindingUtil.inflate((LayoutInflater.from(parent.getContext()))
-                , R.layout.exhibition_item, parent, false);
+        ExhibitionItem1Binding binding = DataBindingUtil.inflate((LayoutInflater.from(parent.getContext()))
+                , R.layout.exhibition_item1, parent, false);
         ViewHolder viewholder = new ViewHolder(binding);
         return viewholder;
     }
@@ -101,23 +102,23 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
          */
         Exhibition exhibition = exhibition_list.get(position);  // 获取每个位置的exhibition item的对象
 
-        holder.getBinding().setExhibitionInfo(exhibition);
+//        holder.getBinding().setExhibitionInfo(exhibition);
         // 渲染数据到View上，数据获取方式：使用在MainActivity传入的list中exhibition对象的get方法
-        holder.rvBinding.exhibitionImage.setImageResource(exhibition.getExhibition_id());
-        holder.rvBinding.exhibitionName.setText(exhibition.getExhibition_name());
-        holder.rvBinding.exhibitionState.setText(exhibition.getExhibition_state());
-        holder.rvBinding.exhibitionPassengerFlow.setText(String.valueOf(exhibition.getExhibition_passenger_flow()) + "人次浏览过");
-        holder.rvBinding.exhibitionLike.setImageResource(exhibition.getExhibition_like());
-        holder.rvBinding.exhibitionHall.setText(exhibition.getExhibition_hall());
-        holder.rvBinding.exhibitionTime.setText("平均停留时间为：" + exhibition.getExhibition_time() + "小时");
+        holder.rvBinding.exhibitionItemImageIv.setImageResource(exhibition.getExhibition_id());
+        holder.rvBinding.exhibitionItemNameTv.setText(exhibition.getExhibition_name());
+        holder.rvBinding.exhibitionItemStateTv.setText(exhibition.getExhibition_state());
+        holder.rvBinding.exhibitionItemPassengersTv.setText(String.valueOf(exhibition.getExhibition_passenger_flow()) + "人次浏览过");
+        holder.rvBinding.exhibitionItemLikeIv.setImageResource(exhibition.getExhibition_like());
+        holder.rvBinding.exhibitionItemHallTv.setText(exhibition.getExhibition_hall());
+        holder.rvBinding.exhibitionItemTimeTv.setText("平均停留时间为：" + exhibition.getExhibition_time() + "小时");
         if (globalVariables.getLocation_change() == 0) {
-            holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() + " 米");
+            holder.rvBinding.exhibtionItemDistanceTv.setText(exhibition.getExhibition_distance() + " 米");
         } else {
-            holder.rvBinding.exhibitionDistance.setText(exhibition.getExhibition_distance() - 100 + " 米");
+            holder.rvBinding.exhibtionItemDistanceTv.setText(exhibition.getExhibition_distance() - 100 + " 米");
         }
 
 
-        holder.getBinding().exhibitionImage.setOnClickListener(new View.OnClickListener() {
+        holder.getBinding().exhibitionItemImageIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(holder.getBinding().getRoot().getContext(), ExhibitionContentActivity.class);

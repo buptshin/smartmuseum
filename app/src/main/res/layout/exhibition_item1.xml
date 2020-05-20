@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/exhibition_item_image_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mainpage_ancient_china" />
+
+        <TextView
+            android:id="@+id/exhibition_item_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:textColor="@color/mainpage_goods_text_white"
+            android:text="回归之路"
+            android:gravity="center_vertical"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/exhibition_item_image_iv"
+            app:layout_constraintTop_toTopOf="@+id/exhibition_item_image_iv"/>
+
+        <TextView
+            android:id="@+id/exhibition_item_state_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="#FFD8DDEE"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="@+id/exhibition_item_name_tv"
+            app:layout_constraintTop_toBottomOf="@+id/exhibition_item_name_tv"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"/>
+
+        <TextView
+            android:id="@+id/exhibition_item_passengers_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:gravity="center_vertical"
+            android:textColor="#FFD8DDEE"
+            app:layout_constraintStart_toStartOf="@+id/exhibition_item_state_tv"
+            app:layout_constraintTop_toBottomOf="@+id/exhibition_item_state_tv"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"/>
+        
+        <ImageView
+            android:id="@+id/exhibition_item_like_background_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="@id/exhibition_item_image_iv"
+            app:layout_constraintEnd_toEndOf="@id/exhibition_item_image_iv"
+            app:srcCompat="@drawable/shape_white_circle"/>
+        
+        <ImageView
+            android:id="@+id/exhibition_item_like_iv"
+            android:layout_width="16dp"
+            android:layout_height="14dp"
+            app:layout_constraintTop_toTopOf="@id/exhibition_item_like_background_iv"
+            app:layout_constraintStart_toStartOf="@+id/exhibition_item_like_background_iv"
+            app:layout_constraintBottom_toBottomOf="@id/exhibition_item_like_background_iv"
+            app:layout_constraintEnd_toEndOf="@id/exhibition_item_like_background_iv"
+            app:srcCompat="@mipmap/mainpage_exhibition_like_selected"/>
+        
+        <ImageView
+            android:id="@+id/exhibition_hall_background_iv"
+            android:layout_width="268dp"
+            android:layout_height="74dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginBottom="17dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="@id/exhibition_item_image_iv"
+            app:layout_constraintEnd_toEndOf="@id/exhibition_item_image_iv"
+            app:layout_constraintBottom_toBottomOf="@id/exhibition_item_image_iv"
+            app:srcCompat="@drawable/exhibition_item_hall_background"
+
+            />
+        
+        <TextView
+            android:id="@+id/exhibition_hall_text_first_tv"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:text="北"
+            android:gravity="center"
+            android:textColor="#842D29"
+            android:textSize="20sp"
+            android:background="@drawable/shape_red_circle"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintStart_toStartOf="@id/exhibition_hall_background_iv"
+            app:layout_constraintBottom_toBottomOf="@id/exhibition_hall_background_iv"
+            app:layout_constraintTop_toTopOf="@id/exhibition_hall_background_iv"
+            />
+
+        <TextView
+            android:id="@+id/exhibition_item_hall_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#111111"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toEndOf="@id/exhibition_hall_text_first_tv"
+            app:layout_constraintTop_toTopOf="@id/exhibition_hall_background_iv"
+            />
+
+        <TextView
+            android:id="@+id/exhibition_item_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#FFD8DDEE"
+            android:layout_marginTop="0dp"
+            android:layout_marginStart="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/exhibition_item_hall_tv"
+            app:layout_constraintStart_toStartOf="@id/exhibition_item_hall_tv"
+            />
+
+        <TextView
+            android:id="@+id/exhibtion_item_distance_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#842D29"
+            android:textSize="12sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toTopOf="@id/exhibition_hall_background_iv"
+            app:layout_constraintEnd_toEndOf="@id/exhibition_hall_background_iv"
+            />
+
+
+            
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -5,7 +5,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,18 +22,19 @@
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="8dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView6"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="28dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:srcCompat="@mipmap/mainpage_navigation_icon" />
 
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="18dp"
                     android:text="@string/text_you_current_location"
                     app:layout_constraintBottom_toBottomOf="@id/imageView"
                     app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -42,7 +44,7 @@
                     android:id="@+id/current_location_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
+                    android:layout_marginStart="18dp"
                     android:text="@string/beiyizhanting"
                     android:textColor="#842d29"
                     android:textSize="20sp"
@@ -58,8 +60,9 @@
                     android:id="@+id/nearTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="19dp"
+                    android:layout_marginStart="24dp"
                     android:text="@string/nearby_text"
                     android:textColor="#111111"
                     android:textSize="24sp"
@@ -78,10 +81,10 @@
                     android:id="@+id/imageView3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="19dp"
                     android:adjustViewBounds="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -95,7 +98,7 @@
                     android:id="@+id/textView18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="19dp"
                     android:text="经典路线"
                     android:textColor="#FFFFFF"
                     android:textSize="36sp"
@@ -111,8 +114,6 @@
                     android:text="（古代中国+复兴之路）"
                     android:textColor="#FFFFFF"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textView18"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/textView18" />
 
                 <androidx.constraintlayout.widget.Guideline
@@ -132,10 +133,10 @@
                     android:id="@+id/imageView2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginBottom="19dp"
                     android:adjustViewBounds="true"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -150,9 +151,8 @@
                     android:text="文物特展"
                     android:textColor="#FFFFFF"
                     android:textSize="36sp"
+                    android:layout_marginStart="19dp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline102"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.05"
                     app:layout_constraintStart_toStartOf="@+id/imageView2" />
 
                 <TextView

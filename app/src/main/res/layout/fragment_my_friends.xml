@@ -62,7 +62,7 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline81"
             app:layout_constraintEnd_toStartOf="@+id/guideline84"
             app:layout_constraintStart_toStartOf="@+id/guideline83"
-            app:layout_constraintTop_toTopOf="@+id/guideline80" />
+            app:layout_constraintTop_toTopOf="@+id/guideline_v_94" />
 
         <ImageView
             android:id="@+id/friend_my_firends_team_iv"
@@ -274,7 +274,7 @@
             app:layout_constraintGuide_percent="0.55" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline80"
+            android:id="@+id/guideline_v_94"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

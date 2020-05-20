@@ -113,8 +113,8 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
     private void initDialog() {
         dialog = new Dialog(ExhibitionContentActivity.this, R.style.edit_AlertDialog_style);
         dialog.setContentView(R.layout.exhibition_content_dialog);
-        ImageView imageView = dialog.findViewById(R.id.exhibition_dialog_image);
-        imageView.setImageResource(R.drawable.returnroad_dialog);
+        ImageView imageView = dialog.findViewById(R.id.guanbi_dialog);
+        imageView.setImageResource(R.drawable.return_road_detail_rolling);
         // true：点击其他地方也可以使dialog消失，false不会
         dialog.setCanceledOnTouchOutside(false);
         Window w = dialog.getWindow();
