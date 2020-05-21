@@ -157,8 +157,8 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                         curMatrix.mapPoints(dstCoordsLoc,new float[]{tx,ty});
 
                         // 改变定位点和周围的渲染的位置
-                        ObjectAnimator obLocY = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationY",dstCoordsLoc[1]-ty);
-                        ObjectAnimator obLocX = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationX",dstCoordsLoc[0]-tx);
+                        ObjectAnimator obLocY = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationY",mBinding.exhibitionInnerCollectionLocpoint.getY()-(imgY+mBinding.exhibitionInnerCollectionMap.getY())+dstCoordsLoc[1]-ty);
+                        ObjectAnimator obLocX = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationX",mBinding.exhibitionInnerCollectionLocpoint.getX()-(imgX+mBinding.exhibitionInnerCollectionMap.getX())+dstCoordsLoc[0]-tx);
                         ObjectAnimator obLocY1 = ObjectAnimator.ofFloat(iv,"translationY",iv.getY()+dstCoordsLoc[1]-ty);
                         ObjectAnimator obLocX1 = ObjectAnimator.ofFloat(iv,"translationX",iv.getX()+dstCoordsLoc[0]-tx);
                         AnimatorSet newLocPoint = new AnimatorSet();
@@ -213,7 +213,7 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
             @Override
             public void onClick(View v) {
                 seekBarProgress -= 3;
-                if(seekBarProgress == 0){
+                if(seekBarProgress <= 0){
                     View parent = mBinding.getRoot().getRootView();
                     NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
                     noScrollViewPager.setCurrentItem(8,false);
