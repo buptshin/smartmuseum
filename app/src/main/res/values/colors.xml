@@ -69,7 +69,7 @@
     <color name="mainpage_explore_exhibition_switch_unchecked">#08080040</color>
 
     <!-- Navigation !-->
-    <color name="mainpage_navigation_selectoritem_wordcolor_black">#FF000521</color>
+    <color name="mainpage_navigation_selectoritem_wordcolor_black">#000521</color>
     <color name="mainpage_navigation_red">#701F1F</color>
     <color name="mainpage_navigation_white">#FFFFFF</color>
     <color name="mainpage_navigation_wordcolor_gray">#8D92A3</color>
@@ -84,6 +84,13 @@
     <!--Navigation_go_routes-->
     <color name="navigation_routes_black">#000521</color>
     <color name="navigation_routes_red">#842D29</color>
+    <color name="navigation_routes_white">#FFFFFF</color>
+
+    <!--Navigation help confirm-->
+    <color name="confirm_help_background">#FFFFFF</color>
+    <color name="confirm_help_red">#842D29</color>
+    <color name="confirm_help_white">#FFFFFF</color>
+    <color name="confirm_help_black_word">#1A1A1A</color>
 
     <!-- Goods !-->
     <color name="mainpage_goods_sell_background">#FFFFFF</color>

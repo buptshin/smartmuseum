@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.navigation.ConfirmHelpActivity"
+        android:background="@color/confirm_help_background">
+        <ImageView
+            android:id="@+id/confirm_help_close_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_margin="35dp"
+            android:src="@mipmap/settings_close_black"/>
+        <RelativeLayout
+            android:id="@+id/confirm_help_click_rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="100dp">
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:src="@drawable/confirm_help_click_point0"
+                android:layout_centerInParent="true"
+                android:gravity="center"/>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/confirm_help_click_point1"
+                android:layout_centerInParent="true"/>
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/confirm_help_click"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/confirm_help_txt1_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="点击屏幕三次发出求助"
+            android:textColor="@color/confirm_help_black_word"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_help_click_rl"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您的联系人，附近的人以及相应组织将会收到您的定位求助"
+            android:textColor="@color/confirm_help_black_word"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingTop="15dp"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm_help_txt1_tv"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

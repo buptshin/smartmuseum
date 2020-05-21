@@ -11,17 +11,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/mainpage_navigation_background"
+        android:background="@color/mainpage_navigation_red"
         android:paddingTop="@dimen/mainpage_fragment_paddingTop">
 
         <TextView
-            android:id="@+id/mainpage_navigation_tv"
+            android:id="@+id/mainpage_navigation_firstaid_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="16dp"
             android:text="导览"
-            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
+            android:textColor="@color/mainpage_navigation_white"
             android:textSize="30sp"
             android:textStyle="bold"
             android:typeface="sans"
@@ -29,17 +29,17 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/mainpage_navigation_search_iv"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@mipmap/mainpage_navigation_search"
+            android:id="@+id/mainpage_navigation_firstaid_search_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/mainpage_navigation_search_white"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="20dp"
             android:layout_marginRight="15dp"/>
 
         <TextView
-            android:id="@+id/mainpage_navigation_floor_b1_tv"
+            android:id="@+id/mainpage_navigation_firstaid_floor_b1_tv"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="40dp"
@@ -49,11 +49,11 @@
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_tv"
             android:layout_marginTop="15dp"/>
 
         <TextView
-            android:id="@+id/mainpage_navigation_floor_1_tv"
+            android:id="@+id/mainpage_navigation_firstaid_floor_1_tv"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="15dp"
@@ -62,12 +62,12 @@
             android:text="1"
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
-            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_b1_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_firstaid_floor_b1_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_tv"
             android:layout_marginTop="15dp"/>
 
         <TextView
-            android:id="@+id/mainpage_navigation_floor_2_tv"
+            android:id="@+id/mainpage_navigation_firstaid_floor_2_tv"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="15dp"
@@ -76,12 +76,12 @@
             android:text="2"
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
-            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_1_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_firstaid_floor_1_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_tv"
             android:layout_marginTop="15dp"/>
 
         <TextView
-            android:id="@+id/mainpage_navigation_floor_3_tv"
+            android:id="@+id/mainpage_navigation_firstaid_floor_3_tv"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="15dp"
@@ -90,12 +90,12 @@
             android:text="3"
             android:textColor="@color/mainpage_navigation_white"
             android:textSize="20sp"
-            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_2_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_firstaid_floor_2_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_tv"
             android:layout_marginTop="15dp"/>
 
         <TextView
-            android:id="@+id/mainpage_navigation_floor_4_tv"
+            android:id="@+id/mainpage_navigation_firstaid_floor_4_tv"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:layout_marginLeft="15dp"
@@ -104,67 +104,36 @@
             android:text="4"
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
-            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_3_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
+            app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_firstaid_floor_3_tv"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_tv"
             android:layout_marginTop="15dp"/>
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/mainpage_navigation_normal_now_location_cl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_floor_b1_tv"
-            android:layout_marginTop="15dp">
-            <TextView
-                android:id="@+id/mainpage_navigation_location_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="您现在的位置是"
-                android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
-                android:textSize="15sp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="20dp"
-                android:gravity="center_vertical"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-            <TextView
-                android:id="@+id/mainpage_navigation_location_value_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="北1展厅"
-                android:textColor="@color/mainpage_navigation_red"
-                android:textSize="20sp"
-                android:layout_marginTop="15dp"
-                android:gravity="center_vertical"
-                app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_location_tv"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBaseline_toBaselineOf="@id/mainpage_navigation_location_tv" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
         <ImageView
-            android:id="@+id/mainpage_navigation_location_map_iv"
+            android:id="@+id/mainpage_navigation_firstaid_location_map_iv"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/mainpage_navigation_map_all"
+            android:src="@drawable/mainpage_navigation_escape_route_map"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_normal_now_location_cl"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_floor_b1_tv"
             android:layout_marginTop="15dp"/>
-
         <ImageView
-            android:id="@+id/mainpage_navigation_escape_routes_iv"
+            android:id="@+id/mainpage_navigation_call_help"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@mipmap/mainpage_navigation_escape_routes"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="80dp"/>
-        <ImageView
-            android:id="@+id/mainpage_navigation_now_location_iv"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@mipmap/mainpage_navigation_now_location"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_escape_routes_iv"
+            android:src="@mipmap/mainpage_navigation_call_help_white"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_firstaid_location_map_iv"
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginRight="15dp"/>
+        <ImageView
+            android:id="@+id/mainpage_navigation_firstaid_now_location_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/mainpage_navigation_location_white"
+            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_call_help"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"/>
+
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
