@@ -43,11 +43,11 @@ public class GoodsMarketSigninAdapter extends RecyclerView.Adapter<GoodsMarketSi
         Bitmap collectionBmp, goodsBmp;
         int resourceFlag = position % 2;
         if (resourceFlag == 0) {
-            collectionBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_collection_1);
-            goodsBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_goods_1);
+            collectionBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_collection_3);
+            goodsBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_goods_3);
         } else {
-            collectionBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_collection_2);
-            goodsBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_goods_2);
+            collectionBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_collection_4);
+            goodsBmp = BitmapFactory.decodeResource(res, R.drawable.goods_market_signin_goods_4);
         }
 
         holder.getBinding().goodsMarketSigninItemCollcetionInclude.goodsMarketSigninCollcetionImg.setImageBitmap(collectionBmp);

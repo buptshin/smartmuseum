@@ -289,6 +289,12 @@ public class GoodsViewModel extends ViewModel {
         list.add(test1);
         list.add(test2);
         list.add(test3);
+        list.add(test1);
+        list.add(test2);
+        list.add(test3);
+        list.add(test1);
+        list.add(test2);
+        list.add(test3);
 
         buyGoodsModelList.setValue(list);
     }

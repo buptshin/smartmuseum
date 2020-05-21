@@ -18,13 +18,13 @@
 
         <ImageView
             android:id="@+id/goods_purchased_goods_image"
-            android:layout_width="@dimen/goods_purchased_item_image_height"
-            android:layout_height="@dimen/goods_purchased_item_image_width"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/goods_purchased_item_margin_start"
             android:layout_marginTop="@dimen/goods_purchased_item_margin"
             android:layout_marginBottom="@dimen/goods_purchased_item_margin"
             android:scaleType="centerCrop"
-            android:src="@drawable/mainpage_goods_sell_goods_1_vertical"
+            android:src="@drawable/mainpage_goods_sell_goods_3_vertical"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"/>

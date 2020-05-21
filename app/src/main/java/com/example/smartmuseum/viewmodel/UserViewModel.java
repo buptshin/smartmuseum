@@ -48,6 +48,10 @@ public class UserViewModel extends ViewModel {
         addressList.add(address2);
         addressList.add(address3);
         addressList.add(address4);
+//        addressList.add(address1);
+//        addressList.add(address2);
+//        addressList.add(address3);
+//        addressList.add(address4);
 
         User user = new User();
         user.setAddress(addressList);

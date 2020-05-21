@@ -9,19 +9,21 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="230dp"
-        android:layout_height="240dp"
-        android:background="@drawable/goods_market_signin_card_background"
+        android:layout_width="170dp"
+        android:layout_height="190dp"
+        android:background="@drawable/goods_market_signin_card_background_2"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/goods_market_signin_collcetion_img"
-            android:layout_width="225dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="25dp"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/goods_market_signin_collection_1"
+            android:src="@drawable/goods_market_signin_collection_3"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
@@ -29,34 +31,34 @@
             android:id="@+id/goods_market_signin_collcetion_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
             android:text="@{goodsCollectionModel.collection.name}"
             android:textSize="@dimen/goods_market_signin_name_text"
             android:textColor="@color/goods_market_text_black"
             tools:text="匽侯盂"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_signin_collcetion_img"/>
 
         <TextView
             android:id="@+id/goods_market_signin_collcetion_dynasty"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="130dp"
-            android:layout_marginEnd="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="15dp"
             android:text="@{goodsCollectionModel.collection.dynasty}"
             android:textSize="16sp"
             android:textColor="@color/goods_market_text_brown"
-            tools:text="@dimen/goods_market_signin_name_text"
+            tools:text="西周"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/goods_market_signin_collcetion_img"/>
 
         <TextView
             android:id="@+id/goods_market_signin_collcetion_exhibiton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="5dp"
             android:text="@{goodsCollectionModel.collection.exhibition}"
             android:textSize="@dimen/goods_market_signin_introduction_text"
             android:textColor="@color/goods_market_text_black"
@@ -69,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="30dp"
+            android:layout_marginStart="5dp"
             android:text="@{goodsCollectionModel.collection.introduction}"
             android:textSize="@dimen/goods_market_signin_introduction_text"
             android:textColor="@color/goods_market_text_gray"

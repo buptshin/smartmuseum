@@ -24,6 +24,7 @@ import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.goods.GoodsInfoActivity;
 import com.example.smartmuseum.view.goods.GoodsOrderCheckActivity;
 import com.example.smartmuseum.view.goods.GoodsOrderStatusActivity;
+import com.example.smartmuseum.view.navigation.NavigationGoRoutesActivity;
 import com.example.smartmuseum.viewmodel.GoodsViewModel;
 
 import java.util.HashMap;
@@ -45,6 +46,16 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     @Override
     protected void onResume() {
         super.onResume();
+        if (Parameters.purchasedGoodsNum <= 0) {
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+        } else {
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
         setPopupWindow();
     }
 
@@ -148,6 +159,23 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             }
         });
 
+        //返回按钮
+        mBinding.routeCommendInfoReturnImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+
+
+        mBinding.routeCommendInfoMapImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RouteCommendInfoActivity.this, NavigationGoRoutesActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         return this;
     }
@@ -203,9 +231,9 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     private void setPopupWindow() {
         //购买数大于0，显示已购买界面
         if (Parameters.purchasedGoodsNum <= 0) {
-//            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
         } else {
-//            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
             mBinding.routeCommendPopupwindowNothingLayout.setVisibility(View.GONE);
             mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.VISIBLE);
         }

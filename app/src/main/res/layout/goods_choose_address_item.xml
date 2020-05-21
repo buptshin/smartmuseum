@@ -57,7 +57,7 @@
             android:id="@+id/goods_choose_address_item_default_flag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="@{address.defaultFlag ? View.VISIBLE : View.GONE}"
+            android:visibility="gone"
             android:text="@string/goods_choose_address_card_default_address"
             android:textColor="@color/goods_choose_address_item_default_color"
             android:textSize="@dimen/goods_choose_address_item_detail_text"
