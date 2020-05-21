@@ -37,8 +37,8 @@
 
         <ImageView
             android:id="@+id/friend_my_firends_close_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
             android:src="@mipmap/friend_myfriend_close_black"
             app:layout_constraintBottom_toTopOf="@+id/guideline75"
             app:layout_constraintEnd_toStartOf="@+id/guideline76"
