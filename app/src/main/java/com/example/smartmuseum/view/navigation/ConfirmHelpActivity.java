@@ -45,14 +45,14 @@ public class ConfirmHelpActivity extends Activity implements ViewChainedBinding 
     @Override
     public ConfirmHelpActivity bindEvent() {
 
-        mBinding.confirmHelpLayout.setOnClickListener(new View.OnClickListener() {
+        mBinding.confirmHelpCloseIv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
         });
 
-        mBinding.confirmHelpClickRl.setOnClickListener(new View.OnClickListener() {
+        mBinding.confirmHelpLayout.setOnClickListener(new View.OnClickListener() {
             //需要监听几次点击事件数组的长度就为几
             //如果要监听双击事件则数组长度为2，如果要监听3次连续点击事件则数组长度为3...
             long[] mHints = new long[3];//初始全部为0
