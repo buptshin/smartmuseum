@@ -57,6 +57,16 @@ public class NavigationFirstAidFragment extends Fragment implements ViewChainedB
                 startActivity(intent);
             }
         });
+
+        //求救
+        mBinding.mainpageNavigationCallHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ConfirmHelpActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return this;
     }
 }
