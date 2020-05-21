@@ -11,9 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.navigation.ConfirmHelpActivity"
+        <activity android:name=".view.navigation.InHelpingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/transcutestyle"></activity>
+        <activity
+            android:name=".view.navigation.ConfirmHelpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/transcutestyle" />
         <activity android:name=".view.navigation.NavigationGoRoutesActivity" />
         <activity android:name=".view.goods.GoodsInfoDetailActivity" />
         <activity android:name=".view.goods.GoodsRecommendActivity" />
@@ -33,11 +37,11 @@
         <activity android:name=".view.navigation.NavigationSearchActivity" />
         <activity
             android:name=".view.goods.GoodsInfoActivity"
-            android:launchMode="singleTask"></activity>
+            android:launchMode="singleTask" />
         <activity android:name=".view.goods.GoodsOrderCheckActivity" />
         <activity
             android:name=".view.settings.SettingsActivity"
-            android:theme="@style/SettingsTheme"></activity>
+            android:theme="@style/SettingsTheme" />
         <activity android:name=".view.startpage.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.navigation.InHelpingActivity"
+        android:background="@color/in_helping_red">
+        <RelativeLayout
+            android:id="@+id/in_helping_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/in_helping_tv1"
+                android:layout_width="202dp"
+                android:layout_height="202dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/confirm_help_click_point1"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/confirm_help_click_point0"/>
+            <TextView
+                android:layout_width="152dp"
+                android:layout_height="152dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/confirm_help_click_point1"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/confirm_help_click_point0"/>
+            <TextView
+                android:id="@+id/in_helping_tv3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:text="3"
+                android:textColor="@color/in_helping_black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:layout_marginTop="200dp"
+                android:background="@drawable/confirm_help_click_point1"/>
+
+            <TextView
+                android:id="@+id/in_helping_tv5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="紧急求助中……"
+                android:textStyle="bold"
+                android:textColor="@color/in_helping_white"
+                android:textSize="28sp"
+                android:gravity="center"
+                android:layout_alignBottom="@+id/in_helping_tv1"/>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/in_helping_tv6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="您的联系人，附近的人以及相应组织将会收到您的定位求助"
+            android:textColor="@color/in_helping_white"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:paddingRight="50dp"
+            android:paddingLeft="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/in_helping_rv"/>
+
+        <TextView
+            android:id="@+id/in_helping_safe_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="我安全了"
+            android:textSize="20sp"
+            android:textColor="@color/in_helping_red"
+            android:gravity="center"
+            android:background="@drawable/in_helping_text_background"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/in_helping_tv6"/>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

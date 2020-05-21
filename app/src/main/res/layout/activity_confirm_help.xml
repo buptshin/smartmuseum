@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.navigation.ConfirmHelpActivity"
-        android:background="@color/confirm_help_background">
+        android:background="@color/confirm_help_background"
+        android:id="@+id/confirm_help_layout">
         <ImageView
             android:id="@+id/confirm_help_close_iv"
             android:layout_width="20dp"
