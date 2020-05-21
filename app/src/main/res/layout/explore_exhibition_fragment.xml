@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:scrollbars="none"
-                android:background="#F9F9F9" />
+                android:background="@color/mainpage_navigation_background" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

@@ -190,6 +190,7 @@
     <color name="exhibition_inner_collector_seekbar_thumb">#55842D29</color>
     <color name="exhibition_inner_collector_seekbar_style_bg">#F1F3F8</color>
     <color name="exhibition_inner_collector_seekbar_style_progress">#842D29</color>
+    <color name="exhibition_inner_collection_field_guide_view">#7A7C79</color>
 
     <!-- RouteCommend !-->
     <color name="route_commend_info_exhibition_location_name_color">#000521</color>

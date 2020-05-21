@@ -151,13 +151,6 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             }
         });
 
-        //导航界面
-        mBinding.routeCommendInfoMapImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //等待添加
-            }
-        });
 
         //返回按钮
         mBinding.routeCommendInfoReturnImg.setOnClickListener(new View.OnClickListener() {
@@ -168,6 +161,7 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
         });
 
 
+        //导航界面
         mBinding.routeCommendInfoMapImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -20,9 +20,11 @@ import com.example.smartmuseum.databinding.ActivityExhibitionContentBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Exhibition;
 import com.example.smartmuseum.util.ScreenUtil;
+import com.example.smartmuseum.view.goods.GoodsInfoActivity;
 import com.example.smartmuseum.view.login.LoginActivity;
 import com.example.smartmuseum.view.mainpage.MainActivity;
 import com.example.smartmuseum.view.me.FieldGuideActivity;
+import com.example.smartmuseum.view.navigation.NavigationGoRoutesActivity;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 import com.example.smartmuseum.viewmodel.ExhibitionViewModel;
 
@@ -47,8 +49,7 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
 
     @Override
     public ExhibitionContentActivity bindView() {
-        //状态栏字体设为黑色
-        ScreenUtil.setAndroidNativeLightStatusBar(ExhibitionContentActivity.this, true);
+        ScreenUtil.fullScreen(ExhibitionContentActivity.this);
         activityExhibitionContentBinding = DataBindingUtil.setContentView(this, R.layout.activity_exhibition_content);
         return this;
     }
@@ -75,8 +76,7 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
         activityExhibitionContentBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ExhibitionContentActivity.this, MainActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
 
@@ -107,6 +107,15 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
                 startActivity(intent);
             }
         });
+
+        activityExhibitionContentBinding.routeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ExhibitionContentActivity.this, NavigationGoRoutesActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return this;
     }
 
@@ -114,7 +123,7 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
         dialog = new Dialog(ExhibitionContentActivity.this, R.style.edit_AlertDialog_style);
         dialog.setContentView(R.layout.exhibition_content_dialog);
         ImageView imageView = dialog.findViewById(R.id.guanbi_dialog);
-        imageView.setImageResource(R.drawable.return_road_detail_rolling);
+//        imageView.setImageResource(R.drawable.return_road_detail_rolling);
         // true：点击其他地方也可以使dialog消失，false不会
         dialog.setCanceledOnTouchOutside(false);
         Window w = dialog.getWindow();

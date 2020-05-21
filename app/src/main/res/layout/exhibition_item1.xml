@@ -8,27 +8,26 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/mainpage_navigation_background">
 
         <ImageView
             android:id="@+id/exhibition_item_image_iv"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:adjustViewBounds="true"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/mainpage_ancient_china" />
+            android:src="@drawable/mainpage_ancient_china" />
 
         <TextView
             android:id="@+id/exhibition_item_name_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="21dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             android:textColor="@color/mainpage_goods_text_white"
             android:text="回归之路"
             android:gravity="center_vertical"
