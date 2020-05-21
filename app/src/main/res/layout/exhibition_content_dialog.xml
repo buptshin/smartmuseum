@@ -29,7 +29,6 @@
             android:paddingStart="10dp"
             android:lineSpacingExtra="5dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/exhibition_detail_textview_shape"
             android:fontFamily="sans-serif-light"
             android:text="这是一条回归之路。\n这也是一条中华民族梦圆之路。\n中华民族延绵五千年所孕育创造的\n璀璨文化，是中华民族根混所寄、\n中华儿女精神所系。"
             android:textColor="#111111"

@@ -23,12 +23,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -51,7 +50,7 @@
                     android:layout_marginStart="0dp"
                     android:text="北一展厅"
                     android:textColor="#842d29"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     app:layout_constraintBaseline_toBaselineOf="@+id/textView6"
                     app:layout_constraintStart_toEndOf="@+id/textView6" />
 
@@ -59,13 +58,14 @@
                     android:id="@+id/recommend_exhibition_or_not"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="43dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
                     android:checked="true"
                     android:text="最新展览"
                     android:thumb="@drawable/mainpage_explore_exhibition_switch_thumb"
                     android:track="@drawable/mainpage_explore_exhibition_switch_track"
                     app:layout_constraintBaseline_toBaselineOf="@+id/current_location_text"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintRight_toRightOf="parent"/>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -76,12 +76,6 @@
                 android:layout_marginTop="4dp"
                 android:scrollbars="none"
                 android:background="@color/mainpage_navigation_background" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="200dp">
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
 

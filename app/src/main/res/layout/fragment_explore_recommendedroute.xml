@@ -101,7 +101,7 @@
                     android:layout_marginStart="19dp"
                     android:text="经典路线"
                     android:textColor="#FFFFFF"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline101"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.05"
@@ -121,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.75" />
+                    app:layout_constraintGuide_percent="0.8" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:text="文物特展"
                     android:textColor="#FFFFFF"
-                    android:textSize="36sp"
+                    android:textSize="30sp"
                     android:layout_marginStart="19dp"
                     app:layout_constraintBottom_toTopOf="@+id/guideline102"
                     app:layout_constraintStart_toStartOf="@+id/imageView2" />
@@ -172,7 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintGuide_percent="0.75" />
+                    app:layout_constraintGuide_percent="0.8" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

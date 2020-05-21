@@ -213,7 +213,14 @@
                     app:layout_constraintTop_toTopOf="@+id/route_commend_info_end_location_text"
                     app:layout_constraintBaseline_toBaselineOf="@+id/route_commend_info_end_location_text"/>
 
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    app:layout_constraintTop_toBottomOf="@+id/route_commend_info_end_location_exhibition_text"
+                    app:layout_constraintLeft_toLeftOf="parent"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
         </ScrollView>
 
         <com.example.smartmuseum.view.otherview.DragFloatActionButton
