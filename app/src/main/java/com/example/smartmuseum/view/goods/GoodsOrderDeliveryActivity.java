@@ -55,7 +55,7 @@ public class GoodsOrderDeliveryActivity extends AppCompatActivity implements Vie
                 iv.setLayoutParams(params);
                 iv.setX(x-50);
                 iv.setY(y-50);
-                mBinding.goodsOrderDeliveryCt.addView(iv);
+                mBinding.goodsOrderDeliveryCl.addView(iv);
 
                 // 渲染的动画展示
                 ObjectAnimator animatorScaleX = ObjectAnimator.ofFloat(iv,"scaleX",1f,1.5f,2f,1.5f,1f);

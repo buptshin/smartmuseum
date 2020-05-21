@@ -6,22 +6,22 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/goods_order_delivery_ct"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        android:background="@color/mainpage_goods_sell_background">
+        android:background="@color/mainpage_goods_sell_background"
+        android:fitsSystemWindows="true">
 
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:scrollbars="none"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/goods_order_delivery_cl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -204,7 +204,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="20dp"
                         app:layout_constraintLeft_toLeftOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_delivery_card_layout"/>
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_delivery_card_layout" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
