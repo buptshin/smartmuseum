@@ -10,6 +10,12 @@
             type="com.example.smartmuseum.model.Exhibition" />
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainpage_goods_sell_background">
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -91,9 +97,9 @@
             android:id="@+id/exhibition_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="huiguizhilu"
+            android:text="回归之路"
             android:textColor="#FFFFFF"
-            android:textSize="48sp"
+            android:textSize="42sp"
             android:textStyle="bold"
             android:layout_marginBottom="10dp"
             app:layout_constraintBottom_toTopOf="@+id/searchView"
@@ -348,4 +354,6 @@
             app:layout_constraintGuide_percent="0.96" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 </layout>

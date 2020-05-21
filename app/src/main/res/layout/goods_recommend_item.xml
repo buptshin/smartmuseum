@@ -174,7 +174,7 @@
                 android:id="@+id/mainpage_goods_sell_commend_goods_iflocation_checkbox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="10dp"
                 android:checked="true"
                 android:src="@drawable/mainpage_goods_sell_people_3"
                 android:text="@string/mainpage_goods_commend_distribution"
