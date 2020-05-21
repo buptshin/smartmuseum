@@ -92,6 +92,11 @@
     <color name="confirm_help_white">#FFFFFF</color>
     <color name="confirm_help_black_word">#1A1A1A</color>
 
+    <!--Navigation in helping-->
+    <color name="in_helping_red">#842D29</color>
+    <color name="in_helping_white">#FFFFFF</color>
+    <color name="in_helping_black">#000000</color>
+
     <!-- Goods !-->
     <color name="mainpage_goods_sell_background">#FFFFFF</color>
     <color name="mainpage_goods_sell_commend_black">#000521</color>
