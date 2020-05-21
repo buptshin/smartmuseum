@@ -12,191 +12,215 @@
         android:fitsSystemWindows="true"
         android:background="@color/mainpage_goods_sell_background">
 
-        <ImageView
-            android:id="@+id/goods_order_delivery_return_img"
-            android:layout_width="@dimen/goods_info_return_size"
-            android:layout_height="@dimen/goods_info_return_size"
-            android:layout_marginStart="@dimen/goods_info_margin_start"
-            android:layout_marginTop="@dimen/goods_order_check_margin"
-            android:src="@mipmap/goods_order_check_return_button_gray"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/goods_order_delivery_people_info_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/goods_order_delivery_layout_margin_top"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_return_img">
-
-            <ImageView
-                android:id="@+id/goods_order_delivery_delivery_img"
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/goods_order_status_delivery"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/goods_order_delivery_people_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
-                android:text="配送员小鲁"
-                android:textColor="@color/goods_order_delivery_name_text"
-                android:textSize="@dimen/goods_order_delivery_people_name_text"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_delivery_img"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="配送员小鲁" />
-
-            <TextView
-                android:id="@+id/goods_order_delivery_people_phone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/goods_order_delivery_phone_margin_start"
-                android:text="130****2399"
-                android:textColor="@color/goods_order_delivery_name_text"
-                android:textSize="@dimen/goods_order_delivery_people_name_text"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_people_name"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="130****2399" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/goods_order_delivery_phone_margin_start"
-                android:src="@mipmap/goods_order_delivery_call"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_people_phone"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/goods_order_delivery_edit_order_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
-                android:text="@string/goods_order_delivery_edit_order"
-                android:textColor="@color/goods_order_delivery_edit_order_text"
-                android:textSize="@dimen/goods_order_delivery_order_edit_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_delivery_img"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_name" />
-
-            <TextView
-                android:id="@+id/goods_order_delivery_myself_order_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
-                android:text="@string/goods_order_delivery_myself_order"
-                android:textColor="@color/goods_order_delivery_edit_order_text"
-                android:textSize="@dimen/goods_order_delivery_order_edit_text"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_edit_order_name"
-                app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_name" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/goods_order_delivery_map_img"
+        <ScrollView
             android:layout_width="0dp"
-            android:layout_height="@dimen/goods_order_delivery_map_height"
-            android:scaleType="matrix"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="0dp"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_info_layout"
-            app:srcCompat="@drawable/goods_order_delivery_map" />
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/goods_order_delivery_time_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/goods_order_delivery_time_layout_margin_start"
-            android:layout_marginTop="@dimen/goods_order_delivery_time_layout_margin_top"
-            android:layout_marginEnd="@dimen/goods_order_delivery_time_layout_margin_start"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_map_img">
-
-            <ImageView
-                android:id="@+id/goods_order_delivery_car_img"
-                android:layout_width="@dimen/goods_order_delivery_time_layout_margin_start"
-                android:layout_height="@dimen/goods_order_delivery_time_layout_margin_start"
-                android:src="@mipmap/goods_order_delivery_car"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.example.smartmuseum.view.otherview.ScaleView
-                android:id="@+id/goods_order_delivery_time_view"
-                android:layout_width="250dp"
-                android:layout_height="20dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_car_img"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
-            android:layout_marginEnd="@dimen/goods_order_delivery_card_margin_top"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_time_layout">
+            app:layout_constraintRight_toRightOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/goods_order_delivery_card_background_height"
-                android:layout_marginTop="@dimen/goods_order_delivery_card_background_margin_top"
-                android:background="@drawable/goods_order_delivery_card_background"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
+
 
                 <ImageView
-                    android:id="@+id/goods_order_delivery_delivery_white_img"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
-                    android:src="@mipmap/goods_order_delivery_delivery_white"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:id="@+id/goods_order_delivery_return_img"
+                    android:layout_width="@dimen/goods_info_return_size"
+                    android:layout_height="@dimen/goods_info_return_size"
+                    android:layout_marginStart="@dimen/goods_info_margin_start"
+                    android:layout_marginTop="@dimen/goods_order_check_margin"
+                    android:src="@mipmap/goods_order_check_return_button_gray"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/goods_order_delivery_people_info_layout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/goods_order_delivery_layout_margin_top"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_return_img">
+
+                    <ImageView
+                        android:id="@+id/goods_order_delivery_delivery_img"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/goods_order_status_delivery"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/goods_order_delivery_people_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
+                        android:text="配送员小鲁"
+                        android:textColor="@color/goods_order_delivery_name_text"
+                        android:textSize="@dimen/goods_order_delivery_people_name_text"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_delivery_img"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="配送员小鲁" />
+
+                    <TextView
+                        android:id="@+id/goods_order_delivery_people_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/goods_order_delivery_phone_margin_start"
+                        android:text="130****2399"
+                        android:textColor="@color/goods_order_delivery_name_text"
+                        android:textSize="@dimen/goods_order_delivery_people_name_text"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_people_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="130****2399" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/goods_order_delivery_phone_margin_start"
+                        android:src="@mipmap/goods_order_delivery_call"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_people_phone"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/goods_order_delivery_edit_order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
+                        android:text="@string/goods_order_delivery_edit_order"
+                        android:textColor="@color/goods_order_delivery_edit_order_text"
+                        android:textSize="@dimen/goods_order_delivery_order_edit_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_delivery_img"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_name" />
+
+                    <TextView
+                        android:id="@+id/goods_order_delivery_myself_order_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/goods_order_delivery_name_margin_start"
+                        android:text="@string/goods_order_delivery_myself_order"
+                        android:textColor="@color/goods_order_delivery_edit_order_text"
+                        android:textSize="@dimen/goods_order_delivery_order_edit_text"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_edit_order_name"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_name" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/goods_order_delivery_map_img"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/goods_order_delivery_map_height"
+                    android:scaleType="matrix"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_info_layout"
+                    app:srcCompat="@drawable/goods_order_delivery_map" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/goods_order_delivery_time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/goods_order_delivery_time_layout_margin_start"
+                    android:layout_marginTop="@dimen/goods_order_delivery_time_layout_margin_top"
+                    android:layout_marginEnd="@dimen/goods_order_delivery_time_layout_margin_start"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_map_img">
+
+                    <ImageView
+                        android:id="@+id/goods_order_delivery_car_img"
+                        android:layout_width="@dimen/goods_order_delivery_time_layout_margin_start"
+                        android:layout_height="@dimen/goods_order_delivery_time_layout_margin_start"
+                        android:src="@mipmap/goods_order_delivery_car"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.example.smartmuseum.view.otherview.ScaleView
+                        android:id="@+id/goods_order_delivery_time_view"
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_car_img"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
-                    android:text="预计5分钟内到达"
-                    android:textColor="@color/goods_order_delivery_time_text"
-                    android:textSize="@dimen/goods_order_delivery_card_background_time_text"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_delivery_white_img"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:text="预计5分钟内到达" />
+                    android:layout_marginEnd="@dimen/goods_order_delivery_card_margin_top"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_time_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/goods_order_delivery_delivery_card_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/goods_order_delivery_card_background_height"
+                        android:layout_marginTop="@dimen/goods_order_delivery_card_background_margin_top"
+                        android:background="@drawable/goods_order_delivery_card_background"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/goods_order_delivery_delivery_white_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
+                            android:src="@mipmap/goods_order_delivery_delivery_white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/goods_order_delivery_card_margin_top"
+                            android:text="预计5分钟内到达"
+                            android:textColor="@color/goods_order_delivery_time_text"
+                            android:textSize="@dimen/goods_order_delivery_card_background_time_text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toRightOf="@+id/goods_order_delivery_delivery_white_img"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="预计5分钟内到达" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/goods_order_delivery_comment"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_delivery_card_layout"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/goods_order_delivery_car_loc_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="170dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/goods_order_delivery_map_img"
+                    app:layout_constraintEnd_toEndOf="@+id/goods_order_delivery_map_img"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/goods_order_delivery_map_img"
+                    app:srcCompat="@mipmap/goods_order_delivery_car_loc_img" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/goods_order_delivery_comment"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/goods_order_delivery_car_loc_point"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="170dp"
-            app:layout_constraintBottom_toBottomOf="@+id/goods_order_delivery_map_img"
-            app:layout_constraintEnd_toEndOf="@+id/goods_order_delivery_map_img"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/goods_order_delivery_map_img"
-            app:srcCompat="@mipmap/goods_order_delivery_car_loc_img" />
+        </ScrollView>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,6 +46,16 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     @Override
     protected void onResume() {
         super.onResume();
+        if (Parameters.purchasedGoodsNum <= 0) {
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+        } else {
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+        }
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
         setPopupWindow();
     }
 
@@ -221,9 +231,9 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     private void setPopupWindow() {
         //购买数大于0，显示已购买界面
         if (Parameters.purchasedGoodsNum <= 0) {
-//            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_nothing);
         } else {
-//            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
+            mBinding.routeCommendDragFloatButton.setBackgroundResource(R.mipmap.route_commend_info_pack_something);
             mBinding.routeCommendPopupwindowNothingLayout.setVisibility(View.GONE);
             mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.VISIBLE);
         }
