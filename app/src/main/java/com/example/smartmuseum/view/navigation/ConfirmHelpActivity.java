@@ -22,8 +22,6 @@ public class ConfirmHelpActivity extends Activity implements ViewChainedBinding 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         this.bindData().bindView().bindEvent();
     }
 
@@ -50,5 +48,14 @@ public class ConfirmHelpActivity extends Activity implements ViewChainedBinding 
             }
         });
         return this;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        Window window = getWindow();
+        WindowManager.LayoutParams windowParams = window.getAttributes();
+        windowParams.alpha = 0.9f;//1.０全透明．０不透明．
+        window.setAttributes(windowParams);
     }
 }

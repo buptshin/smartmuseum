@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="您的联系人，附近的人以及相应组织将会收到您的定位求助"
             android:textColor="@color/confirm_help_black_word"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:gravity="center"
             android:paddingTop="15dp"
             android:paddingLeft="45dp"
