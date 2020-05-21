@@ -86,6 +86,12 @@
     <color name="navigation_routes_red">#842D29</color>
     <color name="navigation_routes_white">#FFFFFF</color>
 
+    <!--Navigation help confirm-->
+    <color name="confirm_help_background">#FFFFFF</color>
+    <color name="confirm_help_red">#842D29</color>
+    <color name="confirm_help_white">#FFFFFF</color>
+    <color name="confirm_help_black_word">#1A1A1A</color>
+
     <!-- Goods !-->
     <color name="mainpage_goods_sell_background">#FFFFFF</color>
     <color name="mainpage_goods_sell_commend_black">#000521</color>

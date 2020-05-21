@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".view.navigation.ConfirmHelpActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/transcutestyle"></activity>
         <activity android:name=".view.navigation.NavigationGoRoutesActivity" />
         <activity android:name=".view.goods.GoodsInfoDetailActivity" />
