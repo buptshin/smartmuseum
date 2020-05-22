@@ -108,7 +108,13 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
         holder.rvBinding.exhibitionItemNameTv.setText(exhibition.getExhibition_name());
         holder.rvBinding.exhibitionItemStateTv.setText(exhibition.getExhibition_state());
         holder.rvBinding.exhibitionItemPassengersTv.setText(String.valueOf(exhibition.getExhibition_passenger_flow()) + "人次浏览过");
-        holder.rvBinding.exhibitionItemLikeIv.setImageResource(exhibition.getExhibition_like());
+
+        if (exhibition.getExhibition_like() == 1) {
+            holder.rvBinding.exhibitionItemLikeIv.setImageResource(R.mipmap.mainpage_exhibition_like_selected);
+        } else {
+            holder.rvBinding.exhibitionItemLikeIv.setImageResource(R.mipmap.mainpage_exhibition_like_not_selected);
+        }
+
         holder.rvBinding.exhibitionItemHallTv.setText(exhibition.getExhibition_hall());
         holder.rvBinding.exhibitionItemTimeTv.setText("平均停留时间为：" + exhibition.getExhibition_time() + "小时");
         if (globalVariables.getLocation_change() == 0) {
@@ -123,6 +129,22 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
             public void onClick(View view) {
                 Intent intent = new Intent(holder.getBinding().getRoot().getContext(), ExhibitionContentActivity.class);
                 holder.getBinding().getRoot().getContext().startActivity(intent);
+            }
+        });
+
+
+        holder.getBinding().exhibitionItemLikeBackgroundIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (exhibition.getExhibition_like() == 1) {
+                    holder.rvBinding.exhibitionItemLikeIv.setImageResource(R.mipmap.mainpage_exhibition_like_selected);
+                    exhibition.setExhibition_like(0);
+                    exhibition_list.set(position, exhibition);
+                } else {
+                    holder.rvBinding.exhibitionItemLikeIv.setImageResource(R.mipmap.mainpage_exhibition_like_not_selected);
+                    exhibition.setExhibition_like(1);
+                    exhibition_list.set(position, exhibition);
+                }
             }
         });
     }

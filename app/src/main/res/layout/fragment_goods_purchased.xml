@@ -15,7 +15,7 @@
             android:layout_height="match_parent"
             android:layout_marginStart="@dimen/goods_purchased_item_margin"
             android:layout_marginEnd="@dimen/goods_purchased_item_margin"
-            android:layout_marginTop="@dimen/goods_purchased_item_margin_2"
+            android:layout_marginBottom="@dimen/goods_purchased_item_margin"
             app:layout_constraintLeft_toRightOf="parent"
             app:layout_constraintRight_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="parent"

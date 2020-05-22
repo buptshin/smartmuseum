@@ -95,10 +95,10 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
     // 展览对象创建
     public void initLatestItemList(ArrayList<Exhibition> list) {
         Exhibition exhibition2 = new Exhibition("古代中国", R.drawable.mainpage_ancient_china, "基本陈列（常设）", 293993924,
-                R.mipmap.mainpage_exhibition_like_not_selected, "地下一层展厅", 3.5, 240);
+                0, "地下一层展厅", 3.5, 240);
 
         Exhibition exhibition1 = new Exhibition("回归之路", R.drawable.mainpage_return_road, "2019.9.17-11.27", 223904,
-                R.mipmap.mainpage_exhibition_like_selected, "北二，北三展厅", 1.5, 130);
+                1, "北二，北三展厅", 1.5, 130);
         list.add(exhibition1);
         list.add(exhibition2);
 
@@ -106,10 +106,10 @@ public class ExploreExhibitionFragment extends Fragment implements ViewChainedBi
 
     public void initRecommendedItemList(ArrayList<Exhibition> list) {
         Exhibition exhibition1 = new Exhibition("古代中国", R.drawable.mainpage_ancient_china, "基本陈列（常设）", 293993924,
-                R.mipmap.mainpage_exhibition_like_not_selected, "地下一层展厅", 3.5, 240);
+                0, "地下一层展厅", 3.5, 240);
         list.add(exhibition1);
         Exhibition exhibition2 = new Exhibition("回归之路", R.drawable.mainpage_return_road, "2019.9.17-11.27", 223904,
-                R.mipmap.mainpage_exhibition_like_selected, "北二，北三展厅", 1.5, 130);
+                1, "北二，北三展厅", 1.5, 130);
         list.add(exhibition2);
     }
 

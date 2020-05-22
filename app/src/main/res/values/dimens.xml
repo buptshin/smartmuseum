@@ -258,6 +258,9 @@
     <dimen name="settings_item_tv">20sp</dimen>
     <dimen name="settings_setted_language_tv">16sp</dimen>
     <dimen name="settings_logout_btn">20sp</dimen>
+
+    <!-- guide !-->
+    <dimen name="guide_image_notsignin_text">16sp</dimen>
     
     <!--MainPage-Drawer-->
     <dimen name="mainpage_drawer_username_tv">24sp</dimen>

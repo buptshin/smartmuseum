@@ -13,7 +13,7 @@
         android:id="@+id/goods_purchased_goods_layout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/goods_purchased_item_card_height"
-        android:layout_marginBottom="@dimen/goods_purchased_item_margin"
+        android:layout_marginTop="@dimen/goods_purchased_item_margin_2"
         android:background="@drawable/goods_purchased_card_background">
 
         <ImageView
