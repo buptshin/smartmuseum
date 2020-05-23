@@ -8,7 +8,6 @@
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/exhibition_inner_collection_cl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".view.exhibition.ExhibitionInnerCollectionFragment">
@@ -104,119 +103,122 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.86" />
 
-        <ImageView
-            android:id="@+id/imageView16"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:src="@mipmap/exhibition_inner_collection_position"
-            app:layout_constraintBottom_toTopOf="@+id/guideline57"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.045"
-            app:layout_constraintStart_toStartOf="@+id/guideline58"
-            app:layout_constraintTop_toTopOf="@+id/guideline56"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.055" />
-
-        <TextView
-            android:id="@+id/exhibition_inner_collection_position_hint_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exhibition_inner_collection_position_hint_tv"
-            android:textColor="#000521"
-            android:textSize="@dimen/exhibition_inner_collection_position_hint_tv"
-            app:layout_constraintBottom_toTopOf="@+id/guideline57"
-            app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_concrete_position_tv"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/imageView16"
-            app:layout_constraintTop_toTopOf="@+id/guideline56"
-            tools:text="您现在的位置是" />
-
-        <TextView
-            android:id="@+id/exhibition_inner_collection_concrete_position_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exhibition_inner_collection_concrete_position_tv"
-            android:textColor="#842D29"
-            android:textSize="@dimen/exhibition_inner_collection_concrete_position_tv"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/exhibition_inner_collection_position_hint_tv"
-            app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_heatmap_img"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_position_hint_tv"
-            tools:text="北1展厅 - 复兴之路" />
-
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_heatmap_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:clickable="true"
-            android:src="@mipmap/exhibition_inner_collection_heatmap_unchecked"
             app:layout_constraintBottom_toTopOf="@+id/guideline57"
             app:layout_constraintEnd_toStartOf="@+id/guideline59"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.045"
-            app:layout_constraintTop_toTopOf="@+id/guideline56"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.065" />
-
-        <TextView
-            android:id="@+id/exhibition_inner_collection_change_hint_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exhibition_inner_collection_change_hint_tv"
-            android:textColor="#8D92A3"
-            android:textSize="@dimen/exhibition_inner_collection_change_hint_tv"
-            app:layout_constraintBottom_toTopOf="@+id/guideline60"
-            app:layout_constraintEnd_toStartOf="@+id/guideline59"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/guideline58"
-            app:layout_constraintTop_toTopOf="@+id/guideline57"
-            tools:text="缩放" />
+            app:layout_constraintTop_toTopOf="@+id/guideline56">
 
-        <SeekBar
-            android:id="@+id/exhibition_inner_collection_seekbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:max="9"
-            android:maxHeight="3dp"
-            android:minHeight="3dp"
-            android:progress="3"
-            android:progressDrawable="@drawable/exhibition_inner_collector_seekbar_style"
-            android:thumb="@drawable/exhibition_inner_collector_seekbar_thumb"
-            app:layout_constraintBottom_toTopOf="@+id/guideline60"
-            app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_expand_btn"
-            app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_small_img"
-            app:layout_constraintTop_toTopOf="@+id/guideline57" />
+            <TextView
+                android:id="@+id/exhibition_inner_collection_concrete_position_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exhibition_inner_collection_concrete_position_tv"
+                android:textColor="#842D29"
+                android:textSize="@dimen/exhibition_inner_collection_concrete_position_tv"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/exhibition_inner_collection_position_hint_tv"
+                app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_heatmap_img"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_position_hint_tv"
+                tools:text="北1展厅 - 复兴之路" />
 
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_small_img"
-            android:layout_width="0dp"
-            android:layout_height="24dp"
-            android:layout_marginLeft="10dp"
-            android:clickable="true"
-            android:src="@mipmap/exhibition_inner_collection_smaller_btn"
-            app:layout_constraintBottom_toTopOf="@+id/guideline60"
-            app:layout_constraintHeight_percent="0.032"
-            app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_change_hint_tv"
-            app:layout_constraintTop_toTopOf="@+id/guideline57"
-            app:layout_constraintVertical_bias="0.5"
-            app:layout_constraintWidth_percent="0.058" />
+            <ImageView
+                android:id="@+id/imageView16"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/exhibition_inner_collection_position"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_position_hint_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_expand_btn"
+            <TextView
+                android:id="@+id/exhibition_inner_collection_position_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exhibition_inner_collection_position_hint_tv"
+                android:textColor="#000521"
+                android:textSize="@dimen/exhibition_inner_collection_position_hint_tv"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+                app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_concrete_position_tv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView16"
+                tools:text="您现在的位置是" />
+
+            <ImageView
+                android:id="@+id/exhibition_inner_collection_heatmap_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:clickable="true"
+                android:src="@mipmap/exhibition_inner_collection_heatmap_unchecked"
+                app:layout_constraintBottom_toBottomOf="@+id/exhibition_inner_collection_concrete_position_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_concrete_position_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:clickable="true"
-            android:src="@mipmap/exhibition_inner_collection_expand_btn"
             app:layout_constraintBottom_toTopOf="@+id/guideline60"
             app:layout_constraintEnd_toStartOf="@+id/guideline61"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.032"
-            app:layout_constraintTop_toTopOf="@+id/guideline57"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.058" />
+            app:layout_constraintStart_toStartOf="@+id/guideline58"
+            app:layout_constraintTop_toTopOf="@+id/guideline57">
+
+            <TextView
+                android:id="@+id/exhibition_inner_collection_change_hint_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/exhibition_inner_collection_change_hint_tv"
+                android:textColor="#8D92A3"
+                android:textSize="@dimen/exhibition_inner_collection_change_hint_tv"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="缩放" />
+
+            <ImageView
+                android:id="@+id/exhibition_inner_collection_small_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="5dp"
+                android:clickable="true"
+                android:src="@mipmap/exhibition_inner_collection_smaller_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_change_hint_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/exhibition_inner_collection_expand_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:clickable="true"
+                android:src="@mipmap/exhibition_inner_collection_expand_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <SeekBar
+                android:id="@+id/exhibition_inner_collection_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:max="9"
+                android:maxHeight="3dp"
+                android:minHeight="3dp"
+                android:progress="3"
+                android:progressDrawable="@drawable/exhibition_inner_collector_seekbar_style"
+                android:thumb="@drawable/exhibition_inner_collector_seekbar_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/exhibition_inner_collection_expand_btn"
+                app:layout_constraintStart_toEndOf="@+id/exhibition_inner_collection_small_img"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline62"
@@ -225,50 +227,58 @@
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.95" />
 
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_map"
+        <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:scaleType="matrix"
-            android:src="@drawable/exhibition_inner_collection_map"
-            android:visibility="visible"
+            android:layout_marginTop="15dp"
+            android:scrollbars="none"
             app:layout_constraintBottom_toTopOf="@+id/guideline64"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline60"
-            app:layout_constraintVertical_bias="0.13" />
+            app:layout_constraintEnd_toStartOf="@+id/guideline93"
+            app:layout_constraintStart_toStartOf="@+id/guideline92"
+            app:layout_constraintTop_toTopOf="@+id/guideline60">
 
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_locpoint"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/exhibition_inner_collector_loc_point"
-            app:layout_constraintBottom_toBottomOf="@+id/exhibition_inner_collection_map"
-            app:layout_constraintEnd_toEndOf="@+id/exhibition_inner_collection_map"
-            app:layout_constraintHorizontal_bias="0.558"
-            app:layout_constraintStart_toStartOf="@+id/exhibition_inner_collection_map"
-            app:layout_constraintTop_toTopOf="@+id/exhibition_inner_collection_map"
-            app:layout_constraintVertical_bias="0.376" />
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
-        <View
-            android:id="@+id/exhibition_inner_collection_check_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:alpha="0.1"
-            android:background="#785634"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/guideline64"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.06"
-            app:layout_constraintHorizontal_bias="0.582"
-            app:layout_constraintStart_toStartOf="@+id/guideline58"
-            app:layout_constraintTop_toTopOf="@+id/guideline60"
-            app:layout_constraintVertical_bias="0.271"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.11" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/exhibition_inner_collection_cl"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/exhibition_inner_collection_map"
+                        android:layout_width="600dp"
+                        android:layout_height="600dp"
+                        android:scaleType="matrix"
+                        android:src="@drawable/exhibition_inner_collection_map"
+                        android:visibility="visible"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/exhibition_inner_collection_locpoint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="204dp"
+                        android:layout_marginTop="176dp"
+                        android:src="@drawable/exhibition_inner_collector_loc_point"
+                        app:layout_constraintStart_toStartOf="@+id/exhibition_inner_collection_map"
+                        app:layout_constraintTop_toTopOf="@+id/exhibition_inner_collection_map" />
+
+                    <View
+                        android:id="@+id/exhibition_inner_collection_check_img"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="152dp"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+        </ScrollView>
 
         <ImageView
             android:id="@+id/exhibition_inner_collection_escape_img"
@@ -283,7 +293,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.9" />
+            app:layout_constraintGuide_percent="0.9015048" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
