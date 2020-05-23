@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateViewModelFactory;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,7 @@ import com.example.smartmuseum.adapter.FriendFragmentAccompanyAdapter;
 import com.example.smartmuseum.databinding.FragmentChooseFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
+import com.example.smartmuseum.viewmodel.AccompanyCountViewModel;
 import com.example.smartmuseum.viewmodel.AccompanyViewModel;
 
 import java.util.HashMap;
@@ -28,6 +30,7 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
 
     private FragmentChooseFriendsBinding fragmentChooseFriendBinding;
     private AccompanyViewModel accompanyViewModel;
+    private AccompanyCountViewModel accompanyCountViewModel;
 
     public static ChooseFriendsFragment getInstance(){
         ChooseFriendsFragment fragment = new ChooseFriendsFragment();
@@ -53,13 +56,16 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
 //        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
         fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         HashMap hashMap=new HashMap();
-        fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setAdapter(new FriendFragmentAccompanyAdapter(accompanyViewModel.getAccompanyList(hashMap).getValue()));
+        fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setAdapter(new FriendFragmentAccompanyAdapter(accompanyViewModel.getAccompanyList(hashMap).getValue(),accompanyCountViewModel));
         return this;
     }
 
     @Override
     public ChooseFriendsFragment bindData() {
         accompanyViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyViewModel.class);
+        accompanyCountViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyCountViewModel.class);
+        fragmentChooseFriendBinding.setData(accompanyCountViewModel);
+        Log.d("jjjjj","传参前："+accompanyCountViewModel.toString());
         return this;
     }
 

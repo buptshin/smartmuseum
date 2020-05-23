@@ -150,7 +150,7 @@ public class MainPageExploreFragment extends Fragment implements ViewChainedBind
                     DrawerLayout drawerLayout = (DrawerLayout)mainpageExploreNewBinding.getRoot().getRootView().findViewById(R.id.mainpage_drawer);
                     drawerLayout.openDrawer(GravityCompat.START);
                 }
-                return false;
+                return true;
             }
         });
         return this;

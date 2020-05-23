@@ -6,10 +6,12 @@ import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
@@ -28,15 +30,19 @@ import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.navigation.NavigationFirstAidFragment;
 import com.example.smartmuseum.view.navigation.NavigationNowFloorFragment;
+import com.example.smartmuseum.viewmodel.AccompanyCountViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PrimitiveIterator;
+
 
 public class MainActivity extends AppCompatActivity implements ViewChainedBinding {
 
     private ActivityMainBinding mBinding;
     private List<Fragment> fragments;
+    private AccompanyCountViewModel accompanyCountViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +52,16 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
 
     @Override
     public MainActivity bindData() {
+        mBinding = DataBindingUtil.setContentView(MainActivity.this, R.layout.activity_main);
+
+        accompanyCountViewModel = new ViewModelProvider(MainActivity.this).get(AccompanyCountViewModel.class);
+        mBinding.setData(accompanyCountViewModel);
+        mBinding.setLifecycleOwner(this);
         return this;
     }
 
     @Override
     public MainActivity bindView() {
-        mBinding = DataBindingUtil.setContentView(MainActivity.this, R.layout.activity_main);
 
         //状态栏字体设为黑色
         ScreenUtil.fullScreen(MainActivity.this);
@@ -105,6 +115,12 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
             mBinding.mainpageNoscrollviewpager.setCurrentItem(6,false);
             mBinding.mainpageBottomnavigationview.setSelectedItemId(R.id.mainpage_navigation_navigation_item);
         }
+        mBinding.mainpageDrawerExitBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mBinding.mainpageDrawer.closeDrawer(GravityCompat.START);
+            }
+        });
         //设置底部导航栏点击事件
         mBinding.mainpageBottomnavigationview.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             private int previousPosition = -1;
