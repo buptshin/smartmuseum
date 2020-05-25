@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="data"
+            type="com.example.smartmuseum.viewmodel.AccompanyCountViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@string/friend_choose_friends_my_accompany"
+            android:text="@{@string/friend_choose_friends_my_accompany(data.account)}"
             android:textColor="#8D92A3"
             android:textSize="@dimen/friend_choose_friends_my_accompany"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"

@@ -1,5 +1,6 @@
 package com.example.smartmuseum.adapter;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.example.smartmuseum.databinding.FriendItemAccompanyBinding;
 import com.example.smartmuseum.model.Accompany;
 import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
+import com.example.smartmuseum.viewmodel.AccompanyCountViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.List;
@@ -21,9 +23,11 @@ import java.util.List;
 public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendFragmentAccompanyAdapter.AccompanyViewHolder> {
 
     private List<Accompany> mList;
+    private AccompanyCountViewModel accompanyCountViewModel;
 
-    public FriendFragmentAccompanyAdapter(List<Accompany> mList) {
+    public FriendFragmentAccompanyAdapter(List<Accompany> mList,AccompanyCountViewModel accompanyCountViewModel) {
         this.mList = mList;
+        this.accompanyCountViewModel = accompanyCountViewModel;
     }
 
     @NonNull
@@ -60,6 +64,7 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
         holder.getBinding().friendChooseFriendsItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                accompanyCountViewModel.addAccompany(1);
                 // 如果当前item下的同伴正在博物馆且没有添加，就可以进行添加的操作
                 if(!accompany.getAdded()&&accompany.getInMuseum()){
                     accompany.setAdded(true);

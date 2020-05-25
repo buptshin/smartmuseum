@@ -80,8 +80,8 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
             @Override
             public void onGlobalLayout() {
                 // 保存一份定位点的原始位置
-                imgX = mBinding.exhibitionInnerCollectionLocpoint.getX()-mBinding.exhibitionInnerCollectionMap.getX();
-                imgY = mBinding.exhibitionInnerCollectionLocpoint.getY()-mBinding.exhibitionInnerCollectionMap.getY();
+                imgX = mBinding.exhibitionInnerCollectionLocpoint.getX();
+                imgY = mBinding.exhibitionInnerCollectionLocpoint.getY();
 
                 // 绘制出定位点周围的渲染
                 float x = mBinding.exhibitionInnerCollectionLocpoint.getX()+(float)mBinding.exhibitionInnerCollectionLocpoint.getWidth()/2;
@@ -160,8 +160,8 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                         curMatrix.mapPoints(dstCoordsLoc,new float[]{tx,ty});
 
                         // 改变定位点和周围的渲染的位置
-                        ObjectAnimator obLocY = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationY",mBinding.exhibitionInnerCollectionLocpoint.getY()-(imgY+mBinding.exhibitionInnerCollectionMap.getY())+dstCoordsLoc[1]-ty);
-                        ObjectAnimator obLocX = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationX",mBinding.exhibitionInnerCollectionLocpoint.getX()-(imgX+mBinding.exhibitionInnerCollectionMap.getX())+dstCoordsLoc[0]-tx);
+                        ObjectAnimator obLocY = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationY",mBinding.exhibitionInnerCollectionLocpoint.getY()-imgY+dstCoordsLoc[1]-ty);
+                        ObjectAnimator obLocX = ObjectAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint,"translationX",mBinding.exhibitionInnerCollectionLocpoint.getX()-imgX+dstCoordsLoc[0]-tx);
                         ObjectAnimator obLocY1 = ObjectAnimator.ofFloat(iv,"translationY",iv.getY()+dstCoordsLoc[1]-ty);
                         ObjectAnimator obLocX1 = ObjectAnimator.ofFloat(iv,"translationX",iv.getX()+dstCoordsLoc[0]-tx);
                         AnimatorSet newLocPoint = new AnimatorSet();
@@ -174,7 +174,7 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                                 super.onAnimationEnd(animation);
                                 // 移动定位点(这里换用ValueAnimator是因为在移动的过程中，定位点周围的渲染的位置不好确定，采用ValueAnimator可以直接赋值，保持定位点和渲染的相对位置不变)
                                 ValueAnimator locMove = ValueAnimator.ofFloat(mBinding.exhibitionInnerCollectionLocpoint.getY(),
-                                        mBinding.exhibitionInnerCollectionLocpoint.getY()-mBinding.exhibitionInnerCollectionMap.getY()+200);
+                                        mBinding.exhibitionInnerCollectionLocpoint.getY()-680);
                                 locMove.setDuration(5000);   // 模拟参观人员的实际走动时间
                                 locMove.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                                     @Override

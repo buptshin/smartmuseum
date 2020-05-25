@@ -218,8 +218,8 @@
             android:text="@string/register_gender_tv"
             android:textColor="@color/register_nickname_with_name_with_gender_tv"
             android:textSize="@dimen/register_nickname_with_name_with_gender_tv"
-            app:layout_constraintBottom_toTopOf="@+id/register_gender_male_img"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
+            app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+            app:layout_constraintStart_toStartOf="@+id/radioGroup"
             app:layout_constraintTop_toTopOf="@+id/guideline37"
             tools:text="性别" />
 
@@ -281,37 +281,33 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline39"
             app:layout_constraintEnd_toStartOf="@+id/guideline27"
             app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toBottomOf="@+id/register_gender_male_img" />
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
-        <ImageView
-            android:id="@+id/register_gender_female_img"
+        <RadioGroup
+            android:id="@+id/radioGroup"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:clickable="true"
-            android:src="@mipmap/register_female_checked"
-            app:layout_constraintBottom_toBottomOf="@+id/register_gender_male_img"
-            app:layout_constraintEnd_toStartOf="@+id/guideline27"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.04"
-            app:layout_constraintHorizontal_bias="0.06"
-            app:layout_constraintStart_toEndOf="@+id/register_gender_male_img"
-            app:layout_constraintTop_toTopOf="@+id/register_gender_male_img"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.051" />
-
-        <ImageView
-            android:id="@+id/register_gender_male_img"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:clickable="true"
-            android:src="@mipmap/register_male_unchecked"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             app:layout_constraintBottom_toTopOf="@+id/view17"
-            app:layout_constraintHeight_default="percent"
-            app:layout_constraintHeight_percent="0.04"
-            app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toBottomOf="@+id/register_gender_tv"
-            app:layout_constraintWidth_default="percent"
-            app:layout_constraintWidth_percent="0.051" />
+            app:layout_constraintStart_toStartOf="@+id/view17"
+            app:layout_constraintTop_toBottomOf="@+id/register_gender_tv">
+
+            <RadioButton
+                android:id="@+id/reigster_male_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/register_male_selector" />
+
+            <RadioButton
+                android:id="@+id/reigster_female_rb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/register_female_selector" />
+        </RadioGroup>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

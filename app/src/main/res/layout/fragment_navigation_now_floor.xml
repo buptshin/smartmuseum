@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
@@ -198,18 +199,32 @@
                 android:onClick="@{()->data.addZoomValue()}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
         <HorizontalScrollView
-            android:layout_width="match_parent"
-            android:layout_height="1500dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginTop="15dp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_zoom_cl">
-            <ImageView
-                android:id="@+id/mainpage_navigation_location_map_iv"
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:scaleType="matrix"
-                android:src="@drawable/mainpage_navigation_floor_map"/>
+                tools:layout_editor_absoluteY="35dp">
+
+                <ImageView
+                    android:id="@+id/mainpage_navigation_location_map_iv"
+                    android:layout_width="600dp"
+                    android:layout_height="600dp"
+                    android:scaleType="matrix"
+                    android:src="@drawable/mainpage_navigation_floor_map"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </HorizontalScrollView>
 

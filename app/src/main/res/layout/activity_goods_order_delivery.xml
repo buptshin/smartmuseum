@@ -21,7 +21,6 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/goods_order_delivery_cl"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -111,26 +110,49 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <ImageView
-                    android:id="@+id/goods_order_delivery_map_img"
+                <HorizontalScrollView
+                    android:id="@+id/goods_order_delivery_scrollview"
                     android:layout_width="0dp"
-                    android:layout_height="@dimen/goods_order_delivery_map_height"
-                    android:scaleType="matrix"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintRight_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_info_layout"
-                    app:srcCompat="@drawable/goods_order_delivery_map" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_people_info_layout">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/goods_order_delivery_cl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/goods_order_delivery_map_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/goods_order_delivery_map_height"
+                            android:scaleType="matrix"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/goods_order_delivery_map" />
+
+                        <ImageView
+                            android:id="@+id/goods_order_delivery_car_loc_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="268dp"
+                            android:layout_marginTop="180dp"
+                            app:layout_constraintStart_toStartOf="@+id/goods_order_delivery_map_img"
+                            app:layout_constraintTop_toTopOf="@+id/goods_order_delivery_map_img"
+                            app:srcCompat="@mipmap/goods_order_delivery_car_loc_img" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </HorizontalScrollView>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/goods_order_delivery_time_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/goods_order_delivery_time_layout_margin_start"
+                    android:layout_marginLeft="40dp"
                     android:layout_marginTop="@dimen/goods_order_delivery_time_layout_margin_top"
-                    android:layout_marginEnd="@dimen/goods_order_delivery_time_layout_margin_start"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_map_img">
+                    app:layout_constraintTop_toBottomOf="@id/goods_order_delivery_scrollview">
 
                     <ImageView
                         android:id="@+id/goods_order_delivery_car_img"
@@ -207,17 +229,6 @@
                         app:layout_constraintTop_toBottomOf="@+id/goods_order_delivery_delivery_card_layout" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <ImageView
-                    android:id="@+id/goods_order_delivery_car_loc_point"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="170dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/goods_order_delivery_map_img"
-                    app:layout_constraintEnd_toEndOf="@+id/goods_order_delivery_map_img"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/goods_order_delivery_map_img"
-                    app:srcCompat="@mipmap/goods_order_delivery_car_loc_img" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>

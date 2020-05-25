@@ -188,7 +188,7 @@
     <string name="background1">white1</string>
     <string name="friend_choose_friends">添加个人伙伴</string>
     <string name="friend_choose_friends_search">搜索</string>
-    <string name="friend_choose_friends_my_accompany">已添加1位同行伙伴</string>
+    <string name="friend_choose_friends_my_accompany">已添加%d位同行伙伴</string>
     <string name="firend_choose_friends_item_accompany_count">曾同行过%d次</string>
     <string name="friend_choose_friends_item_inMuseum">国家博物馆参观中</string>
     <string name="friend_choose_friends_item_not_inMuseum">离线</string>
