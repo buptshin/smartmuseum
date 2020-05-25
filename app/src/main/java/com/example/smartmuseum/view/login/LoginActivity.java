@@ -18,6 +18,7 @@ import com.example.smartmuseum.view.register.RegisterActivity;
 public class LoginActivity extends AppCompatActivity implements ViewChainedBinding {
 
     private ActivityLoginBinding mBinding;
+    private boolean hidePwd = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,19 @@ public class LoginActivity extends AppCompatActivity implements ViewChainedBindi
         mBinding.loginToForgetpwdTv.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, ForgetPwdActivity.class);
             startActivity(intent);
+        });
+
+        // 密码的显示与隐藏
+        mBinding.loginPasswordPreviewImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hidePwd = !hidePwd;
+                if(!hidePwd){
+                    mBinding.loginPasswordPreviewImg.setImageResource(R.mipmap.login_password_hide);
+                }else {
+                    mBinding.loginPasswordPreviewImg.setImageResource(R.mipmap.login_password_preview);
+                }
+            }
         });
         return this;
     }

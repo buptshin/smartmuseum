@@ -24,6 +24,8 @@ import com.example.smartmuseum.view.login.LoginActivity;
 public class RegisterStepOneFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentRegisterStepOneBinding mBinding;
+    private boolean hidePwd = true;
+    private boolean hideAssure = true;
 
     public RegisterStepOneFragment() {
         // Required empty public constructor
@@ -70,6 +72,32 @@ public class RegisterStepOneFragment extends Fragment implements ViewChainedBind
             public void onClick(View v) {
                 NavController controller = Navigation.findNavController(v);
                 controller.navigate(R.id.action_registerStepOneFragment_to_registerStepTwoFragment);
+            }
+        });
+
+        // 输入密码的显示与隐藏
+        mBinding.registerPasswordPreviewImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hidePwd = !hidePwd;
+                if(!hidePwd){
+                    mBinding.registerPasswordPreviewImg.setImageResource(R.mipmap.login_password_hide);
+                }else {
+                    mBinding.registerPasswordPreviewImg.setImageResource(R.mipmap.login_password_preview);
+                }
+            }
+        });
+
+        // 确认密码的显示与隐藏
+        mBinding.registerAssurePwdPreviewImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hideAssure = !hideAssure;
+                if(!hideAssure){
+                    mBinding.registerAssurePwdPreviewImg.setImageResource(R.mipmap.login_password_hide);
+                }else {
+                    mBinding.registerAssurePwdPreviewImg.setImageResource(R.mipmap.login_password_preview);
+                }
             }
         });
         return this;
