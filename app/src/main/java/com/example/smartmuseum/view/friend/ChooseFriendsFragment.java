@@ -65,7 +65,6 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
         accompanyViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyViewModel.class);
         accompanyCountViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyCountViewModel.class);
         fragmentChooseFriendBinding.setData(accompanyCountViewModel);
-        Log.d("jjjjj","传参前："+accompanyCountViewModel.toString());
         return this;
     }
 
