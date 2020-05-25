@@ -227,7 +227,8 @@
                     <TextView
                         android:id="@+id/time_selected2"
                         android:layout_width="wrap_content"
-                        android:layout_height="23dp"
+                        android:layout_height="30dp"
+                        android:padding="5dp"
                         android:background="@drawable/friend_view_start_border"
                         android:gravity="center"
                         android:text="12:30-14:00"

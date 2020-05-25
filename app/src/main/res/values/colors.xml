@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#FFFFFF</color>
-    <color name="colorAccent">#FFFFFF</color>
+    <color name="colorAccent">#8D92A3</color>
 
     <!--StartPage-->
     <color name="startpage_one_order_tv">#FFFFFF</color>

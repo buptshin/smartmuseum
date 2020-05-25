@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentNavigationFirstAidBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 public class NavigationFirstAidFragment extends Fragment implements ViewChainedBinding {
 
@@ -64,6 +65,15 @@ public class NavigationFirstAidFragment extends Fragment implements ViewChainedB
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), ConfirmHelpActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        mBinding.mainpageNavigationFirstaidNowLocationIv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View parent = mBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(1,false);
             }
         });
 
