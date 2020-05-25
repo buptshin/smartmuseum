@@ -71,7 +71,6 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
     public RouteCommendInfoActivity bindView() {
         //状态栏字体设为黑色
         ScreenUtil.setAndroidNativeLightStatusBar(RouteCommendInfoActivity.this, true);
-        setDialog();
         return this;
     }
 
@@ -113,7 +112,7 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
             }
         });
 
-        //悬浮按钮打开浮窗
+        //悬浮按钮点击打开浮窗
         mBinding.routeCommendDragFloatButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -130,6 +129,15 @@ public class RouteCommendInfoActivity extends AppCompatActivity implements ViewC
                 } else {
                     mBinding.routeCommendPopupwindowSomethingLayout.setVisibility(View.VISIBLE);
                 }
+            }
+        });
+
+        //悬浮按钮长按打开弹窗
+        mBinding.routeCommendDragFloatButton.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+                setDialog();
+                return false;
             }
         });
 

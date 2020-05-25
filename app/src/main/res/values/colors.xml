@@ -234,5 +234,8 @@
     <color name="mainpage_drawer_position_tv">#000000</color>
     <color name="mainpage_drawer_btn">#FFFFFF</color>
 
+    <!-- guide !-->
+    <color name="guide_image_notsignin_background_color">#99000000</color>
+    <color name="guide_image_notsignin_text_color">#FFFFFF</color>
 
 </resources>
