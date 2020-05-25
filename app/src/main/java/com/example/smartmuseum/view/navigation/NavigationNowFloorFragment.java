@@ -112,8 +112,6 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
 
                 }else if (flagModel.getZoomValue().getValue().equals(0)){
                     mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_middle);
-                    Toast.makeText(getContext(),"0zoom:"+flagModel.getZoomValue().getValue()+
-                            " isZoom:" + isZoom,Toast.LENGTH_SHORT).show();
                     if (isZoom){
                         isZoom = false;
                         // 缩小地图
