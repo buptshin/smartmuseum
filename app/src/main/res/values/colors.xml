@@ -97,6 +97,12 @@
     <color name="in_helping_white">#FFFFFF</color>
     <color name="in_helping_black">#000000</color>
 
+    <!--exhibits details-->
+    <color name="exhibits_details_black">#000000</color>
+    <color name="exhibits_details_white">#FFFFFF</color>
+    <color name="exhibits_details_black_word">#000521</color>
+    <color name="exhibits_details_gray">#E2E3E4</color>
+
     <!-- Goods !-->
     <color name="mainpage_goods_sell_background">#FFFFFF</color>
     <color name="mainpage_goods_sell_commend_black">#000521</color>

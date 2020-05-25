@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -29,7 +30,7 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
     //标记当前fragment是否已绑定xml文件
     protected boolean isCreated = false;
 
-    private NavigationFlagModel flagModel;
+    public NavigationFlagModel flagModel;
 
     Matrix normalMatrix;
 
@@ -56,7 +57,29 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
         flagModel = new NavigationFlagModel();
         mBinding.setData(flagModel);
         mBinding.setLifecycleOwner(this);
+        View v = mBinding.getRoot();
+        // 标记当前fragment是否已绑定xml文件
+        isCreated = true;
 
+        this.bindData().bindView().bindEvent();
+        return v;
+    }
+
+
+    @Override
+    public NavigationNowFloorFragment bindView() {
+        return this;
+    }
+
+    @Override
+    public NavigationNowFloorFragment bindData() {
+        // 保存一份地图矩阵的原始矩阵
+        normalMatrix = mBinding.mainpageNavigationLocationMapIv.getImageMatrix();
+        return this;
+    }
+
+    @Override
+    public NavigationNowFloorFragment bindEvent() {
         //监听是否打开筛选
         flagModel.getIsGreen().observe(getViewLifecycleOwner(), new Observer<Boolean>() {
             @Override
@@ -83,17 +106,21 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
                     View parent = mBinding.getRoot().getRootView();
                     NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
                     noScrollViewPager.setCurrentItem(1,false);
+                    flagModel.getZoomValue().setValue(0);
+                    flagModel.getIsGreen().setValue(false);
+                    isZoom = false;
 
                 }else if (flagModel.getZoomValue().getValue().equals(0)){
                     mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_middle);
+                    Toast.makeText(getContext(),"0zoom:"+flagModel.getZoomValue().getValue()+
+                            " isZoom:" + isZoom,Toast.LENGTH_SHORT).show();
                     if (isZoom){
+                        isZoom = false;
                         // 缩小地图
                         Matrix matrix = normalMatrix;
-                        Matrix changeMatrix = new Matrix();
-                        changeMatrix.postScale((float)0.625,(float)0.625); // 用于变换坐标点的矩阵
                         matrix.postScale((float)0.625,(float)0.625);  // 用于地图缩放的矩阵
                         mBinding.mainpageNavigationLocationMapIv.setImageMatrix(matrix);
-                        isZoom = false;
+
                     }else {
                         if (flagModel.getIsGreen().getValue().equals(false)){
                             //正常大小、无筛的地图
@@ -104,9 +131,9 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
                         }
                     }
                 }else if (flagModel.getZoomValue().getValue().equals(1)){
+                    mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_high);
                     //防止是从展厅地图跳转过来，引起二次放大
                     if (!isZoom){
-                        mBinding.mainpageNavigationProcessIv.setImageResource(R.mipmap.mainpage_navigation_progressbar_high);
                         //放大地图
                         // 保存一份地图矩阵的原始矩阵
                         Matrix matrix = normalMatrix;
@@ -114,38 +141,14 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
                         mBinding.mainpageNavigationLocationMapIv.setImageMatrix(matrix);
                         isZoom = true;
                     }
-
-
                 }else if (flagModel.getZoomValue().getValue().equals(2)){
+                    //跳转到展厅界面
                     View parent = mBinding.getRoot().getRootView();
                     NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
                     noScrollViewPager.setCurrentItem(6,false);
                 }
             }
         });
-        View v = mBinding.getRoot();
-        // 标记当前fragment是否已绑定xml文件
-        isCreated = true;
-
-        this.bindData().bindView().bindEvent();
-        return v;
-    }
-
-
-    @Override
-    public NavigationNowFloorFragment bindView() {
-        return this;
-    }
-
-    @Override
-    public NavigationNowFloorFragment bindData() {
-        // 保存一份地图矩阵的原始矩阵
-        normalMatrix = mBinding.mainpageNavigationLocationMapIv.getImageMatrix();
-        return this;
-    }
-
-    @Override
-    public NavigationNowFloorFragment bindEvent() {
 
         //搜索按钮
         mBinding.mainpageNavigationSearchIv.setOnClickListener(new View.OnClickListener() {
@@ -180,6 +183,12 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
         }
 
         if (isVisibleToUser) {
+
+            isZoom = false;
+
+            flagModel.getZoomValue().setValue(0);
+            flagModel.getIsGreen().setValue(false);
+
         }
     }
 

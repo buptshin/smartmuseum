@@ -9,17 +9,14 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.NavigationSearchRecordAdapter;
 import com.example.smartmuseum.databinding.ActivityNavigationSearchBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
-import com.example.smartmuseum.model.NavigationFlagModel;
 import com.example.smartmuseum.model.SearchRecord;
 import com.example.smartmuseum.model.SearchRecordModel;
 import com.example.smartmuseum.util.ScreenUtil;
-import com.example.smartmuseum.view.mainpage.MainActivity;
 
 import java.util.ArrayList;
 import java.util.List;
