@@ -6,9 +6,11 @@ import android.animation.AnimatorListenerAdapter;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.graphics.Matrix;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -27,6 +29,7 @@ import com.example.smartmuseum.databinding.FragmentExhibitionInnerCollectionBind
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.mainpage.MainPageNavigationFragment;
+import com.example.smartmuseum.view.navigation.NavigationNowFloorFragment;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 import javax.xml.transform.sax.TemplatesHandler;
@@ -189,6 +192,15 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                                         super.onAnimationEnd(animation);
                                         GlobalVariables.location_change = 1;  // 全局变量，标识用户的位置已经改变
                                         View view = getActivity().getLayoutInflater().inflate(R.layout.exhibition_inner_collector_popwindow_view,null);
+                                        //弹框-了解更多 点击事件
+                                        LinearLayout moreCl = view.findViewById(R.id.exhibition_inner_collection_pw_more_ll);
+                                        moreCl.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                Intent intent = new Intent(getContext(),ExhibitsDetailsActivity.class);
+                                                startActivity(intent);
+                                            }
+                                        });
                                         view.measure(View.MeasureSpec.UNSPECIFIED,View.MeasureSpec.UNSPECIFIED);
                                         // 第四个参数是弹窗能否获得焦点
                                         popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT,true);
@@ -254,6 +266,16 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                     });
                     locSmaller.start();
                 }
+            }
+        });
+
+        //进入急救路线地图
+        mBinding.exhibitionInnerCollectionEscapeImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                View parent = mBinding.getRoot().getRootView();
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+                noScrollViewPager.setCurrentItem(7,false);
             }
         });
         return this;

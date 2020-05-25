@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+            <TextView
+                android:id="@+id/exhibits_details_ar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="    元代在大都、杭州等地设有官办玉器作坊，有从事玉雕制作的能工巧匠数千人，专向皇室提供宫廷用玉。民间玉器作坊也有很大发展，一般以制作装饰性玉器及小件玉器为主。元代玉器用料以和田白玉、青白玉为主，还有和田黄玉、墨玉、青玉、独山玉以及水晶、玛瑙、琥珀等。\n   
+
+    元代玉器在加工工艺上有多层镂雕、圆雕、高浮雕、浅浮雕等，均与阴线刻相结合。多层镂雕技法在元代可谓发挥到了极致，除了在平面上雕出双层图案外，还能在玉料上多层雕琢，起花多可达五、六层，层次分明，具有强烈的透视效果。元代玉器在工艺上较之宋、辽金时期，已渐趋粗犷，不拘小节，雕刻喜欢用深痕阴刻线，线条粗重，使纹饰起凸高，但线纹起止痕明显、线条不匀齐，常有失控的出锋痕迹，显得粗糙。元代也制作了一些仿古玉，在技法上不注重原汁原味，常以伪残和红色或黑色的提油来以假乱真。  "
+                android:textColor="@color/exhibits_details_black_word"
+                android:textSize="13sp"/>
+    </ScrollView>
+
+
+</LinearLayout>

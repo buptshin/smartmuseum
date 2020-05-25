@@ -11,9 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.navigation.InHelpingActivity"
+        <activity android:name=".view.exhibition.ExhibitsDetailsActivity"></activity>
+        <activity
+            android:name=".view.navigation.InHelpingActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/transcutestyle"></activity>
+            android:theme="@style/transcutestyle" />
         <activity
             android:name=".view.navigation.ConfirmHelpActivity"
             android:screenOrientation="portrait"

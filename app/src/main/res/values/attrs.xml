@@ -4,4 +4,9 @@
         <item>已购买</item>
         <item>文创商城</item>
     </string-array>
+    <string-array name="exhibitsDetailsViewPager">
+        <item>信息介绍</item>
+        <item>AR互动</item>
+        <item>评价</item>
+    </string-array>
 </resources>
