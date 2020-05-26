@@ -377,6 +377,62 @@
                     app:layout_constraintStart_toStartOf="@+id/guideline63"
                     app:layout_constraintTop_toTopOf="@+id/guideline70">
 
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.27" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.44" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        app:layout_constraintGuide_percent="0.82" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.1" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline80"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.42" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline82"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.61" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline105"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.75" />
+
                     <ImageView
                         android:id="@+id/mainpage_drawer_position_map"
                         android:layout_width="0dp"
@@ -391,43 +447,35 @@
                         android:id="@+id/mainpage_drawer_map_my_position"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="160dp"
-                        android:layout_marginTop="28dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline105"
+                        app:layout_constraintTop_toTopOf="@+id/guideline22"
                         app:srcCompat="@mipmap/drawer_friends_position_icon_0" />
 
                     <ImageView
                         android:id="@+id/mainpage_drawer_map_position_icon1"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="123dp"
-                        android:layout_marginTop="178dp"
                         android:visibility="@{data.account>=1?View.VISIBLE:View.GONE}"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline80"
+                        app:layout_constraintTop_toTopOf="@+id/guideline25"
                         app:srcCompat="@mipmap/drawer_friends_position_icon_1" />
 
                     <ImageView
                         android:id="@+id/mainpage_drawer_map_position_icon2"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="64dp"
-                        android:layout_marginTop="96dp"
                         android:visibility="@{data.account>=2?View.VISIBLE:View.GONE}"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline28"
+                        app:layout_constraintTop_toTopOf="@+id/guideline23"
                         app:srcCompat="@mipmap/drawer_friends_position_icon_2" />
 
                     <ImageView
                         android:id="@+id/mainpage_drawer_map_position_icon3"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
-                        android:layout_marginStart="163dp"
-                        android:layout_marginTop="320dp"
                         android:visibility="@{data.account>=3?View.VISIBLE:View.GONE}"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline82"
+                        app:layout_constraintTop_toTopOf="@+id/guideline26"
                         app:srcCompat="@mipmap/drawer_friends_position_icon_3" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

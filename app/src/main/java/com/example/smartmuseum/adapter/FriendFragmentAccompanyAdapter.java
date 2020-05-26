@@ -4,6 +4,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.databinding.DataBindingUtil;
@@ -14,6 +15,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FriendItemAccompanyBinding;
 import com.example.smartmuseum.model.Accompany;
 import com.example.smartmuseum.view.GlobalVariables;
+import com.example.smartmuseum.view.mainpage.MainActivity;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 import com.example.smartmuseum.viewmodel.AccompanyCountViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -64,9 +66,9 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
         holder.getBinding().friendChooseFriendsItemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                accompanyCountViewModel.addAccompany(1);
                 // 如果当前item下的同伴正在博物馆且没有添加，就可以进行添加的操作
                 if(!accompany.getAdded()&&accompany.getInMuseum()){
+                    accompanyCountViewModel.addAccompany(1);
                     accompany.setAdded(true);
                     // 跳转到MainActivity的“探索”界面，并默认打开侧滑栏
                     GlobalVariables.hasAcompany = true;
@@ -75,6 +77,15 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
                     BottomNavigationView navigationView = (BottomNavigationView)parent.findViewById(R.id.mainpage_bottomnavigationview);
                     navigationView.setSelectedItemId(navigationView.getMenu().getItem(0).getItemId());
                     noScrollViewPager.setCurrentItem(0,false);
+                    return;
+                }
+                // 对已经添加的取消添加
+                if(accompany.getAdded()&&accompany.getInMuseum()){
+                    accompanyCountViewModel.addAccompany(-1);
+                    accompany.setAdded(false);
+                    accompany.setAccompanyCount(accompany.getAccompanyCount()+1);
+//                    Toast toast = Toast.makeText(v.getContext(),"您已取消添加",Toast.LENGTH_SHORT);
+//                    toast.show();
                 }
             }
         });
