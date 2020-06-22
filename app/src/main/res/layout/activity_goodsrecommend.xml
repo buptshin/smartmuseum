@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="location"
+            type="com.example.smartmuseum.model.Location" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -62,7 +65,8 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintLeft_toRightOf="@+id/mainpage_goods_sell_commend_nowloacation_show_text"
                         android:textColor="@color/mainpage_goods_sell_commend_brown"
-                        android:text="@string/mainpage_goods_commend_now_location"
+                        android:text="@{location.nowLocation}"
+                        tools:text="北1展厅"
                         android:textStyle="bold"
                         android:textSize="@dimen/mainpage_goods_recommend_newlocation_text"/>
 

@@ -1,6 +1,7 @@
 package com.example.smartmuseum.util.http;
 
 import com.example.smartmuseum.model.Goods;
+import com.example.smartmuseum.model.Location;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
@@ -23,8 +24,18 @@ public class HttpRequest {
         Observable<HttpResult<Goods>> testForPost(@Url String url, @Body RequestBody route);
         @POST
         Observable<HttpResult<Goods>> testForPost2(@Url String url, @Header("token") String token, @Body RequestBody route);
-        @GET("getGoodsInfo")
+        @GET("goods/getGoodsInfo")
         Observable<HttpResult<List<Goods>>> testGet(@Header("token") String token, @Query("testId") String testId);
+    }
+
+    public interface GoodsService {
+        @GET("goods/getCommendGoodsInfo")
+        Observable<HttpResult<List<Goods>>> getCommendGoods(@Header("token") String token, @Query("goodsId") String goodsId);
+    }
+
+    public interface LoacationService {
+        @GET("location/getNowLocation")
+        Observable<HttpResult<Location>> getNowLocation(@Header("token") String token, @Query("nowloaction") String location);
     }
 
     public static class Get {
@@ -35,6 +46,38 @@ public class HttpRequest {
             String testId = map.get("testid");
 
             testService.testGet(token, testId)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+        }
+
+        /**
+         * 位置获取
+         */
+        //获取推荐的文创商品
+        public static void getNowLocation(Observer<HttpResult<Location>> observer, HashMap<String, String> map) {
+            LoacationService loacationService = RetrofitWrapper.getInstance().getRetrofit().create(LoacationService.class);
+            String token = map.get("token");
+            String location = map.get("location");
+
+            loacationService.getNowLocation(token, location)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+        }
+
+        /**
+         * 文创商品
+         */
+        //获取推荐的文创商品
+        public static void getCommendGoods(Observer<HttpResult<List<Goods>>> observer, HashMap<String, String> map) {
+            GoodsService goodsService = RetrofitWrapper.getInstance().getRetrofit().create(GoodsService.class);
+            String token = map.get("token");
+            String goodsId = map.get("goodsId");
+
+            goodsService.getCommendGoods(token, goodsId)
                     .subscribeOn(Schedulers.io())
                     .unsubscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())

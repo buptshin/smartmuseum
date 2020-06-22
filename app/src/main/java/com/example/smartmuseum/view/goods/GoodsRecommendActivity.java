@@ -13,8 +13,10 @@ import com.example.smartmuseum.adapter.MainPageGoodsCommendAdapter;
 import com.example.smartmuseum.databinding.ActivityGoodsrecommendBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.Goods;
+import com.example.smartmuseum.model.Location;
 import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.viewmodel.GoodsViewModel;
+import com.example.smartmuseum.viewmodel.LocationViewModel;
 
 import java.util.HashMap;
 import java.util.List;
@@ -23,7 +25,9 @@ public class GoodsRecommendActivity extends AppCompatActivity implements ViewCha
 
     private ActivityGoodsrecommendBinding mBinding;
     private GoodsViewModel goodsViewModel;
+    private LocationViewModel locationViewModel;
     private List<Goods> goodsList;
+    private Location location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,15 +39,31 @@ public class GoodsRecommendActivity extends AppCompatActivity implements ViewCha
     public GoodsRecommendActivity bindData() {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_goodsrecommend);
         goodsViewModel = new ViewModelProvider(this).get(GoodsViewModel.class);
-        HashMap<String, String> map = new HashMap<>();
+        locationViewModel = new ViewModelProvider(this).get(LocationViewModel.class);
+
+        //获取当前位置
+        HashMap<String, String> locationMap = new HashMap<>();
+
         //Activity调用this, fragment调用getViewLifecycleOwner()
-        goodsViewModel.getCommendGoodsModelList(map).observe(this, models -> {
+        locationViewModel.getNowLocationModel(locationMap).observe(this, models -> {
+            location = models;
+            mBinding.setLocation(location);
+        });
+
+
+        //获取推荐商品
+        HashMap<String, String> goodsMap = new HashMap<>();
+        //Activity调用this, fragment调用getViewLifecycleOwner()
+        goodsViewModel.getCommendGoodsModelList(goodsMap).observe(this, models -> {
             goodsList = models;
             LinearLayoutManager ms = new LinearLayoutManager(this);
             ms.setOrientation(LinearLayoutManager.HORIZONTAL);
             mBinding.mainpageGoodsSellCommendRecyclerview.setLayoutManager(ms);
             mBinding.mainpageGoodsSellCommendRecyclerview.setAdapter(new MainPageGoodsCommendAdapter(goodsList));
         });
+
+
+
         return this;
     }
 
@@ -68,6 +88,7 @@ public class GoodsRecommendActivity extends AppCompatActivity implements ViewCha
             @Override
             public void onClick(View view) {
                 finish();
+
             }
         });
 
