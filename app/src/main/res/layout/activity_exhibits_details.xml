@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.exhibition.ExhibitsDetailsActivity">
+        tools:context=".view.navigation.exhibition.ExhibitsDetailsActivity">
         <ImageView
             android:id="@+id/exhibits_details_background_iv"
             android:layout_width="match_parent"

@@ -18,7 +18,7 @@ import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.ActivityMainBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.util.ScreenUtil;
-import com.example.smartmuseum.view.exhibition.ExhibitionInnerCollectionFragment;
+import com.example.smartmuseum.view.navigation.exhibition.ExhibitionInnerCollectionFragment;
 import com.example.smartmuseum.view.me.friend.FriendChooseFragment;
 import com.example.smartmuseum.view.me.friend.FriendIndexFragment;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;

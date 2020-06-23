@@ -1,4 +1,4 @@
-package com.example.smartmuseum.view.exhibition;
+package com.example.smartmuseum.view.navigation.exhibition;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;

@@ -1,4 +1,4 @@
-package com.example.smartmuseum.view.exhibition;
+package com.example.smartmuseum.view.navigation.exhibition;
 
 
 import android.animation.Animator;
@@ -10,10 +10,8 @@ import android.content.Intent;
 import android.graphics.Matrix;
 import android.os.Bundle;
 
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -28,11 +26,7 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentExhibitionInnerCollectionBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.GlobalVariables;
-import com.example.smartmuseum.view.mainpage.MainPageNavigationFragment;
-import com.example.smartmuseum.view.navigation.NavigationNowFloorFragment;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
-
-import javax.xml.transform.sax.TemplatesHandler;
 
 /**
  * A simple {@link Fragment} subclass.
