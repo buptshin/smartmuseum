@@ -1,6 +1,7 @@
 package com.example.smartmuseum.view.mainpage;
 
 import android.content.Intent;
+import android.icu.util.Freezable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +13,24 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 
 import com.example.smartmuseum.R;
+import com.example.smartmuseum.adapter.MyInfoFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.FragmentMainpageMyinfoBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.view.me.FieldGuideActivity;
+import com.example.smartmuseum.view.me.MeCatalogueFragment;
 import com.example.smartmuseum.view.me.MuseumInfoActivity;
+import com.example.smartmuseum.view.me.friend.FriendChooseFragment;
+import com.example.smartmuseum.view.me.friend.FriendIndexFragment;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
-import com.example.smartmuseum.view.settings.SettingsActivity;
+import com.example.smartmuseum.view.me.settings.SettingsActivity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainPageMyInfoFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentMainpageMyinfoBinding mBinding;
+    private List<Fragment> fragments;
 
 
     public static MainPageMyInfoFragment getInstance() {
@@ -44,39 +53,28 @@ public class MainPageMyInfoFragment extends Fragment implements ViewChainedBindi
 
     @Override
     public MainPageMyInfoFragment bindData() {
+        MeCatalogueFragment meCatalogueFragment = MeCatalogueFragment.getInstance();
+        FriendChooseFragment friendChooseFragment = FriendChooseFragment.getInstance();
+        FriendIndexFragment friendIndexFragment = FriendIndexFragment.getInstance();
+
+        fragments = new ArrayList<>();
+        fragments.add(meCatalogueFragment);
+        fragments.add(friendIndexFragment);
+        fragments.add(friendChooseFragment);
+
+        mBinding.mainpageMyinfoSv.setAdapter(new MyInfoFragmentPagerAdapter(getChildFragmentManager(),fragments));
+
         return this;
     }
 
     @Override
     public MainPageMyInfoFragment bindView() {
+        mBinding.mainpageMyinfoSv.setCurrentItem(0);  // 默认放置首页
         return this;
     }
 
     @Override
     public MainPageMyInfoFragment bindEvent() {
-        mBinding.infobutton.setOnClickListener(view -> {
-            Intent intent = new Intent(mBinding.getRoot().getContext(), MuseumInfoActivity.class);
-            startActivity(intent);
-        });
-        mBinding.fgButton.setOnClickListener(view -> {
-            Intent intent = new Intent(mBinding.getRoot().getContext(), FieldGuideActivity.class);
-            startActivity(intent);
-        });
-        mBinding.mainpageMyinfoFriendsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               View parent = mBinding.getRoot().getRootView();
-                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                noScrollViewPager.setCurrentItem(4,false);
-            }
-        });
-        mBinding.mainpageMyinfoSettingsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(mBinding.getRoot().getContext(), SettingsActivity.class);
-                startActivity(intent);
-            }
-        });
         return this;
     }
 }

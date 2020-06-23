@@ -1,11 +1,10 @@
-package com.example.smartmuseum.view.settings;
+package com.example.smartmuseum.view.me.settings;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.view.View;
 
 import com.example.smartmuseum.R;

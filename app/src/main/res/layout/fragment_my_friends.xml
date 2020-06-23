@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.friend.MyFriendsFragment">
+        tools:context=".view.me.friend.FriendIndexFragment">
 
         <View
             android:id="@+id/friend_my_firends_main_view"

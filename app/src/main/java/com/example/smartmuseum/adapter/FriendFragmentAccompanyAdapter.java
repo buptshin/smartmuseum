@@ -72,11 +72,11 @@ public class FriendFragmentAccompanyAdapter extends RecyclerView.Adapter<FriendF
                     accompany.setAdded(true);
                     // 跳转到MainActivity的“探索”界面，并默认打开侧滑栏
                     GlobalVariables.hasAcompany = true;
-                    View parent = holder.getBinding().getRoot().getRootView();
-                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                    BottomNavigationView navigationView = (BottomNavigationView)parent.findViewById(R.id.mainpage_bottomnavigationview);
-                    navigationView.setSelectedItemId(navigationView.getMenu().getItem(0).getItemId());
-                    noScrollViewPager.setCurrentItem(0,false);
+//                    View parent = holder.getBinding().getRoot().getRootView();
+//                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+//                    BottomNavigationView navigationView = (BottomNavigationView)parent.findViewById(R.id.mainpage_bottomnavigationview);
+//                    navigationView.setSelectedItemId(navigationView.getMenu().getItem(0).getItemId());
+//                    noScrollViewPager.setCurrentItem(0,false);
                     return;
                 }
                 // 对已经添加的取消添加

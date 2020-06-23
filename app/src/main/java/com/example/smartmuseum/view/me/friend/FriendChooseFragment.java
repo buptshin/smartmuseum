@@ -1,4 +1,4 @@
-package com.example.smartmuseum.view.friend;
+package com.example.smartmuseum.view.me.friend;
 
 
 import android.os.Bundle;
@@ -10,11 +10,9 @@ import androidx.lifecycle.SavedStateViewModelFactory;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.FriendFragmentAccompanyAdapter;
@@ -26,14 +24,14 @@ import com.example.smartmuseum.viewmodel.AccompanyViewModel;
 
 import java.util.HashMap;
 
-public class ChooseFriendsFragment extends Fragment implements ViewChainedBinding {
+public class FriendChooseFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentChooseFriendsBinding fragmentChooseFriendBinding;
     private AccompanyViewModel accompanyViewModel;
     private AccompanyCountViewModel accompanyCountViewModel;
 
-    public static ChooseFriendsFragment getInstance(){
-        ChooseFriendsFragment fragment = new ChooseFriendsFragment();
+    public static FriendChooseFragment getInstance(){
+        FriendChooseFragment fragment = new FriendChooseFragment();
         return fragment;
     }
 
@@ -52,7 +50,7 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
     }
 
     @Override
-    public ChooseFriendsFragment bindView() {
+    public FriendChooseFragment bindView() {
 //        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
         fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         HashMap hashMap=new HashMap();
@@ -61,7 +59,7 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
     }
 
     @Override
-    public ChooseFriendsFragment bindData() {
+    public FriendChooseFragment bindData() {
         accompanyViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyViewModel.class);
         accompanyCountViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyCountViewModel.class);
         fragmentChooseFriendBinding.setData(accompanyCountViewModel);
@@ -69,13 +67,20 @@ public class ChooseFriendsFragment extends Fragment implements ViewChainedBindin
     }
 
     @Override
-    public ChooseFriendsFragment bindEvent() {
+    public FriendChooseFragment bindEvent() {
         fragmentChooseFriendBinding.friendChooseFriendsBackImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 View parent = fragmentChooseFriendBinding.getRoot().getRootView();
-                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                noScrollViewPager.setCurrentItem(4,false);
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_myinfo_sv);
+                noScrollViewPager.setCurrentItem(1,false);
+            }
+        });
+
+        fragmentChooseFriendBinding.friendChooseFriendsStartBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 点击“立即开始按钮后，跳转到主页”
             }
         });
         return this;

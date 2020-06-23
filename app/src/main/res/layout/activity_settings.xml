@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:background="#F7F8FA"
         android:fitsSystemWindows="true"
-        tools:context=".view.settings.SettingsActivity">
+        tools:context=".view.me.settings.SettingsActivity">
 
         <TextView
             android:id="@+id/settings_lable_tv"

@@ -1,4 +1,4 @@
-package com.example.smartmuseum.view.friend;
+package com.example.smartmuseum.view.me.friend;
 
 
 import android.os.Bundle;
@@ -15,16 +15,15 @@ import android.view.ViewGroup;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentMyFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
-import com.example.smartmuseum.util.ScreenUtil;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
-public class MyFriendsFragment extends Fragment implements ViewChainedBinding<MyFriendsFragment> {
+public class FriendIndexFragment extends Fragment implements ViewChainedBinding<FriendIndexFragment> {
 
     private FragmentMyFriendsBinding fragmentMyFriendsBinding;
     private NoScrollViewPager noScrollViewPager;
 
-    public static MyFriendsFragment getInstance(){
-        MyFriendsFragment fragment = new MyFriendsFragment();
+    public static FriendIndexFragment getInstance(){
+        FriendIndexFragment fragment = new FriendIndexFragment();
         return fragment;
     }
 
@@ -44,31 +43,31 @@ public class MyFriendsFragment extends Fragment implements ViewChainedBinding<My
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         View parent = fragmentMyFriendsBinding.getRoot().getRootView();
-        noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
+        noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_myinfo_sv);
     }
 
     @Override
-    public MyFriendsFragment bindView() {
+    public FriendIndexFragment bindView() {
         return this;
     }
 
     @Override
-    public MyFriendsFragment bindData() {
+    public FriendIndexFragment bindData() {
         return this;
     }
 
     @Override
-    public MyFriendsFragment bindEvent() {
+    public FriendIndexFragment bindEvent() {
         fragmentMyFriendsBinding.friendMyFirendsPersonalStartTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                noScrollViewPager.setCurrentItem(5,false);
+                noScrollViewPager.setCurrentItem(2,false);
             }
         });
         fragmentMyFriendsBinding.friendMyFirendsCloseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                noScrollViewPager.setCurrentItem(3);
+                noScrollViewPager.setCurrentItem(0);
             }
         });
         return this;

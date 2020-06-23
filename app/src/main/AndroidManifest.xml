@@ -42,7 +42,7 @@
             android:launchMode="singleTask" />
         <activity android:name=".view.goods.GoodsOrderCheckActivity" />
         <activity
-            android:name=".view.settings.SettingsActivity"
+            android:name=".view.me.settings.SettingsActivity"
             android:theme="@style/SettingsTheme" />
         <activity android:name=".view.startpage.StartActivity">
             <intent-filter>

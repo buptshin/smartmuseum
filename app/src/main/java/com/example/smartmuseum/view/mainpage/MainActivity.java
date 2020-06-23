@@ -16,17 +16,11 @@ import android.view.View;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.MainPageFragmentPagerAdapter;
 import com.example.smartmuseum.databinding.ActivityMainBinding;
-import com.example.smartmuseum.databinding.FragmentForgetPwdResetBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.util.ScreenUtil;
-import com.example.smartmuseum.view.GlobalVariables;
 import com.example.smartmuseum.view.exhibition.ExhibitionInnerCollectionFragment;
-import com.example.smartmuseum.view.explore.ExploreActivityFragment;
-import com.example.smartmuseum.view.explore.ExploreBookVisitFragment;
-import com.example.smartmuseum.view.explore.ExploreRecommendRoute;
-import com.example.smartmuseum.view.friend.ChooseFriendsFragment;
-import com.example.smartmuseum.view.friend.MyFriendsFragment;
-import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
+import com.example.smartmuseum.view.me.friend.FriendChooseFragment;
+import com.example.smartmuseum.view.me.friend.FriendIndexFragment;
 import com.example.smartmuseum.view.goods.GoodsRecommendActivity;
 import com.example.smartmuseum.view.navigation.NavigationFirstAidFragment;
 import com.example.smartmuseum.view.navigation.NavigationNowFloorFragment;
@@ -35,7 +29,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PrimitiveIterator;
 
 
 public class MainActivity extends AppCompatActivity implements ViewChainedBinding {
@@ -77,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         Fragment mainPageGoodsFragment = MainPageGoodsFragment.getInstance();
         Fragment mainPageMyInfoFragment = MainPageMyInfoFragment.getInstance();
         //个人界面的两个fragment
-        Fragment myFriendsFragment = MyFriendsFragment.getInstance();
-        Fragment chooseFriendsFragment = ChooseFriendsFragment.getInstance();
+        Fragment myFriendsFragment = FriendIndexFragment.getInstance();
+        Fragment chooseFriendsFragment = FriendChooseFragment.getInstance();
         //展厅地图的fragment
         Fragment exhibitionInnerCollectionFragment = ExhibitionInnerCollectionFragment.getInstance();
         //急救路线fragment
