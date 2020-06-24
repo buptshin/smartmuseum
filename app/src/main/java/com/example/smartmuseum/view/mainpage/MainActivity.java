@@ -72,15 +72,6 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         Fragment mainPageNavigationFragment = MainPageNavigationFragment.getInstance();
         Fragment mainPageGoodsFragment = MainPageGoodsFragment.getInstance();
         Fragment mainPageMyInfoFragment = MainPageMyInfoFragment.getInstance();
-        //个人界面的两个fragment
-        Fragment myFriendsFragment = FriendIndexFragment.getInstance();
-        Fragment chooseFriendsFragment = FriendChooseFragment.getInstance();
-        //展厅地图的fragment
-        Fragment exhibitionInnerCollectionFragment = ExhibitionInnerCollectionFragment.getInstance();
-        //急救路线fragment
-        Fragment firstAidFragment = NavigationFirstAidFragment.getInstance();
-        //当前楼层导览fragment
-        Fragment nowFloorFragment = NavigationNowFloorFragment.getInstance();
 
         //添加fragments到adapter
         fragments = new ArrayList<>();
@@ -88,11 +79,6 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         fragments.add(mainPageNavigationFragment);
         fragments.add(mainPageGoodsFragment);
         fragments.add(mainPageMyInfoFragment);
-        fragments.add(myFriendsFragment);
-        fragments.add(chooseFriendsFragment);
-        fragments.add(exhibitionInnerCollectionFragment);
-        fragments.add(firstAidFragment);
-        fragments.add(nowFloorFragment);
 
 
         //设置adapter

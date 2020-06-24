@@ -221,8 +221,8 @@ public class ExhibitionInnerCollectionFragment extends Fragment implements ViewC
                 seekBarProgress -= 3;
                 if(seekBarProgress <= 0){
                     View parent = mBinding.getRoot().getRootView();
-                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                    noScrollViewPager.setCurrentItem(8,false);
+                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_navigation_sv);
+                    noScrollViewPager.setCurrentItem(1,false);
                 }else {
                     mBinding.exhibitionInnerCollectionSeekbar.setProgress(seekBarProgress);
                     // 缩小地图
