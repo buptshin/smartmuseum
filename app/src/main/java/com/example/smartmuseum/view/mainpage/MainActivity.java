@@ -107,14 +107,14 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
     @Override
     public MainActivity bindEvent() {
         // activity的跳转事件
-        int tag = getIntent().getIntExtra("exhibition",0);
-        if(tag == 1){
-            mBinding.mainpageNoscrollviewpager.setCurrentItem(1,false);
-            mBinding.mainpageBottomnavigationview.setSelectedItemId(R.id.mainpage_navigation_navigation_item);
-            MainPageNavigationFragment mainPageNavigationFragment = (MainPageNavigationFragment) mainPageFragmentPagerAdapter.getItem(1);
-            // mainPageNavigationFragment.goExhibition();
-
-        }
+//        int tag = getIntent().getIntExtra("exhibition",0);
+//        if(tag == 1){
+//            mBinding.mainpageNoscrollviewpager.setCurrentItem(1,false);
+//            mBinding.mainpageBottomnavigationview.setSelectedItemId(R.id.mainpage_navigation_navigation_item);
+//            MainPageNavigationFragment mainPageNavigationFragment = (MainPageNavigationFragment) mainPageFragmentPagerAdapter.getItem(1);
+//            // mainPageNavigationFragment.goExhibition();
+//
+//        }
         mBinding.mainpageDrawerExitBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

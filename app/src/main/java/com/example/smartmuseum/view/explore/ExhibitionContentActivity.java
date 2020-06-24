@@ -98,13 +98,13 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
             }
         });
 
-        // 到展厅的界面
+        // 到展厅的界面——先屏蔽
         activityExhibitionContentBinding.navigation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExhibitionContentActivity.this,MainActivity.class);
-                intent.putExtra("exhibition",1);
-                startActivity(intent);
+//                Intent intent = new Intent(ExhibitionContentActivity.this,MainActivity.class);
+//                intent.putExtra("exhibition",1);
+//                startActivity(intent);
             }
         });
 
