@@ -142,28 +142,9 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
                 }else if (flagModel.getZoomValue().getValue().equals(2)){
                     //跳转到展厅界面
                     View parent = mBinding.getRoot().getRootView();
-                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                    noScrollViewPager.setCurrentItem(6,false);
+                    NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_navigation_sv);
+                    noScrollViewPager.setCurrentItem(2,false);
                 }
-            }
-        });
-
-        //搜索按钮
-        mBinding.mainpageNavigationSearchIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        //进入急救路线地图
-        mBinding.mainpageNavigationEscapeRoutesIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                View parent = mBinding.getRoot().getRootView();
-                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                noScrollViewPager.setCurrentItem(7,false);
             }
         });
         return this;

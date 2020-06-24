@@ -68,29 +68,10 @@ public class NavigationFloorsFragment extends Fragment implements ViewChainedBin
             @Override
             public void onClick(View view) {
                 View parent = mBinding.getRoot().getRootView();
-                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                noScrollViewPager.setCurrentItem(8,false);
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_navigation_sv);
+                noScrollViewPager.setCurrentItem(1,false);
             }
         });
-
-//        //进入急救路线地图
-//        mBinding.mainpageNavigationEscapeRoutesIv.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                View parent = mBinding.getRoot().getRootView();
-//                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-//                noScrollViewPager.setCurrentItem(7,false);
-//            }
-//        });
-//
-//        //搜索按钮
-//        mBinding.mainpageNavigationSearchIv.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
-//                startActivity(intent);
-//            }
-//        });
         return this;
     }
 

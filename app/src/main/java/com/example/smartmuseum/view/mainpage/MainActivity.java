@@ -6,10 +6,12 @@ import androidx.core.view.GravityCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
     private ActivityMainBinding mBinding;
     private List<Fragment> fragments;
     private AccompanyCountViewModel accompanyCountViewModel;
+    private MainPageFragmentPagerAdapter mainPageFragmentPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +96,8 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
 
 
         //设置adapter
-        mBinding.mainpageNoscrollviewpager.setAdapter(new MainPageFragmentPagerAdapter(getSupportFragmentManager(), fragments));
+        mainPageFragmentPagerAdapter = new MainPageFragmentPagerAdapter(getSupportFragmentManager(),fragments);
+        mBinding.mainpageNoscrollviewpager.setAdapter(mainPageFragmentPagerAdapter);
         mBinding.mainpageNoscrollviewpager.setOffscreenPageLimit(3);
 
         return this;
@@ -105,8 +109,11 @@ public class MainActivity extends AppCompatActivity implements ViewChainedBindin
         // activity的跳转事件
         int tag = getIntent().getIntExtra("exhibition",0);
         if(tag == 1){
-            mBinding.mainpageNoscrollviewpager.setCurrentItem(6,false);
+            mBinding.mainpageNoscrollviewpager.setCurrentItem(1,false);
             mBinding.mainpageBottomnavigationview.setSelectedItemId(R.id.mainpage_navigation_navigation_item);
+            MainPageNavigationFragment mainPageNavigationFragment = (MainPageNavigationFragment) mainPageFragmentPagerAdapter.getItem(1);
+            // mainPageNavigationFragment.goExhibition();
+
         }
         mBinding.mainpageDrawerExitBtn.setOnClickListener(new View.OnClickListener() {
             @Override

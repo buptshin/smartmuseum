@@ -20,46 +20,18 @@
             app:layout_constraintGuide_percent="0.14" />
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline55"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.12" />
-
-        <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline57"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.24" />
+            app:layout_constraintGuide_percent="0.1" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline60"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.29" />
-
-        <TextView
-            android:id="@+id/exhibition_inner_collection_lable_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/exhibition_inner_collection_lable_tv"
-            android:textColor="#000521"
-            android:textSize="@dimen/exhibition_inner_collection_lable_tv"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/guideline55"
-            app:layout_constraintStart_toStartOf="@+id/guideline92"
-            tools:text="导览" />
-
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_search_img"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@mipmap/exhibition_inner_collection_search"
-            app:layout_constraintBottom_toBottomOf="@id/exhibition_inner_collection_lable_tv"
-            app:layout_constraintEnd_toStartOf="@+id/guideline93"
-            app:layout_constraintTop_toTopOf="@+id/exhibition_inner_collection_lable_tv" />
+            app:layout_constraintGuide_percent="0.15" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline58"
@@ -109,7 +81,7 @@
             app:layout_constraintBottom_toTopOf="@+id/guideline57"
             app:layout_constraintEnd_toStartOf="@+id/guideline59"
             app:layout_constraintStart_toStartOf="@+id/guideline58"
-            app:layout_constraintTop_toTopOf="@+id/guideline56">
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/exhibition_inner_collection_concrete_position_tv"
@@ -220,13 +192,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline62"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.95" />
-
         <ScrollView
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -279,14 +244,6 @@
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </HorizontalScrollView>
         </ScrollView>
-
-        <ImageView
-            android:id="@+id/exhibition_inner_collection_escape_img"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/exhibition_inner_collection_hover"
-            app:layout_constraintBottom_toTopOf="@+id/guideline62"
-            app:layout_constraintEnd_toStartOf="@+id/guideline59" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline64"

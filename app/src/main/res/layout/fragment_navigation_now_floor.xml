@@ -12,32 +12,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/mainpage_navigation_background"
-        android:paddingTop="@dimen/mainpage_fragment_paddingTop">
-
-        <TextView
-            android:id="@+id/mainpage_navigation_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="16dp"
-            android:text="导览"
-            android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:typeface="sans"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:id="@+id/mainpage_navigation_search_iv"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@mipmap/mainpage_navigation_search"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="15dp"/>
+        android:background="@color/mainpage_navigation_background">
 
         <TextView
             android:id="@+id/mainpage_navigation_floor_b1_tv"
@@ -50,8 +25,7 @@
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
-            android:layout_marginTop="15dp"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/mainpage_navigation_floor_1_tv"
@@ -64,8 +38,7 @@
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
             app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_b1_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
-            android:layout_marginTop="15dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/mainpage_navigation_floor_2_tv"
@@ -78,8 +51,7 @@
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
             app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_1_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
-            android:layout_marginTop="15dp"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/mainpage_navigation_floor_3_tv"
@@ -92,8 +64,7 @@
             android:textColor="@color/mainpage_navigation_white"
             android:textSize="20sp"
             app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_2_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
-            android:layout_marginTop="15dp"/>
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <TextView
             android:id="@+id/mainpage_navigation_floor_4_tv"
@@ -106,8 +77,8 @@
             android:textColor="@color/mainpage_navigation_selectoritem_wordcolor_black"
             android:textSize="20sp"
             app:layout_constraintLeft_toRightOf="@+id/mainpage_navigation_floor_3_tv"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_tv"
-            android:layout_marginTop="15dp"/>
+            app:layout_constraintTop_toTopOf="parent"/>
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mainpage_navigation_zoom_cl"
             android:layout_width="match_parent"
@@ -229,22 +200,5 @@
         </HorizontalScrollView>
 
 
-        <ImageView
-            android:id="@+id/mainpage_navigation_escape_routes_iv"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@mipmap/mainpage_navigation_escape_routes"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="80dp"/>
-        <ImageView
-            android:id="@+id/mainpage_navigation_now_location_iv"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@mipmap/mainpage_navigation_now_location"
-            app:layout_constraintTop_toBottomOf="@+id/mainpage_navigation_escape_routes_iv"
-            app:layout_constraintRight_toRightOf="parent"
-            android:layout_marginRight="15dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

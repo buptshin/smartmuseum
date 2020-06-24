@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
@@ -40,6 +41,12 @@ public class NavigationFirstAidFragment extends Fragment implements ViewChainedB
     }
     @Override
     public NavigationFirstAidFragment bindView() {
+//        View parent = mBinding.getRoot().getRootView();
+//        ImageView navEscapeIV = (ImageView)parent.findViewById(R.id.mainpage_navigation_escape_routes_iv);
+//        ImageView navLocationIV = (ImageView)parent.findViewById(R.id.mainpage_navigation_now_location_iv);
+//        navEscapeIV.setVisibility(View.GONE);
+//        navLocationIV.setVisibility(View.GONE);
+//        parent.setBackgroundColor(getResources().getColor(R.color.mainpage_navigation_red));
         return this;
     }
 
@@ -50,15 +57,6 @@ public class NavigationFirstAidFragment extends Fragment implements ViewChainedB
 
     @Override
     public NavigationFirstAidFragment bindEvent() {
-        //搜索按钮
-        mBinding.mainpageNavigationFirstaidSearchIv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), NavigationSearchActivity.class);
-                startActivity(intent);
-            }
-        });
-
         //求救
         mBinding.mainpageNavigationCallHelp.setOnClickListener(new View.OnClickListener() {
             @Override
