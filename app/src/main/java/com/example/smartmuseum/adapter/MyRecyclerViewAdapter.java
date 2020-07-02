@@ -40,7 +40,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
     // 监听器
     private OnItemClickListener onItemClickListener;
 
-    public MyRecyclerViewAdapter(ArrayList<Exhibition> exhibition_list) {
+    public MyRecyclerViewAdapter(List<Exhibition> exhibition_list) {
         this.exhibition_list = exhibition_list;
     }
 

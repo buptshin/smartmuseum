@@ -1,5 +1,6 @@
 package com.example.smartmuseum.util.http;
 
+import com.example.smartmuseum.model.Exhibition;
 import com.example.smartmuseum.model.Goods;
 import com.example.smartmuseum.model.Location;
 import com.google.gson.Gson;
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
+import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.RequestBody;
@@ -36,6 +38,12 @@ public class HttpRequest {
     public interface LoacationService {
         @GET("location/getNowLocation")
         Observable<HttpResult<Location>> getNowLocation(@Header("token") String token, @Query("nowloaction") String location);
+    }
+
+    //探索页面-展览
+    public interface ExhibitionService {
+        @GET("exhibition/getRecommendedExhibitionInfo")
+        Observable<HttpResult<List<Exhibition>>> getRecommendedExhibition(@Header("token") String token, @Query("exhibitionId") String exhibitionId);
     }
 
     public static class Get {
@@ -83,7 +91,29 @@ public class HttpRequest {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(observer);
         }
+
+        /**
+         * 展览
+         */
+        //获取推荐展览
+        public static void getRecommendedExhibition(Observer<HttpResult<List<Exhibition>>> observer, HashMap<String, String> map){
+            ExhibitionService exhibitionService = RetrofitWrapper.getInstance().getRetrofit().create(ExhibitionService.class);
+            String token = map.get("token");
+            String exhibitionId = map.get("exhibitionId");
+
+            exhibitionService.getRecommendedExhibition(token, exhibitionId)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+
+        }
     }
+
+
+
+
+
 
     public static class Post {
 

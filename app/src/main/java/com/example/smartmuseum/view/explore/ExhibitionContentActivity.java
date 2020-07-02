@@ -61,7 +61,7 @@ public class ExhibitionContentActivity extends AppCompatActivity implements View
         HashMap<String, String> map = new HashMap<>();
 
         // 调用数据（Activity里用this,fragment里面用getViewLifecycleOwner()
-        exhibitionViewModel.getExhibition_list(map).observe(this, models -> {
+        exhibitionViewModel.getRecommended_exhibition_list(map).observe(this, models -> {
             exhibitions = models;
             activityExhibitionContentBinding.exhibitionName.setText(exhibitions.get(1).getExhibition_name());
             activityExhibitionContentBinding.exhibitionHall.setText(exhibitions.get(1).getExhibition_hall());
