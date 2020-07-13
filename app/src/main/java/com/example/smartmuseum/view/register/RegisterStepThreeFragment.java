@@ -5,6 +5,8 @@ import android.os.Bundle;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.SavedStateViewModelFactory;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
@@ -15,6 +17,10 @@ import android.view.ViewGroup;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentRegisterStepThreeBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.viewmodel.OnRegisterUserViewModel;
+
+import java.util.IllegalFormatCodePointException;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -22,6 +28,7 @@ import com.example.smartmuseum.handler.ViewChainedBinding;
 public class RegisterStepThreeFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentRegisterStepThreeBinding mBinding;
+    private OnRegisterUserViewModel onRegisterUserViewModel;
 
     public RegisterStepThreeFragment() {
         // Required empty public constructor
@@ -63,10 +70,24 @@ public class RegisterStepThreeFragment extends Fragment implements ViewChainedBi
         mBinding.registerNextStepTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavController controller = Navigation.findNavController(v);
-                controller.navigate(R.id.action_registerStepThreeFragment_to_registerStepFourFragment);
+                if (updateRegisterUser()){
+                    NavController controller = Navigation.findNavController(v);
+                    controller.navigate(R.id.action_registerStepThreeFragment_to_registerStepFourFragment);
+                }
             }
         });
         return this;
+    }
+
+    private boolean updateRegisterUser() {
+        onRegisterUserViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(OnRegisterUserViewModel.class);
+        List<String> selectedPermissions = onRegisterUserViewModel.getOnRegisterUserInfo().getValue().getUserPermissions();
+        if (mBinding.registerPermissionGoodsDeliveryCheckbox.isChecked())
+            selectedPermissions.add("GOODS_DELIVERY_PERMISSION");
+        if (mBinding.registerPermissionNavigationCheckbox.isChecked())
+            selectedPermissions.add("NAVIGATION_PERMISSION");
+        if (mBinding.registerPermissionSafeRunCheckbox.isChecked())
+            selectedPermissions.add("SAFE_RUN_PERMISSION");
+        return true;
     }
 }

@@ -40,6 +40,7 @@
     <color name="register_personal_info_tv">#000000</color>
     <color name="register_nickname_with_name_with_gender_tv">#8D92A3</color>
     <color name="register_nickname_with_name_et">#000521</color>
+    <color name="register_selected_gender_hint_tv">#842D29</color>
     <color name="register_position_permissions_tv">#000000</color>
     <color name="register_choose_permissions_tv">#8D92A3</color>
     <color name="register_permission_checkbox">#210000</color>
@@ -51,7 +52,7 @@
     <color name="register_verify_code_et">#000000 </color>
     <color name="reigster_assure_telephone_chronometer_tv">#FA7268</color>
     <color name="register_assure_telephone_time_hint_tv">#8D92A3</color>
-    <color name="register_assure_telephone_resend_tv">#842D29</color>
+    <color name="register_assure_telephone_send_tv">#842D29</color>
 
     <!--ForgetPwd-->
     <color name="forgetpwd_lable_tv">#000000</color>

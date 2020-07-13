@@ -125,7 +125,7 @@
             android:id="@+id/register_assure_telephone_hint_tv"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/register_assure_telephone_hint_tv"
+            android:text="@string/register_assure_telephone_send_hint_tv"
             android:textColor="@color/register_assure_telephone_hint_tv"
             android:textSize="@dimen/register_assure_telephone_hint_tv"
             app:layout_constraintBottom_toTopOf="@+id/guideline42"
@@ -213,7 +213,8 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
+            android:inputType="number"
+            android:maxLength="1"
             android:textColor="@color/register_verify_code_et"
             android:textSize="@dimen/register_verify_code_et"
             android:textStyle="bold"
@@ -222,8 +223,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline24"
             app:layout_constraintTop_toTopOf="@+id/register_verify_code_two_et"
-            app:layout_constraintWidth_percent="0.08"
-            tools:text="5" />
+            app:layout_constraintWidth_percent="0.08" />
 
         <EditText
             android:id="@+id/register_verify_code_four_et"
@@ -232,7 +232,8 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
+            android:inputType="number"
+            android:maxLength="1"
             android:textColor="@color/register_verify_code_et"
             android:textSize="@dimen/register_verify_code_et"
             android:textStyle="bold"
@@ -241,8 +242,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/register_verify_code_three_et"
             app:layout_constraintTop_toTopOf="@+id/register_verify_code_five_et"
-            app:layout_constraintWidth_percent="0.08"
-            tools:text="5" />
+            app:layout_constraintWidth_percent="0.08" />
 
         <EditText
             android:id="@+id/register_verify_code_five_et"
@@ -251,7 +251,9 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
+            android:inputType="number"
+            android:maxLength="1"
+            android:singleLine="true"
             android:textColor="@color/register_verify_code_et"
             android:textSize="@dimen/register_verify_code_et"
             android:textStyle="bold"
@@ -261,8 +263,7 @@
             app:layout_constraintStart_toEndOf="@+id/register_verify_code_four_et"
             app:layout_constraintTop_toTopOf="@+id/guideline42"
             app:layout_constraintVertical_bias="0.45"
-            app:layout_constraintWidth_percent="0.08"
-            tools:text="5" />
+            app:layout_constraintWidth_percent="0.08" />
 
         <EditText
             android:id="@+id/register_verify_code_two_et"
@@ -271,7 +272,8 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
+            android:inputType="number"
+            android:maxLength="1"
             android:textColor="@color/register_verify_code_et"
             android:textSize="@dimen/register_verify_code_et"
             android:textStyle="bold"
@@ -280,8 +282,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/register_verify_code_one_et"
             app:layout_constraintTop_toTopOf="@+id/register_verify_code_three_et"
-            app:layout_constraintWidth_percent="0.08"
-            tools:text="5" />
+            app:layout_constraintWidth_percent="0.08" />
 
         <EditText
             android:id="@+id/register_verify_code_three_et"
@@ -290,7 +291,8 @@
             android:background="@null"
             android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
+            android:inputType="number"
+            android:maxLength="1"
             android:textColor="@color/register_verify_code_et"
             android:textSize="@dimen/register_verify_code_et"
             android:textStyle="bold"
@@ -299,8 +301,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/register_verify_code_two_et"
             app:layout_constraintTop_toTopOf="@+id/register_verify_code_four_et"
-            app:layout_constraintWidth_percent="0.08"
-            tools:text="5" />
+            app:layout_constraintWidth_percent="0.08" />
 
         <TextView
             android:id="@+id/reigster_assure_telephone_chronometer_tv"
@@ -309,6 +310,7 @@
             android:text="@string/reigster_assure_telephone_chronometer_tv"
             android:textColor="@color/reigster_assure_telephone_chronometer_tv"
             android:textSize="@dimen/reigster_assure_telephone_chronometer_tv"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/guideline44"
             app:layout_constraintStart_toStartOf="@+id/register_verify_code_one_et"
             app:layout_constraintTop_toBottomOf="@+id/imageView11"
@@ -322,6 +324,7 @@
             android:text="@string/register_assure_telephone_time_hint_tv"
             android:textColor="@color/register_assure_telephone_time_hint_tv"
             android:textSize="@dimen/register_assure_telephone_time_hint_tv"
+            android:visibility="gone"
             app:layout_constraintBottom_toTopOf="@+id/guideline44"
             app:layout_constraintStart_toEndOf="@+id/reigster_assure_telephone_chronometer_tv"
             app:layout_constraintTop_toBottomOf="@+id/imageView11"
@@ -329,13 +332,13 @@
             tools:text="后可重新发送验证码" />
 
         <TextView
-            android:id="@+id/register_assure_telephone_resend_tv"
+            android:id="@+id/register_assure_telephone_send_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="@string/register_assure_telephone_resend_tv"
-            android:textColor="@color/register_assure_telephone_resend_tv"
-            android:textSize="@dimen/register_assure_telephone_resend_tv"
+            android:text="@string/register_assure_telephone_send_tv"
+            android:textColor="@color/register_assure_telephone_send_tv"
+            android:textSize="@dimen/register_assure_telephone_send_tv"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/guideline44"
             app:layout_constraintEnd_toStartOf="@+id/guideline27"

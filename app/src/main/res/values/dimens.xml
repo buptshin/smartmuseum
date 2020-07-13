@@ -29,6 +29,7 @@
     <dimen name="register_personal_info_tv">18sp</dimen>
     <dimen name="register_nickname_with_name_with_gender_tv">16sp</dimen>
     <dimen name="register_nickname_with_name_et">20sp</dimen>
+    <dimen name="register_gender_selected_hint_tv">16sp</dimen>
     <dimen name="register_position_permissions_tv">18sp</dimen>
     <dimen name="register_choose_permissions_tv">16sp</dimen>
     <dimen name="register_permission_checkbox">18sp</dimen>
@@ -40,7 +41,7 @@
     <dimen name="register_verify_code_et">30sp</dimen>
     <dimen name="reigster_assure_telephone_chronometer_tv">16sp</dimen>
     <dimen name="register_assure_telephone_time_hint_tv">16sp</dimen>
-    <dimen name="register_assure_telephone_resend_tv">16sp</dimen>
+    <dimen name="register_assure_telephone_send_tv">16sp</dimen>
 
     <!--ForgetPwd-->
     <dimen name="forgetpwd_lable_tv">22sp</dimen>

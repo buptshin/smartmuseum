@@ -230,13 +230,12 @@
             android:background="@null"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="葫芦1125"
+            android:singleLine="true"
             android:textColor="@color/register_nickname_with_name_et"
             android:textSize="@dimen/register_nickname_with_name_et"
             app:layout_constraintBottom_toTopOf="@+id/view15"
             app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toBottomOf="@+id/register_nickname_tv"
-            tools:text="葫芦1125" />
+            app:layout_constraintTop_toBottomOf="@+id/register_nickname_tv" />
 
         <EditText
             android:id="@+id/register_name_et"
@@ -245,13 +244,12 @@
             android:background="@null"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="鲁**"
+            android:singleLine="true"
             android:textColor="@color/register_nickname_with_name_et"
             android:textSize="@dimen/register_nickname_with_name_et"
             app:layout_constraintBottom_toTopOf="@+id/view16"
             app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toBottomOf="@+id/register_name_tv"
-            tools:text="鲁**" />
+            app:layout_constraintTop_toBottomOf="@+id/register_name_tv" />
 
         <View
             android:id="@+id/view15"
@@ -308,6 +306,18 @@
                 android:checked="true"
                 android:drawableLeft="@drawable/register_female_selector" />
         </RadioGroup>
+
+        <TextView
+            android:id="@+id/register_selected_gender_hint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_gender_selected_hint_tv_female"
+            android:textColor="@color/register_selected_gender_hint_tv"
+            android:textSize="@dimen/register_gender_selected_hint_tv"
+            app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+            app:layout_constraintEnd_toStartOf="@+id/guideline27"
+            app:layout_constraintTop_toTopOf="@+id/radioGroup"
+            tools:text="女" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateViewModelFactory;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,12 +19,20 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.adapter.FriendFragmentAccompanyAdapter;
 import com.example.smartmuseum.databinding.FragmentChooseFriendsBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.model.Accompany;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 import com.example.smartmuseum.viewmodel.AccompanyCountViewModel;
 import com.example.smartmuseum.viewmodel.AccompanyViewModel;
 
+import java.sql.SQLTransactionRollbackException;
 import java.util.HashMap;
+import java.util.List;
 
+/**
+ * 将当前的数据传回数据库的时机
+ * 以及后台数据库表的设计
+ * 是否需要观察viewModel？
+ */
 public class FriendChooseFragment extends Fragment implements ViewChainedBinding {
 
     private FragmentChooseFriendsBinding fragmentChooseFriendBinding;
@@ -52,9 +61,6 @@ public class FriendChooseFragment extends Fragment implements ViewChainedBinding
     @Override
     public FriendChooseFragment bindView() {
 //        getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_NOTHING);
-        fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        HashMap hashMap=new HashMap();
-        fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setAdapter(new FriendFragmentAccompanyAdapter(accompanyViewModel.getAccompanyList(hashMap).getValue(),accompanyCountViewModel));
         return this;
     }
 
@@ -63,6 +69,15 @@ public class FriendChooseFragment extends Fragment implements ViewChainedBinding
         accompanyViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyViewModel.class);
         accompanyCountViewModel = new ViewModelProvider(requireActivity(),new SavedStateViewModelFactory(requireActivity().getApplication(),this)).get(AccompanyCountViewModel.class);
         fragmentChooseFriendBinding.setData(accompanyCountViewModel);
+
+        // 获取当前的同行伙伴
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put("userId","ddd");
+        hashMap.put("token","token");
+        accompanyViewModel.getAccompanyList(hashMap).observe(getViewLifecycleOwner(),accompanies -> {
+            fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+            fragmentChooseFriendBinding.friendChooseFriendsAccompanyRecyclerView.setAdapter(new FriendFragmentAccompanyAdapter(accompanies,accompanyCountViewModel));
+        });
         return this;
     }
 

@@ -186,8 +186,7 @@
             android:textSize="@dimen/register_permission_checkbox"
             app:layout_constraintBottom_toTopOf="@+id/register_permission_goods_delivery_checkbox"
             app:layout_constraintStart_toStartOf="@+id/register_permission_goods_delivery_checkbox"
-            app:layout_constraintTop_toBottomOf="@+id/register_choose_permissions_tv"
-            tools:text="    导览" />
+            app:layout_constraintTop_toBottomOf="@+id/register_choose_permissions_tv" />
 
         <CheckBox
             android:id="@+id/register_permission_goods_delivery_checkbox"
@@ -199,8 +198,7 @@
             android:textSize="@dimen/register_permission_checkbox"
             app:layout_constraintBottom_toTopOf="@+id/register_permission_safe_run_checkbox"
             app:layout_constraintStart_toStartOf="@+id/register_permission_safe_run_checkbox"
-            app:layout_constraintTop_toBottomOf="@+id/register_permission_navigation_checkbox"
-            tools:text="    文创配送" />
+            app:layout_constraintTop_toBottomOf="@+id/register_permission_navigation_checkbox" />
 
         <CheckBox
             android:id="@+id/register_permission_safe_run_checkbox"
@@ -213,8 +211,7 @@
             android:textSize="@dimen/register_permission_checkbox"
             app:layout_constraintBottom_toTopOf="@+id/guideline40"
             app:layout_constraintStart_toStartOf="@+id/guideline24"
-            app:layout_constraintTop_toBottomOf="@+id/register_permission_goods_delivery_checkbox"
-            tools:text="    急救逃生" />
+            app:layout_constraintTop_toBottomOf="@+id/register_permission_goods_delivery_checkbox" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

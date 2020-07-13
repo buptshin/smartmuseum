@@ -11,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 
@@ -70,7 +71,7 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
         fragments.add(navigationNowFloorFragment);
         fragments.add(exhibitionInnerCollectionFragment);
         fragments.add(navigationFirstAidFragment);
-        mBinding.mainpageNavigationSv.setAdapter(new NavigationFragmentPagerAdapter(getChildFragmentManager(),fragments));
+        mBinding.mainpageNavigationSv.setAdapter(new NavigationFragmentPagerAdapter(getChildFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,fragments));
         mBinding.mainpageNavigationSv.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -79,7 +80,7 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
 
             @Override
             public void onPageSelected(int position) {
-                if (position == 3){
+                if (position == 3) {
                     // 急救逃生的设置
                     mBinding.mainpageNavigationEscapeRoutesIv.setVisibility(View.GONE);
                     mBinding.mainpageNavigationNowLocationIv.setVisibility(View.GONE);
@@ -90,6 +91,17 @@ public class MainPageNavigationFragment extends Fragment implements ViewChainedB
                     // “导览”的设置
                     mBinding.mainpageNavigationTv.setTextColor(getResources().getColor(R.color.mainpage_navigation_white));
                     mBinding.mainpageNavigationSearchIv.setImageResource(R.mipmap.mainpage_navigation_search_white);
+                }else {
+                    // 急救逃生的设置
+                    mBinding.mainpageNavigationEscapeRoutesIv.setVisibility(View.VISIBLE);
+                    mBinding.mainpageNavigationNowLocationIv.setVisibility(View.VISIBLE);
+
+                    // 背景的设置
+                    mBinding.getRoot().setBackgroundColor(getResources().getColor(R.color.mainpage_navigation_white));
+
+                    // “导览”的设置
+                    mBinding.mainpageNavigationTv.setTextColor(getResources().getColor(R.color.mainpage_navigation_selectoritem_wordcolor_black));
+                    mBinding.mainpageNavigationSearchIv.setImageResource(R.mipmap.mainpage_navigation_search);
                 }
             }
 

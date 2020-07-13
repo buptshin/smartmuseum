@@ -10,24 +10,19 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#FFFFFF"
         tools:context=".view.login.LoginActivity">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.72" />
-
-        <View
-            android:id="@+id/view8"
-            android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/login_museum_bg_iv"
+            android:layout_width="600dp"
             android:layout_height="0dp"
-            android:background="@drawable/login_museum_bg"
-            app:layout_constraintBottom_toTopOf="@+id/guideline15"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/guideline55"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/museum_bg" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline16"
@@ -35,6 +30,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline55"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline19"
@@ -61,29 +63,27 @@
             android:id="@+id/login_welcome_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:gravity="center"
             android:text="@string/login_welcome_tv"
             android:textColor="@color/login_welcome_tv"
             android:textSize="@dimen/login_welcome_tv"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.193"
             tools:text="欢迎来到\n中国国家博物馆" />
 
         <TextView
             android:id="@+id/login_to_register_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:text="@string/login_to_register_tv"
             android:textColor="@color/login_to_register_tv"
             android:textSize="@dimen/login_to_register_tv"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline21"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.073"
             tools:text="注册" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -93,6 +93,7 @@
             android:background="@drawable/login_main_box_border"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline16">
 
@@ -151,6 +152,7 @@
                     android:ems="10"
                     android:hint="@string/login_account_telephone_et_hint"
                     android:inputType="phone"
+                    android:singleLine="true"
                     android:textColor="@color/login_account_telephone_et"
                     android:textSize="@dimen/login_account_telephone_et"
                     app:layout_constraintBottom_toBottomOf="@+id/login_account_telephone_img"
@@ -206,6 +208,7 @@
                     android:ems="10"
                     android:hint="@string/login_password_et_hint"
                     android:inputType="textPassword"
+                    android:singleLine="true"
                     android:textColor="@color/login_password_et"
                     android:textSize="@dimen/login_password_et"
                     app:layout_constraintBottom_toBottomOf="@+id/login_password_lock_img"
@@ -217,13 +220,11 @@
 
                 <ImageView
                     android:id="@+id/login_password_preview_img"
-                    android:layout_width="23dp"
+                    android:layout_width="25dp"
                     android:layout_height="18dp"
                     app:layout_constraintBottom_toBottomOf="@+id/login_password_et"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHeight_percent="0.025"
                     app:layout_constraintTop_toTopOf="@+id/login_password_et"
-                    app:layout_constraintWidth_percent="0.055"
                     app:srcCompat="@mipmap/login_password_preview" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -232,6 +233,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:paddingBottom="20dp"
                 app:layout_constraintEnd_toStartOf="@+id/guideline100"
                 app:layout_constraintStart_toStartOf="@+id/guideline95"
                 app:layout_constraintTop_toBottomOf="@+id/login_password_box">
@@ -256,22 +258,22 @@
                     tools:text="忘记密码？" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <Button
-                android:id="@+id/login_btn"
-                android:layout_width="329dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/login_button_border"
-                android:text="@string/login_btn"
-                android:textColor="@color/login_btn"
-                android:textSize="@dimen/login_btn"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline100"
-                app:layout_constraintStart_toStartOf="@+id/guideline95"
-                tools:text="登录" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/login_button_border"
+            android:text="@string/login_btn"
+            android:textColor="@color/login_btn"
+            android:textSize="@dimen/login_btn"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline21"
+            app:layout_constraintStart_toStartOf="@+id/guideline20"
+            tools:text="登录" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

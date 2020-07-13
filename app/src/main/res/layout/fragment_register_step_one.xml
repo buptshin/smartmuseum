@@ -12,22 +12,16 @@
         android:layout_height="match_parent"
         tools:context=".view.register.RegisterStepOneFragment">
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.69" />
-
-        <View
-            android:id="@+id/view8"
-            android:layout_width="0dp"
+        <ImageView
+            android:id="@+id/register_museum_bg_iv"
+            android:layout_width="600dp"
             android:layout_height="0dp"
-            android:background="@drawable/login_museum_bg"
-            app:layout_constraintBottom_toTopOf="@+id/guideline15"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/guideline62"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/museum_bg" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline16"
@@ -35,6 +29,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.45" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.5" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline19"
@@ -61,29 +62,27 @@
             android:id="@+id/register_welcome_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:gravity="center"
             android:text="@string/register_welcome_tv"
             android:textColor="@color/register_welcome_tv"
             android:textSize="@dimen/register_welcome_tv"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.193"
             tools:text="欢迎来到\n中国国家博物馆" />
 
         <TextView
             android:id="@+id/register_to_login_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:text="@string/register_to_login_tv"
             android:textColor="@color/register_to_login_tv"
             android:textSize="@dimen/register_to_login_tv"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline21"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.073"
             tools:text="登录" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -152,6 +151,7 @@
                     android:ems="10"
                     android:hint="@string/register_account_telephone_et_hint"
                     android:inputType="phone"
+                    android:singleLine="true"
                     android:textColor="@color/register_account_telephone_et"
                     android:textSize="@dimen/register_account_telephone_et"
                     app:layout_constraintBottom_toBottomOf="@+id/register_account_telephone_img"
@@ -208,6 +208,7 @@
                     android:ems="10"
                     android:hint="@string/register_password_et_hint"
                     android:inputType="textPassword"
+                    android:singleLine="true"
                     android:textColor="@color/register_password_et"
                     android:textSize="@dimen/register_password_et"
                     app:layout_constraintBottom_toBottomOf="@+id/register_password_lock_img"
@@ -264,6 +265,7 @@
                     android:ems="10"
                     android:hint="@string/register_assure_pwd_et_hint"
                     android:inputType="textPassword"
+                    android:singleLine="true"
                     android:textColor="@color/register_password_et"
                     android:textSize="@dimen/register_password_et"
                     app:layout_constraintBottom_toBottomOf="@+id/register_assure_pwd_lock_img"
@@ -283,22 +285,22 @@
                     app:layout_constraintTop_toBottomOf="@+id/register_assure_pwd_lock_img" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <Button
-                android:id="@+id/register_btn"
-                android:layout_width="329dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/login_button_border"
-                android:text="@string/register_btn"
-                android:textColor="@color/register_btn"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline18"
-                app:layout_constraintStart_toStartOf="@+id/guideline17"
-                tools:text="@string/register_btn" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/login_button_border"
+            android:text="@string/register_btn"
+            android:textColor="@color/register_btn"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline21"
+            app:layout_constraintStart_toStartOf="@+id/guideline20"
+            tools:text="@string/register_btn" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

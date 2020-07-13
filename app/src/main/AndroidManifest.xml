@@ -25,7 +25,9 @@
         <activity android:name=".view.goods.GoodsRecommendActivity" />
         <activity android:name=".view.forgetpwd.ForgetPwdActivity" />
         <activity android:name=".view.register.RegisterActivity" />
-        <activity android:name=".view.login.LoginActivity" />
+        <activity
+            android:name=".view.login.LoginActivity"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
         <activity android:name=".view.me.FieldGuideActivity" />
         <activity android:name=".view.me.MuseumInfoActivity" />
         <activity android:name=".view.explore.ExhibitionContentActivity" />

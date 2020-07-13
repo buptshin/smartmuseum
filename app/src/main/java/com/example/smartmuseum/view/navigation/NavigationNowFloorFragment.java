@@ -3,6 +3,7 @@ package com.example.smartmuseum.view.navigation;
 import android.content.Intent;
 import android.graphics.Matrix;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +20,12 @@ import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentNavigationNowFloorBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
 import com.example.smartmuseum.model.NavigationFlagModel;
+import com.example.smartmuseum.util.LazyLocationFragment;
 import com.example.smartmuseum.view.mainpage.MainPageNavigationFragment;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
 /*导览-当前楼层fragment*/
-public class NavigationNowFloorFragment extends Fragment implements ViewChainedBinding {
+public class NavigationNowFloorFragment extends LazyLocationFragment implements ViewChainedBinding {
 
     private FragmentNavigationNowFloorBinding mBinding;
 
@@ -153,24 +155,38 @@ public class NavigationNowFloorFragment extends Fragment implements ViewChainedB
     /*
      * 此方法目前仅适用于标示ViewPager中的Fragment是否真实可见
      * */
+//    @Override
+//    public void setUserVisibleHint(boolean isVisibleToUser) {
+//        super.setUserVisibleHint(isVisibleToUser);
+//
+//        if (!isCreated) {
+//            return;
+//        }
+//
+//        if (isVisibleToUser) {
+//
+//            isZoom = false;
+//
+//            flagModel.getZoomValue().setValue(0);
+//            flagModel.getIsGreen().setValue(false);
+//
+//        }
+//    }
+
+
     @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-        super.setUserVisibleHint(isVisibleToUser);
+    protected void additionalWork() {
+        isZoom = false;
 
-        if (!isCreated) {
-            return;
-        }
-
-        if (isVisibleToUser) {
-
-            isZoom = false;
-
-            flagModel.getZoomValue().setValue(0);
-            flagModel.getIsGreen().setValue(false);
-
-        }
+        flagModel.getZoomValue().setValue(0);
+        flagModel.getIsGreen().setValue(false);
     }
 
+    @Override
+    protected void onSubscribe() {
+    }
 
-
+    @Override
+    protected void cancelSubscribe() {
+    }
 }

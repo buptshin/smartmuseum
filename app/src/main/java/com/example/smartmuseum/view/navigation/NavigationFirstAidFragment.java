@@ -13,9 +13,10 @@ import androidx.fragment.app.Fragment;
 import com.example.smartmuseum.R;
 import com.example.smartmuseum.databinding.FragmentNavigationFirstAidBinding;
 import com.example.smartmuseum.handler.ViewChainedBinding;
+import com.example.smartmuseum.util.LazyLocationFragment;
 import com.example.smartmuseum.view.otherview.NoScrollViewPager;
 
-public class NavigationFirstAidFragment extends Fragment implements ViewChainedBinding {
+public class NavigationFirstAidFragment extends LazyLocationFragment implements ViewChainedBinding {
 
     private FragmentNavigationFirstAidBinding mBinding;
 
@@ -41,12 +42,6 @@ public class NavigationFirstAidFragment extends Fragment implements ViewChainedB
     }
     @Override
     public NavigationFirstAidFragment bindView() {
-//        View parent = mBinding.getRoot().getRootView();
-//        ImageView navEscapeIV = (ImageView)parent.findViewById(R.id.mainpage_navigation_escape_routes_iv);
-//        ImageView navLocationIV = (ImageView)parent.findViewById(R.id.mainpage_navigation_now_location_iv);
-//        navEscapeIV.setVisibility(View.GONE);
-//        navLocationIV.setVisibility(View.GONE);
-//        parent.setBackgroundColor(getResources().getColor(R.color.mainpage_navigation_red));
         return this;
     }
 
@@ -70,11 +65,21 @@ public class NavigationFirstAidFragment extends Fragment implements ViewChainedB
             @Override
             public void onClick(View view) {
                 View parent = mBinding.getRoot().getRootView();
-                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_noscrollviewpager);
-                noScrollViewPager.setCurrentItem(1,false);
+                NoScrollViewPager noScrollViewPager = (NoScrollViewPager)parent.findViewById(R.id.mainpage_navigation_sv);
+                noScrollViewPager.setCurrentItem(0,false);
             }
         });
 
         return this;
+    }
+
+    @Override
+    protected void onSubscribe() {
+
+    }
+
+    @Override
+    protected void cancelSubscribe() {
+
     }
 }

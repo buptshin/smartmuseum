@@ -1,15 +1,18 @@
 package com.example.smartmuseum.util.http;
 
 import com.example.smartmuseum.model.Exhibition;
+import com.example.smartmuseum.model.Accompany;
 import com.example.smartmuseum.model.Goods;
 import com.example.smartmuseum.model.Location;
+import com.example.smartmuseum.model.OnRegisterUser;
+import com.example.smartmuseum.model.User;
+import com.example.smartmuseum.util.RegexUtils;
 import com.google.gson.Gson;
 
 import java.util.HashMap;
 import java.util.List;
 import io.reactivex.Observable;
 import io.reactivex.Observer;
-import io.reactivex.Scheduler;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import okhttp3.RequestBody;
@@ -30,6 +33,16 @@ public class HttpRequest {
         Observable<HttpResult<List<Goods>>> testGet(@Header("token") String token, @Query("testId") String testId);
     }
 
+    public interface RegisterService{
+        @POST("register/registerUser")
+        Observable<HttpResult<User>> registerUser(@Body RequestBody body);
+    }
+
+    public interface LoginService{
+        @POST("login")
+        Observable<HttpResult<User>> login(@Body RequestBody body);
+    }
+
     public interface GoodsService {
         @GET("goods/getCommendGoodsInfo")
         Observable<HttpResult<List<Goods>>> getCommendGoods(@Header("token") String token, @Query("goodsId") String goodsId);
@@ -44,6 +57,13 @@ public class HttpRequest {
     public interface ExhibitionService {
         @GET("exhibition/getRecommendedExhibitionInfo")
         Observable<HttpResult<List<Exhibition>>> getRecommendedExhibition(@Header("token") String token, @Query("exhibitionId") String exhibitionId);
+    }
+
+    public interface AccompanyService{
+        @GET("accompany/getAccompany")
+        Observable<HttpResult<List<Accompany>>> getAccompany(@Header("token") String token, @Query("userId") String userId);
+        @POST("accompany/upDateAccompany")
+        Observable<HttpResult<Object>> upDateAccompany(@Header("token")String token, @Body RequestBody accompanyList);
     }
 
     public static class Get {
@@ -108,12 +128,23 @@ public class HttpRequest {
                     .subscribe(observer);
 
         }
+
+        /**
+         * 同行伙伴获取
+         */
+        // 个人伙伴获取
+        public static void getAccompany(Observer<HttpResult<List<Accompany>>> observer, HashMap<String, String> hashMap){
+            AccompanyService accompanyService = RetrofitWrapper.getInstance().getRetrofit().create(AccompanyService.class);
+            String token = hashMap.get("token");
+            String userId = hashMap.get("userId");
+
+            accompanyService.getAccompany(token,userId)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+        }
     }
-
-
-
-
-
 
     public static class Post {
 
@@ -139,6 +170,42 @@ public class HttpRequest {
 
             RequestBody requestBody=RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),json);
             testService.testForPost2("test/postgoods/info", token, requestBody)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+        }
+        // 登录
+        public static void login(Observer<HttpResult<User>> observer, HashMap hashMap){
+            LoginService loginService = RetrofitWrapper.getInstance().getRetrofit().create(LoginService.class);
+            String data = new Gson().toJson(hashMap);
+            RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),data);
+            loginService.login(body)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+        }
+
+        // 注册用户
+        public static void registerUser(Observer<HttpResult<User>> observer,HashMap hashMap){
+            RegisterService registerService = RetrofitWrapper.getInstance().getRetrofit().create(RegisterService.class);
+            String data = new Gson().toJson(hashMap);
+            RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),data);
+            registerService.registerUser(body)
+                    .subscribeOn(Schedulers.io())
+                    .unsubscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(observer);
+        }
+
+        // 更新同行伙伴的信息
+        public static void upDateAccompany(Observer<HttpResult<Object>> observer, String token, HashMap hashMap){
+            AccompanyService accompanyService = RetrofitWrapper.getInstance().getRetrofit().create(AccompanyService.class);
+            String data = new Gson().toJson(hashMap);
+
+            RequestBody requestBody = RequestBody.create(okhttp3.MediaType.parse("application/json; charset=utf-8"),data);
+            accompanyService.upDateAccompany(token,requestBody)
                     .subscribeOn(Schedulers.io())
                     .unsubscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
